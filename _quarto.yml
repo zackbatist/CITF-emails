@@ -1,0 +1,56 @@
+project:
+  type: website
+  title: CITF Emails Analysis
+  preview:
+    port: 7777
+    browser: false
+website: 
+  site-url: https://zackbatist.info/CITF-emails/
+  repo-url: https://github.com/zackbatist/CITF-emails
+  repo-actions: none
+  bread-crumbs: true
+  page-navigation: false
+  back-to-top-navigation: false
+  page-footer:
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    # left:
+    #   - text: "CC0"
+    #     href: https://creativecommons.org/publicdomain/zero/1.0/
+  sidebar:
+    # logo: "images/logo.png"
+    pinned: true
+    align: center
+    style: docked
+    search: false
+    collapse-level: 2
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: topic-modelling/index.qmd
+        text: Topic Modelling
+      - href: network-analysis/index.qmd
+        text: Network Analysis
+      - href: codebook.qmd
+        text: Codebook
+      - href: research-protocol.qmd
+        text: Research Protocol
+toc: true
+toc-depth: 3
+toc-expand: 2
+number-sections: true
+format:
+  html:
+    theme: cosmo
+    code-copy: true
+    code-overflow: wrap
+    page-layout: article
+    grid:
+      body-width: 1000px
+filters:
+  - quarto
+  # - assets/collect-citekeys.lua
+execute:
+  echo: false
+  message: false
+  warning: false
+  freeze: true

@@ -1,0 +1,58 @@
+---
+title: Research Protocol
+subtitle: CITF Emails Analysis
+description: A planning document outlining the project's scope, methods and projected outcomes.
+date-modified: 2025-08-11
+date-format: long
+---
+
+::: {.callout-note}
+Note that the project has significantly evolved since drafting this protocol, and this document does not reflect our current scope of work. It still has value as a marker of our original intent.
+:::
+
+# Overview and Scope
+
+
+## Predictions and Expectations
+
+
+# Materials and Methods
+
+
+## The corpus of works
+
+
+# Analysis
+
+
+# Methodological notes and ideas
+
+
+# Outcomes
+
+
+# Logistics
+## Workflows
+The is a [quarto](https://quarto.org/)-based project situated in a git repository ([CITF-emails](https://github.com/zackbatist/CITF-emails)).
+Zack is the repository's primary maintainer, but Isak has been granted full administrative access, including the ability to make commits directly to the repository without submitting a pull request.
+Zack and Isak will clearly communicate about what they are working on so as to avoid generating conflicting commit histories which would produce a messy merge scenario.
+
+For less technical users, it would be best to annotate automatically-generated PDFs or to work with an un-tracked copy of the markdown files, whose diffs can then be identified and applied by someone who is more familiar with using git.
+
+Here are a few procedural notes and workflows:
+
+- All writing is done in the file pertaining to the specific section, which are included in their corresponding manuscript file (e.g., `topic-modelling.qmd`), which is also where the paper's main parameters are specified.
+- References are cited using `@` followed by the citekey, which follows a strict pattern of the first author's surname followed by the year of publication, all lowercase and without spaces, e.g. `@batist2024`.
+- References are stored in `assets/emails-analysis.bib` which is an automatically-updated export of Zack's Zotero library. If you want to include a reference that is not yet in the library, refer to the DOI and Zack will add it in his revisions.
+- Although we are keeping this as a private repository for now, all of this can be made into a public website. To preview the site locally, use `quarto preview` and navigate to `localhost:7777` in your browser.
+
+Here is an overview of the directory structure:
+
+[TBD]{.mark}
+
+## Timeline
+[TBD]{.mark}
+
+# References
+::: {#refs}
+:::
