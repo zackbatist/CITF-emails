@@ -1,1 +1,94 @@
-# Methods and Data
+# Materials and Methods
+
+## Data Source
+
+This study analyzes email correspondence generated during the operations of the
+Canadian COVID-19 Immunity Task Force (CITF) Databank, a pan-Canadian initiative
+that integrated individual-level health records from 100 partnering studies conducted
+across Canada between 2020 and 2025. The analytical corpus comprises emails from the
+inbox of a central CITF Databank operations manager responsible for coordinating data
+sharing with all 100 partnering studies. Emails span the period from February 2021 to
+September 2025. Future work will expand the corpus to include additional team members'
+inboxes, enabling a more comprehensive view of coordination across the initiative.
+
+## Data Preprocessing
+
+Emails were preprocessed using a multi-step pipeline to remove non-substantive content
+and protect participant privacy. Rule-based cleaning steps removed confidentiality
+disclaimers, meeting-invite text, forwarded-message headers, and institutional email
+signatures. All messages were de-identified using Microsoft Presidio [@alrazihi2025;
+@kotevski2022], an open-source framework for automated detection and anonymization
+of personally identifiable information, with personal names, email addresses, and URLs
+replaced with anonymized placeholders. Duplicate messages were removed within studies
+using normalized text hashing. Documents were filtered to retain only emails with
+non-missing sent dates and appropriate length, excluding near-empty or excessively long
+messages. The CITF Databank operated bilingually; bilingual messages were processed
+to retain English content where identifiable, and remaining French text was translated
+into English using OPUS-MT neural machine translation. This pipeline yielded a final
+analytical sample of 6,833 emails involving 488 unique senders across 100 studies.
+
+## Topic Modeling
+
+We evaluated four topic modeling approaches to identify the method best suited to
+this corpus: K-Means clustering, Latent Dirichlet Allocation (LDA), BERTopic, and
+Non-negative Matrix Factorization (NMF) [@murshed2023; @zubiaga2024]. Methods were
+compared at their peak coherence score (c_v) using standard English stopwords as a
+baseline. NMF outperformed all alternatives (c_v = 0.654), while K-Means produced an
+overly dominant cluster (50.8% of emails), LDA showed the lowest coherence (c_v =
+0.517), and BERTopic assigned 32.3% of emails as outliers. Following additional
+domain-specific stopword curation and part-of-speech filtering, NMF performance
+improved across all values of k tested (k = 5 to 20). Although k = 5 achieved the highest
+coherence (c_v = 0.820), it produced only five broad topics with 35.6% of emails in the
+largest cluster. We selected k = 14 as the optimal balance between coherence (c_v =
+0.768, NPMI = 0.170), granularity (lowest maximum cluster size at 10.7%), and topic
+diversity (0.914) [@rahimi2024].
+
+NMF assigns each email a weight for each of the 14 topics, normalized to sum to 1.0.
+To assign emails to discrete topics for analysis, we applied a 15% probability threshold,
+retaining topic assignments that reflect substantive associations while filtering out
+marginal contributions. This threshold was validated through research team review of
+representative emails. Under this scheme, 27.3% of emails were assigned to a single
+topic, 47.6% to two topics, and 25.1% to three or more topics (mean = 2.01 topics per
+email).
+
+## LLM-Assisted Topic Labeling
+
+To facilitate interpretation of the 14 NMF topics, we used a locally deployed
+open-source large language model to generate topic labels, thematic groupings, and
+topic descriptions [@wanna2024; @janssens2025; @tan2025]. Four open-source models
+were evaluated — Mistral-7B-Instruct-v0.3, Meta-Llama-3.1-8B-Instruct,
+Qwen2.5-7B-Instruct, and Gemma-2-9b-it — each receiving the top 5 keywords and 5
+representative emails for all 14 topics simultaneously. Meta-Llama-3.1-8B-Instruct
+produced the most descriptive and semantically complete labels and was selected for
+subsequent steps. Using zero-shot prompts, the model was queried to: (1) generate 2--5
+word topic labels from keywords and representative emails; (2) group labels into thematic
+categories; and (3) generate 2--3 sentence topic descriptions from keywords and up to 15
+representative emails. Tasks were run across multiple temperature settings (0.0, 0.2,
+0.4, 0.5, 0.7) and random seeds to ensure stability. All outputs were reviewed and
+refined by the research team to ensure face validity and alignment with domain
+knowledge. Local deployment ensured that no email data left secure servers at any
+stage of analysis.
+
+## Phase and Sender Analysis
+
+To examine how topics were distributed across the data sharing lifecycle, each email was
+mapped to one of six sequential phases: Funding Start, Data Introduction, Data Sharing
+Agreement (DSA) Execution, Data Upload, Data Cataloguing, and Data Publication.
+Phase assignments were based on milestone dates recorded for each study. Seven studies
+were excluded from phase analysis due to non-sequential milestone dates, leaving 6,183
+emails from 93 studies. For sender analysis, each email sender was classified into one of
+five categories based on their institutional role: Databank Secretariat, Study Staff, Study
+Investigators, External Partners, and Harmonization Group. For both phase and sender
+analyses, emails were assigned to their dominant topic — the topic receiving the highest
+normalized weight. Email-to-sender ratios were computed for each sender category to
+quantify the intensity of operational engagement across roles.
+
+## Gender Analysis
+
+To examine the distribution of coordination labour by gender, sender first names were
+coded using a probabilistic approach combining the gender_guesser library with manual
+corrections for ambiguous and non-Western names, achieving coverage of 95.2% of
+emails (6,504 of 6,833). Gender was classified as women or men; non-binary and
+gender-diverse identities are not captured by this method, which represents a limitation
+of the approach. Unless otherwise noted, figures report email counts rather than unique
+individuals.
