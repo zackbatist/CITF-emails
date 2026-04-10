@@ -25,7 +25,8 @@ non-missing sent dates and appropriate length, excluding near-empty or excessive
 messages. The CITF Databank operated bilingually; bilingual messages were processed
 to retain English content where identifiable, and remaining French text was translated
 into English using OPUS-MT neural machine translation. This pipeline yielded a final
-analytical sample of 6,833 emails involving 488 unique senders across 100 studies.
+analytical sample of 6,833 emails involving 488 unique senders across 100 studies 
+(see @fig-pipeline).
 
 ## Topic Modeling
 
