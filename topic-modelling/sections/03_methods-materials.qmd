@@ -44,15 +44,16 @@ improved across all values of k tested (k = 5 to 20). Although k = 5 achieved th
 coherence (c_v = 0.820), it produced only five broad topics with 35.6% of emails in the
 largest cluster. We selected k = 14 as the optimal balance between coherence (c_v =
 0.768, NPMI = 0.170), granularity (lowest maximum cluster size at 10.7%), and topic
-diversity (0.914) [@rahimi2024].
+diversity (0.914) [@rahimi2024]. The 14 topics identified by the model and their five
+most characteristic terms are shown in @fig-keywords. The x-axis reflects each term's
+NMF component weight — a non-negative score indicating the strength of association
+between that term and the topic, derived from the factorization of the Term
+Frequency-Inverse Document Frequency (TF-IDF) matrix. Higher scores indicate terms
+that are more strongly and distinctively associated with that topic relative to others
+in the vocabulary.
 
-NMF assigns each email a weight for each of the 14 topics, normalized to sum to 1.0.
-To assign emails to discrete topics for analysis, we applied a 15% probability threshold,
-retaining topic assignments that reflect substantive associations while filtering out
-marginal contributions. This threshold was validated through research team review of
-representative emails. Under this scheme, 27.3% of emails were assigned to a single
-topic, 47.6% to two topics, and 25.1% to three or more topics (mean = 2.01 topics per
-email).
+![Top 5 characteristic terms for each of the 14 NMF topics. The x-axis represents each term's NMF component weight, reflecting its strength of association with that topic relative to others in the vocabulary.](/visuals/fig2_keywords.png){#fig-keywords}
+
 
 ## LLM-Assisted Topic Labeling
 
@@ -71,6 +72,20 @@ representative emails. Tasks were run across multiple temperature settings (0.0,
 refined by the research team to ensure face validity and alignment with domain
 knowledge. Local deployment ensured that no email data left secure servers at any
 stage of analysis.
+
+## Co-occurrence Analysis
+
+To examine relationships between topics, we computed normalized pairwise co-occurrence
+scores across all 14 topics [@stevenson2023]. For each pair of topics, the co-occurrence
+score was calculated as the proportion of shared email assignments relative to the smaller
+of the two topics. Email-to-topic assignments were based on a 15% probability threshold
+applied to the normalized NMF weight matrix. This threshold was selected to capture
+substantive secondary topic assignments while filtering out most tertiary contributions,
+and was validated through research team review of representative emails. Under this
+scheme, 27.3% of emails were assigned to a single topic, 47.6% to two topics, and 25.1%
+to three or more topics (mean = 2.01 topics per email). Co-occurrence scores range from
+0 (no co-occurrence) to 1 (complete overlap), with higher values indicating topics that
+are more likely to appear together within the same emails.
 
 ## Phase and Sender Analysis
 
