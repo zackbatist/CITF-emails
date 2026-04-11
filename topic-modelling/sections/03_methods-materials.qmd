@@ -73,7 +73,7 @@ reviewed and refined by the research team to ensure face validity and alignment 
 knowledge. Local deployment ensured that no email data left secure servers at any
 stage of analysis.
 
-![LLM-assisted labels, thematic groupings, and descriptions for the 14 NMF topics.](visuals/fig3_dendrogram.png){#fig-dendrogram width=80%}
+![LLM-assisted labels, thematic groupings, and descriptions for the 14 NMF topics.](visuals/fig3_dendrogram.png){#fig-dendrogram}
 
 
 ## Co-occurrence Analysis
