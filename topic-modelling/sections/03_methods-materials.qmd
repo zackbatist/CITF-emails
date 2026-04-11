@@ -73,7 +73,7 @@ reviewed and refined by the research team to ensure face validity and alignment 
 knowledge. Local deployment ensured that no email data left secure servers at any
 stage of analysis.
 
-![LLM-assisted labels, thematic groupings, descriptions, and coherence scores (c_v) for the 14 NMF topics.](visuals/fig3_description.png){#fig-description width=70%}
+![LLM-assisted labels, thematic groupings, descriptions, and coherence scores (c_v) for the 14 NMF topics.](visuals/fig3_description.png){#fig-description width=90%}
 
 
 ## Co-occurrence Analysis
