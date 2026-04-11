@@ -52,7 +52,7 @@ Frequency-Inverse Document Frequency (TF-IDF) matrix. Higher scores indicate ter
 that are more strongly and distinctively associated with that topic relative to others
 in the vocabulary.
 
-![Top 5 characteristic terms for each of the 14 NMF topics. The x-axis represents each term's NMF component weight, reflecting its strength of association with that topic relative to others in the vocabulary.](/visuals/fig2_keywords.png){#fig-keywords}
+![Top 5 characteristic terms for each of the 14 NMF topics. The x-axis represents each term's NMF component weight, reflecting its strength of association with that topic relative to others in the vocabulary.](visuals/fig2_keywords.png){#fig-keywords}
 
 
 ## LLM-Assisted Topic Labeling
