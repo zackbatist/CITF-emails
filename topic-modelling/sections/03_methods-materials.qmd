@@ -28,6 +28,8 @@ into English using OPUS-MT neural machine translation. This pipeline yielded a f
 analytical sample of 6,833 emails involving 488 unique senders across 100 studies 
 (see @fig-pipeline).
 
+![Data collection and analysis process](visuals/fig1_pipeline.png){#fig-pipeline width=60%}
+
 ## Topic Modeling
 
 We evaluated four topic modeling approaches to identify the method best suited to
@@ -93,5 +95,3 @@ emails (6,504 of 6,833). Gender was classified as women or men; non-binary and
 gender-diverse identities are not captured by this method, which represents a limitation
 of the approach. Unless otherwise noted, figures report email counts rather than unique
 individuals.
-
-![Data collection and analysis process](visuals/fig1_pipeline.png){#fig-pipeline width=50%}
