@@ -94,4 +94,4 @@ gender-diverse identities are not captured by this method, which represents a li
 of the approach. Unless otherwise noted, figures report email counts rather than unique
 individuals.
 
-![Data collection and analysis process](visuals/fig1_pipeline.png){#fig-pipeline}
+![Data collection and analysis process](visuals/fig1_pipeline.png){#fig-pipeline width=70%}
