@@ -28,7 +28,7 @@ into English using OPUS-MT neural machine translation. This pipeline yielded a f
 analytical sample of 6,833 emails involving 488 unique senders across 100 studies 
 (see @fig-pipeline).
 
-![Data collection and analysis process](visuals/fig1_pipeline.png){#fig-pipeline width=60%}
+![Data collection and analysis process](visuals/fig1_pipeline.png){#fig-pipeline width=70%}
 
 ## Topic Modeling
 
