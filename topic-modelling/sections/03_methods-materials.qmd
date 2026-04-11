@@ -67,13 +67,13 @@ produced the most descriptive and semantically complete labels and was selected 
 subsequent steps. Using zero-shot prompts, the model was queried to: (1) generate 2--5
 word topic labels from keywords and representative emails; (2) group labels into thematic
 categories; and (3) generate 2--3 sentence topic descriptions from keywords and up to 15
-representative emails (see @fig-dendogram). Tasks were run across multiple temperature
+representative emails (see @fig-dendrogram). Tasks were run across multiple temperature
 settings (0.0, 0.2, 0.4, 0.5, 0.7) and random seeds to ensure stability. All outputs were
 reviewed and refined by the research team to ensure face validity and alignment with domain
 knowledge. Local deployment ensured that no email data left secure servers at any
 stage of analysis.
 
-![LLM-assisted labels, thematic groupings, and descriptions for the 14 NMF topics.](visuals/fig3_dendogram.png){#fig-dendogram width=80%}
+![LLM-assisted labels, thematic groupings, and descriptions for the 14 NMF topics.](visuals/fig3_dendrogram.png){#fig-dendrogram width=80%}
 
 
 ## Co-occurrence Analysis
