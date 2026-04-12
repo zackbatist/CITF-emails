@@ -65,7 +65,6 @@ format:
 
 ``` -->
 
-{{< include sections/00_abstract.qmd >}}
 {{< include sections/01_introduction.qmd >}}
 {{< include sections/02_background.qmd >}}
 {{< include sections/03_methods-materials.qmd >}}
