@@ -115,5 +115,8 @@ coded using a probabilistic approach combining the gender_guesser library with m
 corrections for ambiguous and non-Western names, achieving coverage of 95.2% of
 emails (6,504 of 6,833). Gender was classified as women or men; non-binary and
 gender-diverse identities are not captured by this method, which represents a limitation
-of the approach. Unless otherwise noted, figures report email counts rather than unique
-individuals.
+of the approach. The proportion of topic assignments attributed to women and men across all 
+14 topics is shown in @fig-gender.
+
+![Topic assignments by gender category.](visuals/fig6_gender.png){#fig-gender}
+
