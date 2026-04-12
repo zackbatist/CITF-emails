@@ -118,5 +118,5 @@ gender-diverse identities are not captured by this method, which represents a li
 of the approach. The proportion of topic assignments attributed to women and men across all 
 14 topics is shown in @fig-gender.
 
-![Topic assignments by gender category.](visuals/fig6_gender.png){#fig-gender}
+![Topic assignments by gender category.](visuals/fig6_gender.png){#fig-gender width=70%}
 
