@@ -3,44 +3,59 @@
 The analytical corpus comprises 6,833 emails from the inbox of a central CITF Databank
 coordinator, spanning correspondence with 100 participating studies from February 2021
 to September 2025, involving 488 unique senders. NMF identified 14 topics organized
-into four thematic categories: Agreements and Contracts (5 topics, 3,793 multi-topic
-email assignments), Data Operations (4 topics, 2,772), Study Documentation (3 topics,
-2,602), and Coordination (2 topics, 1,612). Table 1 presents the full list of topics with
-their labels, thematic categories, top keywords, and coherence scores. Figure 1 shows
-the distribution of emails across all 14 topics.
+into four thematic categories. The 14 topics identified by the model and their five
+most characteristic terms are shown in @fig-keywords. The x-axis reflects each term's
+NMF component weight — a non-negative score indicating the strength of association
+between that term and the topic, derived from the factorization of the Term
+Frequency-Inverse Document Frequency (TF-IDF) matrix. Higher scores indicate terms
+that are more strongly and distinctively associated with that topic relative to others
+in the vocabulary.
 
-## What the Emails Were About: Convergence of Legal and Technical Matters
+![Top 5 characteristic terms and topic coherence scores (c_v) for each of the 14 NMF topics.](visuals/fig2_keywords.png){#fig-keywords width=70%}
+
+The topic labels, thematic groupings, and descriptions generated through LLM-assisted
+annotation are shown in @fig-dendrogram.
+
+![LLM-assisted labels, thematic groupings, and descriptions for the 14 NMF topics.](visuals/fig3_dendrogram.png){#fig-dendrogram}
+
+## Co-occurrence Analysis of Topic Relationships
 
 Topic co-occurrence analysis revealed two largely separate clusters of topics within the
-corpus (Figure 2). Core legal topics — Document Signatures, Document Appendices, and
-DSA Status — co-occurred frequently with each other (co-occurrence scores: 0.19--0.28)
-but rarely with core technical topics such as Data Upload Instructions, Variable Mapping,
-and Data Transfer Initiation (co-occurrence scores: 0.02--0.09). This structural
-separation suggests that governance and data operations workstreams ran largely in
-parallel rather than in close coordination.
+corpus, with Agreements and Contracts (5 topics, 3,793 multi-topic email assignments),
+Data Operations (4 topics, 2,772), Study Documentation (3 topics, 2,602), and
+Coordination (2 topics, 1,612) (see @fig-cooccurrence). Core governance topics —
+Document Signatures, Document Appendices, and DSA Status — co-occurred frequently
+with each other (co-occurrence scores: 0.19--0.28) but rarely with core technical topics
+such as Data Upload Instructions, Variable Mapping, and Data Transfer Initiation
+(co-occurrence scores: 0.02--0.09). This structural separation suggests that governance
+and data operations workstreams ran largely in parallel rather than in close coordination.
+
+![Co-occurrence matrix with associated number of emails via multi-topic assignment.](visuals/fig4_cooccurrence.png){#fig-cooccurrence}
 
 The primary point of convergence between these two clusters was Document Review and
 Comments, the most frequently assigned topic in the corpus (1,323 email assignments)
 and the most broadly connected across all thematic categories (co-occurrence scores:
 0.10--0.24). This topic likely reflects the reconciliation of technical data descriptions
-and management requirements with institutional legal expectations, as data sharing
-agreements needed to stipulate the exact data being shared and the conditions under
-which they would be managed. It represents the interface between governance and
-operations — the point at which legal and technical concerns were most likely to be
-addressed together.
+and management requirements with institutional expectations, as data sharing agreements
+needed to stipulate the exact data being shared and the conditions under which they
+would be managed. It represents the interface between governance and operations —
+the point at which these concerns were most likely to be addressed together.
 
-## When Topics Appeared: Persistence of Governance
+## Topic Distribution Across Lifecycle Phases and Sender Roles
 
-While dominant topics shifted clearly across phases of the data sharing lifecycle, legal
-and administrative concerns proved more persistent than the phase structure alone would
-suggest (Figure 3). In early phases, correspondence was dominated by legal document
-work: DSA Status accounted for 12% of emails and Document Review for 12% in the
-Intro-to-DSA phase. In later phases, technical topics came to the fore: Data Upload
-Instructions accounted for 27% of emails in the Upload-to-Catalogue phase, and
-Serology and Data Harmonization for 30% in the Catalogue-to-Publication phase.
+While dominant topics shifted clearly across phases of the data sharing lifecycle,
+governance and administrative concerns proved more persistent than the phase structure
+alone would suggest (see @fig-phase-sender). In early phases, correspondence was
+dominated by document work: DSA Status accounted for 12% of emails and Document
+Review for 12% in the Intro-to-DSA phase. In later phases, technical topics came to
+the fore: Data Upload Instructions accounted for 27% of emails in the
+Upload-to-Catalogue phase, and Serology and Data Harmonization for 30% in the
+Catalogue-to-Publication phase.
 
-However, multi-topic analysis showed that legal and administrative concerns did not
-recede as the lifecycle progressed. Even in the Catalogue-to-Publication phase —
+![Topic theme assignments by lifecycle phase and sender category.](visuals/fig5_phase_sender.png){#fig-phase-sender}
+
+However, multi-topic analysis showed that governance and administrative concerns did
+not recede as the lifecycle progressed. Even in the Catalogue-to-Publication phase —
 dominated by Serology and Data Harmonization — DSA Status and Amendments (5%),
 Document Review (7%), and Document Signatures (5%) together still accounted for 17%
 of emails. Rather than being treated as an initial phase with a definite endpoint, data
@@ -50,13 +65,10 @@ attention well beyond the execution of formal agreements.
 Phase duration data further illustrate where effort was concentrated. Studies spent a
 median of 395 days in DSA negotiation (Intro-to-DSA phase) and 398 days in data
 preparation (DSA-to-Upload phase), compared to only 22 days for technical cataloguing
-(Upload-to-Catalogue phase) — an 18:1 ratio of administrative to technical time. Table 2
-presents the full distribution of phase durations across all studies.
-
-## Who Did the Work: Distributions of Labour
+(Upload-to-Catalogue phase) — an 18:1 ratio of administrative to technical time.
 
 Sender analysis revealed sharply uneven operational engagement across institutional
-roles (Figure 4). Databank teams were substantially more active as email senders than
+roles. Databank teams were substantially more active as email senders than
 representatives of partner studies. The Harmonization Group sent emails at a ratio of
 115 emails per sender, and the Secretariat at 101 emails per sender, compared to 7
 emails per sender among External Partners and 5 among Study Investigators. This
@@ -70,17 +82,22 @@ interoperability. The Secretariat's topical profile was the most evenly distribu
 reflecting its broad coordinating mandate across all phases and workstreams. Study
 Investigators' most frequent topic was Meeting Scheduling, which co-occurred most
 strongly with Document Review (0.19) and DSA Status (0.15), suggesting that
-investigators were convened primarily to discuss legal and documentation matters rather
-than to participate in technical data operations.
+investigators were convened primarily to discuss documentation matters rather than to
+participate in technical data operations.
+
+## Gender Distribution of Coordination Labour
 
 Gender analysis revealed a consistent pattern of stratification across both roles and
-phases (Figure 5). Women comprised 74% of Study Staff senders — the largest sender
-group and the one carrying the greatest volume of operational coordination work —
-while the Databank Secretariat was the only category where men were the majority
-(57%). At the phase level, women-coded senders dominated the earliest and most
-labour-intensive phases: Funding to Introduction (69% women) and Introduction to DSA
-(63% women). The final publication phase was the most male-dominated (67% men).
-This progression — from female-dominated early phases involving onboarding and
-negotiation, to male-dominated later phases associated with publication — is consistent
-with prior research documenting the feminization of invisible coordination labour in
-research data infrastructure [@choroszewicz2022].
+phases. The proportion of topic assignments attributed to women and men across all
+14 topics is shown in @fig-gender. Women comprised 74% of Study Staff senders —
+the largest sender group and the one carrying the greatest volume of operational
+coordination work — while the Databank Secretariat was the only category where men
+were the majority (57%). At the phase level, women-coded senders dominated the
+earliest and most labour-intensive phases: Funding to Introduction (69% women) and
+Introduction to DSA (63% women). The final publication phase was the most
+male-dominated (67% men). This progression — from female-dominated early phases
+involving onboarding and negotiation, to male-dominated later phases associated with
+publication — is consistent with prior research documenting the feminization of
+invisible coordination labour in research data infrastructure [@choroszewicz2022].
+
+![Topic assignments by gender category.](visuals/fig6_gender.png){#fig-gender width=70%}
