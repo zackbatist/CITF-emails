@@ -30,7 +30,7 @@ such as Data Upload Instructions, Variable Mapping, and Data Transfer Initiation
 (co-occurrence scores: 0.02--0.09). This structural separation suggests that governance
 and data operations workstreams ran largely in parallel rather than in close coordination.
 
-![Co-occurrence matrix with associated number of emails via multi-topic assignment.](visuals/fig4_cooccurrence.png){#fig-cooccurrence}
+![Topic co-occurrence matrix (0--0.30) with associated number of emails via multi-topic assignment.](visuals/fig4_cooccurrence.png){#fig-cooccurrence}
 
 The primary point of convergence between these two clusters was Document Review and
 Comments, the most frequently assigned topic in the corpus (1,323 email assignments)
