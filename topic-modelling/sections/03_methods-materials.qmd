@@ -90,7 +90,7 @@ to three or more topics (mean = 2.01 topics per email). Co-occurrence scores ran
 0 (no co-occurrence) to 1 (complete overlap), with higher values indicating topics that
 are more likely to appear together within the same emails.
 
-![Co-occurence matrix with associated number of emails via multi-topic assignment.](visuals/fig4_cooccurrence.png){#fig-cooccurrence}
+![Co-occurrence matrix with associated number of emails via multi-topic assignment.](visuals/fig4_cooccurrence.png){#fig-cooccurrence}
 
 ## Phase and Sender Analysis
 
