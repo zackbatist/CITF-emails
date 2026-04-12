@@ -34,9 +34,9 @@ assisted annotation have further improved the interpretability of topic modeling
 The Canadian COVID-19 Immunity Task Force (CITF) Databank offers a rare opportunity
 to apply these methods to the study of health data sharing governance. Established in
 2020 to coordinate serological and immunological research across Canada, the CITF
-Databank integrated over 150,000 health records from 100 partnering studies spanning
+Databank integrated over 150,000 health records from over 100 partnering studies spanning
 diverse institutional settings and geographic locations. The operational work of
-coordinating data sharing with all 100 studies was conducted largely through email
+coordinating data sharing with all these studies was conducted largely through email
 correspondence managed by a central operations team, generating a primary record of
 data sharing coordination as it actually unfolded in real time.
 
