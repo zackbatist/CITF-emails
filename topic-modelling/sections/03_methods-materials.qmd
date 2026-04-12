@@ -82,13 +82,15 @@ To examine relationships between topics, we computed normalized pairwise co-occu
 scores across all 14 topics [@stevenson2023]. For each pair of topics, the co-occurrence
 score was calculated as the proportion of shared email assignments relative to the smaller
 of the two topics. Email-to-topic assignments were based on a 15% probability threshold
-applied to the normalized NMF weight matrix. This threshold was selected to capture
+applied to the normalized NMF weight matrix (see @fig-cooccurence). This threshold was selected to capture
 substantive secondary topic assignments while filtering out most tertiary contributions,
 and was validated through research team review of representative emails. Under this
 scheme, 27.3% of emails were assigned to a single topic, 47.6% to two topics, and 25.1%
 to three or more topics (mean = 2.01 topics per email). Co-occurrence scores range from
 0 (no co-occurrence) to 1 (complete overlap), with higher values indicating topics that
 are more likely to appear together within the same emails.
+
+![Co-occurence matrix with associated number of emails via multi-topic assignment.](visuals/fig4_cooccurence.png){#fig-cooccurence}
 
 ## Phase and Sender Analysis
 
