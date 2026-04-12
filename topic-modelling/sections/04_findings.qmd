@@ -43,7 +43,7 @@ the point at which these concerns were most likely to be addressed together.
 
 ## Topic Distribution Across Lifecycle Phases and Sender Roles
 
-While dominant topics shifted clearly across phases of the data sharing lifecycle,
+While topics shifted clearly across phases of the data sharing lifecycle,
 governance and administrative concerns proved more persistent than the phase structure
 alone would suggest (see @fig-phase-sender). In early phases, correspondence was
 dominated by document work: DSA Status accounted for 12% of emails and Document
