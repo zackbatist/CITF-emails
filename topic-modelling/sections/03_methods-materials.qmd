@@ -7,7 +7,7 @@ Canadian COVID-19 Immunity Task Force (CITF) Databank, a pan-Canadian initiative
 that integrated individual-level health records from 100 partnering studies conducted
 across Canada between 2020 and 2025. The analytical corpus comprises emails from the
 inbox of a central CITF Databank operations manager responsible for coordinating data
-sharing with all 100 partnering studies. Emails span the period from February 2021 to
+sharing with all partnering studies. Emails span the period from February 2021 to
 September 2025. Future work will expand the corpus to include additional team members'
 inboxes, enabling a more comprehensive view of coordination across the initiative.
 
