@@ -1,5 +1,5 @@
 ---
-title: "LLM-assisted topic modelling of COVID-19 research data sharing correspondence"
+title: "LLM-assisted topic modelling of Canadian COVID-19 Immunity Task Force data sharing operations"
 subtitle: "Subtitle TBD"
 date: today
 bibliography: references.bib
