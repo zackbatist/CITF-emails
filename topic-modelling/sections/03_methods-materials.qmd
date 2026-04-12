@@ -44,16 +44,7 @@ improved across all values of k tested (k = 5 to 20). Although k = 5 achieved th
 coherence (c_v = 0.820), it produced only five broad topics with 35.6% of emails in the
 largest cluster. We selected k = 14 as the optimal balance between coherence (c_v =
 0.768, NPMI = 0.170), granularity (lowest maximum cluster size at 10.7%), and topic
-diversity (0.914) [@rahimi2024]. The 14 topics identified by the model and their five
-most characteristic terms are shown in @fig-keywords. The x-axis reflects each term's
-NMF component weight — a non-negative score indicating the strength of association
-between that term and the topic, derived from the factorization of the Term
-Frequency-Inverse Document Frequency (TF-IDF) matrix. Higher scores indicate terms
-that are more strongly and distinctively associated with that topic relative to others
-in the vocabulary.
-
-![Top 5 characteristic terms and topic coherence scores (c_v) for each of the 14 NMF topics.](visuals/fig2_keywords.png){#fig-keywords width=70%}
-
+diversity (0.914) [@rahimi2024].
 
 ## LLM-Assisted Topic Labeling
 
@@ -67,13 +58,11 @@ produced the most descriptive and semantically complete labels and was selected 
 subsequent steps. Using zero-shot prompts, the model was queried to: (1) generate 2--5
 word topic labels from keywords and representative emails; (2) group labels into thematic
 categories; and (3) generate 2--3 sentence topic descriptions from keywords and up to 15
-representative emails (see @fig-dendrogram). Tasks were run across multiple temperature
+representative emails. Tasks were run across multiple temperature
 settings (0.0, 0.2, 0.4, 0.5, 0.7) and random seeds to ensure stability. All outputs were
 reviewed and refined by the research team to ensure face validity and alignment with domain
 knowledge. Local deployment ensured that no email data left secure servers at any
 stage of analysis.
-
-![LLM-assisted labels, thematic groupings, and descriptions for the 14 NMF topics.](visuals/fig3_dendrogram.png){#fig-dendrogram}
 
 
 ## Co-occurrence Analysis
@@ -82,15 +71,13 @@ To examine relationships between topics, we computed normalized pairwise co-occu
 scores across all 14 topics [@stevenson2023]. For each pair of topics, the co-occurrence
 score was calculated as the proportion of shared email assignments relative to the smaller
 of the two topics. Email-to-topic assignments were based on a 15% probability threshold
-applied to the normalized NMF weight matrix (see @fig-cooccurrence). This threshold was selected to capture
+applied to the normalized NMF weight matrix. This threshold was selected to capture
 substantive secondary topic assignments while filtering out most tertiary contributions,
 and was validated through research team review of representative emails. Under this
 scheme, 27.3% of emails were assigned to a single topic, 47.6% to two topics, and 25.1%
 to three or more topics (mean = 2.01 topics per email). Co-occurrence scores range from
 0 (no co-occurrence) to 1 (complete overlap), with higher values indicating topics that
 are more likely to appear together within the same emails.
-
-![Co-occurrence matrix with associated number of emails via multi-topic assignment.](visuals/fig4_cooccurrence.png){#fig-cooccurrence}
 
 ## Phase and Sender Analysis
 
@@ -104,9 +91,7 @@ five categories based on their institutional role: Databank Secretariat, Study S
 Investigators, External Partners, and Harmonization Group. For both phase and sender analyses, 
 topic assignments were based on the 15% probability threshold described above. Email-to-sender 
 ratios were computed for each sender category to quantify the intensity of operational engagement 
-across roles (see @fig-phase-sender).
-
-![Topic theme assignments by lifecycle phase and sender category.](visuals/fig5_phase_sender.png){#fig-phase-sender}
+across roles.
 
 ## Gender Analysis
 
@@ -115,8 +100,4 @@ coded using a probabilistic approach combining the gender_guesser library with m
 corrections for ambiguous and non-Western names, achieving coverage of 95.2% of
 emails (6,504 of 6,833). Gender was classified as women or men; non-binary and
 gender-diverse identities are not captured by this method, which represents a limitation
-of the approach. The proportion of topic assignments attributed to women and men across all 
-14 topics is shown in @fig-gender.
-
-![Topic assignments by gender category.](visuals/fig6_gender.png){#fig-gender width=70%}
-
+of the approach.
