@@ -4,7 +4,7 @@
 
 This study analyzes email correspondence generated during the operations of the
 Canadian COVID-19 Immunity Task Force (CITF) Databank, a pan-Canadian initiative
-that integrated individual-level health records from 100 partnering studies conducted
+that integrated individual-level health records from partnering studies conducted
 across Canada between 2020 and 2025. The analytical corpus comprises emails from the
 inbox of a central CITF Databank operations manager responsible for coordinating data
 sharing with all partnering studies. Emails span the period from February 2021 to
