@@ -101,10 +101,12 @@ Phase assignments were based on milestone dates recorded for each study. Seven s
 were excluded from phase analysis due to non-sequential milestone dates, leaving 6,183
 emails from 93 studies. For sender analysis, each email sender was classified into one of
 five categories based on their institutional role: Databank Secretariat, Study Staff, Study
-Investigators, External Partners, and Harmonization Group. For both phase and sender
-analyses, emails were assigned to their dominant topic — the topic receiving the highest
-normalized weight. Email-to-sender ratios were computed for each sender category to
-quantify the intensity of operational engagement across roles.
+Investigators, External Partners, and Harmonization Group. For both phase and sender analyses, 
+topic assignments were based on the 15% probability threshold described above. Email-to-sender 
+ratios were computed for each sender category to quantify the intensity of operational engagement 
+across roles (see @fig-phase-sender).
+
+![Topic theme assignments by lifecycle phase and sender category.](visuals/fig5_phase_sender.png){#fig-phase-sender}
 
 ## Gender Analysis
 
