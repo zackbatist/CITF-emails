@@ -23,7 +23,7 @@ non-missing sent dates and appropriate length, excluding near-empty or excessive
 messages. The CITF Databank operated bilingually; bilingual messages were processed
 to retain English content where identifiable, and remaining French text was translated
 into English using OPUS-MT neural machine translation. This pipeline yielded a final
-analytical sample of 6,833 emails involving 488 unique senders across 100 studies
+analytical sample of 6,833 emails involving 491 unique senders across 100 studies
 (see @fig-pipeline).
 
 ![Data collection and analysis process](visuals/fig1_pipeline.png){#fig-pipeline width=70%}
@@ -75,7 +75,7 @@ To examine how topics were distributed across the data sharing lifecycle, each e
 mapped to one of six sequential phases: Funding Start, Data Introduction, Data Sharing
 Agreement (DSA) Execution, Data Upload, Data Cataloguing, and Data Publication.
 Phase assignments were based on milestone dates recorded for each study. Seven studies
-were excluded from phase analysis due to non-sequential milestone dates, leaving 6,183
+were excluded from phase analysis due to non-sequential milestone dates, leaving 6,167
 emails from 93 studies. For sender analysis, each email sender was classified into one of
 five categories based on their institutional role: Databank Secretariat, Study Staff, Study
 Investigators, External Partners, and Harmonization Group. For both phase and sender
