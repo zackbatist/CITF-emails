@@ -4,8 +4,8 @@ Timely access to health research data is essential for evidence-informed public 
 decision-making, as demonstrated during the COVID-19 pandemic when the rapid
 aggregation of epidemiological data across institutions and jurisdictions was critical for
 coordinated response [@yehudi2025; @rigby2024]. Despite growing policy commitments
-to open data — including Canada's Tri-Agency Research Data Management (RDM) Policy
-and the initiatives of the Digital Research Alliance of Canada — a recent report by
+to open data, including Canada's Tri-Agency Research Data Management (RDM) Policy
+and the initiatives of the Digital Research Alliance of Canada, a recent report by
 Canada's Chief Science Advisor identified fragmented data governance, inconsistent
 institutional practices, and insufficient workforce capacity as critical barriers to building
 a national scientific data ecosystem [@chiefscience2025]. These findings echo a decade
