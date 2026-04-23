@@ -18,8 +18,65 @@ authors:
   - name: Melissa Ouellet
     id: mo
     email: melissa.ouellet@mcgill.ca
-    # url: 
-    # orcid: 
+    affiliations:
+      - name: McGill University
+        department: Epidemiology, Biostatistics and Occupational Health
+        city: Montreal
+        region: Québec
+        country: Canada
+  - name: Sadun Khezri
+    id: sk
+    email: sadun.khezri@mcgill.ca
+    orcid: 0000-0001-6235-6668
+    affiliations:
+      - name: McGill University
+        department: Epidemiology, Biostatistics and Occupational Health
+        city: Montreal
+        region: Québec
+        country: Canada
+  - name: Tanya Murphy
+    id: tm
+    email: tanya.murphy@mcgill.ca
+    orcid: 0000-0002-9643-8730
+    affiliations:
+      - name: McGill University
+        department: Epidemiology, Biostatistics and Occupational Health
+        city: Montreal
+        region: Québec
+        country: Canada
+  - name: Aklil Noza
+    id: an
+    email: aklil.noza@mcgill.ca
+    affiliations:
+      - name: McGill University
+        department: Epidemiology, Biostatistics and Occupational Health
+        city: Montreal
+        region: Québec
+        country: Canada
+  - name: Samira Abbasgholizadeh-Rahimi
+    id: sar
+    email: samira.rahimi@mcgill.ca
+    orcid: 0000-0003-3781-1360
+    affiliations:
+      - name: McGill University
+        department: Department of Family Medicine
+        city: Montreal
+        region: Québec
+        country: Canada
+  - name: Guillaume Bourque
+    id: gb
+    email: guil.bourque@mcgill.ca
+    orcid: 0000-0002-3933-9656
+    affiliations:
+      - name: McGill University
+        department: Department of Human Genetics
+        city: Montreal
+        region: Québec
+        country: Canada
+  - name: David Buckeridge
+    id: db
+    email: david.buckeridge@mcgill.ca
+    orcid: 0000-0003-1817-5047
     affiliations:
       - name: McGill University
         department: Epidemiology, Biostatistics and Occupational Health
