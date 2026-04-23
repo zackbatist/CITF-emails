@@ -4,19 +4,14 @@
 
 ## Acknowledgements {.appendix}
 
-We thank the members of the CITF Databank team and all partnering study teams whose
-correspondence forms the basis of this analysis. We are grateful to the Canadian COVID-19
-Immunity Task Force for supporting this meta-research program and for their commitment
-to reflexive examination of their own operations. We also thank the McGill Clinical and
-Health Informatics (MCHI) research group for providing computational infrastructure and
-administrative support.
+We thank the members of the CITF Databank team and all partnering study teams whose correspondence forms the basis of this analysis.
+We are grateful to the Canadian COVID-19 Immunity Task Force for supporting this meta-research program and for their commitment to reflexive examination of their own operations.
+We also thank the McGill Clinical and Health Informatics (MCHI) research group for providing computational infrastructure and administrative support.
 
 ## Funding {.appendix}
 
-This work was supported by the Canadian Institutes of Health Research (CIHR) operating
-grant held by David Buckeridge (2024--2027), which supports completion of the CITF
-Databank and related governance research. Zachary Batist is supported as a Postdoctoral
-Researcher within this grant.
+This work was supported by the Canadian Institutes of Health Research (CIHR) operating grant held by David Buckeridge (2024--2027), which supports completion of the CITF Databank and related governance research.
+Zachary Batist is supported as a Postdoctoral Researcher within this grant.
 
 ## Competing Interests {.appendix}
 
@@ -24,47 +19,38 @@ The authors declare no competing interests.
 
 ## Author Contributions {.appendix}
 
-Zachary Batist led the conceptualization of the study, developed and applied the data
-processing and analysis pipeline, conducted topic modeling and sender analyses, and
-led the writing of the manuscript. Melissa Ouellet contributed to data processing,
-analysis, and interpretation of findings, and reviewed and edited the manuscript. Sadun
-Khezri contributed to data processing and analysis. Tanya Murphy and Aklil Noza
-contributed to data collection and management. Samira Abbasgholizadeh-Rahimi
-provided expertise in machine learning methods and reviewed the manuscript. Guillaume
-Bourque provided expertise in computational infrastructure and reviewed the manuscript.
+Zachary Batist led the conceptualization of the study, developed and applied the data processing and analysis pipeline, conducted topic modeling and sender analyses, and led the writing of the manuscript.
+Melissa Ouellet contributed to data processing, analysis, and interpretation of findings, and reviewed and edited the manuscript.
+Sadun Khezri contributed to data processing and analysis.
+Tanya Murphy and Aklil Noza contributed to data collection and management.
+Samira Abbasgholizadeh-Rahimi provided expertise in machine learning methods and reviewed the manuscript.
+Guillaume Bourque provided expertise in computational infrastructure and reviewed the manuscript.
 David Buckeridge conceived and led the CITF Databank initiative, provided domain
-expertise, and reviewed and edited the manuscript. All authors read and approved the
-final manuscript.
+expertise, and reviewed and edited the manuscript.
+All authors read and approved the final manuscript.
 
 ## Informed Consent {.appendix}
 
 This study analyzes administrative correspondence generated in the course of
-operational activities. All email data were de-identified prior to analysis using
-automated anonymization tools. The study was conducted in accordance with applicable
-institutional ethics guidelines. As this study involves analysis of administrative records
-rather than direct engagement with human participants, individual informed consent was
-not required.
+operational activities.
+All email data were de-identified prior to analysis using automated anonymization tools.
+The study was conducted in accordance with applicable institutional ethics guidelines.
+As this study involves analysis of administrative records rather than direct engagement with human participants, individual informed consent was not required.
 
 ## Data Availability Statement {.appendix}
 
 The email corpus analyzed in this study contains sensitive institutional and
-administrative information and is not publicly available. De-identified topic model
-outputs, analytical code, and summary data underlying the figures and tables are
-available in the companion repository at
-[https://github.com/zackbatist/CITF-emails](https://github.com/zackbatist/CITF-emails).
+administrative information and is not publicly available.
+De-identified topic model outputs, analytical code, and summary data underlying the figures and tables are available in the companion repository at [https://github.com/zackbatist/CITF-emails](https://github.com/zackbatist/CITF-emails).
 All code was developed using open-source tools and is archived following FAIR
 principles.
 
 ## Author Bios {.appendix}
 
-**Zachary Batist** is a Postdoctoral Researcher in the Department of Epidemiology,
-Biostatistics and Occupational Health at McGill University's School of Population and
-Global Health. His research focuses on the governance and organizational dimensions of
-health research data sharing.
+**Zachary Batist** is a Postdoctoral Researcher in the Department of Epidemiology, Biostatistics and Occupational Health at McGill University's School of Population and Global Health.
+His research focuses on the governance and organizational dimensions of health research data sharing.
 
-**Melissa Ouellet** is a Research Associate in the Department of Epidemiology,
-Biostatistics and Occupational Health at McGill University.
+**Melissa Ouellet** is a Research Associate in the Department of Epidemiology, Biostatistics and Occupational Health at McGill University.
 
-**David Buckeridge** is a Professor of Epidemiology and Biostatistics at McGill
-University and Director of the CITF Databank. His research concerns the management
-and application of distributed health records and biomedical informatics.
+**David Buckeridge** is a Professor of Epidemiology and Biostatistics at McGill University and Director of the CITF Databank.
+His research concerns the management and application of distributed health records and biomedical informatics.
