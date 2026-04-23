@@ -23,7 +23,7 @@ Future initiatives should consider how coordination roles are defined, compensat
 
 This study has several limitations.
 The corpus is drawn from a single coordinator's inbox, which captures one perspective on the coordination process but may not reflect the full scope of communication across the initiative.
-Emails from other team members, including the Databank's scientific director and data analysts, were not included in this analysis but will be incorporated in future work [@chiefscience2025].
+Emails from other team members, including the Databank's scientific director and data analysts, were not included in this analysis but will be incorporated in future work [@chiefscience2025[This reference seems out of place]{.mark}].
 The gender analysis relies on probabilistic coding of first names, which does not capture non-binary or gender-diverse identities and may misclassify names from non-Western cultural contexts.
 Finally, as a single case study, the findings reflect the specific organizational and institutional context of the CITF Databank; while we believe the structural patterns identified here are likely generalizable to similar pan-Canadian data sharing initiatives, further research across other settings is needed to confirm this.
 
