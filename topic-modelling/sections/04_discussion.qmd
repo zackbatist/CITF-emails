@@ -1,4 +1,4 @@
-# Discussion and Conclusion
+# Discussion
 
 This study analyzed 6,833 emails from the operational correspondence of the CITF Databank to characterize how large-scale health research data sharing is coordinated in practice.
 Three principal findings emerged.
