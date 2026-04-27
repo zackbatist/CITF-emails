@@ -87,14 +87,23 @@ abstract: |
   **Methods:** This study analyzes 6,833 emails from the inbox of a central operations manager at the Canadian COVID-19 Immunity Task Force (CITF) Databank, spanning correspondence with 100 partnering studies from February 2021 to September 2025. Emails were preprocessed using rule-based cleaning and automated de-identification. Non-negative Matrix Factorization (NMF) was applied for topic modeling, selecting k=14 topics based on coherence, granularity, and topic diversity. Topic labels and thematic groupings were generated using a locally deployed large language model and refined by the research team. Topics were analyzed across six phases of the data sharing lifecycle and five sender categories.\
   **Results:** NMF identified 14 topics organized into four thematic categories: Agreements & Contracts, Data Operations, Study Documentation, and Coordination. Governance and data operations workstreams ran largely in parallel, with contractual and administrative concerns persisting throughout all lifecycle phases rather than being resolved early. Studies spent a median of 395 days negotiating data sharing agreements and 398 days in data preparation, compared to only 22 days for technical cataloguing — an 18:1 ratio of administrative to technical time. Coordination labour was highly concentrated among Databank personnel (up to 116 emails per sender) relative to study teams (5–7 emails per sender), with women more concentrated in Study Documentation topics and men in Data Operations topics.\
   **Conclusions:** Data sharing is primarily an administrative and governance challenge rather than a technical one. These findings have direct implications for how Canadian research data infrastructure is resourced, governed, and staffed under national policy frameworks, particularly as institutions build capacity to meet Tri-Agency Research Data Management obligations.
-
-
 keywords:
   - topic modeling
   - research data sharing
   - data governance
   - COVID-19
   - Canada
+citation:
+  type: article-journal
+  url: https://zackbatist.info/CITF-emails/topic-modelling/
+  abstract: ""
+  # doi: TBD
+  # container-title: BMC Medical Informatics and Decision Making
+  # publisher: Springer
+  # volume: TBD
+  # issue: TBD
+  # page-first: TBD
+  # page-last: TBD
 filters: 
   - ../assets/count-para.lua
 format:
@@ -115,6 +124,11 @@ format:
         \usepackage{marvosym}
     template-partials:
       - ../assets/title.tex
+format-links: 
+  - pdf
+  - text: GitHub
+    icon: github
+    href: https://github.com/zackbatist/CITF-emails
 ---
 
 ```{css, echo = FALSE}
