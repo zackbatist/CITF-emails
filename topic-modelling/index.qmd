@@ -118,6 +118,13 @@ format:
       - ../assets/title.tex
 ---
 
+```{css, echo = FALSE}
+p {
+  text-align: justify !important;
+}
+```
+
+
 <!-- ```{r setup}
 
 ```
