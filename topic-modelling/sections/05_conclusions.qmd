@@ -1,1 +1,9 @@
 # Conclusions
+
+As institutions across Canada and beyond face growing obligations to share research data, understanding what that work actually involves — and who bears its costs — is essential for designing governance frameworks that are both realistic and equitable.
+
+Three principal findings from this study stand out.
+First, governance and data operations workstreams ran largely in parallel, with contractual and administrative concerns persisting across all lifecycle phases rather than being resolved early — reflected in an 18:1 ratio of administrative to technical time.
+Second, coordination labour was sharply concentrated among Databank personnel, with the Harmonization Group and Secretariat sending emails at ratios of 116 and 101 per sender respectively, compared to 5–7 among partner study representatives.
+Third, gender disparities followed a consistent pattern: women's representation ranged from 36% in the most technical Data Operations topics to 70% in Study Documentation topics, consistent with broader evidence on the feminization of invisible coordination labour in research infrastructure.
+Taken together, these findings confirm that data sharing is primarily an administrative and governance challenge, and that sustaining it at scale places disproportionate demands on a small number of people — demands that existing funding and workforce planning frameworks are poorly equipped to absorb.
