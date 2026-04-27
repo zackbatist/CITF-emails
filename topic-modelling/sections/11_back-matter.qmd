@@ -45,6 +45,10 @@ We thank the members of the CITF Databank team and all partnering study teams wh
 We are grateful to the Canadian COVID-19 Immunity Task Force for supporting this meta-research program and for their commitment to reflexive examination of their own operations.
 We also thank the McGill Clinical and Health Informatics (MCHI) research group for providing computational infrastructure and administrative support.
 
+Claude (Sonnet 4.6) was used to assist with content organization, grammar checking, and improving overall clarity while drafting this manuscript.
+This tool contributed to the writing process by providing language suggestions and helping to structure the material more effectively.
+
+
 ## Authors' Bios {.appendix}
 
 **Zachary Batist** is a Postdoctoral Researcher in the Department of Epidemiology, Biostatistics and Occupational Health at McGill University's School of Population and Global Health.
