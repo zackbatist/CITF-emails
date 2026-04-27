@@ -30,6 +30,8 @@ website:
         text: Topic Modelling
       - href: network-analysis/index.qmd
         text: Network Analysis
+      - href: data-complexity/index.qmd
+        text: Data Complexity
       - href: codebook.qmd
         text: Codebook
       - href: research-protocol.qmd
