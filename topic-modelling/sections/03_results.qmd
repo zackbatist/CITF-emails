@@ -61,7 +61,7 @@ This structural separation suggests that governance and data operations workstre
 [Can we add p values to indicate whether these relationships are statistically significant?]{.mark}
 Melissa: Sure, these have been added. The p-value indicates whether two topics co-occur more than would be expected by chance, based on a chi-square test of independence.
 
-![Topic co-occurrence matrix (0--0.30) with associated number of emails via multi-topic assignment.](visuals/fig4_cooccurrence.png){#fig-cooccurrence}
+![Topic co-occurrence matrix (0--0.30) with chi-square p-values and associated number of emails via multi-topic assignment.](visuals/fig4_cooccurrence.png){#fig-cooccurrence}
 
 [The variable length of the horizontal bars seems a bit distracting, at least from my own perspective.]{.mark}
 Melissa: No problem, removed them.
