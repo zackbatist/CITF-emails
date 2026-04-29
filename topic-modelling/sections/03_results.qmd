@@ -10,7 +10,7 @@ Higher scores indicate terms that are more strongly and distinctively associated
 
 [Re-order these so they appear in order of their c_v values.
 Can we say something about the meaningfulness of these topics? Which ones are most cohesive and representative of some recognizable reality?]{.mark}
-Melissa: Re-ordered accordingly. Topic coherence varied across the 14 topics, ranging from c_v = 0.473 to c_v =
+Melissa: Re-ordered accordingly. Suggested text: Topic coherence varied across the 14 topics, ranging from c_v = 0.473 to c_v =
 0.956. The most coherent topics were those with highly distinctive technical
 vocabularies: Data Upload Instructions & Credentials (c_v = 0.956), Study
 Description & Catalogue Publication (c_v = 0.930), and Document Appendices &
