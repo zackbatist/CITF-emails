@@ -59,10 +59,12 @@ Core governance topics, including Document Signatures, Document Appendices, and 
 This structural separation suggests that governance and data operations workstreams ran largely in parallel rather than in close coordination.
 
 [Can we add p values to indicate whether these relationships are statistically significant?]{.mark}
+Melissa: Sure, these have been added. The p-value indicates whether two topics co-occur more than would be expected by chance, based on a chi-square test of independence.
 
 ![Topic co-occurrence matrix (0--0.30) with associated number of emails via multi-topic assignment.](visuals/fig4_cooccurrence.png){#fig-cooccurrence}
 
 [The variable length of the horizontal bars seems a bit distracting, at least from my own perspective.]{.mark}
+Melissa: No problem, removed them.
 
 The primary point of convergence between these two clusters was Document Review and Comments, the most frequently assigned topic in the corpus (1,323 email assignments) and the most broadly connected across all thematic categories (co-occurrence scores: 0.08--0.25).
 This topic likely reflects the reconciliation of technical data descriptions and management requirements with institutional expectations, as data sharing agreements needed to stipulate the exact data being shared and the conditions under which they would be managed.
