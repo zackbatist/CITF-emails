@@ -27,6 +27,30 @@ The topic labels, thematic groupings, and descriptions generated through LLM-ass
 This calls attention to the variety of tasks involved in the work.
 Next step is to see whether these topics under the agreements and contracts topic correspond with specific phases.
 Do they happen in the order in which they expect them to occur? Which topics occur throughout the phase, which may indicate their cyclical/discursive rather than definitive nature (i.e., I would expect T12 to occur more than one time throughout the span of time, whereas T7 would happen only one time at the end of the process.).]{.mark}
+Melissa: The topic model identified five discrete topics within the Agreements & Contracts
+theme, compared to only two within Coordination, **reflecting the greater variety
+and specificity of tasks involved in contractual work relative to general
+coordination activities.** Within the Agreements & Contracts theme, individual
+topics showed distinct distributional patterns across the data sharing lifecycle,
+reflecting both process-ordered and cyclical forms of engagement.
+**Do these topics occur in the order in which we would expect them to?** Largely
+yes. Data Sharing Agreements & Consent (T0) and Document Appendices & Revisions
+(T8) were most concentrated in the earliest phases, Funding Start (22.5% and
+21.7%) and Data Introduction (21.0% and 22.7%), consistent with their role in
+establishing the initial terms and conditions of data sharing. DSA Status &
+Amendments (T5) showed a similar early peak (14.4% and 20.6%) but remained more
+persistent across later phases (10.4% in both DSA Execution and Data Cataloguing),
+suggesting that amendments continued to be negotiated well beyond initial agreement
+execution.
+**Which topics are cyclical rather than definitive?** Document Signatures &
+Execution (T7) was relatively flat across phases (ranging from 5.4% to 13.2%),
+contrary to the expectation that signatures would be concentrated at the point of
+DSA Execution, suggesting that formal sign-off occurred at multiple points
+throughout the process rather than once. Document Review & Comments (T12) showed
+the most distinctly cyclical pattern: present at high levels in early phases
+(23.6% and 25.0%) but spiking again at Data Publication (33.3%), confirming that
+document review is not a discrete event but a recurring activity that persists
+across the entire lifecycle.
 
 ## Co-occurrence Analysis of Topic Relationships
 
