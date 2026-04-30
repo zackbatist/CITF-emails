@@ -136,7 +136,7 @@ This concentration of email activity within Databank teams makes visible the coo
 The topical focus of each sender group also differed markedly (see @fig-phase).
 The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work.
 The Secretariat showed the most evenly distributed profile across all four themes, reflecting its broad coordinating mandate across all phases and workstreams.
-External Partners were most concentrated in Agreements & Contracts (52%), suggesting their engagement was primarily oriented around contractual obligations.
+External Partners were most concentrated in Agreements & Contracts (53%), suggesting their engagement was primarily oriented around contractual obligations.
 Study Investigators showed a relatively even split between Agreements & Contracts (36%) and Study Documentation (30%), suggesting they were engaged across both contractual and documentation workstreams rather than technical data operations.
 
 | Category   | Description |
