@@ -100,7 +100,7 @@ Topic theme assignments shifted clearly across phases of the data sharing lifecy
 In early phases, correspondence was dominated by Agreements & Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase.
 In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.
 
-![Topic assignments by lifecycle phase with associated number of emails via multi-topic assignment.](visuals/fig5_phase_strip.png){#fig-phase width=70%}
+![Topic assignments by lifecycle phase with associated number of emails via multi-topic assignment.](visuals/fig5_phase_strip.png){#fig-phase width=80%}
 
 [I broke this section into two, and the figure should be split accordingly.]{.mark} Melissa: Sure, figures now split into phase and sender.
 
@@ -121,7 +121,7 @@ Studies spent a median of 395 days in DSA negotiation (Intro-to-DSA phase) and 3
 | Catalogue → Publication | 29        | 664         | 753           | 245        | 1012       |
 : Distribution of temporal durations for each phase. {#tbl-phases}
 
-![Topic assignments over time via multi-topic assignment.](visuals/fig6_topics_over_time.png){#fig-topics-time width=70%}
+![Topic assignments over time via multi-topic assignment.](visuals/fig6_topics_over_time.png){#fig-topics-time width=80%}
 
 ## Topic Distribution Across Sender Roles
 
