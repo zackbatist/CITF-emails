@@ -100,9 +100,9 @@ Topic theme assignments shifted clearly across phases of the data sharing lifecy
 In early phases, correspondence was dominated by Agreements & Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase.
 In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.
 
-![Topic theme assignments by lifecycle phase with associated number of emails via multi-topic assignment.](visuals/fig5a_phase_strip.png){#fig-phase width=70%}
+![Topic assignments by lifecycle phase with associated number of emails via multi-topic assignment.](visuals/fig5_phase_strip.png){#fig-phase width=70%}
 
-[I broke this section into two, and the figure should be split accordingly.]{.mark}
+[I broke this section into two, and the figure should be split accordingly.]{.mark} Melissa: Sure, figures now split into phase and for sender.
 
 However, Agreements & Contracts concerns did not recede as the lifecycle progressed.
 Even in the Data Upload and Data Cataloguing phases, which were dominated by Data Operations, Agreements & Contracts still accounted for 14% and 21% of topic assignments respectively.
@@ -110,7 +110,7 @@ Rather than being treated as an initial phase with a definite endpoint, contract
 
 Studies spent a median of 395 days in DSA negotiation (Intro-to-DSA phase) and 398 days in data preparation (DSA-to-Upload phase), compared to only 22 days for technical cataloguing (Upload-to-Catalogue phase), an 18:1 ratio of administrative to technical time.
 
-[Can we break down each phase into the specific topics addressed in each? And can we examine the distribution of these topics over time as well, as per my suggestion in [paragraph 16](#16)?]{.mark}
+[Can we break down each phase into the specific topics addressed in each? And can we examine the distribution of these topics over time as well, as per my suggestion in [paragraph 16](#16)?]{.mark} Melissa: Sure, Figure 5 now reflects each phase into specific topics.
 
 | Phase Transition        | N Studies | Mean (days) | Median (days) | Min (days) | Max (days) |
 | :---------------------- | --------- | ----------- | ------------- | ---------- | ---------- |
@@ -127,7 +127,7 @@ Sender analysis revealed sharply uneven operational engagement across institutio
 The Harmonization Group sent emails at a ratio of 116 emails per sender, and the Secretariat at 101 emails per sender, compared to 7 emails per sender among External Partners, 6 among Study Staff, and 5 among Study Investigators.
 This concentration of email activity within Databank teams makes visible the coordination labour sustained by a small number of highly active individuals.
 
-[Can we break down the visual in Figure 5 by topic rather than by theme?]{.mark}
+[Can we break down the visual in Figure 5 by topic rather than by theme?]{.mark} 
 
 The topical focus of each sender group also differed markedly (see @fig-phase).
 The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work.
