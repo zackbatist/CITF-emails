@@ -6,7 +6,7 @@ The 14 topics identified by the model and their five most characteristic terms a
 The x-axis reflects each term's NMF component weight, a non-negative score indicating the strength of association between that term and the topic, derived from the factorization of the Term Frequency-Inverse Document Frequency (TF-IDF) matrix.
 Higher scores indicate terms that are more strongly and distinctively associated with that topic relative to others in the vocabulary.
 
-![Top 5 characteristic terms and topic coherence scores (c_v) for each of the 14 NMF topics.](visuals/fig2_keywords.png){#fig-keywords width=70%}
+![Top 5 characteristic terms and topic coherence scores (c_v) for each of the 14 NMF topics.](visuals/fig_keywords.png){#fig-keywords width=70%}
 
 [Re-order these so they appear in order of their c_v values.
 Can we say something about the meaningfulness of these topics? Which ones are most cohesive and representative of some recognizable reality?]{.mark}
@@ -21,7 +21,7 @@ is consistent with the broad, cross-cutting nature of these activities.
 
 The topic labels, thematic groupings, and descriptions generated through LLM-assisted annotation are shown in @fig-dendrogram.
 
-![LLM-assisted labels, thematic groupings, and descriptions for the 14 NMF topics.](visuals/fig3_dendrogram.png){#fig-dendrogram}
+![LLM-assisted labels, thematic groupings, and descriptions for the 14 NMF topics.](visuals/fig_dendrogram.png){#fig-dendrogram}
 
 [It is somewhat interesting that the topic modelling identified more discrete kinds of work for agreements and contracts than for coordination.
 This calls attention to the variety of tasks involved in the work.
@@ -61,7 +61,7 @@ This structural separation suggests that governance and data operations workstre
 [Can we add p values to indicate whether these relationships are statistically significant?]{.mark}
 Melissa: Sure, these have been added. The p-value indicates whether two topics co-occur more than would be expected by chance, based on a chi-square test of independence.
 
-![Topic co-occurrence matrix (0--0.30) with chi-square p-values and associated number of emails via multi-topic assignment.](visuals/fig4_cooccurrence.png){#fig-cooccurrence}
+![Topic co-occurrence matrix (0--0.30) with chi-square p-values and associated number of emails via multi-topic assignment.](visuals/fig_cooccurrence.png){#fig-cooccurrence}
 
 [The variable length of the horizontal bars seems a bit distracting, at least from my own perspective.]{.mark}
 Melissa: No problem, removed them.
@@ -100,7 +100,7 @@ Topic theme assignments shifted clearly across phases of the data sharing lifecy
 In early phases, correspondence was dominated by Agreements & Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase.
 In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.
 
-![Topic assignments by lifecycle phase, sorted within each theme by entropy descending, with associated number of emails.](visuals/fig5_phase_strip.png){#fig-phase width=70%}
+![Topic assignments by lifecycle phase, sorted within each theme by entropy descending, with associated number of emails.](visuals/fig_phase_strip.png){#fig-phase width=70%}
 
 [I broke this section into two, and the figure should be split accordingly.]{.mark} Melissa: Sure, figures now split into phase and sender.
 
@@ -121,7 +121,7 @@ Studies spent a median of 395 days in DSA negotiation (Intro-to-DSA phase) and 3
 | Catalogue → Publication | 29        | 664         | 753           | 245        | 1012       |
 : Distribution of temporal durations for each phase. {#tbl-phases}
 
-![Topic assignments over time.](visuals/fig6_topics_over_time.png){#fig-topics-time width=80%}
+![Topic assignments over time.](visuals/fig_topics_over_time.png){#fig-topics-time width=80%}
 
 ## Topic Distribution Across Sender Roles
 
@@ -131,7 +131,7 @@ This concentration of email activity within Databank teams makes visible the coo
 
 [Can we break down the visual in Figure 5 by topic rather than by theme?]{.mark} Melissa: Sure, please see below and share your feelings.
 
-![Topic assignments by sender category, sorted within each theme by entropy descending, with associated number of emails.](visuals/fig7_sender_strip.png){#fig-sender width=90%}
+![Topic assignments by sender category, sorted within each theme by entropy descending, with associated number of emails.](visuals/fig_sender_strip.png){#fig-sender width=90%}
 
 The topical focus of each sender group also differed markedly (see @fig-sender).
 The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work.
