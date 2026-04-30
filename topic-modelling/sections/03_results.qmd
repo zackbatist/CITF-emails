@@ -110,7 +110,7 @@ Rather than being treated as an initial phase with a definite endpoint, contract
 
 Studies spent a median of 395 days in DSA negotiation (Intro-to-DSA phase) and 398 days in data preparation (DSA-to-Upload phase), compared to only 22 days for technical cataloguing (Upload-to-Catalogue phase), an 18:1 ratio of administrative to technical time.
 
-[Can we break down each phase into the specific topics addressed in each? And can we examine the distribution of these topics over time as well, as per my suggestion in [paragraph 16](#16)?]{.mark} Melissa: Sure, Figure 5 now reflects each phase into specific topics.
+[Can we break down each phase into the specific topics addressed in each? And can we examine the distribution of these topics over time as well, as per my suggestion in [paragraph 16](#16)?]{.mark} Melissa: Sure, Figure 5 now reflects each phase into specific topics and added a figure for topics over time.
 
 | Phase Transition        | N Studies | Mean (days) | Median (days) | Min (days) | Max (days) |
 | :---------------------- | --------- | ----------- | ------------- | ---------- | ---------- |
@@ -120,6 +120,8 @@ Studies spent a median of 395 days in DSA negotiation (Intro-to-DSA phase) and 3
 | Upload → Catalogue      | 46        | 68          | 22            | 0          | 421        |
 | Catalogue → Publication | 29        | 664         | 753           | 245        | 1012       |
 : Distribution of temporal durations for each phase. {#tbl-phases}
+
+![Topic assignments over time via multi-topic assignment.](visuals/fig6_topics_over_time.png){#fig-topics-time width=70%}
 
 ## Topic Distribution Across Sender Roles
 
