@@ -129,7 +129,9 @@ Sender analysis revealed sharply uneven operational engagement across institutio
 The Harmonization Group sent emails at a ratio of 116 emails per sender, and the Secretariat at 101 emails per sender, compared to 7 emails per sender among External Partners, 6 among Study Staff, and 5 among Study Investigators.
 This concentration of email activity within Databank teams makes visible the coordination labour sustained by a small number of highly active individuals.
 
-[Can we break down the visual in Figure 5 by topic rather than by theme?]{.mark} 
+[Can we break down the visual in Figure 5 by topic rather than by theme?]{.mark} Melissa: Sure, please see below and share your feelings.
+
+![Topic assignments by sender category with associated number of emails via multi-topic assignment.](visuals/fig7_sender_strip.png){#fig-sender width=80%}
 
 The topical focus of each sender group also differed markedly (see @fig-phase).
 The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work.
