@@ -17,7 +17,7 @@ Documents were filtered to retain only emails with non-missing sent dates and ap
 The CITF Databank operated bilingually; bilingual messages were processed to retain English content where identifiable, and remaining French text was translated into English using OPUS-MT neural machine translation.
 This pipeline yielded a final analytical sample of 6,833 emails involving 491 unique senders across 100 studies (see @fig-pipeline).
 
-![Data collection and analysis process](visuals/fig1_pipeline.png){#fig-pipeline width=70%}
+![Data collection and analysis process](visuals/fig_pipeline.png){#fig-pipeline width=70%}
 
 ## Data Analysis
 
