@@ -51,6 +51,8 @@ This tool contributed to the writing process by providing language suggestions a
 
 ## Authors' Bios {.appendix}
 
+MELISSA: Not sure if we should use the affiliation "McGill Clinical and Health Informatics" instead Epi Dept since the target journal is BMC Medical informatics and decision making.
+
 **Zachary Batist** is a Postdoctoral Researcher in the Department of Epidemiology, Biostatistics and Occupational Health at McGill University's School of Population and Global Health.
 His research focuses on the governance and organizational dimensions of health research data sharing.
 
