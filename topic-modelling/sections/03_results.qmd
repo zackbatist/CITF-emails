@@ -71,7 +71,27 @@ This topic likely reflects the reconciliation of technical data descriptions and
 It represents the interface between governance and operations: the point at which these concerns were most likely to be addressed together.
 
 [This finding regarding Document Review and Comments (T12) is reflected in the figure along both axes, but seems more prominent when looking at its vertical intersection. It may be a good idea to label the alternative axis as well.]{.mark}
+Melissa: To facilitate reading along both axes, each topic is now labeled on both the left
+and right sides of the matrix. 
+The prominence of Document Review & Comments
+(T12) is visible along both axes of the co-occurrence matrix: as a row, it
+shows moderate-to-high co-occurrence with nearly all other topics; as a column,
+it similarly attracts broad engagement across thematic clusters, confirming its
+role as the primary interface between governance and data operations workstreams.
 [What about the next higher co-occurrence scores? Maybe a good idea to list the top and bottom 5.]{.mark}
+Melissa: The five highest pairwise co-occurrence scores in the corpus were T7 x T8
+(Document Signatures & Execution x Document Appendices & Revisions, 0.28),
+T3 x T13 (Variable Mapping & Schema Alignment x Data Dictionary & Metadata,
+0.27), T3 x T4 (Variable Mapping & Schema Alignment x Serology & Data
+Harmonization, 0.26), T0 x T8 (Data Sharing Agreements & Consent x Document
+Appendices & Revisions, 0.23), and T0 x T7 (Data Sharing Agreements & Consent
+x Document Signatures & Execution, 0.22), all reflecting tight clustering
+within the Agreements & Contracts and Data Operations themes respectively. The
+five lowest scores involved Executive Correspondence (T6) and Document
+Signatures (T7) paired with Data Operations topics such as Variable Mapping
+(T3) and Data Upload Instructions (T2), with co-occurrence scores of 0.02--0.03,
+consistent with the structural separation between governance and operational
+workstreams identified above.
 
 ## Topic Distribution Across Lifecycle Phases
 
