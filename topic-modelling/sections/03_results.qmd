@@ -121,7 +121,6 @@ Studies spent a median of 395 days in DSA negotiation (Intro-to-DSA phase) and 3
 | Catalogue → Publication | 29        | 664         | 753           | 245        | 1012       |
 : Distribution of temporal durations for each phase. {#tbl-phases}
 
-![Topic assignments over time.](visuals/fig_topics_over_time.png){#fig-topics-time width=80%}
 
 ## Topic Distribution Across Sender Roles
 
