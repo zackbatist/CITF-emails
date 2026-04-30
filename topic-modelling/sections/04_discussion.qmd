@@ -4,7 +4,7 @@ This study analyzed 6,833 emails from the operational correspondence of the CITF
 The findings reveal that data sharing is primarily an administrative and governance challenge, that coordination labour is highly concentrated among a small number of Databank personnel, and that systematic disparities in workload distribution track both institutional role and gender.
 
 The structural separation between governance and data operations workstreams, and the finding that contractual and administrative concerns persist across all phases rather than being resolved early, suggests that formal models of sequential data sharing — in which agreements are finalized before technical work begins — are not how coordination actually unfolds in practice.
-The persistence of contractual concerns into the Data Upload and Data Cataloguing phases suggests that governance and technical work proceeded in parallel by necessity, as evolving data requirements continued to surface new administrative obligations even after agreements were nominally in place
+The persistence of contractual concerns into the Data Upload and Data Cataloguing phases suggests that governance and technical work proceeded in parallel by necessity, as evolving data requirements continued to surface new administrative obligations even after agreements were nominally in place.
 Parallel onboarding strategies, in which technical preparation and agreement negotiation proceed simultaneously, could formalize this reality and reduce overall timelines.
 More responsive and adaptive models for data sharing agreements, which can be amended as data requirements evolve rather than requiring full renegotiation, may also reduce the persistence of governance concerns in later phases [@casey2016; @vanhuis2014].
 
