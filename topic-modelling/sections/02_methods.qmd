@@ -49,5 +49,5 @@ For sender analysis, each email sender was classified into one of five categorie
 For both phase and sender analyses, topic assignments were based on the 15% probability threshold described above.
 Email-to-sender ratios were computed for each sender category to quantify the intensity of operational engagement across roles.
 
-To examine the distribution of coordination labour by gender, sender first names were coded using a probabilistic approach combining the nomquamgender library^[<https://github.com/lead-ratings/gender-guesser>] with manual corrections for ambiguous and non-Western names, achieving coverage of 95.2% of emails (6,504 of 6,833).
-Gender was classified as women or men; non-binary and gender-diverse identities are not captured by this method, which represents a limitation of the approach.
+To examine the distribution of coordination labour by gender, sender first names were coded using a probabilistic approach combining the nomquamgender library [@vanbuskirk2023] with manual corrections for ambiguous and non-Western names, achieving coverage of 95.8% of emails (6,545 of 6,833). Gender was classified as women or men; non-binary and gender-diverse identities are not captured by this method, which represents a limitation of the approach.
+
