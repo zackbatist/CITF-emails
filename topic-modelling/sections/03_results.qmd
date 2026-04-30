@@ -96,11 +96,11 @@ workstreams identified above.
 ## Topic Distribution Across Lifecycle Phases
 
 This analysis is based on 90.3% of the full corpus (6,167 emails), with 7 studies excluded due to non-sequential milestone dates.
-Topic theme assignments shifted clearly across phases of the data sharing lifecycle, with Agreements & Contracts concerns proving more persistent than the phase structure alone would suggest (see @fig-phase-sender).
+Topic theme assignments shifted clearly across phases of the data sharing lifecycle, with Agreements & Contracts concerns proving more persistent than the phase structure alone would suggest (see @fig-phase).
 In early phases, correspondence was dominated by Agreements & Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase.
 In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.
 
-![Topic theme assignments by lifecycle phase and sender category.](visuals/fig5_phase_sender.png){#fig-phase-sender}
+![Topic theme assignments by lifecycle phase and sender category.](visuals/fig5a_phase_strip.png){#fig-phase}
 
 [I broke this section into two, and the figure should be split accordingly.]{.mark}
 
@@ -129,7 +129,7 @@ This concentration of email activity within Databank teams makes visible the coo
 
 [Can we break down the visual in Figure 5 by topic rather than by theme?]{.mark}
 
-The topical focus of each sender group also differed markedly (see @fig-phase-sender).
+The topical focus of each sender group also differed markedly (see @fig-phase).
 The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work.
 The Secretariat showed the most evenly distributed profile across all four themes, reflecting its broad coordinating mandate across all phases and workstreams.
 External Partners were most concentrated in Agreements & Contracts (52%), suggesting their engagement was primarily oriented around contractual obligations.
