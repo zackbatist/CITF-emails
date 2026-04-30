@@ -102,7 +102,7 @@ In later phases, Data Operations came to the fore: this theme accounted for 46% 
 
 ![Topic assignments by lifecycle phase with associated number of emails via multi-topic assignment.](visuals/fig5_phase_strip.png){#fig-phase width=70%}
 
-[I broke this section into two, and the figure should be split accordingly.]{.mark} Melissa: Sure, figures now split into phase and for sender.
+[I broke this section into two, and the figure should be split accordingly.]{.mark} Melissa: Sure, figures now split into phase and sender.
 
 However, Agreements & Contracts concerns did not recede as the lifecycle progressed.
 Even in the Data Upload and Data Cataloguing phases, which were dominated by Data Operations, Agreements & Contracts still accounted for 14% and 21% of topic assignments respectively.
