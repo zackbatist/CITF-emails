@@ -100,7 +100,7 @@ Topic theme assignments shifted clearly across phases of the data sharing lifecy
 In early phases, correspondence was dominated by Agreements & Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase.
 In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.
 
-![Topic assignments by lifecycle phase with associated number of emails.](visuals/fig5_phase_strip.png){#fig-phase width=70%}
+![Topic assignments by lifecycle phase, sorted within each theme by entropy descending, with associated number of emails.](visuals/fig5_phase_strip.png){#fig-phase width=70%}
 
 [I broke this section into two, and the figure should be split accordingly.]{.mark} Melissa: Sure, figures now split into phase and sender.
 
@@ -131,7 +131,7 @@ This concentration of email activity within Databank teams makes visible the coo
 
 [Can we break down the visual in Figure 5 by topic rather than by theme?]{.mark} Melissa: Sure, please see below and share your feelings.
 
-![Topic assignments by sender category with associated number of emails.](visuals/fig7_sender_strip.png){#fig-sender width=90%}
+![Topic assignments by sender category, sorted within each theme by entropy descending, with associated number of emails.](visuals/fig7_sender_strip.png){#fig-sender width=90%}
 
 The topical focus of each sender group also differed markedly (see @fig-phase).
 The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work.
