@@ -100,7 +100,7 @@ Topic theme assignments shifted clearly across phases of the data sharing lifecy
 In early phases, correspondence was dominated by Agreements & Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase.
 In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.
 
-![Topic theme assignments by lifecycle phase and sender category.](visuals/fig5a_phase_strip.png){#fig-phase}
+![Topic theme assignments by lifecycle phase.](visuals/fig5a_phase_strip.png){#fig-phase width=70%}
 
 [I broke this section into two, and the figure should be split accordingly.]{.mark}
 
