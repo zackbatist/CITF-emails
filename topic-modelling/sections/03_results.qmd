@@ -28,7 +28,7 @@ Topic co-occurrence analysis revealed two largely separate clusters of topics wi
 Core governance topics, including Document Signatures, Document Appendices, and DSA Status, co-occurred frequently with each other (co-occurrence scores: 0.20--0.28) but rarely with core technical topics such as Data Upload Instructions, Variable Mapping, and Data Transfer Initiation (co-occurrence scores: 0.02--0.06).
 This structural separation suggests that governance and data operations workstreams ran largely in parallel rather than in close coordination.
 
-![Topic co-occurrence matrix (0--0.30) with chi-square p-values and associated number of emails via multi-topic assignment.](visuals/fig_cooccurrence.png){#fig-cooccurrence}
+![Topic co-occurrence matrix. Circle size indicates the normalized pairwise co-occurrence score between topic pairs (the proportion of shared email assignments relative to the smaller of the two topics, ranging from 0 to 0.30). Numbers below each column indicate the total number of emails assigned to that topic via multi-topic assignment.](visuals/fig_cooccurrence.png){#fig-cooccurrence}
 
 <!-- [Zack: What are these percentages representing? Need to adjust the caption.]{.mark} -->
 
@@ -46,7 +46,7 @@ Topic theme assignments shifted clearly across phases of the data sharing lifecy
 In early phases, correspondence was dominated by Agreements & Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase.
 In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.
 
-![Topic assignments by lifecycle phase, sorted within each theme by entropy descending, with associated number of emails.](visuals/fig_phase_strip.png){#fig-phase width=70%}
+![Topic assignments by lifecycle phase, sorted within each theme by entropy descending. Each dot represents one email assignment; numbers below each column indicate the total number of emails in that phase. Reference clusters at the bottom show approximate densities corresponding to 10, 50, 100, 200, 350, and 500 email assignments.](visuals/fig_phase_strip.png){#fig-phase width=70%}
 
 <!-- [Zack: What are the units for the entropy legend?]{.mark} -->
 
@@ -74,7 +74,7 @@ The Databank Secretariat, which is the central coordination and administrative s
 In contrast, activity was much lower among External Partners (including Statistics Canada, legal counsel, and government agencies), Study Staff (research coordinators and data managers handling preparation and upload), and Study Investigators (PIs and Co-Is responsible for governance decisions), who averaged 7, 6, and 5 emails per sender, respectively.
 This concentration of email activity within Databank teams makes visible the coordination labour sustained by a small number of highly active individuals.
 
-![Topic assignments by sender category, sorted within each theme by entropy descending, with associated number of emails.](visuals/fig_sender_strip.png){#fig-sender width=90%}
+![Topic assignments by sender category, sorted within each theme by entropy descending. Each dot represents one email assignment; numbers below each column indicate the total number of emails sent by that category. Reference clusters at the bottom show approximate densities corresponding to 10, 50, 100, 200, 350, and 500 email assignments.](visuals/fig_sender_strip.png){#fig-sender width=90%}
 
 The topical focus of each sender group also differed markedly (see @fig-sender). The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work.
 The Secretariat showed the most evenly distributed profile across all four themes, reflecting its broad coordinating mandate across all phases and workstreams.
