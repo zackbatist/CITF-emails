@@ -94,7 +94,7 @@ Both women and men were engaged in emails involving a median of 5 distinct topic
 These disparities therefore reflect not a difference in whether women and men did multi-faceted coordination work, but in which topics each group disproportionately handled.
 Both genders were engaged in similar sets of topics, which largely comprised combinations involving Meeting Scheduling & Invitations (T11), Document Review & Comments (T12), and Catalogue Completion Reminders (T9), pointing to coordination and documentation activities as the connective tissue of multi-topic involvement.
 
-At the same time, women's representation varied substantially across topics, ranging from 35% in Serology & Data Harmonization to 69% in Study Description & Catalogue Publication (see Figure 8).
+At the same time, women's representation varied substantially across topics, ranging from 35% in Serology & Data Harmonization to 69% in Study Description & Catalogue Publication (see @fig-gender).
 Data Operations topics, including Serology & Data Harmonization (35% women), Data Transfer Initiation (40% women), and Data Upload Instructions (42% women), were the most male-dominated.
 In contrast, Study Documentation topics showed the highest representation of women: Study Description & Catalogue Publication (69% women), Catalogue Completion Reminders (66% women), and Data Dictionary & Metadata (66% women).
 Agreements & Contracts topics showed a more mixed pattern, with women accounting for 48–58% of assignments across that theme.
