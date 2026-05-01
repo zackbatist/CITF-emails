@@ -164,61 +164,61 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-keywords" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-keywords-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="visuals/fig2_keywords.png" class="img-fluid figure-img" style="width:70.0%">
+<img src="visuals/fig_keywords.png" class="img-fluid figure-img" style="width:70.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-keywords-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Top 5 characteristic terms and topic coherence scores (c_v) for each of the 14 NMF topics.
 </figcaption>
 </figure>
 </div>
-<p><mark>Re-order these so they appear in order of their c_v values. Can we say something about the meaningfulness of these topics? Which ones are most cohesive and representative of some recognizable reality?</mark></p>
+<p>Topic coherence varied across the 14 topics, ranging from c_v = 0.473 to c_v = 0.956. The most coherent topics were those with highly distinctive technical vocabularies: Data Upload Instructions &amp; Credentials (c_v = 0.956), Study Description &amp; Catalogue Publication (c_v = 0.930), and Document Appendices &amp; Revisions (c_v = 0.861). The least coherent topics, Meeting Scheduling &amp; Invitations (c_v = 0.473) and Executive Correspondence (c_v = 0.497), reflect more generic coordination language that is less semantically distinctive, which is consistent with the broad, cross-cutting nature of these activities.</p>
 <p>The topic labels, thematic groupings, and descriptions generated through LLM-assisted annotation are shown in <a href="#fig-dendrogram" class="quarto-xref">Figure&nbsp;2</a>.</p>
 <div id="fig-dendrogram" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-dendrogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="visuals/fig3_dendrogram.png" class="img-fluid figure-img">
+<img src="visuals/fig_dendrogram.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dendrogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: LLM-assisted labels, thematic groupings, and descriptions for the 14 NMF topics.
 </figcaption>
 </figure>
 </div>
-<p><mark>It is somewhat interesting that the topic modelling identified more discrete kinds of work for agreements and contracts than for coordination. This calls attention to the variety of tasks involved in the work. Next step is to see whether these topics under the agreements and contracts topic correspond with specific phases. Do they happen in the order in which they expect them to occur? Which topics occur throughout the phase, which may indicate their cyclical/discursive rather than definitive nature (i.e., I would expect T12 to occur more than one time throughout the span of time, whereas T7 would happen only one time at the end of the process.).</mark></p>
+<p>The topic model identified five discrete topics within the Agreements &amp; Contracts theme, compared to only two within Coordination, reflecting the greater variety and specificity of tasks involved in contractual work relative to general coordination activities. Within the Agreements &amp; Contracts theme, individual topics showed distinct distributional patterns across the data sharing lifecycle, reflecting both process-ordered and cyclical forms of engagement.</p>
+<p>Data Sharing Agreements &amp; Consent (T0) and Document Appendices &amp; Revisions (T8) were most concentrated in the earliest phases, Funding Start (22.5% and 21.7%) and Data Introduction (21.0% and 22.7%), consistent with their role in establishing the initial terms and conditions of data sharing. DSA Status &amp; Amendments (T5) showed a similar early peak (14.4% and 20.6%) but remained more persistent across later phases (10.4% in both DSA Execution and Data Cataloguing), suggesting that amendments continued to be negotiated well beyond initial agreement execution.</p>
+<p>Document Signatures &amp; Execution (T7) was relatively flat across phases (ranging from 5.4% to 13.2%), contrary to the expectation that signatures would be concentrated at the point of DSA Execution, suggesting that formal sign-off occurred at multiple points throughout the process rather than once. Document Review &amp; Comments (T12) showed the most distinctly cyclical pattern: present at high levels in early phases (23.6% and 25.0%) but spiking again at Data Publication (33.3%), confirming that document review is not a discrete event but a recurring activity that persists across the entire lifecycle.</p>
 <section id="co-occurrence-analysis-of-topic-relationships" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="co-occurrence-analysis-of-topic-relationships"><span class="header-section-number">1.1</span> Co-occurrence Analysis of Topic Relationships</h2>
 <p>Topic co-occurrence analysis revealed two largely separate clusters of topics within the corpus, with Agreements and Contracts (5 topics, 3,793 multi-topic email assignments), Data Operations (4 topics, 2,772), Study Documentation (3 topics, 2,602), and Coordination (2 topics, 1,612) (see <a href="#fig-cooccurrence" class="quarto-xref">Figure&nbsp;3</a>). Core governance topics, including Document Signatures, Document Appendices, and DSA Status, co-occurred frequently with each other (co-occurrence scores: 0.20–0.28) but rarely with core technical topics such as Data Upload Instructions, Variable Mapping, and Data Transfer Initiation (co-occurrence scores: 0.02–0.06). This structural separation suggests that governance and data operations workstreams ran largely in parallel rather than in close coordination.</p>
-<p><mark>Can we add p values to indicate whether these relationships are statistically significant?</mark></p>
 <div id="fig-cooccurrence" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cooccurrence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="visuals/fig4_cooccurrence.png" class="img-fluid figure-img">
+<img src="visuals/fig_cooccurrence.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cooccurrence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Topic co-occurrence matrix (0–0.30) with associated number of emails via multi-topic assignment.
+Figure&nbsp;3: Topic co-occurrence matrix (0–0.30) with chi-square p-values and associated number of emails via multi-topic assignment.
 </figcaption>
 </figure>
 </div>
-<p><mark>The variable length of the horizontal bars seems a bit distracting, at least from my own perspective.</mark></p>
+<!-- [Zack: What are these percentages representing? Need to adjust the caption.]{.mark} -->
 <p>The primary point of convergence between these two clusters was Document Review and Comments, the most frequently assigned topic in the corpus (1,323 email assignments) and the most broadly connected across all thematic categories (co-occurrence scores: 0.08–0.25). This topic likely reflects the reconciliation of technical data descriptions and management requirements with institutional expectations, as data sharing agreements needed to stipulate the exact data being shared and the conditions under which they would be managed. It represents the interface between governance and operations: the point at which these concerns were most likely to be addressed together.</p>
-<p><mark>This finding regarding Document Review and Comments (T12) is reflected in the figure along both axes, but seems more prominent when looking at its vertical intersection. It may be a good idea to label the alternative axis as well.</mark> <mark>What about the next higher co-occurrence scores? Maybe a good idea to list the top and bottom 5.</mark></p>
+<p>The five highest pairwise co-occurrence scores in the corpus were T7 x T8 (Document Signatures &amp; Execution x Document Appendices &amp; Revisions, 0.28), T3 x T13 (Variable Mapping &amp; Schema Alignment x Data Dictionary &amp; Metadata, 0.27), T3 x T4 (Variable Mapping &amp; Schema Alignment x Serology &amp; Data Harmonization, 0.26), T0 x T8 (Data Sharing Agreements &amp; Consent x Document Appendices &amp; Revisions, 0.23), and T0 x T7 (Data Sharing Agreements &amp; Consent x Document Signatures &amp; Execution, 0.22), all reflecting tight clustering within the Agreements &amp; Contracts and Data Operations themes respectively. The five lowest scores involved Executive Correspondence (T6) and Document Signatures (T7) paired with Data Operations topics such as Variable Mapping (T3) and Data Upload Instructions (T2), with co-occurrence scores of 0.02–0.03, consistent with the structural separation between governance and operational workstreams identified above.</p>
 </section>
 <section id="topic-distribution-across-lifecycle-phases" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="topic-distribution-across-lifecycle-phases"><span class="header-section-number">1.2</span> Topic Distribution Across Lifecycle Phases</h2>
-<p>This analysis is based on 90.3% of the full corpus (6,167 emails), with 7 studies excluded due to non-sequential milestone dates. Topic theme assignments shifted clearly across phases of the data sharing lifecycle, with Agreements &amp; Contracts concerns proving more persistent than the phase structure alone would suggest (see <a href="#fig-phase-sender" class="quarto-xref">Figure&nbsp;4</a>). In early phases, correspondence was dominated by Agreements &amp; Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase. In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.</p>
-<div id="fig-phase-sender" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>This analysis is based on 90.3% of the full corpus (6,167 emails), with 7 studies excluded due to non-sequential milestone dates. Topic theme assignments shifted clearly across phases of the data sharing lifecycle, with Agreements &amp; Contracts concerns proving more persistent than the phase structure alone would suggest (see <a href="#fig-phase" class="quarto-xref">Figure&nbsp;4</a>). In early phases, correspondence was dominated by Agreements &amp; Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase. In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.</p>
+<div id="fig-phase" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-phase-sender-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="visuals/fig5_phase_sender.png" class="img-fluid figure-img">
+<div aria-describedby="fig-phase-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="visuals/fig_phase_strip.png" class="img-fluid figure-img" style="width:70.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-phase-sender-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Topic theme assignments by lifecycle phase and sender category.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-phase-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Topic assignments by lifecycle phase, sorted within each theme by entropy descending, with associated number of emails.
 </figcaption>
 </figure>
 </div>
-<p><mark>I broke this section into two, and the figure should be split accordingly.</mark></p>
+<!-- [Zack: What are the units for the entropy legend?]{.mark} -->
 <p>However, Agreements &amp; Contracts concerns did not recede as the lifecycle progressed. Even in the Data Upload and Data Cataloguing phases, which were dominated by Data Operations, Agreements &amp; Contracts still accounted for 14% and 21% of topic assignments respectively. Rather than being treated as an initial phase with a definite endpoint, contractual and administrative concerns persisted throughout the data sharing lifecycle, requiring ongoing attention well beyond the execution of formal agreements.</p>
 <p>Studies spent a median of 395 days in DSA negotiation (Intro-to-DSA phase) and 398 days in data preparation (DSA-to-Upload phase), compared to only 22 days for technical cataloguing (Upload-to-Catalogue phase), an 18:1 ratio of administrative to technical time.</p>
-<p><mark>Can we break down each phase into the specific topics addressed in each? And can we examine the distribution of these topics over time as well, as per my suggestion in <a href="#16">paragraph 16</a>?</mark></p>
 <div id="tbl-phases" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-phases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -293,67 +293,35 @@ Table&nbsp;1: Distribution of temporal durations for each phase.
 </section>
 <section id="topic-distribution-across-sender-roles" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="topic-distribution-across-sender-roles"><span class="header-section-number">1.3</span> Topic Distribution Across Sender Roles</h2>
-<p>Sender analysis revealed sharply uneven operational engagement across institutional roles. The Harmonization Group sent emails at a ratio of 116 emails per sender, and the Secretariat at 101 emails per sender, compared to 7 emails per sender among External Partners, 6 among Study Staff, and 5 among Study Investigators. This concentration of email activity within Databank teams makes visible the coordination labour sustained by a small number of highly active individuals.</p>
-<p><mark>Can we break down the visual in Figure 5 by topic rather than by theme?</mark></p>
-<p>The topical focus of each sender group also differed markedly (see <a href="#fig-phase-sender" class="quarto-xref">Figure&nbsp;4</a>). The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work. The Secretariat showed the most evenly distributed profile across all four themes, reflecting its broad coordinating mandate across all phases and workstreams. External Partners were most concentrated in Agreements &amp; Contracts (52%), suggesting their engagement was primarily oriented around contractual obligations. Study Investigators showed a relatively even split between Agreements &amp; Contracts (36%) and Study Documentation (30%), suggesting they were engaged across both contractual and documentation workstreams rather than technical data operations.</p>
-<div id="tbl-sender-categories" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sender-categories-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Definitions of each sender category.
-</figcaption>
-<div aria-describedby="tbl-sender-categories-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 76%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Category</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Databank secretariat</td>
-<td style="text-align: left;">Central coordination and administrative staff responsible for managing day-to-day Databank operations, including facilitating communication between stakeholders, tracking project milestones, and overseeing data sharing agreements</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Study staff</td>
-<td style="text-align: left;">Research coordinators, data managers, project managers, and research assistants working on CITF-funded studies who handle data preparation, documentation, and upload tasks</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Study investigators</td>
-<td style="text-align: left;">Principal investigators (PIs) and co-investigators (Co-Is) who lead CITF-funded studies and hold responsibility for data governance and sharing decisions</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">External partners</td>
-<td style="text-align: left;">External stakeholders including Statistics Canada, government agencies, institutional contracts offices, university legal counsel, and external consultants who support regulatory, legal, and contractual aspects of data sharing</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Databank harmonization group</td>
-<td style="text-align: left;">Specialized research group (Maelstrom Research) responsible for data harmonization, variable mapping, schema alignment, and ensuring data interoperability across studies</td>
-</tr>
-</tbody>
-</table>
+<p>Sender analysis revealed sharply uneven operational engagement across institutional roles. The Databank Harmonization Group, a specialized research group responsible for data harmonization, variable mapping, and ensuring interoperability, sent emails at a ratio of 116 emails per sender. The Databank Secretariat, which is the central coordination and administrative staff responsible for managing day-to-day operations, tracking milestones, and overseeing agreements, sent 101 emails per sender. In contrast, activity was much lower among External Partners (including Statistics Canada, legal counsel, and government agencies), Study Staff (research coordinators and data managers handling preparation and upload), and Study Investigators (PIs and Co-Is responsible for governance decisions), who averaged 7, 6, and 5 emails per sender, respectively. This concentration of email activity within Databank teams makes visible the coordination labour sustained by a small number of highly active individuals.</p>
+<div id="fig-sender" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sender-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="visuals/fig_sender_strip.png" class="img-fluid figure-img" style="width:90.0%">
 </div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sender-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Topic assignments by sender category, sorted within each theme by entropy descending, with associated number of emails.
+</figcaption>
 </figure>
 </div>
+<p>The topical focus of each sender group also differed markedly (see <a href="#fig-sender" class="quarto-xref">Figure&nbsp;5</a>). The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work. The Secretariat showed the most evenly distributed profile across all four themes, reflecting its broad coordinating mandate across all phases and workstreams. External Partners were most concentrated in Agreements &amp; Contracts (53%), suggesting their engagement was primarily oriented around contractual obligations. Study Investigators showed a relatively even split between Agreements &amp; Contracts (36%) and Study Documentation (30%), suggesting they were engaged across both contractual and documentation workstreams rather than technical data operations.</p>
 </section>
 <section id="gender-distribution-of-coordination-labour" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="gender-distribution-of-coordination-labour"><span class="header-section-number">1.4</span> Gender Distribution of Coordination Labour</h2>
-<p>Gender analysis is based on 95.2% of the total sample (6,504 emails), with senders of unknown gender excluded. Women’s representation varied substantially across topics, ranging from 36% in Serology &amp; Data Harmonization to 70% in Study Description &amp; Catalogue Publication (see <a href="#fig-gender" class="quarto-xref">Figure&nbsp;5</a>). Data Operations topics, including Serology &amp; Data Harmonization (36% women), Data Transfer Initiation (40% women), and Data Upload Instructions (44% women), were the most male-dominated. In contrast, Study Documentation topics showed the highest representation of women: Study Description &amp; Catalogue Publication (70% women), Catalogue Completion Reminders (68% women), and Data Dictionary &amp; Metadata (65% women). Agreements &amp; Contracts topics showed a more mixed pattern, with women accounting for 50–58% of assignments across that theme. This progression, from male-dominated Data Operations topics to female-dominated Study Documentation topics, is consistent with prior research documenting the feminization of invisible coordination labour in research data infrastructure <span class="citation" data-cites="choroszewicz2022">[@choroszewicz2022]</span>.</p>
+<p>A fuller account of these relational patterns, including who works with whom, on what, and when, is left to future work using network analysis of the full team correspondence.</p>
+<p>Gender analysis is based on 95.8% of the total sample (6,545 emails), with senders of unknown gender excluded. Across the 456 unique senders with classified gender, women outnumbered men roughly two to one (294 women, 64.5%; 162 men, 35.5%). This imbalance was consistent at the study level: of 100 studies, 70 had a majority-women sender base and only 18 had a majority-men one (median 60.0% women per study).</p>
+<p>Individual breadth of involvement was nearly identical across genders. Both women and men were engaged in emails involving a median of 5 distinct topics, and roughly half of each group (50.7% of women, 52.8% of men) engaged with five or more topics. These disparities therefore reflect not a difference in whether women and men did multi-faceted coordination work, but in which topics each group disproportionately handled. Both genders were engaged in similar sets of topics, which largely comprised combinations involving Meeting Scheduling &amp; Invitations (T11), Document Review &amp; Comments (T12), and Catalogue Completion Reminders (T9), pointing to coordination and documentation activities as the connective tissue of multi-topic involvement.</p>
+<p>At the same time, women’s representation varied substantially across topics, ranging from 35% in Serology &amp; Data Harmonization to 69% in Study Description &amp; Catalogue Publication (see Figure 8). Data Operations topics, including Serology &amp; Data Harmonization (35% women), Data Transfer Initiation (40% women), and Data Upload Instructions (42% women), were the most male-dominated. In contrast, Study Documentation topics showed the highest representation of women: Study Description &amp; Catalogue Publication (69% women), Catalogue Completion Reminders (66% women), and Data Dictionary &amp; Metadata (66% women). Agreements &amp; Contracts topics showed a more mixed pattern, with women accounting for 48–58% of assignments across that theme. This progression, from male-dominated Data Operations topics to female-dominated Study Documentation topics, is consistent with prior research documenting the feminization of invisible coordination labour in research data infrastructure <span class="citation" data-cites="choroszewicz2022">[@choroszewicz2022]</span>.</p>
 <div id="fig-gender" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-gender-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="visuals/fig6_gender.png" class="img-fluid figure-img" style="width:70.0%">
+<img src="visuals/fig_gender.png" class="img-fluid figure-img" style="width:70.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gender-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Topic assignments by gender category.
+Figure&nbsp;6: Topic assignments by gender category.
 </figcaption>
 </figure>
 </div>
-<p><mark>We should probably identify the number of men and women in the whole dataset, and the general split among studies as well. I also wonder about double-counting: are certain people involved in various activities? Is it common for men or women to touch many aspects of work? Among those who do touch multiple aspects of work, what are the things tend to co-touch? This can then explicitly hint at future work that explores relational aspects of the dataset.</mark></p>
 
 
 </section>
