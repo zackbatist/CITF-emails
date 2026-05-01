@@ -1,58 +1,60 @@
 ---
 title: Research Protocol
 subtitle: CITF Emails Analysis
-description: A planning document outlining the project's scope, methods and projected outcomes.
-date-modified: 2025-08-11
-date-format: long
+description: An overview outlining the project's scope, methods and projected outcomes.
+number-sections: false
 ---
 
-::: {.callout-note}
-Note that the project has significantly evolved since drafting this protocol, and this document does not reflect our current scope of work. It still has value as a marker of our original intent.
-:::
+# Project Objectives
 
-# Overview and Scope
+The primary goal of this research is to analyze the administrative and technical labor involved in health data sharing, using three distinct academic papers as vehicles for dissemination:
 
+### 1. Identify Latent Thematic Structures
+To distinguish the primary concerns and functional tasks of data-sharing stakeholders through topic modeling. This will be presented in **Paper 1: Topic Modeling and Thematic Structures**.
 
-## Predictions and Expectations
+### 2. Map Professional Communication and Labor Distribution
+To determine how professional roles and genders facilitate network cohesion and evaluate the distribution of coordination labor. This will be presented in **Paper 2: Network Analysis and Labor Distribution**.
 
+### 3. Evaluate the Impact of Data Complexity
+To examine the relationship between technical data complexity (such as variable counts and subdomains) and the efficiency of the sharing and integration process. This will be presented in **Paper 3: Data Complexity and Integration**.
+
+# Research Questions and Predictions
+
+* **Administrative-to-Technical Ratio**: This study will investigate the hypothesis that the administrative burden—specifically legal negotiations and governance—occupies a significantly larger portion of the data-sharing lifecycle than technical tasks.
+* **Hidden Labor Hypothesis**: The analysis will test whether coordination and documentation tasks are disproportionately performed by women, while technical and publication-related tasks show higher male participation.
+* **Governance Persistence**: The research will evaluate whether concerns regarding data governance and legal compliance remain constant throughout the lifecycle, rather than being concentrated at project initiation.
 
 # Materials and Methods
 
+* **Primary Data**: The analytical sample comprises correspondence associated with 100 participating studies within the CITF Databank.
+* **Stakeholder Mapping**: Senders and recipients will be categorized into distinct groups, including the Databank Secretariat, Study Staff, Investigators, External Partners, and Harmonization Groups.
+* **Data Preparation**: 
+    * Rule-based cleaning will strip non-substantive content such as disclaimers and signatures.
+    * Bilingual messages will be processed for English-language analysis, utilizing machine translation for French-language components.
+    * Automated de-identification tools will be employed to anonymize personal and institutional identifiers.
 
-## The corpus of works
+# Analysis Plan
 
+## 1. Topic Modeling
+* **Modeling Approach**: Non-negative Matrix Factorization (NMF) will be applied to identify latent thematic structures within the communication logs.
+* **Thematic Grouping**: Identified topics will be grouped into functional themes: Coordination, Documentation, Data Operations, and Legal Agreements.
+* **Workflow Mapping**: Correspondence will be mapped across the project lifecycle, from initial funding through to data publication.
 
-# Analysis
+## 2. Network Analysis
+* **Two-Mode Network Construction**: A bipartite network will be created connecting individuals to emails. 
+    * **Properties**: Nodes will be assigned roles, gender, and institutional affiliation; emails will be tagged with absolute dates, project phases, and topics.
+    * **Edge Directionality**: Edges will represent directional communication from "sender" to "to" recipients and "cc" recipients. Noise will be reduced by removing specific Secretariat-bound "cc" edges that distort the graph shape.
+* **One-Mode Projections**:
+    * **Person-to-Person**: Nodes represent individuals; edges represent communication. Analysis will calculate node-betweenness centrality using the Girvan-Newman method to determine which roles or genders are crucial for network cohesion.
+    * **Email-to-Email**: Nodes represent emails; edges represent the co-occurrence of participating individuals. This will identify how frequently specific topics connect and which roles or genders facilitate those connections.
+* **Community Detection**: Edge betweenness will be used to detect community structures and insular clusters to determine active versus observer roles based on edge counts.
 
+## 3. Data Complexity and Integration
+* **Complexity Metrics**: Statistical analysis will be used to determine the relationship between data complexity (e.g., variable counts) and the duration of the sharing pipeline.
+* **Correlation Analysis**: Pearson and Spearman coefficients will be calculated to relate complexity variables to specific pipeline bottlenecks and integration durations.
 
-# Methodological notes and ideas
+# Methodological Approach
 
-
-# Outcomes
-
-
-# Logistics
-## Workflows
-The is a [quarto](https://quarto.org/)-based project situated in a git repository ([CITF-emails](https://github.com/zackbatist/CITF-emails)).
-Zack is the repository's primary maintainer, but Isak has been granted full administrative access, including the ability to make commits directly to the repository without submitting a pull request.
-Zack and Isak will clearly communicate about what they are working on so as to avoid generating conflicting commit histories which would produce a messy merge scenario.
-
-For less technical users, it would be best to annotate automatically-generated PDFs or to work with an un-tracked copy of the markdown files, whose diffs can then be identified and applied by someone who is more familiar with using git.
-
-Here are a few procedural notes and workflows:
-
-- All writing is done in the file pertaining to the specific section, which are included in their corresponding manuscript file (e.g., `topic-modelling.qmd`), which is also where the paper's main parameters are specified.
-- References are cited using `@` followed by the citekey, which follows a strict pattern of the first author's surname followed by the year of publication, all lowercase and without spaces, e.g. `@batist2024`.
-- References are stored in `assets/emails-analysis.bib` which is an automatically-updated export of Zack's Zotero library. If you want to include a reference that is not yet in the library, refer to the DOI and Zack will add it in his revisions.
-- Although we are keeping this as a private repository for now, all of this can be made into a public website. To preview the site locally, use `quarto preview` and navigate to `localhost:7777` in your browser.
-
-Here is an overview of the directory structure:
-
-[TBD]{.mark}
-
-## Timeline
-[TBD]{.mark}
-
-# References
-::: {#refs}
-:::
+* **Privacy and Security**: All computational analysis involving Large Language Models (LLMs) for labeling will be conducted using locally deployed, open-source models to ensure data confidentiality.
+* **Gender and Role Stratification**: The study will employ gender-coding tools and manual verification to analyze the distribution of labor across different professional roles.
+* **Policy Impact**: Findings will provide empirical evidence for research data management policies regarding the constraints faced by institutional contracts offices and coordination teams.
