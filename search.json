@@ -1,389 +1,285 @@
 [
   {
-    "objectID": "network-analysis/index.html#acknowledgments",
-    "href": "network-analysis/index.html#acknowledgments",
-    "title": "Network Analysis",
-    "section": "8.1 Acknowledgments",
-    "text": "8.1 Acknowledgments",
-    "crumbs": [
-      "Network Analysis"
-    ]
-  },
-  {
-    "objectID": "network-analysis/index.html#funding",
-    "href": "network-analysis/index.html#funding",
-    "title": "Network Analysis",
-    "section": "8.2 Funding",
-    "text": "8.2 Funding",
-    "crumbs": [
-      "Network Analysis"
-    ]
-  },
-  {
-    "objectID": "network-analysis/index.html#competing-interests",
-    "href": "network-analysis/index.html#competing-interests",
-    "title": "Network Analysis",
-    "section": "8.3 Competing Interests",
-    "text": "8.3 Competing Interests",
-    "crumbs": [
-      "Network Analysis"
-    ]
-  },
-  {
-    "objectID": "network-analysis/index.html#author-contributions",
-    "href": "network-analysis/index.html#author-contributions",
-    "title": "Network Analysis",
-    "section": "8.4 Author Contributions",
-    "text": "8.4 Author Contributions",
-    "crumbs": [
-      "Network Analysis"
-    ]
-  },
-  {
-    "objectID": "network-analysis/index.html#informed-consent",
-    "href": "network-analysis/index.html#informed-consent",
-    "title": "Network Analysis",
-    "section": "8.5 Informed Consent",
-    "text": "8.5 Informed Consent",
-    "crumbs": [
-      "Network Analysis"
-    ]
-  },
-  {
-    "objectID": "network-analysis/index.html#data-availability-statement",
-    "href": "network-analysis/index.html#data-availability-statement",
-    "title": "Network Analysis",
-    "section": "8.6 Data Availability Statement",
-    "text": "8.6 Data Availability Statement",
-    "crumbs": [
-      "Network Analysis"
-    ]
-  },
-  {
-    "objectID": "network-analysis/index.html#author-bios",
-    "href": "network-analysis/index.html#author-bios",
-    "title": "Network Analysis",
-    "section": "8.7 Author Bios",
-    "text": "8.7 Author Bios",
-    "crumbs": [
-      "Network Analysis"
-    ]
-  },
-  {
-    "objectID": "network-analysis/sections/04_findings.html",
-    "href": "network-analysis/sections/04_findings.html",
-    "title": "1 Findings",
+    "objectID": "research-protocol/index.html",
+    "href": "research-protocol/index.html",
+    "title": "Research Protocol",
     "section": "",
-    "text": "1 Findings"
+    "text": "This document outlines the overall vision, methodological approach, and analytical strategy for the project Mapping the Administrative Processes of Research Data Sharing: Analysis of Operational Email Correspondence from the Canadian COVID-19 Immunity Task Force Databank. It is intended as a living reference that evolves alongside the project, articulating decisions at the level of design and strategy rather than documenting granular operational steps, which are covered in dedicated sub-protocols.",
+    "crumbs": [
+      "Research Protocol"
+    ]
   },
   {
-    "objectID": "network-analysis/sections/00_abstract.html",
-    "href": "network-analysis/sections/00_abstract.html",
-    "title": "1 Abstract",
-    "section": "",
-    "text": "1 Abstract"
+    "objectID": "research-protocol/index.html#motivation-and-problem-statement",
+    "href": "research-protocol/index.html#motivation-and-problem-statement",
+    "title": "Research Protocol",
+    "section": "1 Motivation and Problem Statement",
+    "text": "1 Motivation and Problem Statement\nHealth data sharing is widely understood as a technical challenge — one of interoperability, access infrastructure, and standardization. But for those who actually coordinate it, the experience is primarily organizational: negotiating agreements across institutions, aligning diverse stakeholders with incompatible timelines, and sustaining collaborative relationships under conditions of uncertainty and urgency. These organizational dimensions have remained largely invisible in research on health data infrastructure, crowded out by a strong emphasis on technical solutions.\nThis project takes the organizational dimensions of health data sharing seriously as objects of empirical investigation. It does so by analyzing the administrative correspondence generated during the creation and operation of the COVID-19 Immunity Task Force (CITF) Databank — a pan-Canadian initiative that assembled health records from over 100 COVID-19 studies across the country. The Databank’s email archive is a dense record of the coordination work that made data sharing happen: who communicated with whom, about what, and when.\nThe project builds on a pilot study that demonstrated the analytical viability of this approach. Using topic modeling applied to approximately 7,000 emails from the central operations manager’s mailbox, the pilot identified 14 coherent topics organized into four thematic clusters and surfaced a set of findings about the structure and timing of coordination work, now reported in the topic modelling paper. The proposed project expands on this foundation by enlarging the corpus, extending the analysis to include network-level communication patterns and data complexity effects, and complementing the quantitative findings with qualitative interviews.",
+    "crumbs": [
+      "Research Protocol"
+    ]
   },
   {
-    "objectID": "network-analysis/sections/01_introduction.html",
-    "href": "network-analysis/sections/01_introduction.html",
-    "title": "1 Introduction",
-    "section": "",
-    "text": "1 Introduction"
+    "objectID": "research-protocol/index.html#research-objectives",
+    "href": "research-protocol/index.html#research-objectives",
+    "title": "Research Protocol",
+    "section": "2 Research Objectives",
+    "text": "2 Research Objectives\nThe project pursues two interrelated objectives:\nObjective 1: Characterize the coordination processes among the CITF Databank’s partners, core Databank personnel, and other related stakeholders. This extends the pilot study’s descriptive account of what people communicated about and when, adding analysis of the communication structures through which coordination was enacted — who interacted with whom, how frequently, and in what thematic contexts.\nObjective 2: Identify human and organizational determinants of observed coordination behaviours. This shifts the analytical register from description to explanation. Semi-structured interviews with CITF Databank partners will provide participants’ own accounts of why certain processes were more effortful, how prior experiences shaped their engagement, and what organizational factors facilitated or impeded data sharing.\nTogether, these objectives follow an explanatory sequential mixed-methods logic: the quantitative analysis identifies patterns and raises questions; the qualitative component pursues explanations by drawing on participants’ situated knowledge.",
+    "crumbs": [
+      "Research Protocol"
+    ]
   },
   {
-    "objectID": "network-analysis/sections/02_background.html",
-    "href": "network-analysis/sections/02_background.html",
-    "title": "1 Background",
-    "section": "",
-    "text": "1 Background"
+    "objectID": "research-protocol/index.html#case-description",
+    "href": "research-protocol/index.html#case-description",
+    "title": "Research Protocol",
+    "section": "3 Case Description",
+    "text": "3 Case Description\nThe CITF Databank serves as the empirical case for this study. Established in April 2020, the CITF was mandated to catalyze, fund, and harmonize knowledge about SARS-CoV-2 immunity to support federal, provincial, and territorial decision-making. The Databank centralized research data from CITF-funded studies, ultimately assembling a harmonized dataset drawing on over 165,000 individual participant health records from studies conducted across Canada.\nThe Databank’s pan-Canadian scope — involving data sharing across multiple universities, research institutes, hospitals, and governmental agencies, under pandemic conditions — makes it an unusually rich setting for examining how large-scale health data sharing governance is coordinated in practice. It is neither a routine data request nor a purpose-built federated infrastructure, but something in between: a concentrated administrative effort to retrofit collaborative data sharing onto an ecosystem of independently conducted studies with heterogeneous governance arrangements.\nThe Databank was led by a core team within the CITF Secretariat, supported by dedicated personnel at McGill University’s Office of Sponsored Research and by external experts in data governance and harmonization. This organizational structure — a central operational core interacting with distributed study teams and external institutional partners — is reflected directly in the email corpus and is a primary object of analysis.",
+    "crumbs": [
+      "Research Protocol"
+    ]
   },
   {
-    "objectID": "network-analysis/sections/05_discussion.html",
-    "href": "network-analysis/sections/05_discussion.html",
-    "title": "1 Discussion",
-    "section": "",
-    "text": "1 Discussion"
+    "objectID": "research-protocol/index.html#data-sources",
+    "href": "research-protocol/index.html#data-sources",
+    "title": "Research Protocol",
+    "section": "4 Data Sources",
+    "text": "4 Data Sources\n\n4.1 Email Corpus\nThe primary data source is the email archive of the CITF Databank. The pilot study analyzed 6,833 emails from the inbox of the Databank’s central operations manager, covering correspondence with 100 partner studies from February 2021 to September 2025 (Figure 1).\n\n\n\n\n\n\nFigure 1: Email volume (monthly counts) and number of unique studies active per month, spanning the full duration of the pilot corpus.\n\n\n\nThe proposed project expands this corpus in two directions. First, the remaining ~22,500 emails from the same operations manager’s mailbox — linked to broader CITF operational communications not yet associated with specific studies — will be integrated, approximately doubling the analytical corpus while maintaining the operational perspective established in the pilot. Second, emails from the CITF Databank’s Scientific Director and data analysts will be incorporated. The Scientific Director’s mailbox alone comprises approximately 19,000 emails, adding a senior governance perspective that complements the ground-level operational view and enables triangulation across different organizational roles. The expansion proceeds iteratively: the data processing and analysis pipeline validated through the pilot is applied to each new mailbox in sequence, with the corpus growing in a controlled and documented fashion.\n\n\n4.2 Interviews\nThe secondary data source is a set of semi-structured interviews with individuals who participated in the CITF Databank initiative, primarily on the partner-study side. Participants will be identified through a call for participation addressed to representatives of the 100 partner studies, with targeted follow-up directed toward individuals and studies of particular analytical interest — especially those flagged by the fast/slow study comparison and network centrality analysis.\nThe sample will be composed primarily of principal investigators, data managers, and leading research associates who were actively involved in communications with the Databank. We expect to conduct approximately 10–20 interviews, with selection guided by theoretical considerations — representation of fast and slow studies, diverse institutional arrangements, different phases of the data sharing lifecycle — rather than random sampling.",
+    "crumbs": [
+      "Research Protocol"
+    ]
   },
   {
-    "objectID": "data-complexity/sections/03_methods-materials.html",
-    "href": "data-complexity/sections/03_methods-materials.html",
+    "objectID": "research-protocol/index.html#methodological-design",
+    "href": "research-protocol/index.html#methodological-design",
+    "title": "Research Protocol",
+    "section": "5 Methodological Design",
+    "text": "5 Methodological Design\n\n5.1 Work Package 1: Email Corpus Analysis\n\n5.1.1 Preprocessing\nRaw emails are preprocessed to isolate substantive content. Rule-based cleaning removes confidentiality disclaimers, meeting-invite boilerplate, forwarded-message headers, institutional signatures, automated system notifications, and near-empty or excessively long messages. Bilingual messages are processed to retain English content where identifiable; remaining French text is translated using OPUS-MT. All messages are de-identified using the Presidio framework, anonymizing personal names, email addresses, and URLs. Duplicate messages within studies are removed using normalized text hashing, and emails are linked to partner studies wherever possible to enable study-level analysis.\n\n\n5.1.2 Topic Modeling\nNon-negative Matrix Factorization (NMF) was selected as the topic modeling approach through systematic evaluation against K-Means clustering, Latent Dirichlet Allocation (LDA), and BERTopic. With domain-specific stopword curation and part-of-speech filtering, NMF outperformed all alternatives across coherence metrics (Figure 2), and k = 14 was selected as the optimal balance between coherence (c_v = 0.768, NPMI = 0.170), granularity (lowest maximum cluster size at 10.7%), and topic diversity (0.914). A 15% probability threshold is applied for multi-topic assignment (Figure 3), validated through research team review of representative emails.\n\n\n\n\n\n\nFigure 2: NMF topic model performance across k = 5 to 20, showing semantic coherence (c_v), Normalized PMI (NPMI), and topic balance (share of largest topic). The selected value of k = 14 is indicated by the dashed vertical line.\n\n\n\n\n\n\n\n\n\nFigure 3: Distribution of normalized topic probability weights by rank (dominant, secondary, tertiary) for NMF with k = 14. Dashed lines indicate the 10%, 15%, and 20% assignment thresholds under consideration.\n\n\n\nTopic labels, descriptions, and thematic groupings were generated using Meta-Llama-3.1-8B-Instruct — selected from four locally evaluated open-source models — and refined by the research team. The 14 resulting topics and their thematic groupings are shown in Table 1, and their overall distribution across the corpus in Figure 4. The full methodological rationale for these decisions, including evaluation results for competing approaches and threshold sensitivity analysis, is documented in the topic modelling paper.\n\n\n\nTable 1: The 14 NMF topics, their thematic categories, top 5 keywords, and per-topic coherence scores (c_v).\n\n\n\n\n\n\n\n\n\n\n\nTopic Label\nTheme\nTop 5 Keywords\nc_v\n\n\n\n\nExecutive Correspondence\nCoordination\ncorrespondence, executive, director, contact, proposal\n0.497\n\n\nMeeting Scheduling & Invitations\nCoordination\nmeet, invite, zoom, availability, schedule\n0.473\n\n\nData Sharing Agreements & Consent\nAgreements & Contracts\nagreement, sharing, consent, contract, framework\n0.804\n\n\nDSA Status & Amendments\nAgreements & Contracts\ndsa, extension, amendment, contract, status\n0.543\n\n\nDocument Appendices & Revisions\nAgreements & Contracts\nappendix, version, pdf, framework, accept\n0.861\n\n\nDocument Review & Comments\nAgreements & Contracts\ncomment, draft, approval, description, correction\n0.836\n\n\nDocument Signatures & Execution\nAgreements & Contracts\nsignature, sign, copy, execute, version\n0.759\n\n\nStudy Description & Catalogue Publication\nStudy Documentation\ndescription, participant, catalogue, publish, logo\n0.930\n\n\nData Dictionary & Metadata\nStudy Documentation\nvariable, dictionary, questionnaire, scale, code\n0.878\n\n\nCatalogue Completion Reminders\nStudy Documentation\nmaelstrom, catalogue, support, complete, collaboration\n0.805\n\n\nData Upload Instructions & Credentials\nData Operations\nupload, pydio, form, instruction, refresh\n0.956\n\n\nData Transfer Initiation\nData Operations\ntransfer, preparation, willingness, commence, process\n0.712\n\n\nVariable Mapping & Schema Alignment\nData Operations\nvariable, list, sheet, map, schema\n0.889\n\n\nSerology & Data Harmonization\nData Operations\nserology, harmonization, effort, survey, assay\n0.805\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Distribution of multi-topic email assignments across the 14 NMF topics, grouped by thematic category (N = 6,833 emails; 15% threshold).\n\n\n\n\n\n5.1.3 Analytical Dimensions\nThe pilot corpus analysis is reported in the topic modelling paper, which covers: topic co-occurrence structure; the distribution of topics across the six phases of the data sharing lifecycle; the distribution of topics and email-to-sender ratios across five sender role categories; and an exploratory gender analysis of coordination labour. Key findings include a structural separation between governance and data operations workstreams, a striking 18:1 ratio of administrative to technical time (median 395 days in DSA negotiation versus 22 days for technical cataloguing), and consistent gendered patterns in topic and phase distributions.\nThe proposed expansion of the corpus to additional mailboxes will extend these analyses across a broader and more organizationally diverse set of perspectives. The goal is to move from the single-mailbox operational view of the pilot toward a fuller picture of how coordination work was distributed across the CITF Databank as a whole.\n\n\n5.1.4 Network Analysis\nNetwork analysis extends the topic-level findings by examining the communication structures through which coordination was enacted. The network is constructed as a two-mode heterogeneous graph in which nodes represent individuals and emails, and edges represent communication relationships, with directional edges from sender to “to” recipient and from sender to “cc” recipient. High-volume cc routing that represents systemic notification rather than targeted communication is excluded to avoid distorting the overall structure. The overall graph structure and its two one-mode projections are illustrated in Figure 5.\n\n\n\n\n\n\nFigure 5: Schematic of the two-mode communication network and its person-projection and email co-participation projection.\n\n\n\nTwo one-mode projections are derived for separate analyses.\nIn the person-projection, nodes represent individuals and edges represent email communication weighted by frequency, with topic labels inherited from the emails exchanged. This projection supports several lines of inquiry:\n\nRole × role communication patterns. How frequently do individuals in different roles communicate with one another, and what topics tend to define those connections?\nBetweenness centrality. Node betweenness centrality (Girvan-Newman method) identifies individuals who are structurally essential to holding the network together. Associations between betweenness scores and sender role and gender test whether certain categories are disproportionately positioned as structural brokers. For the highest-ranked nodes, we further characterize what types of actors they connect and what topics tend to carry those bridging relationships — expected to reveal sharp phase-transition dynamics, for instance where data managers bridge study teams and the Harmonization Group.\nCommunity detection. Edge betweenness community detection identifies insular clusters. We expect the Harmonization Group (Maelstrom) and individual study teams to form distinct clusters, with consortia of particular interest. For each community, the number of cross-cluster edges by role and gender will be examined, distinguishing actors who engage primarily within their local cluster from those who sustain broader cross-institutional coordination.\n\nIn the email co-participation projection, nodes represent emails and edges connect emails that share participating individuals, with edges inheriting role and gender attributes from their senders. This supports analysis of which topics are connected through shared participants and which roles and gender categories tend to assert those inter-topic connections — complementing the topic co-occurrence analysis by revealing the human infrastructure underlying observed content clusters.\n\n\n5.1.5 Comparative Fast/Slow Study Analysis\nA targeted comparison of studies at the extremes of the Intro→DSA timeline distribution (pilot: median 395 days, range 7–1,526) examines their email records for distinguishing organizational patterns. This is supplemented by LLM-assisted qualitative comparison of representative email samples and will inform the selection of interview participants, prioritizing studies that illustrate theoretically interesting configurations of speed, institutional complexity, and engagement.\n\n\n\n5.2 Work Package 2: Qualitative Interview Analysis\n\n5.2.1 Interview Design\nInterviews are semi-structured and organized around three sequential domains:\n\nParticipants’ professional backgrounds and experiences. Drawing on life-history methods to understand how participants’ outlooks emerged from their professional trajectories, without seeking biographical detail per se.\nStudies’ missions, purposes, and motivations. Investigating the unique characteristics, goals, and data practices of participants’ studies to understand how these shaped their approach to the Databank’s requirements.\nPractices, procedures, and relationships. Addressing specific actions and interactions in the data sharing process, with attention to expectations, deviations from norms, and moments of friction or facilitation. Topics are calibrated to participants’ roles and may include data governance, documentation practices, and experiences with specific Databank processes.\n\nInterview guides are developed after initial quantitative findings are available, so that findings from the topic modeling, network analysis, and fast/slow study comparison can directly inform the inquiry.\n\n\n5.2.2 Coding and Analysis\nTranscripts are analyzed using thematic coding. An initial code system is developed from the conceptual framework generated by the email analysis, and iterated as coding proceeds. Analytical memos track cross-cutting themes and contextually rich insights that extend beyond what the code system can represent. Meta-Llama-3.1-8B-Instruct assists with organizing coded passages and surfacing incipient patterns across interviews, with all interpretive decisions validated by the research team.",
+    "crumbs": [
+      "Research Protocol"
+    ]
+  },
+  {
+    "objectID": "research-protocol/index.html#planned-outputs",
+    "href": "research-protocol/index.html#planned-outputs",
+    "title": "Research Protocol",
+    "section": "6 Planned Outputs",
+    "text": "6 Planned Outputs\nThe project is organized around four planned manuscripts.\nPaper 1 — Topic modeling and administrative labour presents the core topic modeling results and is the primary output of the pilot study. It characterizes the topical landscape of CITF Databank email correspondence, the distribution of topics across the data sharing lifecycle and sender roles, and the gendered patterns of coordination labour. This paper is complete and available at topic-modelling/.\nPaper 2 — Network analysis and coordination structure extends the topic-level findings to examine the communication structures through which coordination was enacted. Where Paper 1 asks what was communicated and who was doing it, Paper 2 asks how actors were structurally positioned relative to one another: which individuals served as brokers between governance and technical domains, how community structure in the communication network mapped onto institutional boundaries, and whether structural position aligned with the role and gender patterns identified in Paper 1. The analysis draws on betweenness centrality, community detection, and both one-mode projections of the communication network. This paper targets audiences in organizational sociology, health systems management, and computational social science, and is developed in network-analysis/.\nPaper 3 — Data complexity and timeline determinants focuses on variation in data sharing timelines across studies. It takes the Intro→DSA phase as its primary object of analysis — the longest and most variable in the pipeline — and examines whether and how the thematic breadth of shared data, operationalized via subdomain, domain, and harmonized variable counts from Maelstrom catalogue records, predicts phase duration. The pilot found that subdomain breadth positively correlated with DSA negotiation duration (r = 0.41, p = 0.027; r_s = 0.43, p = 0.019), while total variable count was not robustly associated with any phase duration — indicating breadth rather than sheer volume as the more meaningful predictor. Paper 3 extends this analysis with time-to-event modeling to account for censoring (studies that had not yet reached a given milestone), Sankey-style visualization of study trajectories through the pipeline, and association with data documentation completeness at the point of upload. The LLM-assisted fast/slow study comparison provides a qualitative complement that helps explain the mechanisms underlying the quantitative correlations. This paper is of direct relevance to policymakers who need to understand not just that some processes take longer, but why, in order to design governance structures that address the actual sources of delay and friction. It is developed in data-complexity/.\nPaper 4 — Organizational and experiential determinants of data sharing: a qualitative interview study presents the findings of Work Package 2. This paper uses the quantitative findings as its conceptual scaffold — the topic model’s vocabulary of administrative work types, the network analysis’s identification of structural brokers, and the fast/slow study comparison’s organizational factors — to structure and situate participants’ own accounts of the data sharing process.\nThe paper’s central analytical concern is explaining variation: why did some studies move quickly and others slowly, why did certain governance issues persist so much longer than expected, and how did participants’ prior experiences and institutional contexts shape their engagement? Interviews will address these questions at the level of individual situated experience, drawing out factors that are not visible in the email record: the motivations behind decisions to prioritize or deprioritize data sharing, the informal relationships that facilitated or blocked progress, the institutional pressures (pandemic workloads, funding constraints, staff turnover) that shaped what was possible, and the participants’ own assessments of whether the governance apparatus served their needs.\nThematic coding is anchored to the conceptual framework developed through the email analysis but evolves iteratively as interviews surface new patterns. Analysis will attend specifically to the perspectives of partner study representatives — a viewpoint that the email corpus, limited to the Databank’s own operational mailboxes, can only partially capture. The aim is to re-situate data sharing as a governance and organizational challenge experienced from multiple positions, not only from the perspective of the coordinating centre. Taken together with the quantitative findings, this paper will contribute the most actionable evidence in the project: grounded recommendations for how future data sharing initiatives should be designed, resourced, and governed, drawn from the accounts of people who participated in building one.",
+    "crumbs": [
+      "Research Protocol"
+    ]
+  },
+  {
+    "objectID": "research-protocol/index.html#methodological-commitments",
+    "href": "research-protocol/index.html#methodological-commitments",
+    "title": "Research Protocol",
+    "section": "7 Methodological Commitments",
+    "text": "7 Methodological Commitments\nSeveral commitments cut across both work packages.\nLocal computation. All LLM-assisted analysis uses locally deployed open-source models (Meta-Llama-3.1-8B-Instruct), ensuring that no email content or interview material leaves the secure computing infrastructure maintained by the McGill Clinical and Health Informatics group. This is both an ethical requirement and a reproducibility commitment.\nTransparency of analytical decisions. Methodological choices — the selection of NMF over competing approaches, k = 14, the 15% multi-topic threshold, model selection — are all documented with the evaluation evidence that motivated them. Computational methods are treated as tools requiring interpretive oversight.\nLiterate programming. Analysis code and narrative interpretation are developed together in a single document environment, ensuring that analytical steps are legible alongside their outputs and that the analysis is reproducible as the corpus expands.\nSequential integration of methods. The qualitative interview component is explicitly designed to follow from the quantitative email analysis. Interview guides are developed after initial findings are available, making the two work packages intellectually as well as temporally ordered.\nOpen research practices. All data collection is thoroughly documented. De-identified analytical outputs and code will be made freely available following FAIR principles, within the constraints of the research ethics protocol. Articles will be published open access.",
+    "crumbs": [
+      "Research Protocol"
+    ]
+  },
+  {
+    "objectID": "research-protocol/index.html#relationship-to-broader-contexts",
+    "href": "research-protocol/index.html#relationship-to-broader-contexts",
+    "title": "Research Protocol",
+    "section": "8 Relationship to Broader Contexts",
+    "text": "8 Relationship to Broader Contexts\nThis project sits at the intersection of several research conversations that each illuminate a different dimension of what is at stake.\nIn health informatics and health systems research, it contributes empirical evidence about the operational reality of data sharing to a field that has relied heavily on surveys and stakeholder perspectives (Panhuis et al. 2014; Shabani and Borry 2016; Shabani, Thorogood, and Borry 2016). The administrative correspondence of a large-scale pandemic-era initiative is an unusually direct record of how governance and coordination challenges actually unfold, rather than how they are anticipated or recalled. The approach could be adapted to examine organizational challenges in other domains of health systems management — interjurisdictional care delivery, health workforce coordination, or the governance of emerging digital health platforms.\nIn science and technology studies, the project connects to longstanding interest in the invisible work that sustains scientific infrastructure (Choroszewicz 2022; Choroszewicz and Alastalo 2023). Data management, records keeping, agreement negotiation, and cross-institutional coordination are the connective tissue of collaborative research, yet they remain largely unrecognized in how scientific labour is credited and resourced. The gender analysis dimension makes this critique concrete: the pilot findings suggest that the most effortful and least visible phases of data sharing are disproportionately managed by women, a pattern consistent with broader scholarship on the feminization of coordination work in research settings.\nIn health data governance and policy, the project offers a ground-level empirical perspective to inform decisions that are often made without evidence about what large-scale data sharing actually requires in practice. This is particularly consequential in the Canadian context, where the Tri-Agency Research Data Management Policy is expanding data sharing obligations for funded researchers without a commensurate expansion of the administrative capacity needed to meet them. The finding that studies spent a median of 395 days negotiating data sharing agreements — compared to 22 days for technical cataloguing — directly challenges the assumption that governance is a preliminary hurdle to be cleared before the real work begins.",
+    "crumbs": [
+      "Research Protocol"
+    ]
+  },
+  {
+    "objectID": "research-protocol/index.html#analytical-scope-and-limitations",
+    "href": "research-protocol/index.html#analytical-scope-and-limitations",
+    "title": "Research Protocol",
+    "section": "9 Analytical Scope and Limitations",
+    "text": "9 Analytical Scope and Limitations\nThe email corpus captures communication that passed through the mailboxes of a small number of central CITF Databank personnel. It does not capture internal communications within partner studies, communications routed through informal channels, or the full range of interactions that shaped data sharing outcomes. Corpus expansion to include the Scientific Director’s mailbox and data analysts partially addresses this, but the corpus will remain a partial record.\nGender is inferred probabilistically from sender first names, capturing only a binary distinction and subject to error, particularly for ambiguous or non-Western names. Gender analysis is therefore treated as exploratory throughout.\nThe fast/slow study comparison is based on a subset of studies with complete and sequentially consistent milestone date information; seven studies were excluded from phase analysis due to non-sequential milestone dates.\nQualitative interviews are subject to limitations inherent in retrospective accounts: participants’ reconstructions of past experiences are shaped by subsequent developments and current perspectives. These limitations are partially addressed by grounding interview questions in specific documents and timelines surfaced by the email analysis.",
+    "crumbs": [
+      "Research Protocol"
+    ]
+  },
+  {
+    "objectID": "network-analysis/sections/03_methods-materials.html",
+    "href": "network-analysis/sections/03_methods-materials.html",
     "title": "1 Methods and Data",
     "section": "",
     "text": "1 Methods and Data"
   },
   {
-    "objectID": "data-complexity/sections/10_references.html",
-    "href": "data-complexity/sections/10_references.html",
+    "objectID": "network-analysis/sections/10_references.html",
+    "href": "network-analysis/sections/10_references.html",
     "title": "1 References",
     "section": "",
     "text": "1 References"
   },
   {
-    "objectID": "data-complexity/sections/11_back-matter.html#acknowledgments",
-    "href": "data-complexity/sections/11_back-matter.html#acknowledgments",
+    "objectID": "network-analysis/sections/11_back-matter.html#acknowledgments",
+    "href": "network-analysis/sections/11_back-matter.html#acknowledgments",
     "title": "1 Back Matter",
     "section": "1.1 Acknowledgments",
     "text": "1.1 Acknowledgments"
   },
   {
-    "objectID": "data-complexity/sections/11_back-matter.html#funding",
-    "href": "data-complexity/sections/11_back-matter.html#funding",
+    "objectID": "network-analysis/sections/11_back-matter.html#funding",
+    "href": "network-analysis/sections/11_back-matter.html#funding",
     "title": "1 Back Matter",
     "section": "1.2 Funding",
     "text": "1.2 Funding"
   },
   {
-    "objectID": "data-complexity/sections/11_back-matter.html#competing-interests",
-    "href": "data-complexity/sections/11_back-matter.html#competing-interests",
+    "objectID": "network-analysis/sections/11_back-matter.html#competing-interests",
+    "href": "network-analysis/sections/11_back-matter.html#competing-interests",
     "title": "1 Back Matter",
     "section": "1.3 Competing Interests",
     "text": "1.3 Competing Interests"
   },
   {
-    "objectID": "data-complexity/sections/11_back-matter.html#author-contributions",
-    "href": "data-complexity/sections/11_back-matter.html#author-contributions",
+    "objectID": "network-analysis/sections/11_back-matter.html#author-contributions",
+    "href": "network-analysis/sections/11_back-matter.html#author-contributions",
     "title": "1 Back Matter",
     "section": "1.4 Author Contributions",
     "text": "1.4 Author Contributions"
   },
   {
-    "objectID": "data-complexity/sections/11_back-matter.html#informed-consent",
-    "href": "data-complexity/sections/11_back-matter.html#informed-consent",
+    "objectID": "network-analysis/sections/11_back-matter.html#informed-consent",
+    "href": "network-analysis/sections/11_back-matter.html#informed-consent",
     "title": "1 Back Matter",
     "section": "1.5 Informed Consent",
     "text": "1.5 Informed Consent"
   },
   {
-    "objectID": "data-complexity/sections/11_back-matter.html#data-availability-statement",
-    "href": "data-complexity/sections/11_back-matter.html#data-availability-statement",
+    "objectID": "network-analysis/sections/11_back-matter.html#data-availability-statement",
+    "href": "network-analysis/sections/11_back-matter.html#data-availability-statement",
     "title": "1 Back Matter",
     "section": "1.6 Data Availability Statement",
     "text": "1.6 Data Availability Statement"
   },
   {
-    "objectID": "data-complexity/sections/11_back-matter.html#author-bios",
-    "href": "data-complexity/sections/11_back-matter.html#author-bios",
+    "objectID": "network-analysis/sections/11_back-matter.html#author-bios",
+    "href": "network-analysis/sections/11_back-matter.html#author-bios",
     "title": "1 Back Matter",
     "section": "1.7 Author Bios",
     "text": "1.7 Author Bios"
   },
   {
-    "objectID": "data-complexity/sections/12_supplement.html",
-    "href": "data-complexity/sections/12_supplement.html",
+    "objectID": "network-analysis/sections/12_supplement.html",
+    "href": "network-analysis/sections/12_supplement.html",
     "title": "1 Supplementary Materials",
     "section": "",
     "text": "1 Supplementary Materials"
   },
   {
-    "objectID": "data-complexity/sections/06_conclusion.html",
-    "href": "data-complexity/sections/06_conclusion.html",
+    "objectID": "network-analysis/sections/06_conclusion.html",
+    "href": "network-analysis/sections/06_conclusion.html",
     "title": "1 Conclusion",
     "section": "",
     "text": "1 Conclusion"
   },
   {
-    "objectID": "topic-modelling/sections/10_references.html",
-    "href": "topic-modelling/sections/10_references.html",
-    "title": "1 References",
-    "section": "",
-    "text": "1 References"
+    "objectID": "data-complexity/index.html#acknowledgments",
+    "href": "data-complexity/index.html#acknowledgments",
+    "title": "Data Complexity",
+    "section": "8.1 Acknowledgments",
+    "text": "8.1 Acknowledgments",
+    "crumbs": [
+      "Data Complexity"
+    ]
   },
   {
-    "objectID": "topic-modelling/sections/02_methods.html",
-    "href": "topic-modelling/sections/02_methods.html",
-    "title": "1 Methods",
-    "section": "",
-    "text": "This study analyzes email correspondence generated during the operations of the Canadian COVID-19 Immunity Task Force (CITF) Databank, a pan-Canadian initiative that integrated individual-level health records from partnering studies conducted across Canada between 2020 and 2025. The analytical corpus comprises emails from the inbox of a central CITF Databank operations manager responsible for coordinating data sharing with all partnering studies. Emails span the period from February 2021 to September 2025. Future work will expand the corpus to include additional team members’ inboxes, enabling a more comprehensive view of coordination across the initiative.\nEmails were preprocessed using a multi-step pipeline to remove non-substantive content and protect participant privacy. Rule-based cleaning steps removed confidentiality disclaimers, meeting-invite text, forwarded-message headers, and institutional email signatures. All messages were de-identified using Microsoft Presidio [@alrazihi2025; @kotevski2022], an open-source framework for automated detection and anonymization of personally identifiable information, with personal names, email addresses, and URLs replaced with anonymized placeholders. Duplicate messages were removed within studies using normalized text hashing. Documents were filtered to retain only emails with non-missing sent dates and appropriate length, excluding near-empty or excessively long messages. The CITF Databank operated bilingually; bilingual messages were processed to retain English content where identifiable, and remaining French text was translated into English using OPUS-MT neural machine translation. This pipeline yielded a final analytical sample of 6,833 emails involving 491 unique senders across 100 studies (see Figure 1).\n\n\n\n\n\n\nFigure 1: Data collection and analysis process\n\n\n\n\n\n\nWe evaluated four topic modeling approaches to identify the method best suited to this corpus: K-Means clustering, Latent Dirichlet Allocation (LDA), BERTopic, and Non-negative Matrix Factorization (NMF) [@murshed2023; @zubiaga2024]. Methods were compared at their peak coherence score (c_v) using standard English stopwords as a baseline. NMF outperformed all alternatives (c_v = 0.654), while K-Means produced an overly dominant cluster (50.8% of emails), LDA showed the lowest coherence (c_v = 0.517), and BERTopic assigned 32.3% of emails as outliers. Following additional domain-specific stopword curation and part-of-speech filtering, NMF performance improved across all values of k tested (k = 5 to 20). Although k = 5 achieved the highest coherence (c_v = 0.820), it produced only five broad topics with 35.6% of emails in the largest cluster. We selected k = 14 as the optimal balance between coherence (c_v = 0.768, NPMI = 0.170), granularity (lowest maximum cluster size at 10.7%), and topic diversity (0.914) [@rahimi2024].\nTo facilitate interpretation of the 14 NMF topics, we used a locally deployed open-source large language model to generate topic labels, thematic groupings, and topic descriptions [@wanna2024; @janssens2025; @tan2025]. Four open-source models were evaluated: Mistral-7B-Instruct-v0.3, Meta-Llama-3.1-8B-Instruct, Qwen2.5-7B-Instruct, and Gemma-2-9b-it, each receiving the top 5 keywords and 5 representative emails for all 14 topics simultaneously. Meta-Llama-3.1-8B-Instruct produced the most descriptive and semantically complete labels and was selected for subsequent steps. Using zero-shot prompts, the model was queried to: (1) generate 2–5 word topic labels from keywords and representative emails; (2) group labels into thematic categories; and (3) generate 2–3 sentence topic descriptions from keywords and up to 15 representative emails. Tasks were run across multiple temperature settings (0.0, 0.2, 0.4, 0.5, 0.7) and random seeds to ensure stability. All outputs were reviewed and refined by the research team to ensure face validity and alignment with domain knowledge. Local deployment ensured that no email data left secure servers at any stage of analysis.\nTo examine relationships between topics, we computed normalized pairwise co-occurrence scores across all 14 topics [@stevenson2023]. For each pair of topics, the co-occurrence score was calculated as the proportion of shared email assignments relative to the smaller of the two topics. Email-to-topic assignments were based on a 15% probability threshold applied to the normalized NMF weight matrix. This threshold was selected to capture substantive secondary topic assignments while filtering out most tertiary contributions, and was validated through research team review of representative emails. Under this scheme, 27.3% of emails were assigned to a single topic, 47.6% to two topics, and 25.1% to three or more topics (mean = 2.01 topics per email). Co-occurrence scores range from 0 (no co-occurrence) to 1 (complete overlap), with higher values indicating topics that are more likely to appear together within the same emails.\nTo examine how topics were distributed across the data sharing lifecycle, each email was mapped to one of six sequential phases: Funding Start, Data Introduction, Data Sharing Agreement (DSA) Execution, Data Upload, Data Cataloguing, and Data Publication. Phase assignments were based on milestone dates recorded for each study. Seven studies were excluded from phase analysis due to non-sequential milestone dates, leaving 6,167 emails from 93 studies. For sender analysis, each email sender was classified into one of five categories based on their institutional role: Databank Secretariat, Study Staff, Study Investigators, External Partners, and Harmonization Group. For both phase and sender analyses, topic assignments were based on the 15% probability threshold described above. Email-to-sender ratios were computed for each sender category to quantify the intensity of operational engagement across roles.\nTo examine the distribution of coordination labour by gender, sender first names were coded using a probabilistic approach combining the nomquamgender library [@vanbuskirk2023] with manual corrections for ambiguous and non-Western names, achieving coverage of 95.8% of emails (6,545 of 6,833). Gender was classified as women or men; non-binary and gender-diverse identities are not captured by this method, which represents a limitation of the approach."
+    "objectID": "data-complexity/index.html#funding",
+    "href": "data-complexity/index.html#funding",
+    "title": "Data Complexity",
+    "section": "8.2 Funding",
+    "text": "8.2 Funding",
+    "crumbs": [
+      "Data Complexity"
+    ]
   },
   {
-    "objectID": "topic-modelling/sections/02_methods.html#data-source-and-preprocessing",
-    "href": "topic-modelling/sections/02_methods.html#data-source-and-preprocessing",
-    "title": "1 Methods",
-    "section": "",
-    "text": "This study analyzes email correspondence generated during the operations of the Canadian COVID-19 Immunity Task Force (CITF) Databank, a pan-Canadian initiative that integrated individual-level health records from partnering studies conducted across Canada between 2020 and 2025. The analytical corpus comprises emails from the inbox of a central CITF Databank operations manager responsible for coordinating data sharing with all partnering studies. Emails span the period from February 2021 to September 2025. Future work will expand the corpus to include additional team members’ inboxes, enabling a more comprehensive view of coordination across the initiative.\nEmails were preprocessed using a multi-step pipeline to remove non-substantive content and protect participant privacy. Rule-based cleaning steps removed confidentiality disclaimers, meeting-invite text, forwarded-message headers, and institutional email signatures. All messages were de-identified using Microsoft Presidio [@alrazihi2025; @kotevski2022], an open-source framework for automated detection and anonymization of personally identifiable information, with personal names, email addresses, and URLs replaced with anonymized placeholders. Duplicate messages were removed within studies using normalized text hashing. Documents were filtered to retain only emails with non-missing sent dates and appropriate length, excluding near-empty or excessively long messages. The CITF Databank operated bilingually; bilingual messages were processed to retain English content where identifiable, and remaining French text was translated into English using OPUS-MT neural machine translation. This pipeline yielded a final analytical sample of 6,833 emails involving 491 unique senders across 100 studies (see Figure 1).\n\n\n\n\n\n\nFigure 1: Data collection and analysis process"
+    "objectID": "data-complexity/index.html#competing-interests",
+    "href": "data-complexity/index.html#competing-interests",
+    "title": "Data Complexity",
+    "section": "8.3 Competing Interests",
+    "text": "8.3 Competing Interests",
+    "crumbs": [
+      "Data Complexity"
+    ]
   },
   {
-    "objectID": "topic-modelling/sections/02_methods.html#data-analysis",
-    "href": "topic-modelling/sections/02_methods.html#data-analysis",
-    "title": "1 Methods",
-    "section": "",
-    "text": "We evaluated four topic modeling approaches to identify the method best suited to this corpus: K-Means clustering, Latent Dirichlet Allocation (LDA), BERTopic, and Non-negative Matrix Factorization (NMF) [@murshed2023; @zubiaga2024]. Methods were compared at their peak coherence score (c_v) using standard English stopwords as a baseline. NMF outperformed all alternatives (c_v = 0.654), while K-Means produced an overly dominant cluster (50.8% of emails), LDA showed the lowest coherence (c_v = 0.517), and BERTopic assigned 32.3% of emails as outliers. Following additional domain-specific stopword curation and part-of-speech filtering, NMF performance improved across all values of k tested (k = 5 to 20). Although k = 5 achieved the highest coherence (c_v = 0.820), it produced only five broad topics with 35.6% of emails in the largest cluster. We selected k = 14 as the optimal balance between coherence (c_v = 0.768, NPMI = 0.170), granularity (lowest maximum cluster size at 10.7%), and topic diversity (0.914) [@rahimi2024].\nTo facilitate interpretation of the 14 NMF topics, we used a locally deployed open-source large language model to generate topic labels, thematic groupings, and topic descriptions [@wanna2024; @janssens2025; @tan2025]. Four open-source models were evaluated: Mistral-7B-Instruct-v0.3, Meta-Llama-3.1-8B-Instruct, Qwen2.5-7B-Instruct, and Gemma-2-9b-it, each receiving the top 5 keywords and 5 representative emails for all 14 topics simultaneously. Meta-Llama-3.1-8B-Instruct produced the most descriptive and semantically complete labels and was selected for subsequent steps. Using zero-shot prompts, the model was queried to: (1) generate 2–5 word topic labels from keywords and representative emails; (2) group labels into thematic categories; and (3) generate 2–3 sentence topic descriptions from keywords and up to 15 representative emails. Tasks were run across multiple temperature settings (0.0, 0.2, 0.4, 0.5, 0.7) and random seeds to ensure stability. All outputs were reviewed and refined by the research team to ensure face validity and alignment with domain knowledge. Local deployment ensured that no email data left secure servers at any stage of analysis.\nTo examine relationships between topics, we computed normalized pairwise co-occurrence scores across all 14 topics [@stevenson2023]. For each pair of topics, the co-occurrence score was calculated as the proportion of shared email assignments relative to the smaller of the two topics. Email-to-topic assignments were based on a 15% probability threshold applied to the normalized NMF weight matrix. This threshold was selected to capture substantive secondary topic assignments while filtering out most tertiary contributions, and was validated through research team review of representative emails. Under this scheme, 27.3% of emails were assigned to a single topic, 47.6% to two topics, and 25.1% to three or more topics (mean = 2.01 topics per email). Co-occurrence scores range from 0 (no co-occurrence) to 1 (complete overlap), with higher values indicating topics that are more likely to appear together within the same emails.\nTo examine how topics were distributed across the data sharing lifecycle, each email was mapped to one of six sequential phases: Funding Start, Data Introduction, Data Sharing Agreement (DSA) Execution, Data Upload, Data Cataloguing, and Data Publication. Phase assignments were based on milestone dates recorded for each study. Seven studies were excluded from phase analysis due to non-sequential milestone dates, leaving 6,167 emails from 93 studies. For sender analysis, each email sender was classified into one of five categories based on their institutional role: Databank Secretariat, Study Staff, Study Investigators, External Partners, and Harmonization Group. For both phase and sender analyses, topic assignments were based on the 15% probability threshold described above. Email-to-sender ratios were computed for each sender category to quantify the intensity of operational engagement across roles.\nTo examine the distribution of coordination labour by gender, sender first names were coded using a probabilistic approach combining the nomquamgender library [@vanbuskirk2023] with manual corrections for ambiguous and non-Western names, achieving coverage of 95.8% of emails (6,545 of 6,833). Gender was classified as women or men; non-binary and gender-diverse identities are not captured by this method, which represents a limitation of the approach."
+    "objectID": "data-complexity/index.html#author-contributions",
+    "href": "data-complexity/index.html#author-contributions",
+    "title": "Data Complexity",
+    "section": "8.4 Author Contributions",
+    "text": "8.4 Author Contributions",
+    "crumbs": [
+      "Data Complexity"
+    ]
   },
   {
-    "objectID": "topic-modelling/sections/01_background.html",
-    "href": "topic-modelling/sections/01_background.html",
+    "objectID": "data-complexity/index.html#informed-consent",
+    "href": "data-complexity/index.html#informed-consent",
+    "title": "Data Complexity",
+    "section": "8.5 Informed Consent",
+    "text": "8.5 Informed Consent",
+    "crumbs": [
+      "Data Complexity"
+    ]
+  },
+  {
+    "objectID": "data-complexity/index.html#data-availability-statement",
+    "href": "data-complexity/index.html#data-availability-statement",
+    "title": "Data Complexity",
+    "section": "8.6 Data Availability Statement",
+    "text": "8.6 Data Availability Statement",
+    "crumbs": [
+      "Data Complexity"
+    ]
+  },
+  {
+    "objectID": "data-complexity/index.html#author-bios",
+    "href": "data-complexity/index.html#author-bios",
+    "title": "Data Complexity",
+    "section": "8.7 Author Bios",
+    "text": "8.7 Author Bios",
+    "crumbs": [
+      "Data Complexity"
+    ]
+  },
+  {
+    "objectID": "data-complexity/sections/04_findings.html",
+    "href": "data-complexity/sections/04_findings.html",
+    "title": "1 Findings",
+    "section": "",
+    "text": "1 Findings"
+  },
+  {
+    "objectID": "data-complexity/sections/00_abstract.html",
+    "href": "data-complexity/sections/00_abstract.html",
+    "title": "1 Abstract",
+    "section": "",
+    "text": "1 Abstract"
+  },
+  {
+    "objectID": "data-complexity/sections/01_introduction.html",
+    "href": "data-complexity/sections/01_introduction.html",
+    "title": "1 Introduction",
+    "section": "",
+    "text": "1 Introduction"
+  },
+  {
+    "objectID": "data-complexity/sections/02_background.html",
+    "href": "data-complexity/sections/02_background.html",
     "title": "1 Background",
     "section": "",
-    "text": "1 Background\nTimely access to health research data is essential for evidence-informed public health decision-making, as demonstrated during the COVID-19 pandemic when the rapid aggregation of epidemiological data across institutions and jurisdictions was critical for coordinated response [@yehudi2025; @rigby2024]. Despite growing policy commitments to open data, including Canada’s Tri-Agency Research Data Management (RDM) Policy and the initiatives of the Digital Research Alliance of Canada, a recent report by Canada’s Chief Science Advisor identified fragmented data governance, inconsistent institutional practices, and insufficient workforce capacity as critical barriers to building a national scientific data ecosystem [@chiefscience2025]. These findings echo a decade of research on technical, motivational, legal, and ethical barriers to health data sharing [@vanhuis2014; @casey2016], though only a small fraction of that evidence is derived from empirical study of actual data sharing operations.\nMost of what we know about research data sharing comes from self-reported surveys and post-hoc reflections [@vanhuis2014; @shabani2016a; @shabani2016b]. The actual day-to-day work of negotiating data sharing agreements, onboarding partner studies, and managing the technical and administrative dimensions of data transfer across institutions has rarely been observed directly. This gap is consequential: stakeholders consistently underestimate the labour required to coordinate large-scale data sharing, and policymakers lack empirical grounding for decisions about how to staff, fund, and organize data sharing operations [@choroszewicz2022; @casey2016].\nComputational analysis of organizational correspondence offers a promising approach for studying coordination work as it actually unfolds. Topic modeling and related natural language processing techniques have been applied to email archives to characterize patterns of collaboration in large projects [@piccolo2018; @indig2023], and to health-related text data more broadly [@lossioventura2021]. Recent advances in combining non-negative matrix factorization (NMF) with large language model (LLM) assisted annotation have further improved the interpretability of topic modeling outputs [@wanna2024; @janssens2025; @tan2025].\nThe Canadian COVID-19 Immunity Task Force (CITF) Databank offers a rare opportunity to apply these methods to the study of health data sharing governance. Established in 2020 to coordinate serological and immunological research across Canada, the CITF Databank integrated over 150,000 health records from over 100 partnering studies spanning diverse institutional settings and geographic locations. The operational work of coordinating data sharing with all these studies was conducted largely through email correspondence managed by a central operations team, generating a primary record of data sharing coordination as it actually unfolded in real time.\nThis study analyzes that correspondence using topic modeling to characterize the operational processes of research data sharing at scale. Specifically, we examine: (1) what Databank personnel and their collaborators communicated about, and how these topics were distributed across the data sharing lifecycle; (2) how coordination labour was distributed across different institutional roles; and (3) what the distribution of topics across phases and roles reveals about the governance and administrative demands of large-scale data sharing. The findings carry direct implications for Canadian research data infrastructure policy, particularly as institutions develop capacity to meet Tri-Agency RDM obligations and prepare for future public health emergencies."
+    "text": "1 Background"
   },
   {
-    "objectID": "topic-modelling/sections/12_supplement.html",
-    "href": "topic-modelling/sections/12_supplement.html",
-    "title": "1 Supplementary Materials",
-    "section": "",
-    "text": "1 Supplementary Materials"
-  },
-  {
-    "objectID": "research-protocol.html",
-    "href": "research-protocol.html",
-    "title": "Research Protocol",
-    "section": "",
-    "text": "Note\n\n\n\nNote that the project has significantly evolved since drafting this protocol, and this document does not reflect our current scope of work. It still has value as a marker of our original intent.",
-    "crumbs": [
-      "Research Protocol"
-    ]
-  },
-  {
-    "objectID": "research-protocol.html#predictions-and-expectations",
-    "href": "research-protocol.html#predictions-and-expectations",
-    "title": "Research Protocol",
-    "section": "1.1 Predictions and Expectations",
-    "text": "1.1 Predictions and Expectations",
-    "crumbs": [
-      "Research Protocol"
-    ]
-  },
-  {
-    "objectID": "research-protocol.html#the-corpus-of-works",
-    "href": "research-protocol.html#the-corpus-of-works",
-    "title": "Research Protocol",
-    "section": "2.1 The corpus of works",
-    "text": "2.1 The corpus of works",
-    "crumbs": [
-      "Research Protocol"
-    ]
-  },
-  {
-    "objectID": "research-protocol.html#workflows",
-    "href": "research-protocol.html#workflows",
-    "title": "Research Protocol",
-    "section": "6.1 Workflows",
-    "text": "6.1 Workflows\nThe is a quarto-based project situated in a git repository (CITF-emails). Zack is the repository’s primary maintainer, but Isak has been granted full administrative access, including the ability to make commits directly to the repository without submitting a pull request. Zack and Isak will clearly communicate about what they are working on so as to avoid generating conflicting commit histories which would produce a messy merge scenario.\nFor less technical users, it would be best to annotate automatically-generated PDFs or to work with an un-tracked copy of the markdown files, whose diffs can then be identified and applied by someone who is more familiar with using git.\nHere are a few procedural notes and workflows:\n\nAll writing is done in the file pertaining to the specific section, which are included in their corresponding manuscript file (e.g., topic-modelling.qmd), which is also where the paper’s main parameters are specified.\nReferences are cited using @ followed by the citekey, which follows a strict pattern of the first author’s surname followed by the year of publication, all lowercase and without spaces, e.g. @batist2024.\nReferences are stored in assets/emails-analysis.bib which is an automatically-updated export of Zack’s Zotero library. If you want to include a reference that is not yet in the library, refer to the DOI and Zack will add it in his revisions.\nAlthough we are keeping this as a private repository for now, all of this can be made into a public website. To preview the site locally, use quarto preview and navigate to localhost:7777 in your browser.\n\nHere is an overview of the directory structure:\nTBD",
-    "crumbs": [
-      "Research Protocol"
-    ]
-  },
-  {
-    "objectID": "research-protocol.html#timeline",
-    "href": "research-protocol.html#timeline",
-    "title": "Research Protocol",
-    "section": "6.2 Timeline",
-    "text": "6.2 Timeline\nTBD",
-    "crumbs": [
-      "Research Protocol"
-    ]
-  },
-  {
-    "objectID": "topic-modelling/sections/05_conclusions.html",
-    "href": "topic-modelling/sections/05_conclusions.html",
-    "title": "1 Conclusions",
-    "section": "",
-    "text": "1 Conclusions\nAs institutions across Canada and beyond face growing obligations to share research data, understanding what that work actually involves — and who bears its costs — is essential for designing governance frameworks that are both realistic and equitable.\nThree principal findings from this study stand out. First, governance and data operations workstreams ran largely in parallel, with contractual and administrative concerns persisting across all lifecycle phases rather than being resolved early — reflected in an 18:1 ratio of administrative to technical time. Second, coordination labour was sharply concentrated among Databank personnel, with the Harmonization Group and Secretariat sending emails at ratios of 116 and 101 per sender respectively, compared to 5–7 among partner study representatives. Third, gender disparities followed a consistent pattern: women’s representation ranged from 36% in the most technical Data Operations topics to 70% in Study Documentation topics, consistent with broader evidence on the feminization of invisible coordination labour in research infrastructure. Taken together, these findings confirm that data sharing is primarily an administrative and governance challenge, and that sustaining it at scale places disproportionate demands on a small number of people — demands that existing funding and workforce planning frameworks are poorly equipped to absorb."
-  },
-  {
-    "objectID": "topic-modelling/sections/04_discussion.html",
-    "href": "topic-modelling/sections/04_discussion.html",
+    "objectID": "data-complexity/sections/05_discussion.html",
+    "href": "data-complexity/sections/05_discussion.html",
     "title": "1 Discussion",
     "section": "",
-    "text": "1 Discussion\nThis study analyzed 6,833 emails from the operational correspondence of the CITF Databank to characterize how large-scale health research data sharing is coordinated in practice. The findings reveal that data sharing is primarily an administrative and governance challenge, that coordination labour is highly concentrated among a small number of Databank personnel, and that systematic disparities in workload distribution track both institutional role and gender.\nThe structural separation between governance and data operations workstreams, and the finding that contractual and administrative concerns persist across all phases rather than being resolved early, suggests that formal models of sequential data sharing — in which agreements are finalized before technical work begins — are not how coordination actually unfolds in practice. The persistence of contractual concerns into the Data Upload and Data Cataloguing phases suggests that governance and technical work proceeded in parallel by necessity, as evolving data requirements continued to surface new administrative obligations even after agreements were nominally in place. Parallel onboarding strategies, in which technical preparation and agreement negotiation proceed simultaneously, could formalize this reality and reduce overall timelines. More responsive and adaptive models for data sharing agreements, which can be amended as data requirements evolve rather than requiring full renegotiation, may also reduce the persistence of governance concerns in later phases [@casey2016; @vanhuis2014].\nThe concentration of email activity within Databank teams makes visible the coordination labour that is often unrecognized in funding and workload planning. Sustaining data sharing at scale requires recognizing and resourcing this labour explicitly. The gender analysis adds a further dimension to this concern: Data Operations topics were the most male-dominated, while Study Documentation topics showed the highest representation of women, suggesting that the more visible, technically-oriented work was disproportionately associated with men while women were more concentrated in documentation and cataloguing tasks. This pattern is consistent with prior research on the feminization of hidden labour in research data infrastructure [@choroszewicz2022]. Future initiatives should consider how coordination roles are defined, compensated, and credited, and whether existing structures inadvertently concentrate invisible labour among women and other underrepresented groups.\nThese findings have direct implications for how research data sharing infrastructure is resourced and governed in Canada and beyond. Growing data sharing obligations under the Tri-Agency RDM Policy will place increasing demands on university contracts offices and research administration teams. Demands are not easily scaled: contracts office capacity is typically constrained by fixed institutional overhead rates rather than by the volume of agreements requiring processing. Policymakers and research administrators should account for this bottleneck when designing governance frameworks and allocating human resources for data sharing initiatives.\nThis study has several limitations. The corpus is drawn from a single coordinator’s inbox, which captures one perspective on the coordination process but may not reflect the full scope of communication across the initiative. The gender analysis relies on probabilistic coding of first names, which does not capture non-binary or gender-diverse identities and may misclassify names from non-Western cultural contexts. Finally, as a single case study, the findings reflect the specific organizational and institutional context of the CITF Databank; while the structural patterns identified here are likely generalizable to similar pan-Canadian data sharing initiatives, further research across other settings is needed to confirm this. Nevertheless, the use of topic modeling applied to email archives offers a replicable methodological approach that could be adapted to study coordination challenges in other domains of health systems management, and the combination of NMF topic modeling with LLM-assisted annotation proved effective for characterizing thematic structure in a specialized institutional corpus where standard approaches performed poorly. Subsequent work will examine the relational structure of coordination across the full team correspondence, as well as the role of data complexity in shaping coordination demands and timelines."
-  },
-  {
-    "objectID": "topic-modelling/sections/11_back-matter.html#list-of-abbreviations",
-    "href": "topic-modelling/sections/11_back-matter.html#list-of-abbreviations",
-    "title": "1 Back Matter",
-    "section": "1.1 List of Abbreviations",
-    "text": "1.1 List of Abbreviations"
-  },
-  {
-    "objectID": "topic-modelling/sections/11_back-matter.html#ethics-approval-and-consent-to-participate",
-    "href": "topic-modelling/sections/11_back-matter.html#ethics-approval-and-consent-to-participate",
-    "title": "1 Back Matter",
-    "section": "1.2 Ethics Approval and Consent to Participate",
-    "text": "1.2 Ethics Approval and Consent to Participate\n\nThis study analyzes administrative correspondence generated in the course of operational activities. All email data were de-identified prior to analysis using automated anonymization tools. The study was conducted in accordance with applicable institutional ethics guidelines. As this study involves analysis of administrative records rather than direct engagement with human participants, individual informed consent was not required."
-  },
-  {
-    "objectID": "topic-modelling/sections/11_back-matter.html#consent-for-publication",
-    "href": "topic-modelling/sections/11_back-matter.html#consent-for-publication",
-    "title": "1 Back Matter",
-    "section": "1.3 Consent for Publication",
-    "text": "1.3 Consent for Publication"
-  },
-  {
-    "objectID": "topic-modelling/sections/11_back-matter.html#availability-of-data-and-materials",
-    "href": "topic-modelling/sections/11_back-matter.html#availability-of-data-and-materials",
-    "title": "1 Back Matter",
-    "section": "1.4 Availability of Data and Materials",
-    "text": "1.4 Availability of Data and Materials\n\nThe email corpus analyzed in this study contains sensitive institutional and administrative information and is not publicly available. De-identified topic model outputs, analytical code, and summary data underlying the figures and tables are available in the companion repository at https://github.com/zackbatist/CITF-emails. All code was developed using open-source tools and is archived following FAIR principles."
-  },
-  {
-    "objectID": "topic-modelling/sections/11_back-matter.html#competing-interests",
-    "href": "topic-modelling/sections/11_back-matter.html#competing-interests",
-    "title": "1 Back Matter",
-    "section": "1.5 Competing Interests",
-    "text": "1.5 Competing Interests\n\nThe authors declare no competing interests."
-  },
-  {
-    "objectID": "topic-modelling/sections/11_back-matter.html#funding",
-    "href": "topic-modelling/sections/11_back-matter.html#funding",
-    "title": "1 Back Matter",
-    "section": "1.6 Funding",
-    "text": "1.6 Funding\n\nThis work was supported by the Canadian Institutes of Health Research (CIHR) operating grant held by David Buckeridge (2024–2027), which supports completion of the CITF Databank and related governance research. Zachary Batist is supported as a Postdoctoral Researcher within this grant."
-  },
-  {
-    "objectID": "topic-modelling/sections/11_back-matter.html#author-contributions",
-    "href": "topic-modelling/sections/11_back-matter.html#author-contributions",
-    "title": "1 Back Matter",
-    "section": "1.7 Author Contributions",
-    "text": "1.7 Author Contributions\n\nZachary Batist led the conceptualization of the study, developed and applied the data processing and analysis pipeline, conducted topic modeling and sender analyses, and led the writing of the manuscript. Melissa Ouellet contributed to data processing, analysis, and interpretation of findings, and reviewed and edited the manuscript. Sadun Khezri contributed to data processing and analysis. Tanya Murphy and Aklil Noza contributed to data collection and management. Samira Abbasgholizadeh-Rahimi provided expertise in machine learning methods and reviewed the manuscript. Guillaume Bourque provided expertise in computational infrastructure and reviewed the manuscript. David Buckeridge conceived and led the CITF Databank initiative, provided domain expertise, and reviewed and edited the manuscript. All authors read and approved the final manuscript."
-  },
-  {
-    "objectID": "topic-modelling/sections/11_back-matter.html#acknowledgements",
-    "href": "topic-modelling/sections/11_back-matter.html#acknowledgements",
-    "title": "1 Back Matter",
-    "section": "1.8 Acknowledgements",
-    "text": "1.8 Acknowledgements\n\nWe thank the members of the CITF Databank team and all partnering study teams whose correspondence forms the basis of this analysis. We are grateful to the Canadian COVID-19 Immunity Task Force for supporting this meta-research program and for their commitment to reflexive examination of their own operations. We also thank the McGill Clinical and Health Informatics (MCHI) research group for providing computational infrastructure and administrative support.\nClaude (Sonnet 4.6) was used to assist with content organization, grammar checking, and improving overall clarity while drafting this manuscript. This tool contributed to the writing process by providing language suggestions and helping to structure the material more effectively."
-  },
-  {
-    "objectID": "topic-modelling/sections/11_back-matter.html#authors-bios",
-    "href": "topic-modelling/sections/11_back-matter.html#authors-bios",
-    "title": "1 Back Matter",
-    "section": "1.9 Authors’ Bios",
-    "text": "1.9 Authors’ Bios\n\nZachary Batist is a Postdoctoral Researcher in the Department of Epidemiology, Biostatistics and Occupational Health at McGill University’s School of Population and Global Health. His research focuses on the governance and organizational dimensions of health research data sharing.\nMelissa Ouellet is a Research Associate in the Department of Epidemiology, Biostatistics and Occupational Health at McGill University.\nSadun Khezri is\nTanya Murphy is\nAklil Noza is\nSamira Abbasgholizadeh-Rahimi is\nGuillaume Bourque is\nDavid Buckeridge is a Professor of Epidemiology and Biostatistics at McGill University and Director of the CITF Databank. His research concerns the management and application of distributed health records and biomedical informatics."
-  },
-  {
-    "objectID": "topic-modelling/sections/03_results.html",
-    "href": "topic-modelling/sections/03_results.html",
-    "title": "1 Results",
-    "section": "",
-    "text": "The analytical corpus comprises 6,833 emails from the inbox of a central CITF Databank coordinator, spanning correspondence with 100 participating studies from February 2021 to September 2025, involving 491 unique senders. NMF identified 14 topics organized into four thematic categories. The 14 topics identified by the model and their five most characteristic terms are shown in Figure 1. The x-axis reflects each term’s NMF component weight, a non-negative score indicating the strength of association between that term and the topic, derived from the factorization of the Term Frequency-Inverse Document Frequency (TF-IDF) matrix. Higher scores indicate terms that are more strongly and distinctively associated with that topic relative to others in the vocabulary.\n\n\n\n\n\n\nFigure 1: Top 5 characteristic terms and topic coherence scores (c_v) for each of the 14 NMF topics.\n\n\n\nTopic coherence varied across the 14 topics, ranging from c_v = 0.473 to c_v = 0.956. The most coherent topics were those with highly distinctive technical vocabularies: Data Upload Instructions & Credentials (c_v = 0.956), Study Description & Catalogue Publication (c_v = 0.930), and Document Appendices & Revisions (c_v = 0.861). The least coherent topics, Meeting Scheduling & Invitations (c_v = 0.473) and Executive Correspondence (c_v = 0.497), reflect more generic coordination language that is less semantically distinctive, which is consistent with the broad, cross-cutting nature of these activities.\nThe topic labels, thematic groupings, and descriptions generated through LLM-assisted annotation are shown in Figure 2.\n\n\n\n\n\n\nFigure 2: LLM-assisted labels, thematic groupings, and descriptions for the 14 NMF topics.\n\n\n\nThe topic model identified five discrete topics within the Agreements & Contracts theme, compared to only two within Coordination, reflecting the greater variety and specificity of tasks involved in contractual work relative to general coordination activities. Within the Agreements & Contracts theme, individual topics showed distinct distributional patterns across the data sharing lifecycle, reflecting both process-ordered and cyclical forms of engagement.\nData Sharing Agreements & Consent (T0) and Document Appendices & Revisions (T8) were most concentrated in the earliest phases, Funding Start (22.5% and 21.7%) and Data Introduction (21.0% and 22.7%), consistent with their role in establishing the initial terms and conditions of data sharing. DSA Status & Amendments (T5) showed a similar early peak (14.4% and 20.6%) but remained more persistent across later phases (10.4% in both DSA Execution and Data Cataloguing), suggesting that amendments continued to be negotiated well beyond initial agreement execution.\nDocument Signatures & Execution (T7) was relatively flat across phases (ranging from 5.4% to 13.2%), contrary to the expectation that signatures would be concentrated at the point of DSA Execution, suggesting that formal sign-off occurred at multiple points throughout the process rather than once. Document Review & Comments (T12) showed the most distinctly cyclical pattern: present at high levels in early phases (23.6% and 25.0%) but spiking again at Data Publication (33.3%), confirming that document review is not a discrete event but a recurring activity that persists across the entire lifecycle.\n\n\nTopic co-occurrence analysis revealed two largely separate clusters of topics within the corpus, with Agreements and Contracts (5 topics, 3,793 multi-topic email assignments), Data Operations (4 topics, 2,772), Study Documentation (3 topics, 2,602), and Coordination (2 topics, 1,612) (see Figure 3). Core governance topics, including Document Signatures, Document Appendices, and DSA Status, co-occurred frequently with each other (co-occurrence scores: 0.20–0.28) but rarely with core technical topics such as Data Upload Instructions, Variable Mapping, and Data Transfer Initiation (co-occurrence scores: 0.02–0.06). This structural separation suggests that governance and data operations workstreams ran largely in parallel rather than in close coordination.\n\n\n\n\n\n\nFigure 3: Topic co-occurrence matrix (0–0.30) with chi-square p-values and associated number of emails via multi-topic assignment.\n\n\n\n\nThe primary point of convergence between these two clusters was Document Review and Comments, the most frequently assigned topic in the corpus (1,323 email assignments) and the most broadly connected across all thematic categories (co-occurrence scores: 0.08–0.25). This topic likely reflects the reconciliation of technical data descriptions and management requirements with institutional expectations, as data sharing agreements needed to stipulate the exact data being shared and the conditions under which they would be managed. It represents the interface between governance and operations: the point at which these concerns were most likely to be addressed together.\nThe five highest pairwise co-occurrence scores in the corpus were T7 x T8 (Document Signatures & Execution x Document Appendices & Revisions, 0.28), T3 x T13 (Variable Mapping & Schema Alignment x Data Dictionary & Metadata, 0.27), T3 x T4 (Variable Mapping & Schema Alignment x Serology & Data Harmonization, 0.26), T0 x T8 (Data Sharing Agreements & Consent x Document Appendices & Revisions, 0.23), and T0 x T7 (Data Sharing Agreements & Consent x Document Signatures & Execution, 0.22), all reflecting tight clustering within the Agreements & Contracts and Data Operations themes respectively. The five lowest scores involved Executive Correspondence (T6) and Document Signatures (T7) paired with Data Operations topics such as Variable Mapping (T3) and Data Upload Instructions (T2), with co-occurrence scores of 0.02–0.03, consistent with the structural separation between governance and operational workstreams identified above.\n\n\n\nThis analysis is based on 90.3% of the full corpus (6,167 emails), with 7 studies excluded due to non-sequential milestone dates. Topic theme assignments shifted clearly across phases of the data sharing lifecycle, with Agreements & Contracts concerns proving more persistent than the phase structure alone would suggest (see Figure 4). In early phases, correspondence was dominated by Agreements & Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase. In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.\n\n\n\n\n\n\nFigure 4: Topic assignments by lifecycle phase, sorted within each theme by entropy descending, with associated number of emails.\n\n\n\n\nHowever, Agreements & Contracts concerns did not recede as the lifecycle progressed. Even in the Data Upload and Data Cataloguing phases, which were dominated by Data Operations, Agreements & Contracts still accounted for 14% and 21% of topic assignments respectively. Rather than being treated as an initial phase with a definite endpoint, contractual and administrative concerns persisted throughout the data sharing lifecycle, requiring ongoing attention well beyond the execution of formal agreements.\nStudies spent a median of 395 days in DSA negotiation (Intro-to-DSA phase) and 398 days in data preparation (DSA-to-Upload phase), compared to only 22 days for technical cataloguing (Upload-to-Catalogue phase), an 18:1 ratio of administrative to technical time.\n\n\n\nTable 1: Distribution of temporal durations for each phase.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhase Transition\nN Studies\nMean (days)\nMedian (days)\nMin (days)\nMax (days)\n\n\n\n\nFunding → Intro\n83\n212\n190\n7\n670\n\n\nIntro → DSA\n59\n454\n395\n7\n1526\n\n\nDSA → Upload\n50\n394\n398\n2\n1184\n\n\nUpload → Catalogue\n46\n68\n22\n0\n421\n\n\nCatalogue → Publication\n29\n664\n753\n245\n1012\n\n\n\n\n\n\n\n\n\nSender analysis revealed sharply uneven operational engagement across institutional roles. The Databank Harmonization Group, a specialized research group responsible for data harmonization, variable mapping, and ensuring interoperability, sent emails at a ratio of 116 emails per sender. The Databank Secretariat, which is the central coordination and administrative staff responsible for managing day-to-day operations, tracking milestones, and overseeing agreements, sent 101 emails per sender. In contrast, activity was much lower among External Partners (including Statistics Canada, legal counsel, and government agencies), Study Staff (research coordinators and data managers handling preparation and upload), and Study Investigators (PIs and Co-Is responsible for governance decisions), who averaged 7, 6, and 5 emails per sender, respectively. This concentration of email activity within Databank teams makes visible the coordination labour sustained by a small number of highly active individuals.\n\n\n\n\n\n\nFigure 5: Topic assignments by sender category, sorted within each theme by entropy descending, with associated number of emails.\n\n\n\nThe topical focus of each sender group also differed markedly (see Figure 5). The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work. The Secretariat showed the most evenly distributed profile across all four themes, reflecting its broad coordinating mandate across all phases and workstreams. External Partners were most concentrated in Agreements & Contracts (53%), suggesting their engagement was primarily oriented around contractual obligations. Study Investigators showed a relatively even split between Agreements & Contracts (36%) and Study Documentation (30%), suggesting they were engaged across both contractual and documentation workstreams rather than technical data operations.\n\n\n\nA fuller account of these relational patterns, including who works with whom, on what, and when, is left to future work using network analysis of the full team correspondence.\nGender analysis is based on 95.8% of the total sample (6,545 emails), with senders of unknown gender excluded. Across the 456 unique senders with classified gender, women outnumbered men roughly two to one (294 women, 64.5%; 162 men, 35.5%). This imbalance was consistent at the study level: of 100 studies, 70 had a majority-women sender base and only 18 had a majority-men one (median 60.0% women per study).\nIndividual breadth of involvement was nearly identical across genders. Both women and men were engaged in emails involving a median of 5 distinct topics, and roughly half of each group (50.7% of women, 52.8% of men) engaged with five or more topics. These disparities therefore reflect not a difference in whether women and men did multi-faceted coordination work, but in which topics each group disproportionately handled. Both genders were engaged in similar sets of topics, which largely comprised combinations involving Meeting Scheduling & Invitations (T11), Document Review & Comments (T12), and Catalogue Completion Reminders (T9), pointing to coordination and documentation activities as the connective tissue of multi-topic involvement.\nAt the same time, women’s representation varied substantially across topics, ranging from 35% in Serology & Data Harmonization to 69% in Study Description & Catalogue Publication (see Figure 8). Data Operations topics, including Serology & Data Harmonization (35% women), Data Transfer Initiation (40% women), and Data Upload Instructions (42% women), were the most male-dominated. In contrast, Study Documentation topics showed the highest representation of women: Study Description & Catalogue Publication (69% women), Catalogue Completion Reminders (66% women), and Data Dictionary & Metadata (66% women). Agreements & Contracts topics showed a more mixed pattern, with women accounting for 48–58% of assignments across that theme. This progression, from male-dominated Data Operations topics to female-dominated Study Documentation topics, is consistent with prior research documenting the feminization of invisible coordination labour in research data infrastructure [@choroszewicz2022].\n\n\n\n\n\n\nFigure 6: Topic assignments by gender category."
-  },
-  {
-    "objectID": "topic-modelling/sections/03_results.html#co-occurrence-analysis-of-topic-relationships",
-    "href": "topic-modelling/sections/03_results.html#co-occurrence-analysis-of-topic-relationships",
-    "title": "1 Results",
-    "section": "",
-    "text": "Topic co-occurrence analysis revealed two largely separate clusters of topics within the corpus, with Agreements and Contracts (5 topics, 3,793 multi-topic email assignments), Data Operations (4 topics, 2,772), Study Documentation (3 topics, 2,602), and Coordination (2 topics, 1,612) (see Figure 3). Core governance topics, including Document Signatures, Document Appendices, and DSA Status, co-occurred frequently with each other (co-occurrence scores: 0.20–0.28) but rarely with core technical topics such as Data Upload Instructions, Variable Mapping, and Data Transfer Initiation (co-occurrence scores: 0.02–0.06). This structural separation suggests that governance and data operations workstreams ran largely in parallel rather than in close coordination.\n\n\n\n\n\n\nFigure 3: Topic co-occurrence matrix (0–0.30) with chi-square p-values and associated number of emails via multi-topic assignment.\n\n\n\n\nThe primary point of convergence between these two clusters was Document Review and Comments, the most frequently assigned topic in the corpus (1,323 email assignments) and the most broadly connected across all thematic categories (co-occurrence scores: 0.08–0.25). This topic likely reflects the reconciliation of technical data descriptions and management requirements with institutional expectations, as data sharing agreements needed to stipulate the exact data being shared and the conditions under which they would be managed. It represents the interface between governance and operations: the point at which these concerns were most likely to be addressed together.\nThe five highest pairwise co-occurrence scores in the corpus were T7 x T8 (Document Signatures & Execution x Document Appendices & Revisions, 0.28), T3 x T13 (Variable Mapping & Schema Alignment x Data Dictionary & Metadata, 0.27), T3 x T4 (Variable Mapping & Schema Alignment x Serology & Data Harmonization, 0.26), T0 x T8 (Data Sharing Agreements & Consent x Document Appendices & Revisions, 0.23), and T0 x T7 (Data Sharing Agreements & Consent x Document Signatures & Execution, 0.22), all reflecting tight clustering within the Agreements & Contracts and Data Operations themes respectively. The five lowest scores involved Executive Correspondence (T6) and Document Signatures (T7) paired with Data Operations topics such as Variable Mapping (T3) and Data Upload Instructions (T2), with co-occurrence scores of 0.02–0.03, consistent with the structural separation between governance and operational workstreams identified above."
-  },
-  {
-    "objectID": "topic-modelling/sections/03_results.html#topic-distribution-across-lifecycle-phases",
-    "href": "topic-modelling/sections/03_results.html#topic-distribution-across-lifecycle-phases",
-    "title": "1 Results",
-    "section": "",
-    "text": "This analysis is based on 90.3% of the full corpus (6,167 emails), with 7 studies excluded due to non-sequential milestone dates. Topic theme assignments shifted clearly across phases of the data sharing lifecycle, with Agreements & Contracts concerns proving more persistent than the phase structure alone would suggest (see Figure 4). In early phases, correspondence was dominated by Agreements & Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase. In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.\n\n\n\n\n\n\nFigure 4: Topic assignments by lifecycle phase, sorted within each theme by entropy descending, with associated number of emails.\n\n\n\n\nHowever, Agreements & Contracts concerns did not recede as the lifecycle progressed. Even in the Data Upload and Data Cataloguing phases, which were dominated by Data Operations, Agreements & Contracts still accounted for 14% and 21% of topic assignments respectively. Rather than being treated as an initial phase with a definite endpoint, contractual and administrative concerns persisted throughout the data sharing lifecycle, requiring ongoing attention well beyond the execution of formal agreements.\nStudies spent a median of 395 days in DSA negotiation (Intro-to-DSA phase) and 398 days in data preparation (DSA-to-Upload phase), compared to only 22 days for technical cataloguing (Upload-to-Catalogue phase), an 18:1 ratio of administrative to technical time.\n\n\n\nTable 1: Distribution of temporal durations for each phase.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhase Transition\nN Studies\nMean (days)\nMedian (days)\nMin (days)\nMax (days)\n\n\n\n\nFunding → Intro\n83\n212\n190\n7\n670\n\n\nIntro → DSA\n59\n454\n395\n7\n1526\n\n\nDSA → Upload\n50\n394\n398\n2\n1184\n\n\nUpload → Catalogue\n46\n68\n22\n0\n421\n\n\nCatalogue → Publication\n29\n664\n753\n245\n1012"
-  },
-  {
-    "objectID": "topic-modelling/sections/03_results.html#topic-distribution-across-sender-roles",
-    "href": "topic-modelling/sections/03_results.html#topic-distribution-across-sender-roles",
-    "title": "1 Results",
-    "section": "",
-    "text": "Sender analysis revealed sharply uneven operational engagement across institutional roles. The Databank Harmonization Group, a specialized research group responsible for data harmonization, variable mapping, and ensuring interoperability, sent emails at a ratio of 116 emails per sender. The Databank Secretariat, which is the central coordination and administrative staff responsible for managing day-to-day operations, tracking milestones, and overseeing agreements, sent 101 emails per sender. In contrast, activity was much lower among External Partners (including Statistics Canada, legal counsel, and government agencies), Study Staff (research coordinators and data managers handling preparation and upload), and Study Investigators (PIs and Co-Is responsible for governance decisions), who averaged 7, 6, and 5 emails per sender, respectively. This concentration of email activity within Databank teams makes visible the coordination labour sustained by a small number of highly active individuals.\n\n\n\n\n\n\nFigure 5: Topic assignments by sender category, sorted within each theme by entropy descending, with associated number of emails.\n\n\n\nThe topical focus of each sender group also differed markedly (see Figure 5). The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work. The Secretariat showed the most evenly distributed profile across all four themes, reflecting its broad coordinating mandate across all phases and workstreams. External Partners were most concentrated in Agreements & Contracts (53%), suggesting their engagement was primarily oriented around contractual obligations. Study Investigators showed a relatively even split between Agreements & Contracts (36%) and Study Documentation (30%), suggesting they were engaged across both contractual and documentation workstreams rather than technical data operations."
-  },
-  {
-    "objectID": "topic-modelling/sections/03_results.html#gender-distribution-of-coordination-labour",
-    "href": "topic-modelling/sections/03_results.html#gender-distribution-of-coordination-labour",
-    "title": "1 Results",
-    "section": "",
-    "text": "A fuller account of these relational patterns, including who works with whom, on what, and when, is left to future work using network analysis of the full team correspondence.\nGender analysis is based on 95.8% of the total sample (6,545 emails), with senders of unknown gender excluded. Across the 456 unique senders with classified gender, women outnumbered men roughly two to one (294 women, 64.5%; 162 men, 35.5%). This imbalance was consistent at the study level: of 100 studies, 70 had a majority-women sender base and only 18 had a majority-men one (median 60.0% women per study).\nIndividual breadth of involvement was nearly identical across genders. Both women and men were engaged in emails involving a median of 5 distinct topics, and roughly half of each group (50.7% of women, 52.8% of men) engaged with five or more topics. These disparities therefore reflect not a difference in whether women and men did multi-faceted coordination work, but in which topics each group disproportionately handled. Both genders were engaged in similar sets of topics, which largely comprised combinations involving Meeting Scheduling & Invitations (T11), Document Review & Comments (T12), and Catalogue Completion Reminders (T9), pointing to coordination and documentation activities as the connective tissue of multi-topic involvement.\nAt the same time, women’s representation varied substantially across topics, ranging from 35% in Serology & Data Harmonization to 69% in Study Description & Catalogue Publication (see Figure 8). Data Operations topics, including Serology & Data Harmonization (35% women), Data Transfer Initiation (40% women), and Data Upload Instructions (42% women), were the most male-dominated. In contrast, Study Documentation topics showed the highest representation of women: Study Description & Catalogue Publication (69% women), Catalogue Completion Reminders (66% women), and Data Dictionary & Metadata (66% women). Agreements & Contracts topics showed a more mixed pattern, with women accounting for 48–58% of assignments across that theme. This progression, from male-dominated Data Operations topics to female-dominated Study Documentation topics, is consistent with prior research documenting the feminization of invisible coordination labour in research data infrastructure [@choroszewicz2022].\n\n\n\n\n\n\nFigure 6: Topic assignments by gender category."
+    "text": "1 Discussion"
   },
   {
     "objectID": "topic-modelling/index.html#data-source-and-preprocessing",
@@ -410,7 +306,7 @@
     "href": "topic-modelling/index.html#co-occurrence-analysis-of-topic-relationships",
     "title": "LLM-assisted topic modelling of Canadian COVID-19 Immunity Task Force data sharing operations",
     "section": "Co-occurrence Analysis of Topic Relationships",
-    "text": "Co-occurrence Analysis of Topic Relationships\n[19] Topic co-occurrence analysis revealed two largely separate clusters of topics within the corpus, with Agreements and Contracts (5 topics, 3,793 multi-topic email assignments), Data Operations (4 topics, 2,772), Study Documentation (3 topics, 2,602), and Coordination (2 topics, 1,612) (see Figure 4). Core governance topics, including Document Signatures, Document Appendices, and DSA Status, co-occurred frequently with each other (co-occurrence scores: 0.20–0.28) but rarely with core technical topics such as Data Upload Instructions, Variable Mapping, and Data Transfer Initiation (co-occurrence scores: 0.02–0.06). This structural separation suggests that governance and data operations workstreams ran largely in parallel rather than in close coordination.\n\n\n\n\n\n\nFigure 4: Topic co-occurrence matrix (0–0.30) with chi-square p-values and associated number of emails via multi-topic assignment.\n\n\n\n\n[20] The primary point of convergence between these two clusters was Document Review and Comments, the most frequently assigned topic in the corpus (1,323 email assignments) and the most broadly connected across all thematic categories (co-occurrence scores: 0.08–0.25). This topic likely reflects the reconciliation of technical data descriptions and management requirements with institutional expectations, as data sharing agreements needed to stipulate the exact data being shared and the conditions under which they would be managed. It represents the interface between governance and operations: the point at which these concerns were most likely to be addressed together.\n[21] The five highest pairwise co-occurrence scores in the corpus were T7 x T8 (Document Signatures & Execution x Document Appendices & Revisions, 0.28), T3 x T13 (Variable Mapping & Schema Alignment x Data Dictionary & Metadata, 0.27), T3 x T4 (Variable Mapping & Schema Alignment x Serology & Data Harmonization, 0.26), T0 x T8 (Data Sharing Agreements & Consent x Document Appendices & Revisions, 0.23), and T0 x T7 (Data Sharing Agreements & Consent x Document Signatures & Execution, 0.22), all reflecting tight clustering within the Agreements & Contracts and Data Operations themes respectively. The five lowest scores involved Executive Correspondence (T6) and Document Signatures (T7) paired with Data Operations topics such as Variable Mapping (T3) and Data Upload Instructions (T2), with co-occurrence scores of 0.02–0.03, consistent with the structural separation between governance and operational workstreams identified above.",
+    "text": "Co-occurrence Analysis of Topic Relationships\n[19] Topic co-occurrence analysis revealed two largely separate clusters of topics within the corpus, with Agreements and Contracts (5 topics, 3,793 multi-topic email assignments), Data Operations (4 topics, 2,772), Study Documentation (3 topics, 2,602), and Coordination (2 topics, 1,612) (see Figure 4). Core governance topics, including Document Signatures, Document Appendices, and DSA Status, co-occurred frequently with each other (co-occurrence scores: 0.20–0.28) but rarely with core technical topics such as Data Upload Instructions, Variable Mapping, and Data Transfer Initiation (co-occurrence scores: 0.02–0.06). This structural separation suggests that governance and data operations workstreams ran largely in parallel rather than in close coordination.\n\n\n\n\n\n\nFigure 4: Topic co-occurrence matrix. Circle size indicates the normalized pairwise co-occurrence score between topic pairs (the proportion of shared email assignments relative to the smaller of the two topics, ranging from 0 to 0.30). Numbers below each column indicate the total number of emails assigned to that topic via multi-topic assignment.\n\n\n\n\n[20] The primary point of convergence between these two clusters was Document Review and Comments, the most frequently assigned topic in the corpus (1,323 email assignments) and the most broadly connected across all thematic categories (co-occurrence scores: 0.08–0.25). This topic likely reflects the reconciliation of technical data descriptions and management requirements with institutional expectations, as data sharing agreements needed to stipulate the exact data being shared and the conditions under which they would be managed. It represents the interface between governance and operations: the point at which these concerns were most likely to be addressed together.\n[21] The five highest pairwise co-occurrence scores in the corpus were T7 x T8 (Document Signatures & Execution x Document Appendices & Revisions, 0.28), T3 x T13 (Variable Mapping & Schema Alignment x Data Dictionary & Metadata, 0.27), T3 x T4 (Variable Mapping & Schema Alignment x Serology & Data Harmonization, 0.26), T0 x T8 (Data Sharing Agreements & Consent x Document Appendices & Revisions, 0.23), and T0 x T7 (Data Sharing Agreements & Consent x Document Signatures & Execution, 0.22), all reflecting tight clustering within the Agreements & Contracts and Data Operations themes respectively. The five lowest scores involved Executive Correspondence (T6) and Document Signatures (T7) paired with Data Operations topics such as Variable Mapping (T3) and Data Upload Instructions (T2), with co-occurrence scores of 0.02–0.03, consistent with the structural separation between governance and operational workstreams identified above.",
     "crumbs": [
       "Topic Modelling"
     ]
@@ -420,7 +316,7 @@
     "href": "topic-modelling/index.html#topic-distribution-across-lifecycle-phases",
     "title": "LLM-assisted topic modelling of Canadian COVID-19 Immunity Task Force data sharing operations",
     "section": "Topic Distribution Across Lifecycle Phases",
-    "text": "Topic Distribution Across Lifecycle Phases\n[22] This analysis is based on 90.3% of the full corpus (6,167 emails), with 7 studies excluded due to non-sequential milestone dates. Topic theme assignments shifted clearly across phases of the data sharing lifecycle, with Agreements & Contracts concerns proving more persistent than the phase structure alone would suggest (see Figure 5). In early phases, correspondence was dominated by Agreements & Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase. In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.\n\n\n\n\n\n\nFigure 5: Topic assignments by lifecycle phase, sorted within each theme by entropy descending, with associated number of emails.\n\n\n\n\n[23] However, Agreements & Contracts concerns did not recede as the lifecycle progressed. Even in the Data Upload and Data Cataloguing phases, which were dominated by Data Operations, Agreements & Contracts still accounted for 14% and 21% of topic assignments respectively. Rather than being treated as an initial phase with a definite endpoint, contractual and administrative concerns persisted throughout the data sharing lifecycle, requiring ongoing attention well beyond the execution of formal agreements.\n[24] Studies spent a median of 395 days in DSA negotiation (Intro-to-DSA phase) and 398 days in data preparation (DSA-to-Upload phase), compared to only 22 days for technical cataloguing (Upload-to-Catalogue phase), an 18:1 ratio of administrative to technical time.\n\n\n\nTable 1: Distribution of temporal durations for each phase.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhase Transition\nN Studies\nMean (days)\nMedian (days)\nMin (days)\nMax (days)\n\n\n\n\nFunding → Intro\n83\n212\n190\n7\n670\n\n\nIntro → DSA\n59\n454\n395\n7\n1526\n\n\nDSA → Upload\n50\n394\n398\n2\n1184\n\n\nUpload → Catalogue\n46\n68\n22\n0\n421\n\n\nCatalogue → Publication\n29\n664\n753\n245\n1012",
+    "text": "Topic Distribution Across Lifecycle Phases\n[22] This analysis is based on 90.3% of the full corpus (6,167 emails), with 7 studies excluded due to non-sequential milestone dates. Topic theme assignments shifted clearly across phases of the data sharing lifecycle, with Agreements & Contracts concerns proving more persistent than the phase structure alone would suggest (see Figure 5). In early phases, correspondence was dominated by Agreements & Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase. In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.\n\n\n\n\n\n\nFigure 5: Topic assignments by lifecycle phase, sorted within each theme by entropy descending. Each dot represents one email assignment; numbers below each column indicate the total number of emails in that phase. Reference clusters at the bottom show approximate densities corresponding to 10, 50, 100, 200, 350, and 500 email assignments.\n\n\n\n\n[23] However, Agreements & Contracts concerns did not recede as the lifecycle progressed. Even in the Data Upload and Data Cataloguing phases, which were dominated by Data Operations, Agreements & Contracts still accounted for 14% and 21% of topic assignments respectively. Rather than being treated as an initial phase with a definite endpoint, contractual and administrative concerns persisted throughout the data sharing lifecycle, requiring ongoing attention well beyond the execution of formal agreements.\n[24] Studies spent a median of 395 days in DSA negotiation (Intro-to-DSA phase) and 398 days in data preparation (DSA-to-Upload phase), compared to only 22 days for technical cataloguing (Upload-to-Catalogue phase), an 18:1 ratio of administrative to technical time.\n\n\n\nTable 1: Distribution of temporal durations for each phase.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhase Transition\nN Studies\nMean (days)\nMedian (days)\nMin (days)\nMax (days)\n\n\n\n\nFunding → Intro\n83\n212\n190\n7\n670\n\n\nIntro → DSA\n59\n454\n395\n7\n1526\n\n\nDSA → Upload\n50\n394\n398\n2\n1184\n\n\nUpload → Catalogue\n46\n68\n22\n0\n421\n\n\nCatalogue → Publication\n29\n664\n753\n245\n1012",
     "crumbs": [
       "Topic Modelling"
     ]
@@ -430,7 +326,7 @@
     "href": "topic-modelling/index.html#topic-distribution-across-sender-roles",
     "title": "LLM-assisted topic modelling of Canadian COVID-19 Immunity Task Force data sharing operations",
     "section": "Topic Distribution Across Sender Roles",
-    "text": "Topic Distribution Across Sender Roles\n[25] Sender analysis revealed sharply uneven operational engagement across institutional roles. The Databank Harmonization Group, a specialized research group responsible for data harmonization, variable mapping, and ensuring interoperability, sent emails at a ratio of 116 emails per sender. The Databank Secretariat, which is the central coordination and administrative staff responsible for managing day-to-day operations, tracking milestones, and overseeing agreements, sent 101 emails per sender. In contrast, activity was much lower among External Partners (including Statistics Canada, legal counsel, and government agencies), Study Staff (research coordinators and data managers handling preparation and upload), and Study Investigators (PIs and Co-Is responsible for governance decisions), who averaged 7, 6, and 5 emails per sender, respectively. This concentration of email activity within Databank teams makes visible the coordination labour sustained by a small number of highly active individuals.\n\n\n\n\n\n\nFigure 6: Topic assignments by sender category, sorted within each theme by entropy descending, with associated number of emails.\n\n\n\n[26] The topical focus of each sender group also differed markedly (see Figure 6). The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work. The Secretariat showed the most evenly distributed profile across all four themes, reflecting its broad coordinating mandate across all phases and workstreams. External Partners were most concentrated in Agreements & Contracts (53%), suggesting their engagement was primarily oriented around contractual obligations. Study Investigators showed a relatively even split between Agreements & Contracts (36%) and Study Documentation (30%), suggesting they were engaged across both contractual and documentation workstreams rather than technical data operations.",
+    "text": "Topic Distribution Across Sender Roles\n[25] Sender analysis revealed sharply uneven operational engagement across institutional roles. The Databank Harmonization Group, a specialized research group responsible for data harmonization, variable mapping, and ensuring interoperability, sent emails at a ratio of 116 emails per sender. The Databank Secretariat, which is the central coordination and administrative staff responsible for managing day-to-day operations, tracking milestones, and overseeing agreements, sent 101 emails per sender. In contrast, activity was much lower among External Partners (including Statistics Canada, legal counsel, and government agencies), Study Staff (research coordinators and data managers handling preparation and upload), and Study Investigators (PIs and Co-Is responsible for governance decisions), who averaged 7, 6, and 5 emails per sender, respectively. This concentration of email activity within Databank teams makes visible the coordination labour sustained by a small number of highly active individuals.\n\n\n\n\n\n\nFigure 6: Topic assignments by sender category, sorted within each theme by entropy descending. Each dot represents one email assignment; numbers below each column indicate the total number of emails sent by that category. Reference clusters at the bottom show approximate densities corresponding to 10, 50, 100, 200, 350, and 500 email assignments.\n\n\n\n[26] The topical focus of each sender group also differed markedly (see Figure 6). The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work. The Secretariat showed the most evenly distributed profile across all four themes, reflecting its broad coordinating mandate across all phases and workstreams. External Partners were most concentrated in Agreements & Contracts (53%), suggesting their engagement was primarily oriented around contractual obligations. Study Investigators showed a relatively even split between Agreements & Contracts (36%) and Study Documentation (30%), suggesting they were engaged across both contractual and documentation workstreams rather than technical data operations.",
     "crumbs": [
       "Topic Modelling"
     ]
@@ -440,7 +336,7 @@
     "href": "topic-modelling/index.html#gender-distribution-of-coordination-labour",
     "title": "LLM-assisted topic modelling of Canadian COVID-19 Immunity Task Force data sharing operations",
     "section": "Gender Distribution of Coordination Labour",
-    "text": "Gender Distribution of Coordination Labour\n[27] A fuller account of these relational patterns, including who works with whom, on what, and when, is left to future work using network analysis of the full team correspondence.\n[28] Gender analysis is based on 95.8% of the total sample (6,545 emails), with senders of unknown gender excluded. Across the 456 unique senders with classified gender, women outnumbered men roughly two to one (294 women, 64.5%; 162 men, 35.5%). This imbalance was consistent at the study level: of 100 studies, 70 had a majority-women sender base and only 18 had a majority-men one (median 60.0% women per study).\n[29] Individual breadth of involvement was nearly identical across genders. Both women and men were engaged in emails involving a median of 5 distinct topics, and roughly half of each group (50.7% of women, 52.8% of men) engaged with five or more topics. These disparities therefore reflect not a difference in whether women and men did multi-faceted coordination work, but in which topics each group disproportionately handled. Both genders were engaged in similar sets of topics, which largely comprised combinations involving Meeting Scheduling & Invitations (T11), Document Review & Comments (T12), and Catalogue Completion Reminders (T9), pointing to coordination and documentation activities as the connective tissue of multi-topic involvement.\n[30] At the same time, women’s representation varied substantially across topics, ranging from 35% in Serology & Data Harmonization to 69% in Study Description & Catalogue Publication (see Figure 8). Data Operations topics, including Serology & Data Harmonization (35% women), Data Transfer Initiation (40% women), and Data Upload Instructions (42% women), were the most male-dominated. In contrast, Study Documentation topics showed the highest representation of women: Study Description & Catalogue Publication (69% women), Catalogue Completion Reminders (66% women), and Data Dictionary & Metadata (66% women). Agreements & Contracts topics showed a more mixed pattern, with women accounting for 48–58% of assignments across that theme. This progression, from male-dominated Data Operations topics to female-dominated Study Documentation topics, is consistent with prior research documenting the feminization of invisible coordination labour in research data infrastructure (Choroszewicz 2022).\n\n\n\n\n\n\nFigure 7: Topic assignments by gender category.",
+    "text": "Gender Distribution of Coordination Labour\n[27] A fuller account of these relational patterns, including who works with whom, on what, and when, is left to future work using network analysis of the full team correspondence.\n[28] Gender analysis is based on 95.8% of the total sample (6,545 emails), with senders of unknown gender excluded. Across the 456 unique senders with classified gender, women outnumbered men roughly two to one (294 women, 64.5%; 162 men, 35.5%). This imbalance was consistent at the study level: of 100 studies, 70 had a majority-women sender base and only 18 had a majority-men one (median 60.0% women per study).\n[29] Individual breadth of involvement was nearly identical across genders. Both women and men were engaged in emails involving a median of 5 distinct topics, and roughly half of each group (50.7% of women, 52.8% of men) engaged with five or more topics. These disparities therefore reflect not a difference in whether women and men did multi-faceted coordination work, but in which topics each group disproportionately handled. Both genders were engaged in similar sets of topics, which largely comprised combinations involving Meeting Scheduling & Invitations (T11), Document Review & Comments (T12), and Catalogue Completion Reminders (T9), pointing to coordination and documentation activities as the connective tissue of multi-topic involvement.\n[30] At the same time, women’s representation varied substantially across topics, ranging from 35% in Serology & Data Harmonization to 69% in Study Description & Catalogue Publication (see Figure 7). Data Operations topics, including Serology & Data Harmonization (35% women), Data Transfer Initiation (40% women), and Data Upload Instructions (42% women), were the most male-dominated. In contrast, Study Documentation topics showed the highest representation of women: Study Description & Catalogue Publication (69% women), Catalogue Completion Reminders (66% women), and Data Dictionary & Metadata (66% women). Agreements & Contracts topics showed a more mixed pattern, with women accounting for 48–58% of assignments across that theme. This progression, from male-dominated Data Operations topics to female-dominated Study Documentation topics, is consistent with prior research documenting the feminization of invisible coordination labour in research data infrastructure (Choroszewicz 2022).\n\n\n\n\n\n\nFigure 7: Topic assignments by gender category.",
     "crumbs": [
       "Topic Modelling"
     ]
@@ -536,185 +432,349 @@
     ]
   },
   {
-    "objectID": "data-complexity/sections/05_discussion.html",
-    "href": "data-complexity/sections/05_discussion.html",
+    "objectID": "topic-modelling/sections/03_results.html",
+    "href": "topic-modelling/sections/03_results.html",
+    "title": "1 Results",
+    "section": "",
+    "text": "The analytical corpus comprises 6,833 emails from the inbox of a central CITF Databank coordinator, spanning correspondence with 100 participating studies from February 2021 to September 2025, involving 491 unique senders. NMF identified 14 topics organized into four thematic categories. The 14 topics identified by the model and their five most characteristic terms are shown in Figure 1. The x-axis reflects each term’s NMF component weight, a non-negative score indicating the strength of association between that term and the topic, derived from the factorization of the Term Frequency-Inverse Document Frequency (TF-IDF) matrix. Higher scores indicate terms that are more strongly and distinctively associated with that topic relative to others in the vocabulary.\n\n\n\n\n\n\nFigure 1: Top 5 characteristic terms and topic coherence scores (c_v) for each of the 14 NMF topics.\n\n\n\nTopic coherence varied across the 14 topics, ranging from c_v = 0.473 to c_v = 0.956. The most coherent topics were those with highly distinctive technical vocabularies: Data Upload Instructions & Credentials (c_v = 0.956), Study Description & Catalogue Publication (c_v = 0.930), and Document Appendices & Revisions (c_v = 0.861). The least coherent topics, Meeting Scheduling & Invitations (c_v = 0.473) and Executive Correspondence (c_v = 0.497), reflect more generic coordination language that is less semantically distinctive, which is consistent with the broad, cross-cutting nature of these activities.\nThe topic labels, thematic groupings, and descriptions generated through LLM-assisted annotation are shown in Figure 2.\n\n\n\n\n\n\nFigure 2: LLM-assisted labels, thematic groupings, and descriptions for the 14 NMF topics.\n\n\n\nThe topic model identified five discrete topics within the Agreements & Contracts theme, compared to only two within Coordination, reflecting the greater variety and specificity of tasks involved in contractual work relative to general coordination activities. Within the Agreements & Contracts theme, individual topics showed distinct distributional patterns across the data sharing lifecycle, reflecting both process-ordered and cyclical forms of engagement.\nData Sharing Agreements & Consent (T0) and Document Appendices & Revisions (T8) were most concentrated in the earliest phases, Funding Start (22.5% and 21.7%) and Data Introduction (21.0% and 22.7%), consistent with their role in establishing the initial terms and conditions of data sharing. DSA Status & Amendments (T5) showed a similar early peak (14.4% and 20.6%) but remained more persistent across later phases (10.4% in both DSA Execution and Data Cataloguing), suggesting that amendments continued to be negotiated well beyond initial agreement execution.\nDocument Signatures & Execution (T7) was relatively flat across phases (ranging from 5.4% to 13.2%), contrary to the expectation that signatures would be concentrated at the point of DSA Execution, suggesting that formal sign-off occurred at multiple points throughout the process rather than once. Document Review & Comments (T12) showed the most distinctly cyclical pattern: present at high levels in early phases (23.6% and 25.0%) but spiking again at Data Publication (33.3%), confirming that document review is not a discrete event but a recurring activity that persists across the entire lifecycle.\n\n\nTopic co-occurrence analysis revealed two largely separate clusters of topics within the corpus, with Agreements and Contracts (5 topics, 3,793 multi-topic email assignments), Data Operations (4 topics, 2,772), Study Documentation (3 topics, 2,602), and Coordination (2 topics, 1,612) (see Figure 3). Core governance topics, including Document Signatures, Document Appendices, and DSA Status, co-occurred frequently with each other (co-occurrence scores: 0.20–0.28) but rarely with core technical topics such as Data Upload Instructions, Variable Mapping, and Data Transfer Initiation (co-occurrence scores: 0.02–0.06). This structural separation suggests that governance and data operations workstreams ran largely in parallel rather than in close coordination.\n\n\n\n\n\n\nFigure 3: Topic co-occurrence matrix. Circle size indicates the normalized pairwise co-occurrence score between topic pairs (the proportion of shared email assignments relative to the smaller of the two topics, ranging from 0 to 0.30). Numbers below each column indicate the total number of emails assigned to that topic via multi-topic assignment.\n\n\n\n\nThe primary point of convergence between these two clusters was Document Review and Comments, the most frequently assigned topic in the corpus (1,323 email assignments) and the most broadly connected across all thematic categories (co-occurrence scores: 0.08–0.25). This topic likely reflects the reconciliation of technical data descriptions and management requirements with institutional expectations, as data sharing agreements needed to stipulate the exact data being shared and the conditions under which they would be managed. It represents the interface between governance and operations: the point at which these concerns were most likely to be addressed together.\nThe five highest pairwise co-occurrence scores in the corpus were T7 x T8 (Document Signatures & Execution x Document Appendices & Revisions, 0.28), T3 x T13 (Variable Mapping & Schema Alignment x Data Dictionary & Metadata, 0.27), T3 x T4 (Variable Mapping & Schema Alignment x Serology & Data Harmonization, 0.26), T0 x T8 (Data Sharing Agreements & Consent x Document Appendices & Revisions, 0.23), and T0 x T7 (Data Sharing Agreements & Consent x Document Signatures & Execution, 0.22), all reflecting tight clustering within the Agreements & Contracts and Data Operations themes respectively. The five lowest scores involved Executive Correspondence (T6) and Document Signatures (T7) paired with Data Operations topics such as Variable Mapping (T3) and Data Upload Instructions (T2), with co-occurrence scores of 0.02–0.03, consistent with the structural separation between governance and operational workstreams identified above.\n\n\n\nThis analysis is based on 90.3% of the full corpus (6,167 emails), with 7 studies excluded due to non-sequential milestone dates. Topic theme assignments shifted clearly across phases of the data sharing lifecycle, with Agreements & Contracts concerns proving more persistent than the phase structure alone would suggest (see Figure 4). In early phases, correspondence was dominated by Agreements & Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase. In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.\n\n\n\n\n\n\nFigure 4: Topic assignments by lifecycle phase, sorted within each theme by entropy descending. Each dot represents one email assignment; numbers below each column indicate the total number of emails in that phase. Reference clusters at the bottom show approximate densities corresponding to 10, 50, 100, 200, 350, and 500 email assignments.\n\n\n\n\nHowever, Agreements & Contracts concerns did not recede as the lifecycle progressed. Even in the Data Upload and Data Cataloguing phases, which were dominated by Data Operations, Agreements & Contracts still accounted for 14% and 21% of topic assignments respectively. Rather than being treated as an initial phase with a definite endpoint, contractual and administrative concerns persisted throughout the data sharing lifecycle, requiring ongoing attention well beyond the execution of formal agreements.\nStudies spent a median of 395 days in DSA negotiation (Intro-to-DSA phase) and 398 days in data preparation (DSA-to-Upload phase), compared to only 22 days for technical cataloguing (Upload-to-Catalogue phase), an 18:1 ratio of administrative to technical time.\n\n\n\nTable 1: Distribution of temporal durations for each phase.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhase Transition\nN Studies\nMean (days)\nMedian (days)\nMin (days)\nMax (days)\n\n\n\n\nFunding → Intro\n83\n212\n190\n7\n670\n\n\nIntro → DSA\n59\n454\n395\n7\n1526\n\n\nDSA → Upload\n50\n394\n398\n2\n1184\n\n\nUpload → Catalogue\n46\n68\n22\n0\n421\n\n\nCatalogue → Publication\n29\n664\n753\n245\n1012\n\n\n\n\n\n\n\n\n\nSender analysis revealed sharply uneven operational engagement across institutional roles. The Databank Harmonization Group, a specialized research group responsible for data harmonization, variable mapping, and ensuring interoperability, sent emails at a ratio of 116 emails per sender. The Databank Secretariat, which is the central coordination and administrative staff responsible for managing day-to-day operations, tracking milestones, and overseeing agreements, sent 101 emails per sender. In contrast, activity was much lower among External Partners (including Statistics Canada, legal counsel, and government agencies), Study Staff (research coordinators and data managers handling preparation and upload), and Study Investigators (PIs and Co-Is responsible for governance decisions), who averaged 7, 6, and 5 emails per sender, respectively. This concentration of email activity within Databank teams makes visible the coordination labour sustained by a small number of highly active individuals.\n\n\n\n\n\n\nFigure 5: Topic assignments by sender category, sorted within each theme by entropy descending. Each dot represents one email assignment; numbers below each column indicate the total number of emails sent by that category. Reference clusters at the bottom show approximate densities corresponding to 10, 50, 100, 200, 350, and 500 email assignments.\n\n\n\nThe topical focus of each sender group also differed markedly (see Figure 5). The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work. The Secretariat showed the most evenly distributed profile across all four themes, reflecting its broad coordinating mandate across all phases and workstreams. External Partners were most concentrated in Agreements & Contracts (53%), suggesting their engagement was primarily oriented around contractual obligations. Study Investigators showed a relatively even split between Agreements & Contracts (36%) and Study Documentation (30%), suggesting they were engaged across both contractual and documentation workstreams rather than technical data operations.\n\n\n\nA fuller account of these relational patterns, including who works with whom, on what, and when, is left to future work using network analysis of the full team correspondence.\nGender analysis is based on 95.8% of the total sample (6,545 emails), with senders of unknown gender excluded. Across the 456 unique senders with classified gender, women outnumbered men roughly two to one (294 women, 64.5%; 162 men, 35.5%). This imbalance was consistent at the study level: of 100 studies, 70 had a majority-women sender base and only 18 had a majority-men one (median 60.0% women per study).\nIndividual breadth of involvement was nearly identical across genders. Both women and men were engaged in emails involving a median of 5 distinct topics, and roughly half of each group (50.7% of women, 52.8% of men) engaged with five or more topics. These disparities therefore reflect not a difference in whether women and men did multi-faceted coordination work, but in which topics each group disproportionately handled. Both genders were engaged in similar sets of topics, which largely comprised combinations involving Meeting Scheduling & Invitations (T11), Document Review & Comments (T12), and Catalogue Completion Reminders (T9), pointing to coordination and documentation activities as the connective tissue of multi-topic involvement.\nAt the same time, women’s representation varied substantially across topics, ranging from 35% in Serology & Data Harmonization to 69% in Study Description & Catalogue Publication (see Figure 6). Data Operations topics, including Serology & Data Harmonization (35% women), Data Transfer Initiation (40% women), and Data Upload Instructions (42% women), were the most male-dominated. In contrast, Study Documentation topics showed the highest representation of women: Study Description & Catalogue Publication (69% women), Catalogue Completion Reminders (66% women), and Data Dictionary & Metadata (66% women). Agreements & Contracts topics showed a more mixed pattern, with women accounting for 48–58% of assignments across that theme. This progression, from male-dominated Data Operations topics to female-dominated Study Documentation topics, is consistent with prior research documenting the feminization of invisible coordination labour in research data infrastructure [@choroszewicz2022].\n\n\n\n\n\n\nFigure 6: Topic assignments by gender category."
+  },
+  {
+    "objectID": "topic-modelling/sections/03_results.html#co-occurrence-analysis-of-topic-relationships",
+    "href": "topic-modelling/sections/03_results.html#co-occurrence-analysis-of-topic-relationships",
+    "title": "1 Results",
+    "section": "",
+    "text": "Topic co-occurrence analysis revealed two largely separate clusters of topics within the corpus, with Agreements and Contracts (5 topics, 3,793 multi-topic email assignments), Data Operations (4 topics, 2,772), Study Documentation (3 topics, 2,602), and Coordination (2 topics, 1,612) (see Figure 3). Core governance topics, including Document Signatures, Document Appendices, and DSA Status, co-occurred frequently with each other (co-occurrence scores: 0.20–0.28) but rarely with core technical topics such as Data Upload Instructions, Variable Mapping, and Data Transfer Initiation (co-occurrence scores: 0.02–0.06). This structural separation suggests that governance and data operations workstreams ran largely in parallel rather than in close coordination.\n\n\n\n\n\n\nFigure 3: Topic co-occurrence matrix. Circle size indicates the normalized pairwise co-occurrence score between topic pairs (the proportion of shared email assignments relative to the smaller of the two topics, ranging from 0 to 0.30). Numbers below each column indicate the total number of emails assigned to that topic via multi-topic assignment.\n\n\n\n\nThe primary point of convergence between these two clusters was Document Review and Comments, the most frequently assigned topic in the corpus (1,323 email assignments) and the most broadly connected across all thematic categories (co-occurrence scores: 0.08–0.25). This topic likely reflects the reconciliation of technical data descriptions and management requirements with institutional expectations, as data sharing agreements needed to stipulate the exact data being shared and the conditions under which they would be managed. It represents the interface between governance and operations: the point at which these concerns were most likely to be addressed together.\nThe five highest pairwise co-occurrence scores in the corpus were T7 x T8 (Document Signatures & Execution x Document Appendices & Revisions, 0.28), T3 x T13 (Variable Mapping & Schema Alignment x Data Dictionary & Metadata, 0.27), T3 x T4 (Variable Mapping & Schema Alignment x Serology & Data Harmonization, 0.26), T0 x T8 (Data Sharing Agreements & Consent x Document Appendices & Revisions, 0.23), and T0 x T7 (Data Sharing Agreements & Consent x Document Signatures & Execution, 0.22), all reflecting tight clustering within the Agreements & Contracts and Data Operations themes respectively. The five lowest scores involved Executive Correspondence (T6) and Document Signatures (T7) paired with Data Operations topics such as Variable Mapping (T3) and Data Upload Instructions (T2), with co-occurrence scores of 0.02–0.03, consistent with the structural separation between governance and operational workstreams identified above."
+  },
+  {
+    "objectID": "topic-modelling/sections/03_results.html#topic-distribution-across-lifecycle-phases",
+    "href": "topic-modelling/sections/03_results.html#topic-distribution-across-lifecycle-phases",
+    "title": "1 Results",
+    "section": "",
+    "text": "This analysis is based on 90.3% of the full corpus (6,167 emails), with 7 studies excluded due to non-sequential milestone dates. Topic theme assignments shifted clearly across phases of the data sharing lifecycle, with Agreements & Contracts concerns proving more persistent than the phase structure alone would suggest (see Figure 4). In early phases, correspondence was dominated by Agreements & Contracts work: this theme accounted for 45% of topic assignments in the Funding Start phase and 50% in the Data Introduction phase. In later phases, Data Operations came to the fore: this theme accounted for 46% of assignments in the DSA Execution phase, rising to 56% in the Data Upload phase and 52% in the Data Cataloguing phase.\n\n\n\n\n\n\nFigure 4: Topic assignments by lifecycle phase, sorted within each theme by entropy descending. Each dot represents one email assignment; numbers below each column indicate the total number of emails in that phase. Reference clusters at the bottom show approximate densities corresponding to 10, 50, 100, 200, 350, and 500 email assignments.\n\n\n\n\nHowever, Agreements & Contracts concerns did not recede as the lifecycle progressed. Even in the Data Upload and Data Cataloguing phases, which were dominated by Data Operations, Agreements & Contracts still accounted for 14% and 21% of topic assignments respectively. Rather than being treated as an initial phase with a definite endpoint, contractual and administrative concerns persisted throughout the data sharing lifecycle, requiring ongoing attention well beyond the execution of formal agreements.\nStudies spent a median of 395 days in DSA negotiation (Intro-to-DSA phase) and 398 days in data preparation (DSA-to-Upload phase), compared to only 22 days for technical cataloguing (Upload-to-Catalogue phase), an 18:1 ratio of administrative to technical time.\n\n\n\nTable 1: Distribution of temporal durations for each phase.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhase Transition\nN Studies\nMean (days)\nMedian (days)\nMin (days)\nMax (days)\n\n\n\n\nFunding → Intro\n83\n212\n190\n7\n670\n\n\nIntro → DSA\n59\n454\n395\n7\n1526\n\n\nDSA → Upload\n50\n394\n398\n2\n1184\n\n\nUpload → Catalogue\n46\n68\n22\n0\n421\n\n\nCatalogue → Publication\n29\n664\n753\n245\n1012"
+  },
+  {
+    "objectID": "topic-modelling/sections/03_results.html#topic-distribution-across-sender-roles",
+    "href": "topic-modelling/sections/03_results.html#topic-distribution-across-sender-roles",
+    "title": "1 Results",
+    "section": "",
+    "text": "Sender analysis revealed sharply uneven operational engagement across institutional roles. The Databank Harmonization Group, a specialized research group responsible for data harmonization, variable mapping, and ensuring interoperability, sent emails at a ratio of 116 emails per sender. The Databank Secretariat, which is the central coordination and administrative staff responsible for managing day-to-day operations, tracking milestones, and overseeing agreements, sent 101 emails per sender. In contrast, activity was much lower among External Partners (including Statistics Canada, legal counsel, and government agencies), Study Staff (research coordinators and data managers handling preparation and upload), and Study Investigators (PIs and Co-Is responsible for governance decisions), who averaged 7, 6, and 5 emails per sender, respectively. This concentration of email activity within Databank teams makes visible the coordination labour sustained by a small number of highly active individuals.\n\n\n\n\n\n\nFigure 5: Topic assignments by sender category, sorted within each theme by entropy descending. Each dot represents one email assignment; numbers below each column indicate the total number of emails sent by that category. Reference clusters at the bottom show approximate densities corresponding to 10, 50, 100, 200, 350, and 500 email assignments.\n\n\n\nThe topical focus of each sender group also differed markedly (see Figure 5). The Harmonization Group was the most topically specialized, with Study Documentation accounting for 65% of its topic assignments, reflecting its focused role in data dictionary and catalogue work. The Secretariat showed the most evenly distributed profile across all four themes, reflecting its broad coordinating mandate across all phases and workstreams. External Partners were most concentrated in Agreements & Contracts (53%), suggesting their engagement was primarily oriented around contractual obligations. Study Investigators showed a relatively even split between Agreements & Contracts (36%) and Study Documentation (30%), suggesting they were engaged across both contractual and documentation workstreams rather than technical data operations."
+  },
+  {
+    "objectID": "topic-modelling/sections/03_results.html#gender-distribution-of-coordination-labour",
+    "href": "topic-modelling/sections/03_results.html#gender-distribution-of-coordination-labour",
+    "title": "1 Results",
+    "section": "",
+    "text": "A fuller account of these relational patterns, including who works with whom, on what, and when, is left to future work using network analysis of the full team correspondence.\nGender analysis is based on 95.8% of the total sample (6,545 emails), with senders of unknown gender excluded. Across the 456 unique senders with classified gender, women outnumbered men roughly two to one (294 women, 64.5%; 162 men, 35.5%). This imbalance was consistent at the study level: of 100 studies, 70 had a majority-women sender base and only 18 had a majority-men one (median 60.0% women per study).\nIndividual breadth of involvement was nearly identical across genders. Both women and men were engaged in emails involving a median of 5 distinct topics, and roughly half of each group (50.7% of women, 52.8% of men) engaged with five or more topics. These disparities therefore reflect not a difference in whether women and men did multi-faceted coordination work, but in which topics each group disproportionately handled. Both genders were engaged in similar sets of topics, which largely comprised combinations involving Meeting Scheduling & Invitations (T11), Document Review & Comments (T12), and Catalogue Completion Reminders (T9), pointing to coordination and documentation activities as the connective tissue of multi-topic involvement.\nAt the same time, women’s representation varied substantially across topics, ranging from 35% in Serology & Data Harmonization to 69% in Study Description & Catalogue Publication (see Figure 6). Data Operations topics, including Serology & Data Harmonization (35% women), Data Transfer Initiation (40% women), and Data Upload Instructions (42% women), were the most male-dominated. In contrast, Study Documentation topics showed the highest representation of women: Study Description & Catalogue Publication (69% women), Catalogue Completion Reminders (66% women), and Data Dictionary & Metadata (66% women). Agreements & Contracts topics showed a more mixed pattern, with women accounting for 48–58% of assignments across that theme. This progression, from male-dominated Data Operations topics to female-dominated Study Documentation topics, is consistent with prior research documenting the feminization of invisible coordination labour in research data infrastructure [@choroszewicz2022].\n\n\n\n\n\n\nFigure 6: Topic assignments by gender category."
+  },
+  {
+    "objectID": "topic-modelling/sections/11_back-matter.html#list-of-abbreviations",
+    "href": "topic-modelling/sections/11_back-matter.html#list-of-abbreviations",
+    "title": "1 Back Matter",
+    "section": "1.1 List of Abbreviations",
+    "text": "1.1 List of Abbreviations"
+  },
+  {
+    "objectID": "topic-modelling/sections/11_back-matter.html#ethics-approval-and-consent-to-participate",
+    "href": "topic-modelling/sections/11_back-matter.html#ethics-approval-and-consent-to-participate",
+    "title": "1 Back Matter",
+    "section": "1.2 Ethics Approval and Consent to Participate",
+    "text": "1.2 Ethics Approval and Consent to Participate\n\nThis study analyzes administrative correspondence generated in the course of operational activities. All email data were de-identified prior to analysis using automated anonymization tools. The study was conducted in accordance with applicable institutional ethics guidelines. As this study involves analysis of administrative records rather than direct engagement with human participants, individual informed consent was not required."
+  },
+  {
+    "objectID": "topic-modelling/sections/11_back-matter.html#consent-for-publication",
+    "href": "topic-modelling/sections/11_back-matter.html#consent-for-publication",
+    "title": "1 Back Matter",
+    "section": "1.3 Consent for Publication",
+    "text": "1.3 Consent for Publication"
+  },
+  {
+    "objectID": "topic-modelling/sections/11_back-matter.html#availability-of-data-and-materials",
+    "href": "topic-modelling/sections/11_back-matter.html#availability-of-data-and-materials",
+    "title": "1 Back Matter",
+    "section": "1.4 Availability of Data and Materials",
+    "text": "1.4 Availability of Data and Materials\n\nThe email corpus analyzed in this study contains sensitive institutional and administrative information and is not publicly available. De-identified topic model outputs, analytical code, and summary data underlying the figures and tables are available in the companion repository at https://github.com/zackbatist/CITF-emails. All code was developed using open-source tools and is archived following FAIR principles."
+  },
+  {
+    "objectID": "topic-modelling/sections/11_back-matter.html#competing-interests",
+    "href": "topic-modelling/sections/11_back-matter.html#competing-interests",
+    "title": "1 Back Matter",
+    "section": "1.5 Competing Interests",
+    "text": "1.5 Competing Interests\n\nThe authors declare no competing interests."
+  },
+  {
+    "objectID": "topic-modelling/sections/11_back-matter.html#funding",
+    "href": "topic-modelling/sections/11_back-matter.html#funding",
+    "title": "1 Back Matter",
+    "section": "1.6 Funding",
+    "text": "1.6 Funding\n\nThis work was supported by the Canadian Institutes of Health Research (CIHR) operating grant held by David Buckeridge (2024–2027), which supports completion of the CITF Databank and related governance research. Zachary Batist is supported as a Postdoctoral Researcher within this grant."
+  },
+  {
+    "objectID": "topic-modelling/sections/11_back-matter.html#author-contributions",
+    "href": "topic-modelling/sections/11_back-matter.html#author-contributions",
+    "title": "1 Back Matter",
+    "section": "1.7 Author Contributions",
+    "text": "1.7 Author Contributions\n\nZachary Batist led the conceptualization of the study, developed and applied the data processing and analysis pipeline, conducted topic modeling and sender analyses, and led the writing of the manuscript. Melissa Ouellet contributed to data processing, analysis, and interpretation of findings, and reviewed and edited the manuscript. Sadun Khezri contributed to data processing and analysis. Tanya Murphy and Aklil Noza contributed to data collection and management. Samira Abbasgholizadeh-Rahimi provided expertise in machine learning methods and reviewed the manuscript. Guillaume Bourque provided expertise in computational infrastructure and reviewed the manuscript. David Buckeridge conceived and led the CITF Databank initiative, provided domain expertise, and reviewed and edited the manuscript. All authors read and approved the final manuscript."
+  },
+  {
+    "objectID": "topic-modelling/sections/11_back-matter.html#acknowledgements",
+    "href": "topic-modelling/sections/11_back-matter.html#acknowledgements",
+    "title": "1 Back Matter",
+    "section": "1.8 Acknowledgements",
+    "text": "1.8 Acknowledgements\n\nWe thank the members of the CITF Databank team and all partnering study teams whose correspondence forms the basis of this analysis. We are grateful to the Canadian COVID-19 Immunity Task Force for supporting this meta-research program and for their commitment to reflexive examination of their own operations. We also thank the McGill Clinical and Health Informatics (MCHI) research group for providing computational infrastructure and administrative support.\nClaude (Sonnet 4.6) was used to assist with content organization, grammar checking, and improving overall clarity while drafting this manuscript. This tool contributed to the writing process by providing language suggestions and helping to structure the material more effectively."
+  },
+  {
+    "objectID": "topic-modelling/sections/11_back-matter.html#authors-bios",
+    "href": "topic-modelling/sections/11_back-matter.html#authors-bios",
+    "title": "1 Back Matter",
+    "section": "1.9 Authors’ Bios",
+    "text": "1.9 Authors’ Bios\n\nZachary Batist is a Postdoctoral Researcher in the Department of Epidemiology, Biostatistics and Occupational Health at McGill University’s School of Population and Global Health. His research focuses on the governance and organizational dimensions of health research data sharing.\nMelissa Ouellet is a Research Associate in the Department of Epidemiology, Biostatistics and Occupational Health at McGill University.\nSadun Khezri is\nTanya Murphy is\nAklil Noza is\nSamira Abbasgholizadeh-Rahimi is\nGuillaume Bourque is\nDavid Buckeridge is a Professor of Epidemiology and Biostatistics at McGill University and Director of the CITF Databank. His research concerns the management and application of distributed health records and biomedical informatics."
+  },
+  {
+    "objectID": "topic-modelling/sections/04_discussion.html",
+    "href": "topic-modelling/sections/04_discussion.html",
     "title": "1 Discussion",
     "section": "",
-    "text": "1 Discussion"
+    "text": "1 Discussion\nThis study analyzed 6,833 emails from the operational correspondence of the CITF Databank to characterize how large-scale health research data sharing is coordinated in practice. The findings reveal that data sharing is primarily an administrative and governance challenge, that coordination labour is highly concentrated among a small number of Databank personnel, and that systematic disparities in workload distribution track both institutional role and gender.\nThe structural separation between governance and data operations workstreams, and the finding that contractual and administrative concerns persist across all phases rather than being resolved early, suggests that formal models of sequential data sharing — in which agreements are finalized before technical work begins — are not how coordination actually unfolds in practice. The persistence of contractual concerns into the Data Upload and Data Cataloguing phases suggests that governance and technical work proceeded in parallel by necessity, as evolving data requirements continued to surface new administrative obligations even after agreements were nominally in place. Parallel onboarding strategies, in which technical preparation and agreement negotiation proceed simultaneously, could formalize this reality and reduce overall timelines. More responsive and adaptive models for data sharing agreements, which can be amended as data requirements evolve rather than requiring full renegotiation, may also reduce the persistence of governance concerns in later phases [@casey2016; @vanhuis2014].\nThe concentration of email activity within Databank teams makes visible the coordination labour that is often unrecognized in funding and workload planning. Sustaining data sharing at scale requires recognizing and resourcing this labour explicitly. The gender analysis adds a further dimension to this concern: Data Operations topics were the most male-dominated, while Study Documentation topics showed the highest representation of women, suggesting that the more visible, technically-oriented work was disproportionately associated with men while women were more concentrated in documentation and cataloguing tasks. This pattern is consistent with prior research on the feminization of hidden labour in research data infrastructure [@choroszewicz2022]. Future initiatives should consider how coordination roles are defined, compensated, and credited, and whether existing structures inadvertently concentrate invisible labour among women and other underrepresented groups.\nThese findings have direct implications for how research data sharing infrastructure is resourced and governed in Canada and beyond. Growing data sharing obligations under the Tri-Agency RDM Policy will place increasing demands on university contracts offices and research administration teams. Demands are not easily scaled: contracts office capacity is typically constrained by fixed institutional overhead rates rather than by the volume of agreements requiring processing. Policymakers and research administrators should account for this bottleneck when designing governance frameworks and allocating human resources for data sharing initiatives.\nThis study has several limitations. The corpus is drawn from a single coordinator’s inbox, which captures one perspective on the coordination process but may not reflect the full scope of communication across the initiative. The gender analysis relies on probabilistic coding of first names, which does not capture non-binary or gender-diverse identities and may misclassify names from non-Western cultural contexts. Finally, as a single case study, the findings reflect the specific organizational and institutional context of the CITF Databank; while the structural patterns identified here are likely generalizable to similar pan-Canadian data sharing initiatives, further research across other settings is needed to confirm this. Nevertheless, the use of topic modeling applied to email archives offers a replicable methodological approach that could be adapted to study coordination challenges in other domains of health systems management, and the combination of NMF topic modeling with LLM-assisted annotation proved effective for characterizing thematic structure in a specialized institutional corpus where standard approaches performed poorly. Subsequent work will examine the relational structure of coordination across the full team correspondence, as well as the role of data complexity in shaping coordination demands and timelines."
   },
   {
-    "objectID": "data-complexity/sections/02_background.html",
-    "href": "data-complexity/sections/02_background.html",
-    "title": "1 Background",
+    "objectID": "topic-modelling/sections/05_conclusions.html",
+    "href": "topic-modelling/sections/05_conclusions.html",
+    "title": "1 Conclusions",
     "section": "",
-    "text": "1 Background"
+    "text": "1 Conclusions\nAs institutions across Canada and beyond face growing obligations to share research data, understanding what that work actually involves — and who bears its costs — is essential for designing governance frameworks that are both realistic and equitable.\nThree principal findings from this study stand out. First, governance and data operations workstreams ran largely in parallel, with contractual and administrative concerns persisting across all lifecycle phases rather than being resolved early — reflected in an 18:1 ratio of administrative to technical time. Second, coordination labour was sharply concentrated among Databank personnel, with the Harmonization Group and Secretariat sending emails at ratios of 116 and 101 per sender respectively, compared to 5–7 among partner study representatives. Third, gender disparities followed a consistent pattern: women’s representation ranged from 36% in the most technical Data Operations topics to 70% in Study Documentation topics, consistent with broader evidence on the feminization of invisible coordination labour in research infrastructure. Taken together, these findings confirm that data sharing is primarily an administrative and governance challenge, and that sustaining it at scale places disproportionate demands on a small number of people — demands that existing funding and workforce planning frameworks are poorly equipped to absorb."
   },
   {
-    "objectID": "data-complexity/sections/01_introduction.html",
-    "href": "data-complexity/sections/01_introduction.html",
-    "title": "1 Introduction",
-    "section": "",
-    "text": "1 Introduction"
-  },
-  {
-    "objectID": "data-complexity/sections/00_abstract.html",
-    "href": "data-complexity/sections/00_abstract.html",
-    "title": "1 Abstract",
-    "section": "",
-    "text": "1 Abstract"
-  },
-  {
-    "objectID": "data-complexity/sections/04_findings.html",
-    "href": "data-complexity/sections/04_findings.html",
-    "title": "1 Findings",
-    "section": "",
-    "text": "1 Findings"
-  },
-  {
-    "objectID": "data-complexity/index.html#acknowledgments",
-    "href": "data-complexity/index.html#acknowledgments",
-    "title": "Data Complexity",
-    "section": "8.1 Acknowledgments",
-    "text": "8.1 Acknowledgments",
-    "crumbs": [
-      "Data Complexity"
-    ]
-  },
-  {
-    "objectID": "data-complexity/index.html#funding",
-    "href": "data-complexity/index.html#funding",
-    "title": "Data Complexity",
-    "section": "8.2 Funding",
-    "text": "8.2 Funding",
-    "crumbs": [
-      "Data Complexity"
-    ]
-  },
-  {
-    "objectID": "data-complexity/index.html#competing-interests",
-    "href": "data-complexity/index.html#competing-interests",
-    "title": "Data Complexity",
-    "section": "8.3 Competing Interests",
-    "text": "8.3 Competing Interests",
-    "crumbs": [
-      "Data Complexity"
-    ]
-  },
-  {
-    "objectID": "data-complexity/index.html#author-contributions",
-    "href": "data-complexity/index.html#author-contributions",
-    "title": "Data Complexity",
-    "section": "8.4 Author Contributions",
-    "text": "8.4 Author Contributions",
-    "crumbs": [
-      "Data Complexity"
-    ]
-  },
-  {
-    "objectID": "data-complexity/index.html#informed-consent",
-    "href": "data-complexity/index.html#informed-consent",
-    "title": "Data Complexity",
-    "section": "8.5 Informed Consent",
-    "text": "8.5 Informed Consent",
-    "crumbs": [
-      "Data Complexity"
-    ]
-  },
-  {
-    "objectID": "data-complexity/index.html#data-availability-statement",
-    "href": "data-complexity/index.html#data-availability-statement",
-    "title": "Data Complexity",
-    "section": "8.6 Data Availability Statement",
-    "text": "8.6 Data Availability Statement",
-    "crumbs": [
-      "Data Complexity"
-    ]
-  },
-  {
-    "objectID": "data-complexity/index.html#author-bios",
-    "href": "data-complexity/index.html#author-bios",
-    "title": "Data Complexity",
-    "section": "8.7 Author Bios",
-    "text": "8.7 Author Bios",
-    "crumbs": [
-      "Data Complexity"
-    ]
-  },
-  {
-    "objectID": "network-analysis/sections/06_conclusion.html",
-    "href": "network-analysis/sections/06_conclusion.html",
-    "title": "1 Conclusion",
-    "section": "",
-    "text": "1 Conclusion"
-  },
-  {
-    "objectID": "network-analysis/sections/12_supplement.html",
-    "href": "network-analysis/sections/12_supplement.html",
+    "objectID": "topic-modelling/sections/12_supplement.html",
+    "href": "topic-modelling/sections/12_supplement.html",
     "title": "1 Supplementary Materials",
     "section": "",
     "text": "1 Supplementary Materials"
   },
   {
-    "objectID": "network-analysis/sections/11_back-matter.html#acknowledgments",
-    "href": "network-analysis/sections/11_back-matter.html#acknowledgments",
-    "title": "1 Back Matter",
-    "section": "1.1 Acknowledgments",
-    "text": "1.1 Acknowledgments"
+    "objectID": "topic-modelling/sections/01_background.html",
+    "href": "topic-modelling/sections/01_background.html",
+    "title": "1 Background",
+    "section": "",
+    "text": "1 Background\nTimely access to health research data is essential for evidence-informed public health decision-making, as demonstrated during the COVID-19 pandemic when the rapid aggregation of epidemiological data across institutions and jurisdictions was critical for coordinated response [@yehudi2025; @rigby2024]. Despite growing policy commitments to open data, including Canada’s Tri-Agency Research Data Management (RDM) Policy and the initiatives of the Digital Research Alliance of Canada, a recent report by Canada’s Chief Science Advisor identified fragmented data governance, inconsistent institutional practices, and insufficient workforce capacity as critical barriers to building a national scientific data ecosystem [@chiefscience2025]. These findings echo a decade of research on technical, motivational, legal, and ethical barriers to health data sharing [@vanhuis2014; @casey2016], though only a small fraction of that evidence is derived from empirical study of actual data sharing operations.\nMost of what we know about research data sharing comes from self-reported surveys and post-hoc reflections [@vanhuis2014; @shabani2016a; @shabani2016b]. The actual day-to-day work of negotiating data sharing agreements, onboarding partner studies, and managing the technical and administrative dimensions of data transfer across institutions has rarely been observed directly. This gap is consequential: stakeholders consistently underestimate the labour required to coordinate large-scale data sharing, and policymakers lack empirical grounding for decisions about how to staff, fund, and organize data sharing operations [@choroszewicz2022; @casey2016].\nComputational analysis of organizational correspondence offers a promising approach for studying coordination work as it actually unfolds. Topic modeling and related natural language processing techniques have been applied to email archives to characterize patterns of collaboration in large projects [@piccolo2018; @indig2023], and to health-related text data more broadly [@lossioventura2021]. Recent advances in combining non-negative matrix factorization (NMF) with large language model (LLM) assisted annotation have further improved the interpretability of topic modeling outputs [@wanna2024; @janssens2025; @tan2025].\nThe Canadian COVID-19 Immunity Task Force (CITF) Databank offers a rare opportunity to apply these methods to the study of health data sharing governance. Established in 2020 to coordinate serological and immunological research across Canada, the CITF Databank integrated over 150,000 health records from over 100 partnering studies spanning diverse institutional settings and geographic locations. The operational work of coordinating data sharing with all these studies was conducted largely through email correspondence managed by a central operations team, generating a primary record of data sharing coordination as it actually unfolded in real time.\nThis study analyzes that correspondence using topic modeling to characterize the operational processes of research data sharing at scale. Specifically, we examine: (1) what Databank personnel and their collaborators communicated about, and how these topics were distributed across the data sharing lifecycle; (2) how coordination labour was distributed across different institutional roles; and (3) what the distribution of topics across phases and roles reveals about the governance and administrative demands of large-scale data sharing. The findings carry direct implications for Canadian research data infrastructure policy, particularly as institutions develop capacity to meet Tri-Agency RDM obligations and prepare for future public health emergencies."
   },
   {
-    "objectID": "network-analysis/sections/11_back-matter.html#funding",
-    "href": "network-analysis/sections/11_back-matter.html#funding",
-    "title": "1 Back Matter",
-    "section": "1.2 Funding",
-    "text": "1.2 Funding"
+    "objectID": "topic-modelling/sections/02_methods.html",
+    "href": "topic-modelling/sections/02_methods.html",
+    "title": "1 Methods",
+    "section": "",
+    "text": "This study analyzes email correspondence generated during the operations of the Canadian COVID-19 Immunity Task Force (CITF) Databank, a pan-Canadian initiative that integrated individual-level health records from partnering studies conducted across Canada between 2020 and 2025. The analytical corpus comprises emails from the inbox of a central CITF Databank operations manager responsible for coordinating data sharing with all partnering studies. Emails span the period from February 2021 to September 2025. Future work will expand the corpus to include additional team members’ inboxes, enabling a more comprehensive view of coordination across the initiative.\nEmails were preprocessed using a multi-step pipeline to remove non-substantive content and protect participant privacy. Rule-based cleaning steps removed confidentiality disclaimers, meeting-invite text, forwarded-message headers, and institutional email signatures. All messages were de-identified using Microsoft Presidio [@alrazihi2025; @kotevski2022], an open-source framework for automated detection and anonymization of personally identifiable information, with personal names, email addresses, and URLs replaced with anonymized placeholders. Duplicate messages were removed within studies using normalized text hashing. Documents were filtered to retain only emails with non-missing sent dates and appropriate length, excluding near-empty or excessively long messages. The CITF Databank operated bilingually; bilingual messages were processed to retain English content where identifiable, and remaining French text was translated into English using OPUS-MT neural machine translation. This pipeline yielded a final analytical sample of 6,833 emails involving 491 unique senders across 100 studies (see Figure 1).\n\n\n\n\n\n\nFigure 1: Data collection and analysis process\n\n\n\n\n\n\nWe evaluated four topic modeling approaches to identify the method best suited to this corpus: K-Means clustering, Latent Dirichlet Allocation (LDA), BERTopic, and Non-negative Matrix Factorization (NMF) [@murshed2023; @zubiaga2024]. Methods were compared at their peak coherence score (c_v) using standard English stopwords as a baseline. NMF outperformed all alternatives (c_v = 0.654), while K-Means produced an overly dominant cluster (50.8% of emails), LDA showed the lowest coherence (c_v = 0.517), and BERTopic assigned 32.3% of emails as outliers. Following additional domain-specific stopword curation and part-of-speech filtering, NMF performance improved across all values of k tested (k = 5 to 20). Although k = 5 achieved the highest coherence (c_v = 0.820), it produced only five broad topics with 35.6% of emails in the largest cluster. We selected k = 14 as the optimal balance between coherence (c_v = 0.768, NPMI = 0.170), granularity (lowest maximum cluster size at 10.7%), and topic diversity (0.914) [@rahimi2024].\nTo facilitate interpretation of the 14 NMF topics, we used a locally deployed open-source large language model to generate topic labels, thematic groupings, and topic descriptions [@wanna2024; @janssens2025; @tan2025]. Four open-source models were evaluated: Mistral-7B-Instruct-v0.3, Meta-Llama-3.1-8B-Instruct, Qwen2.5-7B-Instruct, and Gemma-2-9b-it, each receiving the top 5 keywords and 5 representative emails for all 14 topics simultaneously. Meta-Llama-3.1-8B-Instruct produced the most descriptive and semantically complete labels and was selected for subsequent steps. Using zero-shot prompts, the model was queried to: (1) generate 2–5 word topic labels from keywords and representative emails; (2) group labels into thematic categories; and (3) generate 2–3 sentence topic descriptions from keywords and up to 15 representative emails. Tasks were run across multiple temperature settings (0.0, 0.2, 0.4, 0.5, 0.7) and random seeds to ensure stability. All outputs were reviewed and refined by the research team to ensure face validity and alignment with domain knowledge. Local deployment ensured that no email data left secure servers at any stage of analysis.\nTo examine relationships between topics, we computed normalized pairwise co-occurrence scores across all 14 topics [@stevenson2023]. For each pair of topics, the co-occurrence score was calculated as the proportion of shared email assignments relative to the smaller of the two topics. Email-to-topic assignments were based on a 15% probability threshold applied to the normalized NMF weight matrix. This threshold was selected to capture substantive secondary topic assignments while filtering out most tertiary contributions, and was validated through research team review of representative emails. Under this scheme, 27.3% of emails were assigned to a single topic, 47.6% to two topics, and 25.1% to three or more topics (mean = 2.01 topics per email). Co-occurrence scores range from 0 (no co-occurrence) to 1 (complete overlap), with higher values indicating topics that are more likely to appear together within the same emails.\nTo examine how topics were distributed across the data sharing lifecycle, each email was mapped to one of six sequential phases: Funding Start, Data Introduction, Data Sharing Agreement (DSA) Execution, Data Upload, Data Cataloguing, and Data Publication. Phase assignments were based on milestone dates recorded for each study. Seven studies were excluded from phase analysis due to non-sequential milestone dates, leaving 6,167 emails from 93 studies. For sender analysis, each email sender was classified into one of five categories based on their institutional role: Databank Secretariat, Study Staff, Study Investigators, External Partners, and Harmonization Group. For both phase and sender analyses, topic assignments were based on the 15% probability threshold described above. Email-to-sender ratios were computed for each sender category to quantify the intensity of operational engagement across roles.\nTo examine the distribution of coordination labour by gender, sender first names were coded using a probabilistic approach combining the nomquamgender library [@vanbuskirk2023] with manual corrections for ambiguous and non-Western names, achieving coverage of 95.8% of emails (6,545 of 6,833). Gender was classified as women or men; non-binary and gender-diverse identities are not captured by this method, which represents a limitation of the approach."
   },
   {
-    "objectID": "network-analysis/sections/11_back-matter.html#competing-interests",
-    "href": "network-analysis/sections/11_back-matter.html#competing-interests",
-    "title": "1 Back Matter",
-    "section": "1.3 Competing Interests",
-    "text": "1.3 Competing Interests"
+    "objectID": "topic-modelling/sections/02_methods.html#data-source-and-preprocessing",
+    "href": "topic-modelling/sections/02_methods.html#data-source-and-preprocessing",
+    "title": "1 Methods",
+    "section": "",
+    "text": "This study analyzes email correspondence generated during the operations of the Canadian COVID-19 Immunity Task Force (CITF) Databank, a pan-Canadian initiative that integrated individual-level health records from partnering studies conducted across Canada between 2020 and 2025. The analytical corpus comprises emails from the inbox of a central CITF Databank operations manager responsible for coordinating data sharing with all partnering studies. Emails span the period from February 2021 to September 2025. Future work will expand the corpus to include additional team members’ inboxes, enabling a more comprehensive view of coordination across the initiative.\nEmails were preprocessed using a multi-step pipeline to remove non-substantive content and protect participant privacy. Rule-based cleaning steps removed confidentiality disclaimers, meeting-invite text, forwarded-message headers, and institutional email signatures. All messages were de-identified using Microsoft Presidio [@alrazihi2025; @kotevski2022], an open-source framework for automated detection and anonymization of personally identifiable information, with personal names, email addresses, and URLs replaced with anonymized placeholders. Duplicate messages were removed within studies using normalized text hashing. Documents were filtered to retain only emails with non-missing sent dates and appropriate length, excluding near-empty or excessively long messages. The CITF Databank operated bilingually; bilingual messages were processed to retain English content where identifiable, and remaining French text was translated into English using OPUS-MT neural machine translation. This pipeline yielded a final analytical sample of 6,833 emails involving 491 unique senders across 100 studies (see Figure 1).\n\n\n\n\n\n\nFigure 1: Data collection and analysis process"
   },
   {
-    "objectID": "network-analysis/sections/11_back-matter.html#author-contributions",
-    "href": "network-analysis/sections/11_back-matter.html#author-contributions",
-    "title": "1 Back Matter",
-    "section": "1.4 Author Contributions",
-    "text": "1.4 Author Contributions"
+    "objectID": "topic-modelling/sections/02_methods.html#data-analysis",
+    "href": "topic-modelling/sections/02_methods.html#data-analysis",
+    "title": "1 Methods",
+    "section": "",
+    "text": "We evaluated four topic modeling approaches to identify the method best suited to this corpus: K-Means clustering, Latent Dirichlet Allocation (LDA), BERTopic, and Non-negative Matrix Factorization (NMF) [@murshed2023; @zubiaga2024]. Methods were compared at their peak coherence score (c_v) using standard English stopwords as a baseline. NMF outperformed all alternatives (c_v = 0.654), while K-Means produced an overly dominant cluster (50.8% of emails), LDA showed the lowest coherence (c_v = 0.517), and BERTopic assigned 32.3% of emails as outliers. Following additional domain-specific stopword curation and part-of-speech filtering, NMF performance improved across all values of k tested (k = 5 to 20). Although k = 5 achieved the highest coherence (c_v = 0.820), it produced only five broad topics with 35.6% of emails in the largest cluster. We selected k = 14 as the optimal balance between coherence (c_v = 0.768, NPMI = 0.170), granularity (lowest maximum cluster size at 10.7%), and topic diversity (0.914) [@rahimi2024].\nTo facilitate interpretation of the 14 NMF topics, we used a locally deployed open-source large language model to generate topic labels, thematic groupings, and topic descriptions [@wanna2024; @janssens2025; @tan2025]. Four open-source models were evaluated: Mistral-7B-Instruct-v0.3, Meta-Llama-3.1-8B-Instruct, Qwen2.5-7B-Instruct, and Gemma-2-9b-it, each receiving the top 5 keywords and 5 representative emails for all 14 topics simultaneously. Meta-Llama-3.1-8B-Instruct produced the most descriptive and semantically complete labels and was selected for subsequent steps. Using zero-shot prompts, the model was queried to: (1) generate 2–5 word topic labels from keywords and representative emails; (2) group labels into thematic categories; and (3) generate 2–3 sentence topic descriptions from keywords and up to 15 representative emails. Tasks were run across multiple temperature settings (0.0, 0.2, 0.4, 0.5, 0.7) and random seeds to ensure stability. All outputs were reviewed and refined by the research team to ensure face validity and alignment with domain knowledge. Local deployment ensured that no email data left secure servers at any stage of analysis.\nTo examine relationships between topics, we computed normalized pairwise co-occurrence scores across all 14 topics [@stevenson2023]. For each pair of topics, the co-occurrence score was calculated as the proportion of shared email assignments relative to the smaller of the two topics. Email-to-topic assignments were based on a 15% probability threshold applied to the normalized NMF weight matrix. This threshold was selected to capture substantive secondary topic assignments while filtering out most tertiary contributions, and was validated through research team review of representative emails. Under this scheme, 27.3% of emails were assigned to a single topic, 47.6% to two topics, and 25.1% to three or more topics (mean = 2.01 topics per email). Co-occurrence scores range from 0 (no co-occurrence) to 1 (complete overlap), with higher values indicating topics that are more likely to appear together within the same emails.\nTo examine how topics were distributed across the data sharing lifecycle, each email was mapped to one of six sequential phases: Funding Start, Data Introduction, Data Sharing Agreement (DSA) Execution, Data Upload, Data Cataloguing, and Data Publication. Phase assignments were based on milestone dates recorded for each study. Seven studies were excluded from phase analysis due to non-sequential milestone dates, leaving 6,167 emails from 93 studies. For sender analysis, each email sender was classified into one of five categories based on their institutional role: Databank Secretariat, Study Staff, Study Investigators, External Partners, and Harmonization Group. For both phase and sender analyses, topic assignments were based on the 15% probability threshold described above. Email-to-sender ratios were computed for each sender category to quantify the intensity of operational engagement across roles.\nTo examine the distribution of coordination labour by gender, sender first names were coded using a probabilistic approach combining the nomquamgender library [@vanbuskirk2023] with manual corrections for ambiguous and non-Western names, achieving coverage of 95.8% of emails (6,545 of 6,833). Gender was classified as women or men; non-binary and gender-diverse identities are not captured by this method, which represents a limitation of the approach."
   },
   {
-    "objectID": "network-analysis/sections/11_back-matter.html#informed-consent",
-    "href": "network-analysis/sections/11_back-matter.html#informed-consent",
-    "title": "1 Back Matter",
-    "section": "1.5 Informed Consent",
-    "text": "1.5 Informed Consent"
-  },
-  {
-    "objectID": "network-analysis/sections/11_back-matter.html#data-availability-statement",
-    "href": "network-analysis/sections/11_back-matter.html#data-availability-statement",
-    "title": "1 Back Matter",
-    "section": "1.6 Data Availability Statement",
-    "text": "1.6 Data Availability Statement"
-  },
-  {
-    "objectID": "network-analysis/sections/11_back-matter.html#author-bios",
-    "href": "network-analysis/sections/11_back-matter.html#author-bios",
-    "title": "1 Back Matter",
-    "section": "1.7 Author Bios",
-    "text": "1.7 Author Bios"
-  },
-  {
-    "objectID": "network-analysis/sections/10_references.html",
-    "href": "network-analysis/sections/10_references.html",
+    "objectID": "topic-modelling/sections/10_references.html",
+    "href": "topic-modelling/sections/10_references.html",
     "title": "1 References",
     "section": "",
     "text": "1 References"
   },
   {
-    "objectID": "network-analysis/sections/03_methods-materials.html",
-    "href": "network-analysis/sections/03_methods-materials.html",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CITF Emails",
+    "section": "",
+    "text": "This research project addresses a critical evidence gap in the Canadian health system: the organizational and collaborative labor required to share health research data at scale. While technical informatics barriers are often the focus of development, the administrative and governance processes – such as negotiating data sharing agreements and aligning institutional frameworks – remain poorly understood and under-resourced. The study aims to move beyond theoretical models by empirically investigating the actual operations of the COVID-19 Immunity Task Force (CITF) Databank. By examining these coordination efforts, the project seeks to provide actionable recommendations for health system leaders and policymakers responsible for building and sustaining national data sharing capacity.\nResearch Objectives and Methodology\nThe project utilizes an explanatory sequential mixed-methods design to investigate the human and organizational determinants of data sharing behaviors. The first phase focuses on characterizing coordination processes through a quantitative analysis of approximately 50,000 emails exchanged between Databank personnel and contributing partners. Using natural language processing and network analysis, the research team will map communication patterns and identify how governance and technical work are distributed across different roles. This is followed by a second phase consisting of semi-structured interviews with principal investigators and data managers to elicit situated perspectives on the specific organizational factors that either facilitated or hindered their participation.\nSignificance and Knowledge Translation\nThe significance of this work lies in its potential to improve pandemic preparedness and the overall efficiency of the Canadian health research ecosystem. By documenting how governance processes actually unfolded during a public health emergency, the project provides a grounded perspective on the material needs of stakeholders. Knowledge translation efforts are directed toward health system leaders, research administrators, and international organizations like GA4GH to ensure that the findings inform future management strategies and policy frameworks. Ultimately, the project emphasizes that the primary obstacles to timely health data sharing are not technical, but rather reside in the “invisible labor” of coordination and the complexity of inter-institutional governance.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "data-complexity/sections/06_conclusion.html",
+    "href": "data-complexity/sections/06_conclusion.html",
+    "title": "1 Conclusion",
+    "section": "",
+    "text": "1 Conclusion"
+  },
+  {
+    "objectID": "data-complexity/sections/12_supplement.html",
+    "href": "data-complexity/sections/12_supplement.html",
+    "title": "1 Supplementary Materials",
+    "section": "",
+    "text": "1 Supplementary Materials"
+  },
+  {
+    "objectID": "data-complexity/sections/11_back-matter.html#acknowledgments",
+    "href": "data-complexity/sections/11_back-matter.html#acknowledgments",
+    "title": "1 Back Matter",
+    "section": "1.1 Acknowledgments",
+    "text": "1.1 Acknowledgments"
+  },
+  {
+    "objectID": "data-complexity/sections/11_back-matter.html#funding",
+    "href": "data-complexity/sections/11_back-matter.html#funding",
+    "title": "1 Back Matter",
+    "section": "1.2 Funding",
+    "text": "1.2 Funding"
+  },
+  {
+    "objectID": "data-complexity/sections/11_back-matter.html#competing-interests",
+    "href": "data-complexity/sections/11_back-matter.html#competing-interests",
+    "title": "1 Back Matter",
+    "section": "1.3 Competing Interests",
+    "text": "1.3 Competing Interests"
+  },
+  {
+    "objectID": "data-complexity/sections/11_back-matter.html#author-contributions",
+    "href": "data-complexity/sections/11_back-matter.html#author-contributions",
+    "title": "1 Back Matter",
+    "section": "1.4 Author Contributions",
+    "text": "1.4 Author Contributions"
+  },
+  {
+    "objectID": "data-complexity/sections/11_back-matter.html#informed-consent",
+    "href": "data-complexity/sections/11_back-matter.html#informed-consent",
+    "title": "1 Back Matter",
+    "section": "1.5 Informed Consent",
+    "text": "1.5 Informed Consent"
+  },
+  {
+    "objectID": "data-complexity/sections/11_back-matter.html#data-availability-statement",
+    "href": "data-complexity/sections/11_back-matter.html#data-availability-statement",
+    "title": "1 Back Matter",
+    "section": "1.6 Data Availability Statement",
+    "text": "1.6 Data Availability Statement"
+  },
+  {
+    "objectID": "data-complexity/sections/11_back-matter.html#author-bios",
+    "href": "data-complexity/sections/11_back-matter.html#author-bios",
+    "title": "1 Back Matter",
+    "section": "1.7 Author Bios",
+    "text": "1.7 Author Bios"
+  },
+  {
+    "objectID": "data-complexity/sections/10_references.html",
+    "href": "data-complexity/sections/10_references.html",
+    "title": "1 References",
+    "section": "",
+    "text": "1 References"
+  },
+  {
+    "objectID": "data-complexity/sections/03_methods-materials.html",
+    "href": "data-complexity/sections/03_methods-materials.html",
     "title": "1 Methods and Data",
     "section": "",
     "text": "1 Methods and Data"
+  },
+  {
+    "objectID": "network-analysis/sections/05_discussion.html",
+    "href": "network-analysis/sections/05_discussion.html",
+    "title": "1 Discussion",
+    "section": "",
+    "text": "1 Discussion"
+  },
+  {
+    "objectID": "network-analysis/sections/02_background.html",
+    "href": "network-analysis/sections/02_background.html",
+    "title": "1 Background",
+    "section": "",
+    "text": "1 Background"
+  },
+  {
+    "objectID": "network-analysis/sections/01_introduction.html",
+    "href": "network-analysis/sections/01_introduction.html",
+    "title": "1 Introduction",
+    "section": "",
+    "text": "1 Introduction"
+  },
+  {
+    "objectID": "network-analysis/sections/00_abstract.html",
+    "href": "network-analysis/sections/00_abstract.html",
+    "title": "1 Abstract",
+    "section": "",
+    "text": "1 Abstract"
+  },
+  {
+    "objectID": "network-analysis/sections/04_findings.html",
+    "href": "network-analysis/sections/04_findings.html",
+    "title": "1 Findings",
+    "section": "",
+    "text": "1 Findings"
+  },
+  {
+    "objectID": "network-analysis/index.html#acknowledgments",
+    "href": "network-analysis/index.html#acknowledgments",
+    "title": "Network Analysis",
+    "section": "8.1 Acknowledgments",
+    "text": "8.1 Acknowledgments",
+    "crumbs": [
+      "Network Analysis"
+    ]
+  },
+  {
+    "objectID": "network-analysis/index.html#funding",
+    "href": "network-analysis/index.html#funding",
+    "title": "Network Analysis",
+    "section": "8.2 Funding",
+    "text": "8.2 Funding",
+    "crumbs": [
+      "Network Analysis"
+    ]
+  },
+  {
+    "objectID": "network-analysis/index.html#competing-interests",
+    "href": "network-analysis/index.html#competing-interests",
+    "title": "Network Analysis",
+    "section": "8.3 Competing Interests",
+    "text": "8.3 Competing Interests",
+    "crumbs": [
+      "Network Analysis"
+    ]
+  },
+  {
+    "objectID": "network-analysis/index.html#author-contributions",
+    "href": "network-analysis/index.html#author-contributions",
+    "title": "Network Analysis",
+    "section": "8.4 Author Contributions",
+    "text": "8.4 Author Contributions",
+    "crumbs": [
+      "Network Analysis"
+    ]
+  },
+  {
+    "objectID": "network-analysis/index.html#informed-consent",
+    "href": "network-analysis/index.html#informed-consent",
+    "title": "Network Analysis",
+    "section": "8.5 Informed Consent",
+    "text": "8.5 Informed Consent",
+    "crumbs": [
+      "Network Analysis"
+    ]
+  },
+  {
+    "objectID": "network-analysis/index.html#data-availability-statement",
+    "href": "network-analysis/index.html#data-availability-statement",
+    "title": "Network Analysis",
+    "section": "8.6 Data Availability Statement",
+    "text": "8.6 Data Availability Statement",
+    "crumbs": [
+      "Network Analysis"
+    ]
+  },
+  {
+    "objectID": "network-analysis/index.html#author-bios",
+    "href": "network-analysis/index.html#author-bios",
+    "title": "Network Analysis",
+    "section": "8.7 Author Bios",
+    "text": "8.7 Author Bios",
+    "crumbs": [
+      "Network Analysis"
+    ]
   }
 ]

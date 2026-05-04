@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Research Protocol – CITF Emails Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0b10f4a090abded817b2fe5f069b6edb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research-protocol/index.html">Research Protocol</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topic-modelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Topic Modelling</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../network-analysis/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Network Analysis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../data-complexity/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Complexity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../codebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Codebook</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../research-protocol/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Research Protocol</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#motivation-and-problem-statement" id="toc-motivation-and-problem-statement" class="nav-link active" data-scroll-target="#motivation-and-problem-statement"><span class="header-section-number">1</span> Motivation and Problem Statement</a></li>
+  <li><a href="#research-objectives" id="toc-research-objectives" class="nav-link" data-scroll-target="#research-objectives"><span class="header-section-number">2</span> Research Objectives</a></li>
+  <li><a href="#case-description" id="toc-case-description" class="nav-link" data-scroll-target="#case-description"><span class="header-section-number">3</span> Case Description</a></li>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources"><span class="header-section-number">4</span> Data Sources</a>
+  <ul class="collapse">
+  <li><a href="#email-corpus" id="toc-email-corpus" class="nav-link" data-scroll-target="#email-corpus"><span class="header-section-number">4.1</span> Email Corpus</a></li>
+  <li><a href="#interviews" id="toc-interviews" class="nav-link" data-scroll-target="#interviews"><span class="header-section-number">4.2</span> Interviews</a></li>
+  </ul></li>
+  <li><a href="#methodological-design" id="toc-methodological-design" class="nav-link" data-scroll-target="#methodological-design"><span class="header-section-number">5</span> Methodological Design</a>
+  <ul class="collapse">
+  <li><a href="#work-package-1-email-corpus-analysis" id="toc-work-package-1-email-corpus-analysis" class="nav-link" data-scroll-target="#work-package-1-email-corpus-analysis"><span class="header-section-number">5.1</span> Work Package 1: Email Corpus Analysis</a></li>
+  <li><a href="#work-package-2-qualitative-interview-analysis" id="toc-work-package-2-qualitative-interview-analysis" class="nav-link" data-scroll-target="#work-package-2-qualitative-interview-analysis"><span class="header-section-number">5.2</span> Work Package 2: Qualitative Interview Analysis</a></li>
+  </ul></li>
+  <li><a href="#planned-outputs" id="toc-planned-outputs" class="nav-link" data-scroll-target="#planned-outputs"><span class="header-section-number">6</span> Planned Outputs</a></li>
+  <li><a href="#methodological-commitments" id="toc-methodological-commitments" class="nav-link" data-scroll-target="#methodological-commitments"><span class="header-section-number">7</span> Methodological Commitments</a></li>
+  <li><a href="#relationship-to-broader-contexts" id="toc-relationship-to-broader-contexts" class="nav-link" data-scroll-target="#relationship-to-broader-contexts"><span class="header-section-number">8</span> Relationship to Broader Contexts</a></li>
+  <li><a href="#analytical-scope-and-limitations" id="toc-analytical-scope-and-limitations" class="nav-link" data-scroll-target="#analytical-scope-and-limitations"><span class="header-section-number">9</span> Analytical Scope and Limitations</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Research Protocol</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This document outlines the overall vision, methodological approach, and analytical strategy for the project <em>Mapping the Administrative Processes of Research Data Sharing: Analysis of Operational Email Correspondence from the Canadian COVID-19 Immunity Task Force Databank</em>. It is intended as a living reference that evolves alongside the project, articulating decisions at the level of design and strategy rather than documenting granular operational steps, which are covered in dedicated sub-protocols.</p>
+<section id="motivation-and-problem-statement" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="motivation-and-problem-statement"><span class="header-section-number">1</span> Motivation and Problem Statement</h2>
+<p>Health data sharing is widely understood as a technical challenge — one of interoperability, access infrastructure, and standardization. But for those who actually coordinate it, the experience is primarily organizational: negotiating agreements across institutions, aligning diverse stakeholders with incompatible timelines, and sustaining collaborative relationships under conditions of uncertainty and urgency. These organizational dimensions have remained largely invisible in research on health data infrastructure, crowded out by a strong emphasis on technical solutions.</p>
+<p>This project takes the organizational dimensions of health data sharing seriously as objects of empirical investigation. It does so by analyzing the administrative correspondence generated during the creation and operation of the COVID-19 Immunity Task Force (CITF) Databank — a pan-Canadian initiative that assembled health records from over 100 COVID-19 studies across the country. The Databank’s email archive is a dense record of the coordination work that made data sharing happen: who communicated with whom, about what, and when.</p>
+<p>The project builds on a pilot study that demonstrated the analytical viability of this approach. Using topic modeling applied to approximately 7,000 emails from the central operations manager’s mailbox, the pilot identified 14 coherent topics organized into four thematic clusters and surfaced a set of findings about the structure and timing of coordination work, now reported in the <a href="../topic-modelling/">topic modelling paper</a>. The proposed project expands on this foundation by enlarging the corpus, extending the analysis to include network-level communication patterns and data complexity effects, and complementing the quantitative findings with qualitative interviews.</p>
+</section>
+<section id="research-objectives" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="research-objectives"><span class="header-section-number">2</span> Research Objectives</h2>
+<p>The project pursues two interrelated objectives:</p>
+<p><strong>Objective 1: Characterize the coordination processes among the CITF Databank’s partners, core Databank personnel, and other related stakeholders.</strong> This extends the pilot study’s descriptive account of what people communicated about and when, adding analysis of the communication structures through which coordination was enacted — who interacted with whom, how frequently, and in what thematic contexts.</p>
+<p><strong>Objective 2: Identify human and organizational determinants of observed coordination behaviours.</strong> This shifts the analytical register from description to explanation. Semi-structured interviews with CITF Databank partners will provide participants’ own accounts of why certain processes were more effortful, how prior experiences shaped their engagement, and what organizational factors facilitated or impeded data sharing.</p>
+<p>Together, these objectives follow an explanatory sequential mixed-methods logic: the quantitative analysis identifies patterns and raises questions; the qualitative component pursues explanations by drawing on participants’ situated knowledge.</p>
+</section>
+<section id="case-description" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="case-description"><span class="header-section-number">3</span> Case Description</h2>
+<p>The CITF Databank serves as the empirical case for this study. Established in April 2020, the CITF was mandated to catalyze, fund, and harmonize knowledge about SARS-CoV-2 immunity to support federal, provincial, and territorial decision-making. The Databank centralized research data from CITF-funded studies, ultimately assembling a harmonized dataset drawing on over 165,000 individual participant health records from studies conducted across Canada.</p>
+<p>The Databank’s pan-Canadian scope — involving data sharing across multiple universities, research institutes, hospitals, and governmental agencies, under pandemic conditions — makes it an unusually rich setting for examining how large-scale health data sharing governance is coordinated in practice. It is neither a routine data request nor a purpose-built federated infrastructure, but something in between: a concentrated administrative effort to retrofit collaborative data sharing onto an ecosystem of independently conducted studies with heterogeneous governance arrangements.</p>
+<p>The Databank was led by a core team within the CITF Secretariat, supported by dedicated personnel at McGill University’s Office of Sponsored Research and by external experts in data governance and harmonization. This organizational structure — a central operational core interacting with distributed study teams and external institutional partners — is reflected directly in the email corpus and is a primary object of analysis.</p>
+</section>
+<section id="data-sources" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="data-sources"><span class="header-section-number">4</span> Data Sources</h2>
+<section id="email-corpus" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="email-corpus"><span class="header-section-number">4.1</span> Email Corpus</h3>
+<p>The primary data source is the email archive of the CITF Databank. The pilot study analyzed 6,833 emails from the inbox of the Databank’s central operations manager, covering correspondence with 100 partner studies from February 2021 to September 2025 (<a href="#fig-email-volume" class="quarto-xref">Figure&nbsp;1</a>).</p>
+<div id="fig-email-volume" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-email-volume-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="visuals/fig_email_volume.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-email-volume-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Email volume (monthly counts) and number of unique studies active per month, spanning the full duration of the pilot corpus.
+</figcaption>
+</figure>
+</div>
+<p>The proposed project expands this corpus in two directions. First, the remaining ~22,500 emails from the same operations manager’s mailbox — linked to broader CITF operational communications not yet associated with specific studies — will be integrated, approximately doubling the analytical corpus while maintaining the operational perspective established in the pilot. Second, emails from the CITF Databank’s Scientific Director and data analysts will be incorporated. The Scientific Director’s mailbox alone comprises approximately 19,000 emails, adding a senior governance perspective that complements the ground-level operational view and enables triangulation across different organizational roles. The expansion proceeds iteratively: the data processing and analysis pipeline validated through the pilot is applied to each new mailbox in sequence, with the corpus growing in a controlled and documented fashion.</p>
+</section>
+<section id="interviews" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="interviews"><span class="header-section-number">4.2</span> Interviews</h3>
+<p>The secondary data source is a set of semi-structured interviews with individuals who participated in the CITF Databank initiative, primarily on the partner-study side. Participants will be identified through a call for participation addressed to representatives of the 100 partner studies, with targeted follow-up directed toward individuals and studies of particular analytical interest — especially those flagged by the fast/slow study comparison and network centrality analysis.</p>
+<p>The sample will be composed primarily of principal investigators, data managers, and leading research associates who were actively involved in communications with the Databank. We expect to conduct approximately 10–20 interviews, with selection guided by theoretical considerations — representation of fast and slow studies, diverse institutional arrangements, different phases of the data sharing lifecycle — rather than random sampling.</p>
+</section>
+</section>
+<section id="methodological-design" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="methodological-design"><span class="header-section-number">5</span> Methodological Design</h2>
+<section id="work-package-1-email-corpus-analysis" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="work-package-1-email-corpus-analysis"><span class="header-section-number">5.1</span> Work Package 1: Email Corpus Analysis</h3>
+<section id="preprocessing" class="level4" data-number="5.1.1">
+<h4 data-number="5.1.1" class="anchored" data-anchor-id="preprocessing"><span class="header-section-number">5.1.1</span> Preprocessing</h4>
+<p>Raw emails are preprocessed to isolate substantive content. Rule-based cleaning removes confidentiality disclaimers, meeting-invite boilerplate, forwarded-message headers, institutional signatures, automated system notifications, and near-empty or excessively long messages. Bilingual messages are processed to retain English content where identifiable; remaining French text is translated using OPUS-MT. All messages are de-identified using the Presidio framework, anonymizing personal names, email addresses, and URLs. Duplicate messages within studies are removed using normalized text hashing, and emails are linked to partner studies wherever possible to enable study-level analysis.</p>
+</section>
+<section id="topic-modeling" class="level4" data-number="5.1.2">
+<h4 data-number="5.1.2" class="anchored" data-anchor-id="topic-modeling"><span class="header-section-number">5.1.2</span> Topic Modeling</h4>
+<p>Non-negative Matrix Factorization (NMF) was selected as the topic modeling approach through systematic evaluation against K-Means clustering, Latent Dirichlet Allocation (LDA), and BERTopic. With domain-specific stopword curation and part-of-speech filtering, NMF outperformed all alternatives across coherence metrics (<a href="#fig-nmf-performance" class="quarto-xref">Figure&nbsp;2</a>), and k = 14 was selected as the optimal balance between coherence (c_v = 0.768, NPMI = 0.170), granularity (lowest maximum cluster size at 10.7%), and topic diversity (0.914). A 15% probability threshold is applied for multi-topic assignment (<a href="#fig-threshold" class="quarto-xref">Figure&nbsp;3</a>), validated through research team review of representative emails.</p>
+<div id="fig-nmf-performance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nmf-performance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="visuals/fig_nmf_performance.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nmf-performance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: NMF topic model performance across k = 5 to 20, showing semantic coherence (c_v), Normalized PMI (NPMI), and topic balance (share of largest topic). The selected value of k = 14 is indicated by the dashed vertical line.
+</figcaption>
+</figure>
+</div>
+<div id="fig-threshold" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-threshold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="visuals/fig_threshold.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-threshold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Distribution of normalized topic probability weights by rank (dominant, secondary, tertiary) for NMF with k = 14. Dashed lines indicate the 10%, 15%, and 20% assignment thresholds under consideration.
+</figcaption>
+</figure>
+</div>
+<p>Topic labels, descriptions, and thematic groupings were generated using Meta-Llama-3.1-8B-Instruct — selected from four locally evaluated open-source models — and refined by the research team. The 14 resulting topics and their thematic groupings are shown in <a href="#tbl-topics" class="quarto-xref">Table&nbsp;1</a>, and their overall distribution across the corpus in <a href="#fig-topics-distribution" class="quarto-xref">Figure&nbsp;4</a>. The full methodological rationale for these decisions, including evaluation results for competing approaches and threshold sensitivity analysis, is documented in the <a href="../topic-modelling/">topic modelling paper</a>.</p>
+<div id="tbl-topics" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-topics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: The 14 NMF topics, their thematic categories, top 5 keywords, and per-topic coherence scores (c_v).
+</figcaption>
+<div aria-describedby="tbl-topics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Topic Label</th>
+<th>Theme</th>
+<th>Top 5 Keywords</th>
+<th>c_v</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Executive Correspondence</td>
+<td>Coordination</td>
+<td>correspondence, executive, director, contact, proposal</td>
+<td>0.497</td>
+</tr>
+<tr class="even">
+<td>Meeting Scheduling &amp; Invitations</td>
+<td>Coordination</td>
+<td>meet, invite, zoom, availability, schedule</td>
+<td>0.473</td>
+</tr>
+<tr class="odd">
+<td>Data Sharing Agreements &amp; Consent</td>
+<td>Agreements &amp; Contracts</td>
+<td>agreement, sharing, consent, contract, framework</td>
+<td>0.804</td>
+</tr>
+<tr class="even">
+<td>DSA Status &amp; Amendments</td>
+<td>Agreements &amp; Contracts</td>
+<td>dsa, extension, amendment, contract, status</td>
+<td>0.543</td>
+</tr>
+<tr class="odd">
+<td>Document Appendices &amp; Revisions</td>
+<td>Agreements &amp; Contracts</td>
+<td>appendix, version, pdf, framework, accept</td>
+<td>0.861</td>
+</tr>
+<tr class="even">
+<td>Document Review &amp; Comments</td>
+<td>Agreements &amp; Contracts</td>
+<td>comment, draft, approval, description, correction</td>
+<td>0.836</td>
+</tr>
+<tr class="odd">
+<td>Document Signatures &amp; Execution</td>
+<td>Agreements &amp; Contracts</td>
+<td>signature, sign, copy, execute, version</td>
+<td>0.759</td>
+</tr>
+<tr class="even">
+<td>Study Description &amp; Catalogue Publication</td>
+<td>Study Documentation</td>
+<td>description, participant, catalogue, publish, logo</td>
+<td>0.930</td>
+</tr>
+<tr class="odd">
+<td>Data Dictionary &amp; Metadata</td>
+<td>Study Documentation</td>
+<td>variable, dictionary, questionnaire, scale, code</td>
+<td>0.878</td>
+</tr>
+<tr class="even">
+<td>Catalogue Completion Reminders</td>
+<td>Study Documentation</td>
+<td>maelstrom, catalogue, support, complete, collaboration</td>
+<td>0.805</td>
+</tr>
+<tr class="odd">
+<td>Data Upload Instructions &amp; Credentials</td>
+<td>Data Operations</td>
+<td>upload, pydio, form, instruction, refresh</td>
+<td>0.956</td>
+</tr>
+<tr class="even">
+<td>Data Transfer Initiation</td>
+<td>Data Operations</td>
+<td>transfer, preparation, willingness, commence, process</td>
+<td>0.712</td>
+</tr>
+<tr class="odd">
+<td>Variable Mapping &amp; Schema Alignment</td>
+<td>Data Operations</td>
+<td>variable, list, sheet, map, schema</td>
+<td>0.889</td>
+</tr>
+<tr class="even">
+<td>Serology &amp; Data Harmonization</td>
+<td>Data Operations</td>
+<td>serology, harmonization, effort, survey, assay</td>
+<td>0.805</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-topics-distribution" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-topics-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="visuals/fig_topics_distribution.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-topics-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Distribution of multi-topic email assignments across the 14 NMF topics, grouped by thematic category (N = 6,833 emails; 15% threshold).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="analytical-dimensions" class="level4" data-number="5.1.3">
+<h4 data-number="5.1.3" class="anchored" data-anchor-id="analytical-dimensions"><span class="header-section-number">5.1.3</span> Analytical Dimensions</h4>
+<p>The pilot corpus analysis is reported in the <a href="../topic-modelling/">topic modelling paper</a>, which covers: topic co-occurrence structure; the distribution of topics across the six phases of the data sharing lifecycle; the distribution of topics and email-to-sender ratios across five sender role categories; and an exploratory gender analysis of coordination labour. Key findings include a structural separation between governance and data operations workstreams, a striking 18:1 ratio of administrative to technical time (median 395 days in DSA negotiation versus 22 days for technical cataloguing), and consistent gendered patterns in topic and phase distributions.</p>
+<p>The proposed expansion of the corpus to additional mailboxes will extend these analyses across a broader and more organizationally diverse set of perspectives. The goal is to move from the single-mailbox operational view of the pilot toward a fuller picture of how coordination work was distributed across the CITF Databank as a whole.</p>
+</section>
+<section id="network-analysis" class="level4" data-number="5.1.4">
+<h4 data-number="5.1.4" class="anchored" data-anchor-id="network-analysis"><span class="header-section-number">5.1.4</span> Network Analysis</h4>
+<p>Network analysis extends the topic-level findings by examining the communication structures through which coordination was enacted. The network is constructed as a two-mode heterogeneous graph in which nodes represent individuals and emails, and edges represent communication relationships, with directional edges from sender to “to” recipient and from sender to “cc” recipient. High-volume cc routing that represents systemic notification rather than targeted communication is excluded to avoid distorting the overall structure. The overall graph structure and its two one-mode projections are illustrated in <a href="#fig-network-schema" class="quarto-xref">Figure&nbsp;5</a>.</p>
+<div id="fig-network-schema" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-network-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="visuals/fig_network_schema.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-network-schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Schematic of the two-mode communication network and its person-projection and email co-participation projection.
+</figcaption>
+</figure>
+</div>
+<p>Two one-mode projections are derived for separate analyses.</p>
+<p>In the <strong>person-projection</strong>, nodes represent individuals and edges represent email communication weighted by frequency, with topic labels inherited from the emails exchanged. This projection supports several lines of inquiry:</p>
+<ul>
+<li><em>Role × role communication patterns.</em> How frequently do individuals in different roles communicate with one another, and what topics tend to define those connections?</li>
+<li><em>Betweenness centrality.</em> Node betweenness centrality (Girvan-Newman method) identifies individuals who are structurally essential to holding the network together. Associations between betweenness scores and sender role and gender test whether certain categories are disproportionately positioned as structural brokers. For the highest-ranked nodes, we further characterize what types of actors they connect and what topics tend to carry those bridging relationships — expected to reveal sharp phase-transition dynamics, for instance where data managers bridge study teams and the Harmonization Group.</li>
+<li><em>Community detection.</em> Edge betweenness community detection identifies insular clusters. We expect the Harmonization Group (Maelstrom) and individual study teams to form distinct clusters, with consortia of particular interest. For each community, the number of cross-cluster edges by role and gender will be examined, distinguishing actors who engage primarily within their local cluster from those who sustain broader cross-institutional coordination.</li>
+</ul>
+<p>In the <strong>email co-participation projection</strong>, nodes represent emails and edges connect emails that share participating individuals, with edges inheriting role and gender attributes from their senders. This supports analysis of which topics are connected through shared participants and which roles and gender categories tend to assert those inter-topic connections — complementing the topic co-occurrence analysis by revealing the human infrastructure underlying observed content clusters.</p>
+</section>
+<section id="comparative-fastslow-study-analysis" class="level4" data-number="5.1.5">
+<h4 data-number="5.1.5" class="anchored" data-anchor-id="comparative-fastslow-study-analysis"><span class="header-section-number">5.1.5</span> Comparative Fast/Slow Study Analysis</h4>
+<p>A targeted comparison of studies at the extremes of the Intro→DSA timeline distribution (pilot: median 395 days, range 7–1,526) examines their email records for distinguishing organizational patterns. This is supplemented by LLM-assisted qualitative comparison of representative email samples and will inform the selection of interview participants, prioritizing studies that illustrate theoretically interesting configurations of speed, institutional complexity, and engagement.</p>
+</section>
+</section>
+<section id="work-package-2-qualitative-interview-analysis" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="work-package-2-qualitative-interview-analysis"><span class="header-section-number">5.2</span> Work Package 2: Qualitative Interview Analysis</h3>
+<section id="interview-design" class="level4" data-number="5.2.1">
+<h4 data-number="5.2.1" class="anchored" data-anchor-id="interview-design"><span class="header-section-number">5.2.1</span> Interview Design</h4>
+<p>Interviews are semi-structured and organized around three sequential domains:</p>
+<ol type="1">
+<li><strong>Participants’ professional backgrounds and experiences.</strong> Drawing on life-history methods to understand how participants’ outlooks emerged from their professional trajectories, without seeking biographical detail per se.</li>
+<li><strong>Studies’ missions, purposes, and motivations.</strong> Investigating the unique characteristics, goals, and data practices of participants’ studies to understand how these shaped their approach to the Databank’s requirements.</li>
+<li><strong>Practices, procedures, and relationships.</strong> Addressing specific actions and interactions in the data sharing process, with attention to expectations, deviations from norms, and moments of friction or facilitation. Topics are calibrated to participants’ roles and may include data governance, documentation practices, and experiences with specific Databank processes.</li>
+</ol>
+<p>Interview guides are developed after initial quantitative findings are available, so that findings from the topic modeling, network analysis, and fast/slow study comparison can directly inform the inquiry.</p>
+</section>
+<section id="coding-and-analysis" class="level4" data-number="5.2.2">
+<h4 data-number="5.2.2" class="anchored" data-anchor-id="coding-and-analysis"><span class="header-section-number">5.2.2</span> Coding and Analysis</h4>
+<p>Transcripts are analyzed using thematic coding. An initial code system is developed from the conceptual framework generated by the email analysis, and iterated as coding proceeds. Analytical memos track cross-cutting themes and contextually rich insights that extend beyond what the code system can represent. Meta-Llama-3.1-8B-Instruct assists with organizing coded passages and surfacing incipient patterns across interviews, with all interpretive decisions validated by the research team.</p>
+</section>
+</section>
+</section>
+<section id="planned-outputs" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="planned-outputs"><span class="header-section-number">6</span> Planned Outputs</h2>
+<p>The project is organized around four planned manuscripts.</p>
+<p><strong>Paper 1 — Topic modeling and administrative labour</strong> presents the core topic modeling results and is the primary output of the pilot study. It characterizes the topical landscape of CITF Databank email correspondence, the distribution of topics across the data sharing lifecycle and sender roles, and the gendered patterns of coordination labour. This paper is complete and available at <a href="../topic-modelling/">topic-modelling/</a>.</p>
+<p><strong>Paper 2 — Network analysis and coordination structure</strong> extends the topic-level findings to examine the communication structures through which coordination was enacted. Where Paper 1 asks <em>what</em> was communicated and <em>who</em> was doing it, Paper 2 asks <em>how</em> actors were structurally positioned relative to one another: which individuals served as brokers between governance and technical domains, how community structure in the communication network mapped onto institutional boundaries, and whether structural position aligned with the role and gender patterns identified in Paper 1. The analysis draws on betweenness centrality, community detection, and both one-mode projections of the communication network. This paper targets audiences in organizational sociology, health systems management, and computational social science, and is developed in <a href="../network-analysis/">network-analysis/</a>.</p>
+<p><strong>Paper 3 — Data complexity and timeline determinants</strong> focuses on variation in data sharing timelines across studies. It takes the Intro→DSA phase as its primary object of analysis — the longest and most variable in the pipeline — and examines whether and how the thematic breadth of shared data, operationalized via subdomain, domain, and harmonized variable counts from Maelstrom catalogue records, predicts phase duration. The pilot found that subdomain breadth positively correlated with DSA negotiation duration (r = 0.41, p = 0.027; r_s = 0.43, p = 0.019), while total variable count was not robustly associated with any phase duration — indicating breadth rather than sheer volume as the more meaningful predictor. Paper 3 extends this analysis with time-to-event modeling to account for censoring (studies that had not yet reached a given milestone), Sankey-style visualization of study trajectories through the pipeline, and association with data documentation completeness at the point of upload. The LLM-assisted fast/slow study comparison provides a qualitative complement that helps explain the mechanisms underlying the quantitative correlations. This paper is of direct relevance to policymakers who need to understand not just that some processes take longer, but <em>why</em>, in order to design governance structures that address the actual sources of delay and friction. It is developed in <a href="../data-complexity/">data-complexity/</a>.</p>
+<p><strong>Paper 4 — Organizational and experiential determinants of data sharing: a qualitative interview study</strong> presents the findings of Work Package 2. This paper uses the quantitative findings as its conceptual scaffold — the topic model’s vocabulary of administrative work types, the network analysis’s identification of structural brokers, and the fast/slow study comparison’s organizational factors — to structure and situate participants’ own accounts of the data sharing process.</p>
+<p>The paper’s central analytical concern is explaining variation: why did some studies move quickly and others slowly, why did certain governance issues persist so much longer than expected, and how did participants’ prior experiences and institutional contexts shape their engagement? Interviews will address these questions at the level of individual situated experience, drawing out factors that are not visible in the email record: the motivations behind decisions to prioritize or deprioritize data sharing, the informal relationships that facilitated or blocked progress, the institutional pressures (pandemic workloads, funding constraints, staff turnover) that shaped what was possible, and the participants’ own assessments of whether the governance apparatus served their needs.</p>
+<p>Thematic coding is anchored to the conceptual framework developed through the email analysis but evolves iteratively as interviews surface new patterns. Analysis will attend specifically to the perspectives of partner study representatives — a viewpoint that the email corpus, limited to the Databank’s own operational mailboxes, can only partially capture. The aim is to re-situate data sharing as a governance and organizational challenge experienced from multiple positions, not only from the perspective of the coordinating centre. Taken together with the quantitative findings, this paper will contribute the most actionable evidence in the project: grounded recommendations for how future data sharing initiatives should be designed, resourced, and governed, drawn from the accounts of people who participated in building one.</p>
+</section>
+<section id="methodological-commitments" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="methodological-commitments"><span class="header-section-number">7</span> Methodological Commitments</h2>
+<p>Several commitments cut across both work packages.</p>
+<p><strong>Local computation.</strong> All LLM-assisted analysis uses locally deployed open-source models (Meta-Llama-3.1-8B-Instruct), ensuring that no email content or interview material leaves the secure computing infrastructure maintained by the McGill Clinical and Health Informatics group. This is both an ethical requirement and a reproducibility commitment.</p>
+<p><strong>Transparency of analytical decisions.</strong> Methodological choices — the selection of NMF over competing approaches, k = 14, the 15% multi-topic threshold, model selection — are all documented with the evaluation evidence that motivated them. Computational methods are treated as tools requiring interpretive oversight.</p>
+<p><strong>Literate programming.</strong> Analysis code and narrative interpretation are developed together in a single document environment, ensuring that analytical steps are legible alongside their outputs and that the analysis is reproducible as the corpus expands.</p>
+<p><strong>Sequential integration of methods.</strong> The qualitative interview component is explicitly designed to follow from the quantitative email analysis. Interview guides are developed after initial findings are available, making the two work packages intellectually as well as temporally ordered.</p>
+<p><strong>Open research practices.</strong> All data collection is thoroughly documented. De-identified analytical outputs and code will be made freely available following FAIR principles, within the constraints of the research ethics protocol. Articles will be published open access.</p>
+</section>
+<section id="relationship-to-broader-contexts" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="relationship-to-broader-contexts"><span class="header-section-number">8</span> Relationship to Broader Contexts</h2>
+<p>This project sits at the intersection of several research conversations that each illuminate a different dimension of what is at stake.</p>
+<p>In <strong>health informatics and health systems research</strong>, it contributes empirical evidence about the operational reality of data sharing to a field that has relied heavily on surveys and stakeholder perspectives <span class="citation" data-cites="vanhuis2014 shabani2016a shabani2016b">(<a href="#ref-vanhuis2014" role="doc-biblioref">Panhuis et al. 2014</a>; <a href="#ref-shabani2016a" role="doc-biblioref">Shabani and Borry 2016</a>; <a href="#ref-shabani2016b" role="doc-biblioref">Shabani, Thorogood, and Borry 2016</a>)</span>. The administrative correspondence of a large-scale pandemic-era initiative is an unusually direct record of how governance and coordination challenges actually unfold, rather than how they are anticipated or recalled. The approach could be adapted to examine organizational challenges in other domains of health systems management — interjurisdictional care delivery, health workforce coordination, or the governance of emerging digital health platforms.</p>
+<p>In <strong>science and technology studies</strong>, the project connects to longstanding interest in the invisible work that sustains scientific infrastructure <span class="citation" data-cites="choroszewicz2022 choroszewicz2023">(<a href="#ref-choroszewicz2022" role="doc-biblioref">Choroszewicz 2022</a>; <a href="#ref-choroszewicz2023" role="doc-biblioref">Choroszewicz and Alastalo 2023</a>)</span>. Data management, records keeping, agreement negotiation, and cross-institutional coordination are the connective tissue of collaborative research, yet they remain largely unrecognized in how scientific labour is credited and resourced. The gender analysis dimension makes this critique concrete: the pilot findings suggest that the most effortful and least visible phases of data sharing are disproportionately managed by women, a pattern consistent with broader scholarship on the feminization of coordination work in research settings.</p>
+<p>In <strong>health data governance and policy</strong>, the project offers a ground-level empirical perspective to inform decisions that are often made without evidence about what large-scale data sharing actually requires in practice. This is particularly consequential in the Canadian context, where the Tri-Agency Research Data Management Policy is expanding data sharing obligations for funded researchers without a commensurate expansion of the administrative capacity needed to meet them. The finding that studies spent a median of 395 days negotiating data sharing agreements — compared to 22 days for technical cataloguing — directly challenges the assumption that governance is a preliminary hurdle to be cleared before the real work begins.</p>
+</section>
+<section id="analytical-scope-and-limitations" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="analytical-scope-and-limitations"><span class="header-section-number">9</span> Analytical Scope and Limitations</h2>
+<p>The email corpus captures communication that passed through the mailboxes of a small number of central CITF Databank personnel. It does not capture internal communications within partner studies, communications routed through informal channels, or the full range of interactions that shaped data sharing outcomes. Corpus expansion to include the Scientific Director’s mailbox and data analysts partially addresses this, but the corpus will remain a partial record.</p>
+<p>Gender is inferred probabilistically from sender first names, capturing only a binary distinction and subject to error, particularly for ambiguous or non-Western names. Gender analysis is therefore treated as exploratory throughout.</p>
+<p>The fast/slow study comparison is based on a subset of studies with complete and sequentially consistent milestone date information; seven studies were excluded from phase analysis due to non-sequential milestone dates.</p>
+<p>Qualitative interviews are subject to limitations inherent in retrospective accounts: participants’ reconstructions of past experiences are shaped by subsequent developments and current perspectives. These limitations are partially addressed by grounding interview questions in specific documents and timelines surfaced by the email analysis.</p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-choroszewicz2022" class="csl-entry" role="listitem">
+Choroszewicz, Marta. 2022. <span>“Emotional Labour in the Collaborative Data Practices of Repurposing Healthcare Data and Building Data Technologies.”</span> <em>Big Data &amp; Society</em> 9 (1). <a href="https://doi.org/10.1177/20539517221098413">https://doi.org/10.1177/20539517221098413</a>.
+</div>
+<div id="ref-choroszewicz2023" class="csl-entry" role="listitem">
+Choroszewicz, Marta, and Marja Alastalo. 2023. <span>“Organisational and Professional Hierarchies in a Data Management System: Public–Private Collaborative Building of Public Healthcare and Social Services in Finland.”</span> <em>Information, Communication &amp; Society</em> 26 (1): 155–73. <a href="https://doi.org/10.1080/1369118X.2021.1942952">https://doi.org/10.1080/1369118X.2021.1942952</a>.
+</div>
+<div id="ref-vanhuis2014" class="csl-entry" role="listitem">
+Panhuis, Willem G. van, Proma Paul, Claudia Emerson, John Grefenstette, Richard Wilder, Abraham J. Herbst, David Heymann, and Donald S. Burke. 2014. <span>“A Systematic Review of Barriers to Data Sharing in Public Health.”</span> <em>BMC Public Health</em> 14 (1): 1144. <a href="https://doi.org/10.1186/1471-2458-14-1144">https://doi.org/10.1186/1471-2458-14-1144</a>.
+</div>
+<div id="ref-shabani2016a" class="csl-entry" role="listitem">
+Shabani, Mahsa, and Pascal Borry. 2016. <span>“<span>‘<span>You</span> Want the Right Amount of Oversight’</span>: Interviews with Data Access Committee Members and Experts on Genomic Data Access.”</span> <em>Genetics in Medicine</em> 18 (9): 892–97. <a href="https://doi.org/10.1038/gim.2015.189">https://doi.org/10.1038/gim.2015.189</a>.
+</div>
+<div id="ref-shabani2016b" class="csl-entry" role="listitem">
+Shabani, Mahsa, Adrian Thorogood, and Pascal Borry. 2016. <span>“Who Should Have Access to Genomic Data and How Should They Be Held Accountable? <span>Perspectives</span> of Data Access Committee Members and Experts.”</span> <em>European Journal of Human Genetics</em> 24 (12): 1671–75. <a href="https://doi.org/10.1038/ejhg.2016.111">https://doi.org/10.1038/ejhg.2016.111</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/zackbatist\.info\/CITF-emails\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
