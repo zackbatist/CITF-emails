@@ -34,7 +34,7 @@ website:
         text: Data Complexity
       - href: codebook.qmd
         text: Codebook
-      - href: research-protocol.qmd
+      - href: research-protocol/index.qmd
         text: Research Protocol
 toc: true
 toc-depth: 3
