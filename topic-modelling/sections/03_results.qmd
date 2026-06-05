@@ -9,7 +9,7 @@ The analytical corpus comprises 6,833 emails from the inbox of the central CITF 
 
 Topic coherence varied across the 14 topics, ranging from c_v = 0.473 to c_v = 0.956. The most coherent topics were those with highly distinctive technical vocabularies: Data Upload Instructions & Credentials (c_v = 0.956), Study Description & Catalogue Publication (c_v = 0.930), and Agreement Drafting & Revisions (c_v = 0.861). The least coherent topics, Meeting Scheduling & Invitations (c_v = 0.473) and Executive Correspondence (c_v = 0.497), reflect more generic coordination language that is less semantically distinctive, which is consistent with the broad, cross-cutting nature of these activities.
 
-The 14 topics were unevenly distributed across the four thematic   categories. Five topics fell within the Agreements & Contracts theme, compared to only two within Coordination, reflecting the greater variety and specificity of tasks involved in contractual work relative to general coordination activities.
+The 14 topics were unevenly distributed across the four thematic categories. Five topics fell within the Agreements & Contracts theme, compared to only two within Coordination, reflecting the greater variety and specificity of tasks involved in contractual work relative to general coordination activities.
 
 ## Topic Distribution Across Lifecycle Phases
 
