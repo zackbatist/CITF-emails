@@ -4,6 +4,8 @@
 
 ## List of Abbreviations {.appendix}
 
+CIHR: Canadian Institutes of Health Research; CITF: COVID-19 Immunity Task Force; c_v: topic coherence score; DSA: Data Sharing Agreement; FAIR: Findable, Accessible, Interoperable, Reusable; LDA: Latent Dirichlet Allocation; LLM: Large Language Model; MCHI: McGill Clinical and Health Informatics; NMF: Non-negative Matrix Factorization; NPMI: Normalized Pointwise Mutual Information; SD: Standard Deviation; TF-IDF: Term Frequency-Inverse Document Frequency
+
 ## Ethics Approval and Consent to Participate {.appendix}
 
 This study analyzes administrative correspondence generated in the course of operational activities.
