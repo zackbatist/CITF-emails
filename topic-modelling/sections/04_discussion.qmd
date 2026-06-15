@@ -1,4 +1,4 @@
-#Discussion
+# Discussion
 
 This study analyzed 6,833 emails from the operational correspondence of the CITF Databank to characterize how large-scale health research data sharing was coordinated in one national initiative. The findings show that data sharing coordination involved substantial administrative and governance work alongside technical work, that coordination labour was differentiated systematically by lifecycle phase, by institutional role, and by within-study topic structure, with a further gender pattern carrying the same structure, and that the same two-workstream pattern emerged across the phase, role, and co-occurrence analyses.
 

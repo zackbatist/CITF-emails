@@ -4,7 +4,41 @@
 
 ## List of Abbreviations {.appendix}
 
-CIHR: Canadian Institutes of Health Research; CITF: COVID-19 Immunity Task Force; c_v: topic coherence score; DSA: Data Sharing Agreement; FAIR: Findable, Accessible, Interoperable, Reusable; LDA: Latent Dirichlet Allocation; LLM: Large Language Model; MCHI: McGill Clinical and Health Informatics; NMF: Non-negative Matrix Factorization; NPMI: Normalized Pointwise Mutual Information; SD: Standard Deviation; TF-IDF: Term Frequency-Inverse Document Frequency
+CIHR
+: Canadian Institutes of Health Research;
+
+CITF
+: COVID-19 Immunity Task Force
+
+c_v
+: topic coherence score
+
+DSA
+: Data Sharing Agreement
+
+FAIR
+: Findable, Accessible, Interoperable, Reusable
+
+LDA
+: Latent Dirichlet Allocation
+
+LLM
+: Large Language Model
+
+MCHI
+: McGill Clinical and Health Informatics
+
+NMF
+: Non-negative Matrix Factorization
+
+NPMI
+: Normalized Pointwise Mutual Information
+
+SD
+: Standard Deviation
+
+TF-IDF
+: Term Frequency-Inverse Document Frequency
 
 ## Ethics Approval and Consent to Participate {.appendix}
 
@@ -50,23 +84,20 @@ We also thank the McGill Clinical and Health Informatics (MCHI) research group f
 Claude (Sonnet 4.6) was used to assist with content organization, grammar checking, and improving overall clarity while drafting this manuscript.
 This tool contributed to the writing process by providing language suggestions and helping to structure the material more effectively.
 
-
 ## Authors' Bios {.appendix}
 
-**Zachary Batist** is a Postdoctoral Researcher in the Department of Epidemiology, Biostatistics and Occupational Health at McGill University's School of Population and Global Health.
-His research focuses on the governance and organizational dimensions of health research data sharing.
+**Zachary Batist** is a Postdoctoral Researcher in the Department of Epidemiology, Biostatistics and Occupational Health at McGill University’s School of Population and Global Health. His research focuses on the governance and organizational dimensions of health research data sharing.
 
-**Melissa Ouellet** is a Research Associate in the Department of Epidemiology, Biostatistics and Occupational Health at McGill University.
+**Melissa Ouellet** is a Research Associate in the McGill Clinical & Health Informatics Research Group of the Department of Epidemiology, Biostatistics and Occupational Health at McGill University.
 
-**Sadun Khezri** is 
+**Sadun Khezri** is a Research Coordinator with the CITF Databank in the Department of Epidemiology, Biostatistics and Occupational Health at McGill University’s School of Population and Global Health. His work focuses on the harmonization and curation of population-level immunity data and the development of harmonized epidemiological data resources.
 
 **Tanya Murphy** is 
 
 **Aklil Noza** is 
 
-**Samira Abbasgholizadeh-Rahimi** is 
+**Samira Abbasgholizadeh-Rahimi** is Assistant Professor at McGill and Mila-Quebec AI Institute, affiliated scientist at the Lady Davis Institute for Medical Research of the Jewish General Hospital, Canada Research Chair (Tier II) in AI and Advanced Digital Primary Healthcare, and co-director of the McGill Collaborative for AI and Society (McCAIS). Her research is concerned with developing and implementing advanced digital health technologies including AI-enabled tools in primary healthcare.
 
-**Guillaume Bourque** is 
+**Guillaume Bourque** is Professor of human genetics at McGill University, concerned with developing advanced tools and scalable computational infrastructure to enable large-scale applied research. He also serves on the Board of Directors of the Digital Research Alliance of Canada (DRAC), an organization whose mission is to develop infrastructure in support of Canadian research data commons.
 
-**David Buckeridge** is a Professor of Epidemiology and Biostatistics at McGill University and Director of the CITF Databank.
-His research concerns the management and application of distributed health records and biomedical informatics.
+**David Buckeridge** is a Professor of Epidemiology and Biostatistics at McGill University and Director of the CITF Databank. His research concerns the management and application of distributed health records and biomedical informatics.
