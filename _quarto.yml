@@ -4,6 +4,8 @@ project:
   preview:
     port: 7777
     browser: false
+  render: 
+    - "!private/" # Internal docs
 website: 
   site-url: https://zackbatist.info/CITF-emails/
   repo-url: https://github.com/zackbatist/CITF-emails
@@ -48,6 +50,13 @@ format:
     page-layout: article
     grid:
       body-width: 1000px
+    include-in-header:
+      - text: |
+          <style type="text/css">
+          p {
+            text-align: justify !important;
+          }
+          </style>
 filters:
   - quarto
   # - assets/collect-citekeys.lua

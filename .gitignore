@@ -56,3 +56,4 @@ notes/*_files/
 .luarc.json
 _extensions/
 _freeze/
+private/
