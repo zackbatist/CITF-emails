@@ -1,9 +1,34 @@
 ---
-title: "Research Protocol"
 bibliography: CITF-emails.bib
+format:
+  html:
+    title: Research Protocol
+  pdf: 
+    keep-tex: false
+    title: Deriving insights for research data sharing from a large-scale data sharing initiative in Canada
+    date: last-modified
+    reference-location: block
+    toc: false
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    linestretch: 1.2
+    colorlinks: true
+    include-in-header:
+      text: |
+        \usepackage{ragged2e}
+        \usepackage{parskip}
+        \usepackage{microtype}
+        \usepackage{lastpage}
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \lhead{\textbf{Research protocol}}
+        \rhead{\thepage\ of \pageref*{LastPage}}
+        \cfoot{}
+
 ---
 
-This document outlines the overall vision, methodological approach, and analytical strategy for the project *Mapping the Administrative Processes of Research Data Sharing: Analysis of Operational Email Correspondence from the Canadian COVID-19 Immunity Task Force Databank*. It is intended as a living reference that evolves alongside the project, articulating decisions at the level of design and strategy rather than documenting granular operational steps, which are covered in dedicated sub-protocols.
+This document outlines the overall vision, methodological approach, and analytical strategy for the project *Deriving insights for research data sharing from a large-scale data sharing initiative in Canada*. It is intended as a living reference that evolves alongside the project, articulating decisions at the level of design and strategy rather than documenting granular operational steps, which are covered in dedicated sub-protocols.
 
 ## Motivation and Problem Statement
 
@@ -44,8 +69,6 @@ Emails relating to broader CITF operational communications not associated with s
 The secondary data source is a questionnaire administered to individuals who participated in the CITF Databank initiative, primarily on the partner-study side. Respondents will be identified through a call for participation addressed to representatives of the 100 partner studies.
 
 The questionnaire is structured around three domains: (1) participants' professional backgrounds and experiences; (2) studies' missions, purposes, and motivations; and (3) practices, procedures, and relationships. The first domain also serves as a branching mechanism, routing respondents to role-appropriate question blocks in the remaining sections. Questions in the second and third domains correspond to the topic and phase categories established by the email analysis. The questionnaire also collects information pertaining to respondents' gender, institutional affiliation, and role, which correspond with variables structuring the email analysis, therefore enabling comparison across the two data sources at the level of aggregate categories rather than individual identity. A brief pilot with 2–3 respondents will precede full distribution of the questionnaire.
-
-A smaller, targeted set of follow-up interviews may be conducted with a subset of respondents, particularly those flagged by the fast/slow study comparison and network centrality analysis, to pursue more open-ended lines of inquiry.
 
 ## Methodological Design
 
@@ -117,13 +140,13 @@ In the **email co-participation projection**, nodes represent emails and edges c
 
 #### Comparative Fast/Slow Study Analysis
 
-A targeted comparison of studies at the extremes of the Intro→DSA timeline distribution (pilot: median 395 days, range 7–1,526) examines their email records for distinguishing organizational patterns. This is supplemented by LLM-assisted qualitative comparison of representative email samples and will inform the selection of interview participants, prioritizing studies that illustrate theoretically interesting configurations of speed, institutional complexity, and engagement.
+A targeted comparison of studies at the extremes of the Intro→DSA timeline distribution (pilot: median 395 days, range 7–1,526) examines their email records for distinguishing organizational patterns. This is supplemented by LLM-assisted qualitative comparison of representative email samples and will inform the identification of studies for targeted questionnaire follow-up, prioritizing those that illustrate theoretically interesting configurations of speed, institutional complexity, and engagement.
 
 #### Impact of Data Complexity
 
-### Work Package 3: Questionnaire and Interview Analysis
+### Work Package 3: Questionnaire Analysis
 
-#### Questionnaire and Interview Design
+#### Questionnaire Design
 
 The questionnaire is organized around three sequential domains:
 
@@ -131,11 +154,11 @@ The questionnaire is organized around three sequential domains:
 2. **Studies' missions, purposes, and motivations.** Investigating the unique characteristics, goals, and data practices of participants' studies to understand how these shaped their approach to the Databank's requirements.
 3. **Practices, procedures, and relationships.** Addressing specific actions and interactions in the data sharing process, with attention to expectations, deviations from norms, and moments of friction or facilitation. Topics are calibrated to participants' roles and may include data governance, documentation practices, and experiences with specific Databank processes.
 
-The questionnaire is developed after initial quantitative findings are available, so that findings from the topic modeling, network analysis, and fast/slow study comparison can directly inform its design. The follow-up interview guide draws on the same three domains, pursued in greater depth.
+The questionnaire is developed after initial quantitative findings are available, so that findings from the topic modeling, network analysis, and fast/slow study comparison can directly inform its design. Questions in each domain include open-ended items pursuing the same themes in greater depth.
 
 #### Coding and Analysis
 
-Open-ended questionnaire responses and follow-up interview transcripts are analyzed using thematic coding. An initial code system is developed from the conceptual framework generated by the email analysis, and iterated as coding proceeds. Analytical memos track cross-cutting themes and contextually rich insights that extend beyond what the code system can represent. Structured (closed-ended) questionnaire responses are analyzed descriptively and associatively, in aggregate categories corresponding to the roles, genders, and institutional affiliations used in the email analysis.
+Open-ended questionnaire responses are analyzed using thematic coding. An initial code system is developed from the conceptual framework generated by the email analysis, and iterated as coding proceeds. Analytical memos track cross-cutting themes and contextually rich insights that extend beyond what the code system can represent. Structured (closed-ended) questionnaire responses are analyzed descriptively and associatively, in aggregate categories corresponding to the roles, genders, and institutional affiliations used in the email analysis.
 
 ## Planned Outputs
 
@@ -147,23 +170,23 @@ The project is organized around four planned manuscripts.
 
 **Paper 3 — Data complexity and timeline determinants** focuses on variation in data sharing timelines across studies. It takes the Intro→DSA phase as its primary object of analysis — the longest and most variable in the pipeline — and examines whether and how the thematic breadth of shared data, operationalized via subdomain, domain, and harmonized variable counts from Maelstrom catalogue records, predicts phase duration. The pilot found that subdomain breadth positively correlated with DSA negotiation duration (r = 0.41, p = 0.027; r_s = 0.43, p = 0.019), while total variable count was not robustly associated with any phase duration — indicating breadth rather than sheer volume as the more meaningful predictor. Paper 3 extends this analysis with time-to-event modeling to account for censoring (studies that had not yet reached a given milestone), Sankey-style visualization of study trajectories through the pipeline, and association with data documentation completeness at the point of upload. The LLM-assisted fast/slow study comparison provides a qualitative complement that helps explain the mechanisms underlying the quantitative correlations. This paper is of direct relevance to policymakers who need to understand not just that some processes take longer, but *why*, in order to design governance structures that address the actual sources of delay and friction. It is developed in [data-complexity/](../data-complexity/).
 
-**Paper 4 — Organizational and experiential determinants of data sharing: a questionnaire and interview study** presents the findings of Work Package 3. This paper uses the quantitative findings as its conceptual scaffold (the topic model's vocabulary of administrative work types, the network analysis's identification of structural brokers, and the fast/slow study comparison's organizational factors) to structure and situate participants' own accounts of the data sharing process.
+**Paper 4 — Organizational and experiential determinants of data sharing: a questionnaire study** presents the findings of Work Package 3. This paper uses the quantitative findings as its conceptual scaffold (the topic model's vocabulary of administrative work types, the network analysis's identification of structural brokers, and the fast/slow study comparison's organizational factors) to structure and situate participants' own accounts of the data sharing process.
 
-The paper's central analytical concern is explaining variation: why did some studies move quickly and others slowly, why did certain governance issues persist so much longer than expected, and how did participants' prior experiences and institutional contexts shape their engagement? The questionnaire, supplemented by follow-up interviews with a targeted subset of respondents, will address these questions, drawing out factors that are not visible in the email record: the motivations behind decisions to prioritize or de-prioritize data sharing, the informal relationships that facilitated or blocked progress, the institutional pressures (pandemic workloads, funding constraints, staff turnover) that shaped what was possible, and the participants' own assessments of whether the governance apparatus served their needs.
+The paper's central analytical concern is explaining variation: why did some studies move quickly and others slowly, why did certain governance issues persist so much longer than expected, and how did participants' prior experiences and institutional contexts shape their engagement? The questionnaire will address these questions, drawing out factors that are not visible in the email record: the motivations behind decisions to prioritize or de-prioritize data sharing, the informal relationships that facilitated or blocked progress, the institutional pressures (pandemic workloads, funding constraints, staff turnover) that shaped what was possible, and the participants' own assessments of whether the governance apparatus served their needs.
 
-Thematic coding is anchored to the conceptual framework developed through the email analysis but evolves iteratively as responses and interviews surface new patterns. Analysis will attend specifically to the perspectives of partner study representatives — a viewpoint that the email corpus, limited to the Databank's own operational mailboxes, can only partially capture. The aim is to re-situate data sharing as a governance and organizational challenge experienced from multiple positions, not only from the perspective of the coordinating centre. Taken together with the quantitative findings, this paper will contribute the most actionable evidence in the project: grounded recommendations for how future data sharing initiatives should be designed, resourced, and governed, drawn from the accounts of people who participated in building one.
+Thematic coding is anchored to the conceptual framework developed through the email analysis but evolves iteratively as responses surface new patterns. Analysis will attend specifically to the perspectives of partner study representatives — a viewpoint that the email corpus, limited to the Databank's own operational mailboxes, can only partially capture. The aim is to re-situate data sharing as a governance and organizational challenge experienced from multiple positions, not only from the perspective of the coordinating centre. Taken together with the quantitative findings, this paper will contribute the most actionable evidence in the project: grounded recommendations for how future data sharing initiatives should be designed, resourced, and governed, drawn from the accounts of people who participated in building one.
 
 ## Methodological Commitments
 
 Several commitments cut across both work packages.
 
-**Local computation.** All LLM-assisted analysis uses locally deployed open-source models (Meta-Llama-3.1-8B-Instruct), ensuring that no email content or interview material leaves the secure computing infrastructure maintained by the McGill Clinical and Health Informatics group. This is both an ethical requirement and a reproducibility commitment.
+**Local computation.** All LLM-assisted analysis uses locally deployed open-source models (Meta-Llama-3.1-8B-Instruct), ensuring that no email content or questionnaire material leaves the secure computing infrastructure maintained by the McGill Clinical and Health Informatics group. This is both an ethical requirement and a reproducibility commitment.
 
 **Transparency of analytical decisions.** Methodological choices — the selection of NMF over competing approaches, k = 14, the 15% multi-topic threshold, model selection — are all documented with the evaluation evidence that motivated them. Computational methods are treated as tools requiring interpretive oversight.
 
 **Literate programming.** Analysis code and narrative interpretation are developed together in a single document environment, ensuring that analytical steps are legible alongside their outputs and that the analysis is reproducible as the corpus expands.
 
-**Sequential integration of methods.** The qualitative component is explicitly designed to follow from the quantitative email analysis. The questionnaire and follow-up interview guide are developed after initial findings are available, making the two work packages intellectually as well as temporally ordered.
+**Sequential integration of methods.** The qualitative component is explicitly designed to follow from the quantitative email analysis. The questionnaire is developed after initial findings are available, making the two work packages intellectually as well as temporally ordered.
 
 **Open research practices.** All data collection is thoroughly documented. De-identified analytical outputs and code will be made freely available following FAIR principles, within the constraints of the research ethics protocol. Articles will be published open access.
 
@@ -185,4 +208,6 @@ Gender is inferred probabilistically from sender first names, capturing only a b
 
 The fast/slow study comparison is based on a subset of studies with complete and sequentially consistent milestone date information; seven studies were excluded from phase analysis due to non-sequential milestone dates.
 
-The questionnaire and follow-up interviews are subject to limitations inherent in retrospective accounts: participants' reconstructions of past experiences are shaped by subsequent developments and current perspectives. These limitations are partially addressed by grounding questionnaire and interview questions in specific documents and timelines surfaced by the email analysis.
+The questionnaire is subject to limitations inherent in retrospective accounts: participants' reconstructions of past experiences are shaped by subsequent developments and current perspectives. These limitations are partially addressed by grounding questionnaire questions in specific documents and timelines surfaced by the email analysis.
+
+## References
