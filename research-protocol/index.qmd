@@ -66,9 +66,9 @@ Emails relating to broader CITF operational communications not associated with s
 
 ### Questionnaire
 
-The secondary data source is a questionnaire administered to individuals who participated in the CITF Databank initiative, primarily on the partner-study side. Respondents will be identified through a call for participation addressed to representatives of the 100 partner studies.
+The secondary data source is a questionnaire administered to individuals who participated in the CITF Databank initiative, identified through the CITF's roster of data contributors, including project leaders, data managers, and key technical and administrative personnel. Project leaders may also be asked to forward the questionnaire to team members who worked in a less visible capacity and whose contact information the CITF does not maintain. A waiver of consent applies to the email data; questionnaire participants provide informed consent prior to beginning. Recruitment and consent procedures are detailed in the ethics protocol, recruitment materials, and informed consent document.
 
-The questionnaire is structured around three domains: (1) participants' professional backgrounds and experiences; (2) studies' missions, purposes, and motivations; and (3) practices, procedures, and relationships. The first domain also serves as a branching mechanism, routing respondents to role-appropriate question blocks in the remaining sections. Questions in the second and third domains correspond to the topic and phase categories established by the email analysis. The questionnaire also collects information pertaining to respondents' gender, institutional affiliation, and role, which correspond with variables structuring the email analysis, therefore enabling comparison across the two data sources at the level of aggregate categories rather than individual identity. A brief pilot with 2–3 respondents will precede full distribution of the questionnaire.
+The questionnaire is structured around four domains: (1) participants' professional backgrounds and experiences; (2) independent and collaborative activities; (3) impact and change over time; and (4) demographic data. The first domain also serves as a branching mechanism, routing respondents to role-appropriate question blocks in the remaining sections. Questions in the second and third domains correspond to the topic and phase categories established by the email analysis. The demographic domain collects respondents' gender and institutional affiliation, which correspond with variables structuring the email analysis, therefore enabling comparison across the two data sources at the level of aggregate categories rather than individual identity. The full question set is documented in the questionnaire protocol. A brief pilot with 2–3 respondents will precede full distribution of the questionnaire.
 
 ## Methodological Design
 
@@ -148,13 +148,14 @@ A targeted comparison of studies at the extremes of the Intro→DSA timeline dis
 
 #### Questionnaire Design
 
-The questionnaire is organized around three sequential domains:
+The questionnaire is organized around four sequential domains, detailed in the questionnaire protocol:
 
 1. **Participants' professional backgrounds and experiences.** Drawing on life-history methods to understand how participants' outlooks emerged from their professional trajectories, without seeking biographical detail per se.
-2. **Studies' missions, purposes, and motivations.** Investigating the unique characteristics, goals, and data practices of participants' studies to understand how these shaped their approach to the Databank's requirements.
-3. **Practices, procedures, and relationships.** Addressing specific actions and interactions in the data sharing process, with attention to expectations, deviations from norms, and moments of friction or facilitation. Topics are calibrated to participants' roles and may include data governance, documentation practices, and experiences with specific Databank processes.
+2. **Independent and collaborative activities.** Addressing specific actions and interactions in the data sharing process, including role-specific working relationships, communication patterns, and moments of friction or facilitation.
+3. **Impact and change over time.** Examining participants' experiences with data-sharing initiatives before and after the CITF Databank, and how the experience shaped their subsequent work.
+4. **Demographic data.** Collecting gender and institutional affiliation to support aggregate analysis in correspondence with the categories used in the email analysis.
 
-The questionnaire is developed after initial quantitative findings are available, so that findings from the topic modeling, network analysis, and fast/slow study comparison can directly inform its design. Questions in each domain include open-ended items pursuing the same themes in greater depth.
+The questionnaire is developed after initial quantitative findings are available, so that findings from the topic modeling, network analysis, and fast/slow study comparison can directly inform its design. Questions in each domain include open-ended items pursuing the same themes in greater depth. Recruitment follows the procedure and materials specified in the ethics protocol and recruitment email, and participants provide consent via the informed consent document prior to beginning the questionnaire.
 
 #### Coding and Analysis
 
