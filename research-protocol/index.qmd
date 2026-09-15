@@ -28,7 +28,7 @@ format:
 
 ---
 
-This document outlines the overall vision, methodological approach, and analytical strategy for the project *Deriving insights for research data sharing from a large-scale data sharing initiative in Canada*. It is intended as a living reference that evolves alongside the project, articulating decisions at the level of design and strategy rather than documenting granular operational steps, which are covered in dedicated sub-protocols.
+This document outlines the overall vision, methodological approach, and analytical strategy for the project *Deriving insights for research data sharing from a large-scale data sharing initiative in Canada*. It is intended as a living reference that evolves alongside the project, articulating decisions at the level of design and strategy rather than documenting granular operational steps, which are covered in dedicated sub-protocols. The study's human participants research is conducted under McGill REB file #26-08-029.
 
 ## Motivation and Problem Statement
 
@@ -60,7 +60,7 @@ The primary data source is the email archive of the CITF Databank. A pilot phase
 
 To check whether the pipeline's output was usable, topic modelling was applied to the processed corpus, identifying 14 coherent topics organized into four thematic clusters. These topics were then analyzed for their distribution across the data sharing lifecycle, across sender roles, and across gender, and for how they co-occurred with one another, surfacing a preliminary set of observations about the structure and timing of coordination work, now reported in the [topic modelling preprint](../topic-modelling/).
 
-The rest of the project's email corpus is assembled by applying the pipeline developed from the pilot phase to additional mailboxes belonging to relevant individuals, including the Databank's Scientific Director and data managers. The expansion proceeds iteratively; the data processing and analysis pipeline validated through the pilot is applied to each new mailbox in sequence, with the corpus growing in a controlled and documented fashion. The expanded corpus will then serve as the basis for further analysis, including a reiteration of the topic modelling, a network analysis of communication patterns, and an analysis of the effects of data complexity.
+The rest of the project's email corpus is assembled by applying the pipeline developed from the pilot phase to additional mailboxes belonging to relevant individuals, including the Databank's Scientific Director and Data Managers. The expansion proceeds iteratively; the data processing and analysis pipeline validated through the pilot is applied to each new mailbox in sequence, with the corpus growing in a controlled and documented fashion. The expanded corpus will then serve as the basis for further analysis, including a reiteration of the topic modelling, a network analysis of communication patterns, and an analysis of the effects of data complexity.
 
 Emails relating to broader CITF operational communications not associated with specific studies are not included. This reflects the project's focus on relationships between the CITF and its partners that contribute data, rather than on other aspects of CITF operations.
 
