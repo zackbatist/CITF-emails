@@ -25,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -203,8 +238,18 @@ p {
   <li><a href="#sec-coding-tool" id="toc-sec-coding-tool" class="nav-link" data-scroll-target="#sec-coding-tool"><span class="header-section-number">5.3</span> The coding tool</a></li>
   </ul></li>
   <li><a href="#sec-block-13" id="toc-sec-block-13" class="nav-link" data-scroll-target="#sec-block-13"><span class="header-section-number">6</span> Block 13: validating rules and correcting tags (planned)</a></li>
-  <li><a href="#sec-reproducibility" id="toc-sec-reproducibility" class="nav-link" data-scroll-target="#sec-reproducibility"><span class="header-section-number">7</span> Reproducibility</a></li>
-  <li><a href="#sec-next-steps" id="toc-sec-next-steps" class="nav-link" data-scroll-target="#sec-next-steps"><span class="header-section-number">8</span> Next steps</a></li>
+  <li><a href="#sec-planned-analysis" id="toc-sec-planned-analysis" class="nav-link" data-scroll-target="#sec-planned-analysis"><span class="header-section-number">7</span> Planned analysis</a></li>
+  <li><a href="#sec-reproducibility" id="toc-sec-reproducibility" class="nav-link" data-scroll-target="#sec-reproducibility"><span class="header-section-number">8</span> Reproducibility</a></li>
+  <li><a href="#sec-next-steps" id="toc-sec-next-steps" class="nav-link" data-scroll-target="#sec-next-steps"><span class="header-section-number">9</span> Next steps</a></li>
+  <li><a href="#sec-zoning-tests" id="toc-sec-zoning-tests" class="nav-link" data-scroll-target="#sec-zoning-tests"><span class="header-section-number">10</span> Appendix: reproducing the zoning tests</a>
+  <ul class="collapse">
+  <li><a href="#provenance" id="toc-provenance" class="nav-link" data-scroll-target="#provenance"><span class="header-section-number">10.1</span> Provenance</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup"><span class="header-section-number">10.2</span> Setup</a></li>
+  <li><a href="#chipmunk-benchmarks" id="toc-chipmunk-benchmarks" class="nav-link" data-scroll-target="#chipmunk-benchmarks"><span class="header-section-number">10.3</span> Chipmunk benchmarks</a></li>
+  <li><a href="#okapi-rebuild" id="toc-okapi-rebuild" class="nav-link" data-scroll-target="#okapi-rebuild"><span class="header-section-number">10.4</span> Okapi rebuild</a></li>
+  <li><a href="#recall-by-zone-on-enron" id="toc-recall-by-zone-on-enron" class="nav-link" data-scroll-target="#recall-by-zone-on-enron"><span class="header-section-number">10.5</span> Recall by zone on Enron</a></li>
+  <li><a href="#five-emails" id="toc-five-emails" class="nav-link" data-scroll-target="#five-emails"><span class="header-section-number">10.6</span> Five emails</a></li>
+  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -273,15 +318,15 @@ p {
 
 <section id="sec-purpose" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Purpose</h1>
-<p><span id="1" class="paragraph-number">[1]</span> The CITF email project studies research data sharing through the correspondence that carried it. A first close reading of 30 emails showed that how people wrote mattered as much as what they wrote about, and the DocuScope memo adopted DocuScope, following <span class="citation" data-cites="brown2022">Brown and Laudenbach (<a href="#ref-brown2022" role="doc-biblioref">2022</a>)</span>, to capture the <em>how</em> at corpus scale. The project uses DocuScope for HOW categories only.</p>
+<p><span id="1" class="paragraph-number">[1]</span> The CITF email project studies research data sharing through the correspondence that carried it. A first close reading of 30 emails showed that how people wrote mattered as much as what they wrote about, and we adopted DocuScope, following <span class="citation" data-cites="brown2022">Brown and Laudenbach (<a href="#ref-brown2022" role="doc-biblioref">2022</a>)</span>, to capture the <em>how</em> at corpus scale. The project uses DocuScope for HOW categories only.</p>
 <p><span id="2" class="paragraph-number">[2]</span> This session asked whether DocuScope’s HOW tags describe these emails accurately enough to support that use, and built a reproducible procedure to find tagging errors, measure them, and correct the ones that can be corrected. Every step that changes the data is code with fixed parameters, and every human judgement is stored as a coded file, so that each result can be rerun and audited.</p>
 </section>
 <section id="sec-starting-point" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Starting point</h1>
 <p><span id="3" class="paragraph-number">[3]</span> Melissa’s notebook (blocks 1 to 7) sets up everything this session relies on. It loads <code>msgs10</code> and <code>recip4</code>, flattens and deduplicates the emails, keeps the 10,397 emails linked to a CITF study ID, tags email bodies with the <code>en_docusco_spacy</code> model (version 1.5), and exports 30 tagged emails to <code>docuscope_sample_30.html</code>.</p>
 <p><span id="4" class="paragraph-number">[4]</span> Block 7 defines the pool that this session works from: study emails of 300 to 2,000 characters, with emails that look like they contain credentials removed. The pool holds 6,086 emails.</p>
-<p><span id="5" class="paragraph-number">[5]</span> Block 7 also sorts the 19 HOW categories into six working groups (<code>how_groups</code>), which made the 30-email sample easier to read. This session works with the categories directly, since the memo plans to derive groups from the data through a factor analysis once the tags are cleaned.</p>
-<p><span id="6" class="paragraph-number">[6]</span> The notebook runs on the CITF analysis server (<code>citf-analysis</code>), reached from VSCodium through the Open Remote SSH extension, with a dedicated environment at <code>~/docuscope-env</code>. <a href="#sec-reproducibility" class="quarto-xref">Section&nbsp;7</a> lists the software versions.</p>
+<p><span id="5" class="paragraph-number">[5]</span> Block 7 also sorts the 19 HOW categories into six working groups (<code>how_groups</code>), which made the 30-email sample easier to read. This session works with the categories directly, since we plan to derive groups from the data through a factor analysis once the tags are cleaned (<a href="#sec-planned-analysis" class="quarto-xref">Section&nbsp;7</a>).</p>
+<p><span id="6" class="paragraph-number">[6]</span> The notebook runs on the CITF analysis server (<code>citf-analysis</code>), reached from VSCodium through the Open Remote SSH extension, with a dedicated environment at <code>~/docuscope-env</code>. <a href="#sec-reproducibility" class="quarto-xref">Section&nbsp;8</a> lists the software versions.</p>
 </section>
 <section id="sec-distribution" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Block 8: distribution of HOW tags</h1>
@@ -302,7 +347,7 @@ p {
 <p><span id="13" class="paragraph-number">[13]</span> An email body holds more than what its sender wrote for that message. It also carries earlier messages quoted below a reply, notices that mail systems insert, markup, signature blocks and boilerplate lines that recur across many emails. DocuScope tags all of this text alike, but tags in it describe other writers, mail software or standing institutional text, not the sender’s rhetoric. Because the same signatures and notices repeat word for word across hundreds of emails, their tags also make senders look more alike than their writing is. Blocks 9 and 10 therefore divide each email into zones and keep only the authored zone for analysis.</p>
 <p><span id="14" class="paragraph-number">[14]</span> Block 9 labels the email bodies with Chipmunk <span class="citation" data-cites="bevendorff2020">(<a href="#ref-bevendorff2020" role="doc-biblioref">Bevendorff et al. 2020</a>)</span>, a neural model trained to segment emails. Chipmunk gives each line of an email body one of 15 labels, such as paragraph, closing, personal signature, quotation and mail client signature. The model runs on the CITF analysis server, so no email text leaves it.</p>
 <p><span id="15" class="paragraph-number">[15]</span> We chose Chipmunk after comparing the published tools for email zoning, the task of dividing an email into parts such as greeting, body, signature and quoted text <span class="citation" data-cites="lampert2009">(<a href="#ref-lampert2009" role="doc-biblioref">Lampert et al. 2009</a>)</span>. Rule-based libraries such as talon, email_reply_parser and mail-parser-reply detect only quotations and signatures, and their authors report no evaluation. Zebra <span class="citation" data-cites="lampert2009">(<a href="#ref-lampert2009" role="doc-biblioref">Lampert et al. 2009</a>)</span> exists only in third-party reimplementations, and Chipmunk outperformed Quagga <span class="citation" data-cites="repke2018">(<a href="#ref-repke2018" role="doc-biblioref">Repke and Krestel 2018</a>)</span> in its authors’ tests. Chipmunk is peer-reviewed, its authors released its code, training data and trained model, and it labels greetings and closings and separates personal signatures from notices that mail programs add.</p>
-<p><span id="16" class="paragraph-number">[16]</span> We tested Chipmunk extensively before using it. Its authors trained it on Gmane, an archive of public mailing lists. They tested it on Gmane and on Enron, a corpus of corporate email. We reran both tests and reproduced their results. We also ran Chipmunk on five CITF emails and compared its zones with a provisional labelling made during testing, which has not been reviewed.</p>
+<p><span id="16" class="paragraph-number">[16]</span> We tested Chipmunk extensively before using it. Its authors trained it on Gmane, an archive of public mailing lists. They tested it on Gmane and on Enron, a corpus of corporate email. We reran both tests and reproduced their results (<a href="#sec-zoning-tests" class="quarto-xref">Section&nbsp;10</a>). We also ran Chipmunk on five CITF emails and compared its zones with a provisional labelling made during testing, which has not been reviewed.</p>
 <p><span id="17" class="paragraph-number">[17]</span> We compared Chipmunk with Okapi <span class="citation" data-cites="jardim2021">(<a href="#ref-jardim2021" role="doc-biblioref">Jardim et al. 2021</a>)</span>. Okapi is a multilingual extension of Chipmunk that keeps its 15 zones and Gmane training emails. Chipmunk reads the layout of each line and the lines around it. Okapi reads the wording of each line through a multilingual language model. Okapi’s authors published its design but no trained model. We therefore built Okapi from their paper and trained it ourselves, and the Okapi results in the table come from our rebuild. The two models score alike on Gmane and Enron. On the five CITF emails Okapi labelled whole signature blocks as authored text in three of them and Chipmunk did not. The table gives the share of lines each model labels correctly. It also gives the results that Chipmunk’s authors report for Quagga and an SVM baseline on the same benchmarks.</p>
 <table class="caption-top table">
 <colgroup>
@@ -688,8 +733,22 @@ p {
 </ol>
 <p><span id="41" class="paragraph-number">[41]</span> The thresholds in steps 2, 5 and 7 remain to be set, and they must be set before the coded results are examined.</p>
 </section>
-<section id="sec-reproducibility" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Reproducibility</h1>
+<section id="sec-planned-analysis" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Planned analysis</h1>
+<p><span id="42" class="paragraph-number">[42]</span> Brown and Laudenbach <span class="citation" data-cites="brown2022">(<a href="#ref-brown2022" role="doc-biblioref">2022</a>)</span> group the DocuScope categories into four rhetorical functions (their Table 3):</p>
+<ul>
+<li><strong>Negotiated Information</strong>: CitationAuthority, PublicTerms, AcademicTerms, SyntacticComplexity, InformationReportVerbs, MetadiscourseInteractive, Citation, Contingent, InformationStates, InformationTopics, Uncertainty</li>
+<li><strong>Narrative Forecasting</strong>: Narrative, Description, Future, Updates</li>
+<li><strong>Supportive Interaction</strong>: Facilitate, PublicTerms, CitationHedged, Citation, Responsibility, Interactive</li>
+<li><strong>Modulated Reporting</strong>: ConfidenceHedged, InformationChangeNegative, Uncertainty, ConfidenceHigh, FirstPerson, InformationChangePositive, Strategic, Description, InformationExposition, Negative</li>
+</ul>
+<p><span id="43" class="paragraph-number">[43]</span> We derive our own groups from the cleaned tags. We aggregate the HOW tag counts in authored text by sender and run a factor analysis, which groups the categories that the same senders use often. Each group becomes a rhetorical category for research data sharing emails. We name each group after its highest-scoring DocuScope categories and test the name in a manual review.</p>
+<p><span id="44" class="paragraph-number">[44]</span> The manual review covers all DocuScope tags in a sample of 200 emails. For each email, we write a topic label that names what the email is about, drawing on its InformationTopics spans, which mark the nominal subjects and objects that signal what a text concerns. We also assign each email the rhetorical categories that fit it, and we keep a category’s name only if the senders of the emails we assign it to score highest on its group.</p>
+<p><span id="45" class="paragraph-number">[45]</span> We then give part of this annotated sample to an LLM and ask it to label the remaining emails in the corpus, adding new labels where the sample has none. We check the LLM’s labels against our own on the held-out part of the sample.</p>
+<p><span id="46" class="paragraph-number">[46]</span> DocuScope reads English only, so we translate the French emails and flag them. Translation changes style, so we check whether the flagged emails behave differently.</p>
+</section>
+<section id="sec-reproducibility" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Reproducibility</h1>
 <ul>
 <li><strong>Server and environment.</strong> <code>citf-analysis</code>, Python 3.12 in <code>~/docuscope-env</code>, with docuscospacy 0.3.7, en_docusco_spacy 1.5, spaCy 3.8.18, pandas 3.1.1, polars 2.1.0 and pyarrow 26.0.1.</li>
 <li><strong>Inputs.</strong> <code>msgs10.csv</code> and <code>recip4.csv</code> in <code>/citfdata_share/email/processed data/melissa</code>.</li>
@@ -700,8 +759,8 @@ p {
 <li><strong>Parameters.</strong> Patterns, thresholds, rule lists and sample sizes sit at the top of blocks 9 to 12.</li>
 </ul>
 </section>
-<section id="sec-next-steps" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Next steps</h1>
+<section id="sec-next-steps" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Next steps</h1>
 <ul>
 <li>Decide which groups the analysis will compare, such as senders, studies or periods. Measure from block 8’s output how much category shares differ between them.</li>
 <li>Set the thresholds for applying rules, rating categories and building a model from those differences, before examining any coded results.</li>
@@ -713,6 +772,502 @@ p {
 <li>Have two coders code the sample in <code>docuscope_coding_tool.html</code>.</li>
 <li>Write and run block 13 (<a href="#sec-block-13" class="quarto-xref">Section&nbsp;6</a>).</li>
 </ul>
+</section>
+<section id="sec-zoning-tests" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Appendix: reproducing the zoning tests</h1>
+<p><span id="47" class="paragraph-number">[47]</span> The zoning tests ran on the lab’s GPU machine (<code>buckeridge-rtx6000</code>) in <code>~/models/email-zoning</code>. The folder lives on <code>citf-analysis</code>, and the GPU machine mounts it over SSHFS. Chipmunk runs on the CPU. Okapi runs on one GPU.</p>
+<section id="provenance" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="provenance"><span class="header-section-number">10.1</span> Provenance</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Source</th>
+<th>Identifier</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Chipmunk code and annotations</td>
+<td>github.com/webis-de/acl20-crawling-mailing-lists</td>
+<td>commit <code>ecc2c70bb9b38a989fa64e6b6edf51990df52253</code></td>
+</tr>
+<tr class="even">
+<td><code>fasttext-model.bin</code> (1.78 GB)</td>
+<td>files.webis.de/webis-gmane19-model</td>
+<td>SHA-256 <code>c5320b1f93113c8cc5fc86f88abd06891232572451cc973525923e2593532ca1</code></td>
+</tr>
+<tr class="odd">
+<td><code>segmenter_hinge.epoch-11.val_loss-0.093.h5</code> (9.9 MB)</td>
+<td>files.webis.de/webis-gmane19-model</td>
+<td>SHA-256 <code>5e32645c43c814d145aaac280b588c4dc410ce44753a696d398da9b655b712e5</code></td>
+</tr>
+<tr class="even">
+<td>XLM-RoBERTa base</td>
+<td>huggingface.co/FacebookAI/xlm-roberta-base</td>
+<td>revision <code>e73636d4f797dec63c3081bb6ed5c7b0bb3f2089</code></td>
+</tr>
+</tbody>
+</table>
+<p><span id="48" class="paragraph-number">[48]</span> <code>chipmunk-packages.txt</code> and <code>okapi-packages.txt</code> in the same folder record every installed package version.</p>
+</section>
+<section id="setup" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="setup"><span class="header-section-number">10.2</span> Setup</h2>
+<p><span id="49" class="paragraph-number">[49]</span> The setup installs uv in the home directory and keeps its Python builds and both download caches on the mount.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-LsSf</span> https://astral.sh/uv/install.sh <span class="kw">|</span> <span class="fu">sh</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/models/email-zoning <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> ~/models/email-zoning</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">UV_CACHE_DIR</span><span class="op">=</span>~/models/email-zoning/.cache/uv</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">UV_PYTHON_INSTALL_DIR</span><span class="op">=</span>~/models/email-zoning/.python</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HF_HOME</span><span class="op">=</span>~/models/email-zoning/.cache/huggingface</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/webis-de/acl20-crawling-mailing-lists.git</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">-C</span> acl20-crawling-mailing-lists checkout ecc2c70bb9b38a989fa64e6b6edf51990df52253</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> weights <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> weights</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fSLO</span> https://files.webis.de/webis-gmane19-model/fasttext-model.bin</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fSLO</span> https://files.webis.de/webis-gmane19-model/segmenter_hinge.epoch-11.val_loss-0.093.h5</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">sha256sum</span> <span class="pp">*</span> <span class="op">&gt;</span> SHA256SUMS</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span id="50" class="paragraph-number">[50]</span> The Chipmunk environment needs four adjustments to the repository’s <code>requirements.txt</code>. It installs only the packages the segmenter imports. <code>fasttextmirror</code> needs <code>pybind11</code> to compile without declaring it, so it builds without isolation. TensorFlow 2.2 declares no upper bound on <code>protobuf</code> or <code>numpy</code> but fails with current releases of both, so the last line pins their 2020 releases.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> venv <span class="at">--python</span> 3.8 chipmunk-env</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> chipmunk-env/bin/activate</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip install pybind11 setuptools wheel</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip install <span class="at">--no-build-isolation</span> <span class="st">"fasttextmirror==0.8.22"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip install <span class="st">"tensorflow==2.2.0"</span> <span class="st">"click==8.1.8"</span> <span class="st">"tqdm==4.70.1"</span> <span class="st">"elasticsearch==6.8.2"</span> <span class="st">"pyspark==3.5.9"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip install <span class="st">"protobuf==3.20.3"</span> <span class="st">"numpy==1.18.5"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip freeze <span class="op">&gt;</span> chipmunk-packages.txt</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span id="51" class="paragraph-number">[51]</span> The Okapi environment uses PyTorch’s CUDA 12.6 build, since the server’s driver (565.57) supports CUDA up to 12.7.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> venv <span class="at">--python</span> 3.11 okapi-env</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> okapi-env/bin/activate</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip install <span class="at">--torch-backend</span> cu126 <span class="st">"torch==2.14.1"</span> <span class="st">"transformers==5.22.2"</span> <span class="st">"pytorch-crf==0.7.2"</span> <span class="st">"huggingface_hub==2.4.0"</span> <span class="st">"numpy==2.4.6"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip freeze <span class="op">&gt;</span> okapi-packages.txt</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> e73636d4f797dec63c3081bb6ed5c7b0bb3f2089 <span class="op">&gt;</span> xlmr-revision.txt</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">timeout</span> 900 python3 <span class="at">-</span> <span class="op">&lt;&lt;'EOF'</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="st">from huggingface_hub import snapshot_download</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="st">rev = open("xlmr-revision.txt").read().strip()</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="st">snapshot_download("FacebookAI/xlm-roberta-base", revision=rev, allow_patterns=["*.json", "*.safetensors", "*.model"])</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="chipmunk-benchmarks" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="chipmunk-benchmarks"><span class="header-section-number">10.3</span> Chipmunk benchmarks</h2>
+<p><span id="52" class="paragraph-number">[52]</span> The repository’s own <code>evaluate</code> command scores the trained segmenter on the 300 Gmane validation emails and the 296 Enron emails. The paper reports its 96% on the same 300 emails.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/models/email-zoning</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> chipmunk-env/bin/activate</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> acl20-crawling-mailing-lists</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="va">CUDA_VISIBLE_DEVICES</span><span class="op">=</span><span class="st">""</span> <span class="fu">timeout</span> 3600 ./run.sh src/parsing/message_segmenter.py evaluate <span class="dt">\</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  ../weights/segmenter_hinge.epoch-11.val_loss-0.093.h5 ../weights/fasttext-model.bin <span class="dt">\</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  annotations/annotations-final-validation.jsonl <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span> <span class="kw">|</span> <span class="fu">tee</span> ../eval-gmane-validation.log</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="va">CUDA_VISIBLE_DEVICES</span><span class="op">=</span><span class="st">""</span> <span class="fu">timeout</span> 3600 ./run.sh src/parsing/message_segmenter.py evaluate <span class="dt">\</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  ../weights/segmenter_hinge.epoch-11.val_loss-0.093.h5 ../weights/fasttext-model.bin <span class="dt">\</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  annotations/enron-annotated.jsonl <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span> <span class="kw">|</span> <span class="fu">tee</span> ../eval-enron.log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="okapi-rebuild" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="okapi-rebuild"><span class="header-section-number">10.4</span> Okapi rebuild</h2>
+<p><span id="53" class="paragraph-number">[53]</span> The Okapi paper specifies the encoder and the sequence model. We chose the remaining settings.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Okapi paper</th>
+<th>Our rebuild</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Line embedding</td>
+<td>XLM-RoBERTa base, frozen; last four layers concatenated per token and averaged over the line (3,072 features)</td>
+<td>Same; lines cut at 128 subword tokens</td>
+</tr>
+<tr class="even">
+<td>Sequence model</td>
+<td>BiLSTM, one layer, 64 units; CRF output</td>
+<td>Same</td>
+</tr>
+<tr class="odd">
+<td>Dropout and optimizer</td>
+<td>0.25; RMSprop, learning rate 0.001</td>
+<td>Same</td>
+</tr>
+<tr class="even">
+<td>Training emails</td>
+<td>Chipmunk’s English Gmane annotations</td>
+<td><code>annotations-final-train.jsonl</code> (2,733 emails), split 90% training and 10% development with seed 13</td>
+</tr>
+<tr class="odd">
+<td>Labels</td>
+<td>Chipmunk’s 15 zones</td>
+<td>The 15 zones plus <code>&lt;empty&gt;</code> for blank lines, assigned with the Chipmunk repository’s <code>annotation_dict_to_lines</code>, so scores compare with Chipmunk’s <code>evaluate</code></td>
+</tr>
+<tr class="even">
+<td>Batch size and stopping</td>
+<td>Not reported</td>
+<td>8 emails per batch; up to 50 epochs, stopping after 5 epochs without improvement on the development emails (training stopped after epoch 14 and kept epoch 9)</td>
+</tr>
+</tbody>
+</table>
+<p><span id="54" class="paragraph-number">[54]</span> <code>okapi.py</code> embeds every line, trains the model, saves it as <code>okapi-model.pt</code>, and writes <code>okapi-eval-gmane-validation.txt</code> and <code>okapi-eval-enron.txt</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/models/email-zoning</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HF_HOME</span><span class="op">=</span>~/models/email-zoning/.cache/huggingface</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> okapi-env/bin/activate</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="va">CUDA_VISIBLE_DEVICES</span><span class="op">=</span>0 <span class="fu">timeout</span> 7200 python3 okapi.py <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span> <span class="kw">|</span> <span class="fu">tee</span> okapi-train.log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>okapi.py
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Okapi (Jardim, Rei and Almeida 2021), rebuilt from the paper's description.</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">Line labels follow annotation_dict_to_lines in webis-de/acl20-crawling-mailing-lists (src/util/mail_classification.py)."""</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json, random, sys</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, torch</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch <span class="im">import</span> nn</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torchcrf <span class="im">import</span> CRF</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> AutoTokenizer, AutoModel</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">13</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>ROOT <span class="op">=</span> Path(<span class="va">__file__</span>).resolve().parent</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>ANN <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">"acl20-crawling-mailing-lists"</span> <span class="op">/</span> <span class="st">"annotations"</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>REV <span class="op">=</span> (ROOT <span class="op">/</span> <span class="st">"xlmr-revision.txt"</span>).read_text().strip()</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>LABELS <span class="op">=</span> [<span class="st">"paragraph"</span>, <span class="st">"closing"</span>, <span class="st">"inline_headers"</span>, <span class="st">"log_data"</span>, <span class="st">"mua_signature"</span>, <span class="st">"patch"</span>, <span class="st">"personal_signature"</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>          <span class="st">"quotation"</span>, <span class="st">"quotation_marker"</span>, <span class="st">"raw_code"</span>, <span class="st">"salutation"</span>, <span class="st">"section_heading"</span>, <span class="st">"tabular"</span>, <span class="st">"technical"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>          <span class="st">"visual_separator"</span>, <span class="st">"&lt;empty&gt;"</span>]</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>IDX <span class="op">=</span> {l: i <span class="cf">for</span> i, l <span class="kw">in</span> <span class="bu">enumerate</span>(LABELS)}</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>EMPTY <span class="op">=</span> IDX[<span class="st">"&lt;empty&gt;"</span>]</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>random.seed(SEED)<span class="op">;</span> np.random.seed(SEED)<span class="op">;</span> torch.manual_seed(SEED)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>torch.backends.cudnn.deterministic, torch.backends.cudnn.benchmark <span class="op">=</span> <span class="va">True</span>, <span class="va">False</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>dev <span class="op">=</span> torch.device(<span class="st">"cuda"</span>)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> annotations(d):</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">"annotations"</span> <span class="kw">in</span> d:</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> d[<span class="st">"annotations"</span>]</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [{<span class="st">"start_offset"</span>: a[<span class="dv">0</span>], <span class="st">"end_offset"</span>: a[<span class="dv">1</span>], <span class="st">"label"</span>: a[<span class="dv">2</span>]} <span class="cf">for</span> a <span class="kw">in</span> d.get(<span class="st">"labels"</span>) <span class="kw">or</span> []]</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> line_labels(d):</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Same logic as annotation_dict_to_lines in the Chipmunk repository."""</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    lines <span class="op">=</span> [l <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="cf">for</span> l <span class="kw">in</span> d[<span class="st">"text"</span>].split(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)]</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    anns <span class="op">=</span> <span class="bu">sorted</span>(annotations(d), key<span class="op">=</span><span class="kw">lambda</span> a: a[<span class="st">"start_offset"</span>], reverse<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>    offset, out <span class="op">=</span> <span class="dv">0</span>, []</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> l <span class="kw">in</span> lines:</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>        end <span class="op">=</span> offset <span class="op">+</span> <span class="bu">len</span>(l)</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> anns <span class="kw">and</span> offset <span class="op">&gt;</span> anns[<span class="op">-</span><span class="dv">1</span>][<span class="st">"end_offset"</span>]:</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>            anns.pop()</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> anns <span class="kw">or</span> <span class="kw">not</span> l.strip():</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>            out.append((l, <span class="st">"&lt;empty&gt;"</span>))</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> offset <span class="op">&lt;</span> anns[<span class="op">-</span><span class="dv">1</span>][<span class="st">"end_offset"</span>] <span class="kw">and</span> end <span class="op">&gt;</span> anns[<span class="op">-</span><span class="dv">1</span>][<span class="st">"start_offset"</span>]:</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>            out.append((l, anns[<span class="op">-</span><span class="dv">1</span>][<span class="st">"label"</span>]))</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>            out.append((l, <span class="st">"&lt;empty&gt;"</span>))</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>        offset <span class="op">=</span> end</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load(name):</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>    mails <span class="op">=</span> []</span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> row <span class="kw">in</span> <span class="bu">open</span>(ANN <span class="op">/</span> name):</span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>        d <span class="op">=</span> json.loads(row)</span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> annotations(d):</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>        ll <span class="op">=</span> line_labels(d)</span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(ll) <span class="op">&gt;</span> <span class="dv">5000</span>:</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>        mails.append(([l.rstrip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>) <span class="cf">for</span> l, _ <span class="kw">in</span> ll], [IDX[y] <span class="cf">for</span> _, y <span class="kw">in</span> ll]))</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mails</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>tok <span class="op">=</span> AutoTokenizer.from_pretrained(<span class="st">"FacebookAI/xlm-roberta-base"</span>, revision<span class="op">=</span>REV)</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>enc <span class="op">=</span> AutoModel.from_pretrained(<span class="st">"FacebookAI/xlm-roberta-base"</span>, revision<span class="op">=</span>REV).to(dev).<span class="bu">eval</span>()</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a><span class="at">@torch.no_grad</span>()</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> embed(lines, bs<span class="op">=</span><span class="dv">256</span>):</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>    out <span class="op">=</span> []</span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(lines), bs):</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>        b <span class="op">=</span> tok(lines[i:i <span class="op">+</span> bs], padding<span class="op">=</span><span class="va">True</span>, truncation<span class="op">=</span><span class="va">True</span>, max_length<span class="op">=</span><span class="dv">128</span>, return_tensors<span class="op">=</span><span class="st">"pt"</span>).to(dev)</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>        hs <span class="op">=</span> enc(<span class="op">**</span>b, output_hidden_states<span class="op">=</span><span class="va">True</span>).hidden_states</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> torch.cat(hs[<span class="op">-</span><span class="dv">4</span>:], dim<span class="op">=-</span><span class="dv">1</span>)</span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>        m <span class="op">=</span> b[<span class="st">"attention_mask"</span>].unsqueeze(<span class="op">-</span><span class="dv">1</span>).<span class="bu">float</span>()</span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>        out.append(((x <span class="op">*</span> m).<span class="bu">sum</span>(<span class="dv">1</span>) <span class="op">/</span> m.<span class="bu">sum</span>(<span class="dv">1</span>)).half().cpu())</span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> torch.cat(out)</span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> embed_set(name):</span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>    cache <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">"okapi-cache"</span> <span class="op">/</span> (name <span class="op">+</span> <span class="st">".pt"</span>)</span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> cache.exists():</span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> torch.load(cache)</span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>    mails <span class="op">=</span> load(name)</span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> [(embed(lines), torch.tensor(y)) <span class="cf">for</span> lines, y <span class="kw">in</span> mails]</span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>    cache.parent.mkdir(exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>    torch.save(data, cache)</span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> data</span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Okapi(nn.Module):</span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.lstm <span class="op">=</span> nn.LSTM(<span class="dv">3072</span>, <span class="dv">64</span>, num_layers<span class="op">=</span><span class="dv">1</span>, batch_first<span class="op">=</span><span class="va">True</span>, bidirectional<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.drop <span class="op">=</span> nn.Dropout(<span class="fl">0.25</span>)</span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.out <span class="op">=</span> nn.Linear(<span class="dv">128</span>, <span class="bu">len</span>(LABELS))</span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.crf <span class="op">=</span> CRF(<span class="bu">len</span>(LABELS), batch_first<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> emissions(<span class="va">self</span>, x):</span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.out(<span class="va">self</span>.drop(<span class="va">self</span>.lstm(x)[<span class="dv">0</span>]))</span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> batch(items):</span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">max</span>(<span class="bu">len</span>(y) <span class="cf">for</span> _, y <span class="kw">in</span> items)</span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> torch.zeros(<span class="bu">len</span>(items), n, <span class="dv">3072</span>)</span>
+<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> torch.zeros(<span class="bu">len</span>(items), n, dtype<span class="op">=</span>torch.<span class="bu">long</span>)</span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> torch.zeros(<span class="bu">len</span>(items), n, dtype<span class="op">=</span>torch.<span class="bu">bool</span>)</span>
+<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, (xe, ye) <span class="kw">in</span> <span class="bu">enumerate</span>(items):</span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a>        x[i, :<span class="bu">len</span>(ye)], y[i, :<span class="bu">len</span>(ye)], m[i, :<span class="bu">len</span>(ye)] <span class="op">=</span> xe.<span class="bu">float</span>(), ye, <span class="va">True</span></span>
+<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x.to(dev), y.to(dev), m.to(dev)</span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a><span class="at">@torch.no_grad</span>()</span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> predict(model, data):</span>
+<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a>    model.<span class="bu">eval</span>()</span>
+<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a>    gold, pred <span class="op">=</span> [], []</span>
+<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(data), <span class="dv">8</span>):</span>
+<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a>        x, y, m <span class="op">=</span> batch(data[i:i <span class="op">+</span> <span class="dv">8</span>])</span>
+<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> p, yy, mm <span class="kw">in</span> <span class="bu">zip</span>(model.crf.decode(model.emissions(x), m), y, m):</span>
+<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a>            pred.extend(p)<span class="op">;</span> gold.extend(yy[mm].tolist())</span>
+<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array(gold), np.array(pred)</span>
+<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> report(name, gold, pred):</span>
+<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a>    cm <span class="op">=</span> np.zeros((<span class="bu">len</span>(LABELS), <span class="bu">len</span>(LABELS)))</span>
+<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> g, p <span class="kw">in</span> <span class="bu">zip</span>(gold, pred):</span>
+<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a>        cm[g, p] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a>    ne <span class="op">=</span> gold <span class="op">!=</span> EMPTY</span>
+<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a>    lines <span class="op">=</span> [<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span><span class="bu">len</span>(gold)<span class="sc">}</span><span class="ss"> lines"</span>,</span>
+<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a>             <span class="ss">f"accuracy, all lines (as Chipmunk's evaluate): </span><span class="sc">{</span>(gold <span class="op">==</span> pred)<span class="sc">.</span>mean()<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a>             <span class="ss">f"accuracy, non-blank lines: </span><span class="sc">{</span>(gold[ne] <span class="op">==</span> pred[ne])<span class="sc">.</span>mean()<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a>             <span class="st">""</span>, <span class="ss">f"</span><span class="sc">{</span><span class="st">'zone'</span><span class="sc">:&lt;20}{</span><span class="st">'lines'</span><span class="sc">:&gt;8}{</span><span class="st">'recall'</span><span class="sc">:&gt;8}</span><span class="ss">  main confusion"</span>]</span>
+<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, l <span class="kw">in</span> <span class="bu">enumerate</span>(LABELS):</span>
+<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a>        n <span class="op">=</span> cm[i].<span class="bu">sum</span>()</span>
+<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> n <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a>        row <span class="op">=</span> cm[i] <span class="op">/</span> n</span>
+<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a>        off <span class="op">=</span> [(row[j], LABELS[j]) <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(LABELS)) <span class="cf">if</span> j <span class="op">!=</span> i <span class="kw">and</span> row[j] <span class="op">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a>        top <span class="op">=</span> <span class="bu">max</span>(off) <span class="cf">if</span> off <span class="cf">else</span> (<span class="dv">0</span>, <span class="st">""</span>)</span>
+<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a>        lines.append(<span class="ss">f"</span><span class="sc">{</span>l<span class="sc">:&lt;20}{</span><span class="bu">int</span>(n)<span class="sc">:&gt;8}{</span>row[i]<span class="sc">:&gt;8.3f}</span><span class="ss">  </span><span class="sc">{</span>top[<span class="dv">1</span>]<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>top[<span class="dv">0</span>]<span class="sc">:.3f}</span><span class="ss">"</span> <span class="cf">if</span> top[<span class="dv">1</span>] <span class="cf">else</span> <span class="ss">f"</span><span class="sc">{</span>l<span class="sc">:&lt;20}{</span><span class="bu">int</span>(n)<span class="sc">:&gt;8}{</span>row[i]<span class="sc">:&gt;8.3f}</span><span class="ss">"</span>)</span>
+<span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>.join(lines)</span>
+<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(text <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a>    (ROOT <span class="op">/</span> <span class="ss">f"okapi-eval-</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">.txt"</span>).write_text(text <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a>train_all <span class="op">=</span> embed_set(<span class="st">"annotations-final-train.jsonl"</span>)</span>
+<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a>order <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="bu">len</span>(train_all)))</span>
+<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a>random.Random(SEED).shuffle(order)</span>
+<span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a>cut <span class="op">=</span> <span class="bu">len</span>(order) <span class="op">//</span> <span class="dv">10</span></span>
+<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a>devset <span class="op">=</span> [train_all[i] <span class="cf">for</span> i <span class="kw">in</span> order[:cut]]</span>
+<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a>train <span class="op">=</span> [train_all[i] <span class="cf">for</span> i <span class="kw">in</span> order[cut:]]</span>
+<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"train </span><span class="sc">{</span><span class="bu">len</span>(train)<span class="sc">}</span><span class="ss"> emails | dev </span><span class="sc">{</span><span class="bu">len</span>(devset)<span class="sc">}</span><span class="ss"> emails"</span>)</span>
+<span id="cb6-152"><a href="#cb6-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-153"><a href="#cb6-153" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> Okapi().to(dev)</span>
+<span id="cb6-154"><a href="#cb6-154" aria-hidden="true" tabindex="-1"></a>opt <span class="op">=</span> torch.optim.RMSprop(model.parameters(), lr<span class="op">=</span><span class="fl">0.001</span>)</span>
+<span id="cb6-155"><a href="#cb6-155" aria-hidden="true" tabindex="-1"></a>best, best_state, wait <span class="op">=</span> <span class="op">-</span><span class="dv">1</span>, <span class="va">None</span>, <span class="dv">0</span></span>
+<span id="cb6-156"><a href="#cb6-156" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">51</span>):</span>
+<span id="cb6-157"><a href="#cb6-157" aria-hidden="true" tabindex="-1"></a>    model.train()</span>
+<span id="cb6-158"><a href="#cb6-158" aria-hidden="true" tabindex="-1"></a>    random.Random(SEED <span class="op">+</span> epoch).shuffle(train)</span>
+<span id="cb6-159"><a href="#cb6-159" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(train), <span class="dv">8</span>):</span>
+<span id="cb6-160"><a href="#cb6-160" aria-hidden="true" tabindex="-1"></a>        x, y, m <span class="op">=</span> batch(train[i:i <span class="op">+</span> <span class="dv">8</span>])</span>
+<span id="cb6-161"><a href="#cb6-161" aria-hidden="true" tabindex="-1"></a>        loss <span class="op">=</span> <span class="op">-</span>model.crf(model.emissions(x), y, m, reduction<span class="op">=</span><span class="st">"mean"</span>)</span>
+<span id="cb6-162"><a href="#cb6-162" aria-hidden="true" tabindex="-1"></a>        opt.zero_grad()<span class="op">;</span> loss.backward()<span class="op">;</span> opt.step()</span>
+<span id="cb6-163"><a href="#cb6-163" aria-hidden="true" tabindex="-1"></a>    g, p <span class="op">=</span> predict(model, devset)</span>
+<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a>    acc <span class="op">=</span> (g <span class="op">==</span> p).mean()</span>
+<span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"epoch </span><span class="sc">{</span>epoch<span class="sc">:&gt;2}</span><span class="ss"> | dev accuracy </span><span class="sc">{</span>acc<span class="sc">:.4f}</span><span class="ss">"</span>, flush<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-166"><a href="#cb6-166" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> acc <span class="op">&gt;</span> best:</span>
+<span id="cb6-167"><a href="#cb6-167" aria-hidden="true" tabindex="-1"></a>        best, best_state, wait <span class="op">=</span> acc, {k: v.detach().clone() <span class="cf">for</span> k, v <span class="kw">in</span> model.state_dict().items()}, <span class="dv">0</span></span>
+<span id="cb6-168"><a href="#cb6-168" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb6-169"><a href="#cb6-169" aria-hidden="true" tabindex="-1"></a>        wait <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb6-170"><a href="#cb6-170" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> wait <span class="op">&gt;=</span> <span class="dv">5</span>:</span>
+<span id="cb6-171"><a href="#cb6-171" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb6-172"><a href="#cb6-172" aria-hidden="true" tabindex="-1"></a>model.load_state_dict(best_state)</span>
+<span id="cb6-173"><a href="#cb6-173" aria-hidden="true" tabindex="-1"></a>torch.save(best_state, ROOT <span class="op">/</span> <span class="st">"okapi-model.pt"</span>)</span>
+<span id="cb6-174"><a href="#cb6-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-175"><a href="#cb6-175" aria-hidden="true" tabindex="-1"></a>report(<span class="st">"gmane-validation"</span>, <span class="op">*</span>predict(model, embed_set(<span class="st">"annotations-final-validation.jsonl"</span>)))</span>
+<span id="cb6-176"><a href="#cb6-176" aria-hidden="true" tabindex="-1"></a>report(<span class="st">"enron"</span>, <span class="op">*</span>predict(model, embed_set(<span class="st">"enron-annotated.jsonl"</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</section>
+<section id="recall-by-zone-on-enron" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="recall-by-zone-on-enron"><span class="header-section-number">10.5</span> Recall by zone on Enron</h2>
+<p><span id="55" class="paragraph-number">[55]</span> On Enron, the two models recall the zones that matter for us at similar rates. Both read about a quarter of mua_signature lines as paragraph, which would send banners and disclaimers into the text DocuScope tags.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Zone</th>
+<th>Chipmunk</th>
+<th>Okapi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>paragraph</td>
+<td>0.94</td>
+<td>0.92</td>
+</tr>
+<tr class="even">
+<td>salutation</td>
+<td>0.81</td>
+<td>0.84</td>
+</tr>
+<tr class="odd">
+<td>closing</td>
+<td>0.90</td>
+<td>0.90</td>
+</tr>
+<tr class="even">
+<td>personal_signature</td>
+<td>0.85</td>
+<td>0.79</td>
+</tr>
+<tr class="odd">
+<td>mua_signature</td>
+<td>0.71</td>
+<td>0.72</td>
+</tr>
+<tr class="even">
+<td>quotation</td>
+<td>0.97</td>
+<td>0.94</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="five-emails" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="five-emails"><span class="header-section-number">10.6</span> Five emails</h2>
+<p><span id="56" class="paragraph-number">[56]</span> <code>five-emails.txt</code> holds the first five emails of the 30-email sample. This block splits it into one body per email in <code>emails/</code>, named by msgid2, and saves the header fields to <code>emails/headers.json</code>. Each body is everything below the <code>───</code> line, unchanged.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/models/email-zoning</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> okapi-env/bin/activate</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">timeout</span> 60 python3 <span class="at">-</span> <span class="op">&lt;&lt;'EOF'</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="st">import json, re</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="st">from pathlib import Path</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="st">raw = Path("five-emails.txt").read_text()</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="st">blocks = re.split(r"^(?=Email \d+ of \d+$)", raw, flags=re.M)</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="st">out, headers = Path("emails"), {}</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="st">out.mkdir(exist_ok=True)</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="st">for b in (b for b in blocks if b.strip()):</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="st">    head, body = re.split(r"^─{20,}\n", b, maxsplit=1, flags=re.M)</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="st">    fields = dict(l.split(": ", 1) for l in head.strip().split("\n")[1:])</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="st">    fields["Email"] = head.split("\n", 1)[0]</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="st">    msgid = fields["msgid2"]</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="st">    (out / f"{msgid}.txt").write_text(body.rstrip("\n") + "\n")</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="st">    headers[msgid] = fields</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="st">    print(msgid, fields["Email"], "|", len(body.strip().split("\n")), "lines")</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="st">(out / "headers.json").write_text(json.dumps(headers, indent=2, ensure_ascii=False))</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span id="57" class="paragraph-number">[57]</span> Chipmunk labels each line with the repository’s own functions and writes <code>zones-chipmunk.jsonl</code>. <code>chipmunk_raw</code> holds the model’s top zone for each line; <code>chipmunk</code> holds the same after the repository’s <code>_post_process_labels</code> corrections.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/models/email-zoning</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> chipmunk-env/bin/activate</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="va">CUDA_VISIBLE_DEVICES</span><span class="op">=</span><span class="st">""</span> <span class="va">TF_CPP_MIN_LOG_LEVEL</span><span class="op">=</span>3 <span class="va">PYTHONPATH</span><span class="op">=</span>acl20-crawling-mailing-lists/src <span class="va">PYTHONWARNINGS</span><span class="op">=</span>ignore <span class="fu">timeout</span> 1800 python3 <span class="at">-</span> <span class="op">&lt;&lt;'EOF'</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="st">import json</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="st">from pathlib import Path</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="st">import numpy as np</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="st">from tensorflow.keras import models</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="st">from util.mail_classification import load_fasttext_model, MailLinesSequence</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="st">from parsing.message_segmenter import CONTEXT_SHAPE, INF_BATCH_SIZE, _post_process_labels</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="st">load_fasttext_model("weights/fasttext-model.bin")</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="st">model = models.load_model("weights/segmenter_hinge.epoch-11.val_loss-0.093.h5")</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="st">headers = json.loads(Path("emails/headers.json").read_text())</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="st">rows = []</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="st">for msgid, h in headers.items():</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="st">    text = Path(f"emails/{msgid}.txt").read_text().rstrip("\n")</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="st">    seq = MailLinesSequence(text, CONTEXT_SHAPE, labeled=False, input_is_raw_text=True, batch_size=INF_BATCH_SIZE)</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="st">    soft = model.predict(seq)</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="st">    raw = [MailLinesSequence.LABEL_MAP_INVERSE[int(np.argmax(s))] for s in soft]</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="st">    post = [label for _, label in _post_process_labels(seq, soft.copy())]</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="st">    print(f"\n{h['Email']} (msgid2 {msgid})")</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="st">    for i, (line, r, p) in enumerate(zip(text.split("\n"), raw, post), 1):</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="st">        rows.append({"msgid2": msgid, "line": i, "text": line, "chipmunk_raw": r, "chipmunk": p})</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="st">        print(f"{i:&gt;3}  {r:&lt;19}{p:&lt;19}{line[:70]}")</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="st">Path("zones-chipmunk.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows))</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span id="58" class="paragraph-number">[58]</span> Okapi loads <code>okapi-model.pt</code>, labels each line, and merges its labels with Chipmunk’s into <code>zones.jsonl</code>. Each embedding passes through half precision before the BiLSTM, as in training.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/models/email-zoning</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> okapi-env/bin/activate</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HF_HOME</span><span class="op">=</span>~/models/email-zoning/.cache/huggingface</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="va">CUDA_VISIBLE_DEVICES</span><span class="op">=</span>0 <span class="fu">timeout</span> 900 python3 <span class="at">-</span> <span class="op">&lt;&lt;'EOF'</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="st">import json</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="st">from pathlib import Path</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="st">import torch</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="st">from torch import nn</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="st">from torchcrf import CRF</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="st">from transformers import AutoTokenizer, AutoModel</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="st">LABELS = ["paragraph", "closing", "inline_headers", "log_data", "mua_signature", "patch", "personal_signature",</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="st">          "quotation", "quotation_marker", "raw_code", "salutation", "section_heading", "tabular", "technical",</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="st">          "visual_separator", "&lt;empty&gt;"]</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="st">REV = Path("xlmr-revision.txt").read_text().strip()</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="st">dev = torch.device("cuda")</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="st">tok = AutoTokenizer.from_pretrained("FacebookAI/xlm-roberta-base", revision=REV)</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="st">enc = AutoModel.from_pretrained("FacebookAI/xlm-roberta-base", revision=REV).to(dev).eval()</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="st">class Okapi(nn.Module):</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="st">    """Same architecture as okapi.py."""</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="st">    def __init__(self):</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="st">        super().__init__()</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="st">        self.lstm = nn.LSTM(3072, 64, num_layers=1, batch_first=True, bidirectional=True)</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="st">        self.drop = nn.Dropout(0.25)</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="st">        self.out = nn.Linear(128, len(LABELS))</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="st">        self.crf = CRF(len(LABELS), batch_first=True)</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="st">    def emissions(self, x):</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="st">        return self.out(self.drop(self.lstm(x)[0]))</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="st">@torch.no_grad()</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a><span class="st">def embed(lines):</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a><span class="st">    b = tok(lines, padding=True, truncation=True, max_length=128, return_tensors="pt").to(dev)</span></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a><span class="st">    x = torch.cat(enc(**b, output_hidden_states=True).hidden_states[-4:], dim=-1)</span></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="st">    m = b["attention_mask"].unsqueeze(-1).float()</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a><span class="st">    return ((x * m).sum(1) / m.sum(1)).half().float()</span></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a><span class="st">model = Okapi().to(dev)</span></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a><span class="st">model.load_state_dict(torch.load("okapi-model.pt"))</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="st">model.eval()</span></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a><span class="st">rows = [json.loads(l) for l in open("zones-chipmunk.jsonl")]</span></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="st">headers = json.loads(Path("emails/headers.json").read_text())</span></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a><span class="st">for msgid, h in headers.items():</span></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a><span class="st">    mine = [r for r in rows if r["msgid2"] == msgid]</span></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a><span class="st">    x = embed([r["text"] for r in mine]).unsqueeze(0)</span></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="st">    pred = model.crf.decode(model.emissions(x), torch.ones(x.shape[:2], dtype=torch.bool, device=dev))[0]</span></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a><span class="st">    print(f"\n{h['Email']} (msgid2 {msgid})")</span></span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a><span class="st">    print(f"{'':&gt;3}  {'chipmunk_raw':&lt;19}{'chipmunk':&lt;19}{'okapi':&lt;19}text")</span></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a><span class="st">    for r, p in zip(mine, pred):</span></span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a><span class="st">        r["okapi"] = LABELS[p]</span></span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a><span class="st">        print(f"{r['line']:&gt;3}  {r['chipmunk_raw']:&lt;19}{r['chipmunk']:&lt;19}{r['okapi']:&lt;19}{r['text'][:60]}")</span></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a><span class="st">Path("zones.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows))</span></span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>
