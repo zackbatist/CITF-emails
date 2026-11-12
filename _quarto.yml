@@ -6,6 +6,8 @@ project:
     browser: false
   render: 
     - "!private/" # Internal docs
+    - "!**/*.ipynb" # Notebooks hold email text in their outputs
+    - "!docuscope-assessment/data/" # Email data
 website: 
   site-url: https://zackbatist.info/CITF-emails/
   repo-url: https://github.com/zackbatist/CITF-emails
