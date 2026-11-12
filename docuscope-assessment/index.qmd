@@ -58,6 +58,8 @@ format:
 {{< include sections/04_detecting-errors.qmd >}}
 {{< include sections/05_coding-sample.qmd >}}
 {{< include sections/06_block-13.qmd >}}
-{{< include sections/07_reproducibility.qmd >}}
-{{< include sections/08_next-steps.qmd >}}
-{{< include sections/10_references.qmd >}}
+{{< include sections/07_planned-analysis.qmd >}}
+{{< include sections/08_reproducibility.qmd >}}
+{{< include sections/09_next-steps.qmd >}}
+{{< include sections/10_appendix-zoning-tests.qmd >}}
+{{< include sections/11_references.qmd >}}

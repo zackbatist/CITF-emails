@@ -1,5 +1,5 @@
 # Purpose {#sec-purpose}
 
-The CITF email project studies research data sharing through the correspondence that carried it. A first close reading of 30 emails showed that how people wrote mattered as much as what they wrote about, and the DocuScope memo adopted DocuScope, following @brown2022, to capture the *how* at corpus scale. The project uses DocuScope for HOW categories only.
+The CITF email project studies research data sharing through the correspondence that carried it. A first close reading of 30 emails showed that how people wrote mattered as much as what they wrote about, and we adopted DocuScope, following @brown2022, to capture the *how* at corpus scale. The project uses DocuScope for HOW categories only.
 
 This session asked whether DocuScope's HOW tags describe these emails accurately enough to support that use, and built a reproducible procedure to find tagging errors, measure them, and correct the ones that can be corrected. Every step that changes the data is code with fixed parameters, and every human judgement is stored as a coded file, so that each result can be rerun and audited.
