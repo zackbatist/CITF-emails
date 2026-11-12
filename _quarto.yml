@@ -41,8 +41,6 @@ website:
         text: Data Complexity
       - href: docuscope-assessment/index.qmd
         text: DocuScope Assessment
-      - href: codebook.qmd
-        text: Codebook
       - href: research-protocol/index.qmd
         text: Research Protocol
 toc: true
