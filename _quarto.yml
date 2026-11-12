@@ -5,6 +5,8 @@ project:
     port: 7777
     browser: false
   render: 
+    - "*.qmd"
+    - "**/*.qmd"
     - "!private/" # Internal docs
     - "!**/*.ipynb" # Notebooks hold email text in their outputs
     - "!docuscope-assessment/data/" # Email data
