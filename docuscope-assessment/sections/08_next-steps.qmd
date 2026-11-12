@@ -1,0 +1,11 @@
+# Next steps {#sec-next-steps}
+
+- Decide which groups the analysis will compare, such as senders, studies or periods. Measure from block 8's output how much category shares differ between them.
+- Set the thresholds for applying rules, rating categories and building a model from those differences, before examining any coded results.
+- Set the margin, the distance a true rate can lie from its threshold and still be classified correctly with 95% confidence.
+- Compute the tags needed per stratum from the thresholds and margin, and update `n_per_rule`, `n_per_category` and `n_per_noun` in block 12.
+- Add a top-up draw to block 12 that samples more tags for chosen strata without repeating tags already drawn. Make the coding tool load the new tags alongside existing codes.
+- Test the `name` rule in the coding sample. The rule currently counts as accurate without testing, flags tags that only partly overlap a name, ignores case and covers only seven names.
+- Write content patterns that exclude automated messages sent from personal addresses, such as out-of-office replies and ticket confirmations.
+- Have two coders code the sample in `docuscope_coding_tool.html`.
+- Write and run block 13 (@sec-block-13).

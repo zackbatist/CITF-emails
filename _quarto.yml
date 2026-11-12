@@ -34,6 +34,8 @@ website:
         text: Network Analysis
       - href: data-complexity/index.qmd
         text: Data Complexity
+      - href: docuscope-assessment/index.qmd
+        text: DocuScope Assessment
       - href: codebook.qmd
         text: Codebook
       - href: research-protocol/index.qmd

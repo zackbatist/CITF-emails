@@ -1,0 +1,117 @@
+# Blocks 9 to 12: detecting likely tagging errors {#sec-detecting-errors}
+
+Our strategy is to clean the tags with error rules. Each DocuScope category stands for a rhetorical function, such as hedging a claim or addressing the reader. A tag is inaccurate when the word or phrase it marks does not perform that function in its sentence, as when "May" in "May 8th" carries a ConfidenceHedged tag although it names a month and qualifies no claim. An error rule describes, in code, one recurring form of inaccurate tag. The inaccuracies in @sec-distribution recur in recognizable forms across thousands of emails, so a rule can find every instance of its form, the same way on every run, in terms anyone can read and question. Human judgement then goes into testing the rules and estimating the inaccuracies that no rule catches. If those remaining inaccuracies prove substantial, a supervised model trained on human judgements becomes the next step. In the human review, described in @sec-coding-sample, two coders independently judge a sample of tags. Block 13 then measures agreement between the coders, estimates each rule's hit rate and each category's remaining inaccuracy with confidence intervals and stratum weights, keeps the rules that meet thresholds set in advance, and relabels their matches with a log of every change.
+
+The work spans four blocks. Blocks 10 and 12 leave out automated notifications (@sec-automated), blocks 9 and 10 divide every email into zones (@sec-zones), and block 11 draws the emails for checking the zones by hand (@sec-checking-zones). Block 12 gives each tag the zone of the line it falls on, flags HOW tags in authored text that match an error rule (@sec-error-rules), and lists inaccuracies that span more than one tag (@sec-multi-tag). It then draws the coding sample for the human review (@sec-coding-sample). All patterns, meaning the regular expressions and word lists that define reply headers, banners, closing lines, names, domain nouns and each error rule, sit at the top of the cell that uses them, so that each can be inspected and changed.
+
+## Excluding automated notifications {#sec-automated}
+
+Automated notifications have no author, so blocks 10 and 12 leave them out by sender. The run excluded 30 notifications from DocuSign, SharePoint and WeTransfer, leaving 6,056 emails and 174,765 HOW tags. The count is small because block 7's filters already remove most notifications, and because the rule identifies automated emails by sender address alone. Automated messages sent from a person's address therefore remain in the pool, including ticket confirmations ("Reference#: REF00000 Please use this number when inquiring") and out-of-office replies. Catching them requires patterns on email content, such as "out of the office", "absent du bureau" or "Reference#", which no block includes yet.
+
+## Zones {#sec-zones}
+
+An email body holds more than what its sender wrote for that message. It also carries earlier messages quoted below a reply, notices that mail systems insert, markup, signature blocks and boilerplate lines that recur across many emails. DocuScope tags all of this text alike, but tags in it describe other writers, mail software or standing institutional text, not the sender's rhetoric. Because the same signatures and notices repeat word for word across hundreds of emails, their tags also make senders look more alike than their writing is. Blocks 9 and 10 therefore divide each email into zones and keep only the authored zone for analysis.
+
+Block 9 labels the email bodies with Chipmunk [@bevendorff2020], a neural model trained to segment emails. Chipmunk gives each line of an email body one of 15 labels, such as paragraph, closing, personal signature, quotation and mail client signature. The model runs on the CITF analysis server, so no email text leaves it.
+
+We chose Chipmunk after comparing the published tools for email zoning, the task of dividing an email into parts such as greeting, body, signature and quoted text [@lampert2009]. Rule-based libraries such as talon, email_reply_parser and mail-parser-reply detect only quotations and signatures, and their authors report no evaluation. Zebra [@lampert2009] exists only in third-party reimplementations, and Chipmunk outperformed Quagga [@repke2018] in its authors' tests. Chipmunk is peer-reviewed, its authors released its code, training data and trained model, and it labels greetings and closings and separates personal signatures from notices that mail programs add.
+
+We tested Chipmunk extensively before using it. Its authors trained it on Gmane, an archive of public mailing lists. They tested it on Gmane and on Enron, a corpus of corporate email. We reran both tests and reproduced their results. We also ran Chipmunk on five CITF emails and compared its zones with a provisional labelling made during testing, which has not been reviewed.
+
+We compared Chipmunk with Okapi [@jardim2021]. Okapi is a multilingual extension of Chipmunk that keeps its 15 zones and Gmane training emails. Chipmunk reads the layout of each line and the lines around it. Okapi reads the wording of each line through a multilingual language model. Okapi's authors published its design but no trained model. We therefore built Okapi from their paper and trained it ourselves, and the Okapi results in the table come from our rebuild. The two models score alike on Gmane and Enron. On the five CITF emails Okapi labelled whole signature blocks as authored text in three of them and Chipmunk did not. The table gives the share of lines each model labels correctly. It also gives the results that Chipmunk's authors report for Quagga and an SVM baseline on the same benchmarks.
+
+| Model | Gmane, published | Gmane, our run | Enron, published | Enron, our run | Five CITF emails (provisional) |
+|---|---:|---:|---:|---:|---:|
+| Chipmunk | 96% | 95.5% | 88% | 88.8% | 54 of 66 lines |
+| Okapi | 96% | 96.4% | 88% | 85.3% | 29 of 66 lines |
+| Quagga | 94% | not run | 83% | not run | not run |
+| SVM baseline | 80% | not run | 72% | not run | not run |
+
+The table shows that Chipmunk scores highest on Enron and on the five CITF emails. Our runs used the authors' own evaluation sets, namely their 300 Gmane validation emails, on which they selected the released model, and 296 of their 300 Enron emails.
+
+The tests also exposed one weakness, which the code in block 10 corrects. On Enron, Chipmunk and Okapi both read about a quarter of banner and disclaimer lines as authored text. Block 10 therefore adds the disclaimer rule and the banner regular expressions described below.
+
+Block 10 maps Chipmunk's 15 line labels onto six zones. Chipmunk was trained on technical mailing lists, so most of its labels describe content such as code patches, log output and tables. Our analysis keeps only authored text, so block 10 merges the labels into one authored zone and four zones for text the sender did not write. It adds a sixth zone, markup, matched by regular expressions. We keep the four non-authored zones separate to see how many of each category's tags come from signatures, banners, quoted messages and other text. Block 12, which flags likely tagging errors, reports these counts.
+
+| Zone | What it covers | Chipmunk labels |
+|---|---|---|
+| Authored | Text the sender wrote for this message, including greetings and closing lines | paragraph, salutation, closing |
+| Signature | Signature blocks: names, titles, organizations, addresses | personal_signature |
+| Banner | Inserted notices: external-sender warnings, confidentiality disclaimers, work-from-home alerts, land acknowledgements | mua_signature |
+| Quoted | Earlier messages below a reply or forward header | quotation, quotation_marker, inline_headers |
+| Markup | Angle-bracket tags, image references, "image removed by sender", URLs, Outlook Web Access link labels | none; regular expressions only |
+| Other | Separators, tables, attachment lists, meeting-invitation details, code and log lines | all other labels; attachment and meeting-invitation lines by regular expressions |
+
+To check Chipmunk across the whole corpus, block 10 compares Chipmunk's zones with zones assigned by regular expressions. The regular expressions mark reply and forward headers, external-sender banners, closing lines and markup. They place the signature after the last closing line and treat lines repeated across many emails as template text. The two methods agree on 73.5% of the 62,906 non-blank lines, and each catches text the other misses. Chipmunk finds signatures in emails with no closing line, confidentiality disclaimers, and attachment and dial-in lines. The regular expressions find external-sender banners, reply headers that carry no ">" marks, and markup. Block 10 therefore combines the two.
+
+Block 10 refines Chipmunk's zones in two stages. Chipmunk sometimes gives a line a label that clashes with the text around it, and five rules first correct these errors.
+
+1. **Greetings and closings are authored.** Greetings and closings ("Dear Dr. Smith", "Kind regards") are part of how these emails do their work. Chipmunk's salutation and closing labels already map to the authored zone. A closing such as "Kind regards," that Chipmunk labels signature or other also becomes authored.
+2. **Disclaimers are banner.** Text that Chipmunk labels authored, signature or other but that contains disclaimer wording, such as "intended recipient" or "received this message in error", becomes banner.
+3. **Organization names and job titles inside a signature block are signature.** Chipmunk sometimes labels an organization name or job title as authored when the text above and below it is signature. Such text becomes signature unless it ends a sentence.
+4. **Sentences inside the message are authored.** Chipmunk sometimes labels a sentence as banner or other when the text above and below it is authored. Such a sentence becomes authored if it has four or more words and no tabs.
+5. **Signature lines after the message are signature.** Chipmunk sometimes labels a whole signature as authored when no closing precedes it. Short lines without sentence punctuation at the end of the message become signature when a signature line follows them or when they hold a name with credentials, a title, an organization or contact details. A sign-off name alone, such as "Sam", stays authored.
+
+Rule 5 and the attachment and meeting-invitation lines come from the zone check (@sec-checking-zones).
+
+Zones matched by regular expressions then take precedence, in this order: markup, attachment and meeting-invitation lines (other), banner, and quoted, which covers everything from the first reply or forward header on. A line of underscores counts as a reply header only when a "From:" or "De :" line follows it, so meeting invitations stay out of the quoted zone. The banner expressions cover English and French external-sender warnings, disclaimer headings, remote-work notices and land acknowledgements. Block 10 prints a sample of the lines each rule changes, and saves the final zone of every line to `email_zones.parquet`. The table gives the resulting share of each category's tags in each zone.
+
+| Category | Tags | Authored (%) | Signature (%) | Banner (%) | Quoted (%) |
+|---|---:|---:|---:|---:|---:|
+| Strategic | 12,388 | 51.4 | 41.8 | 1.3 | 1.3 |
+| Negative | 7,961 | 66.2 | 5.8 | 26.8 | 0.7 |
+| Positive | 29,856 | 77.8 | 13.5 | 5.2 | 1.2 |
+| Interactive | 27,744 | 79.2 | 5.9 | 12.1 | 1.7 |
+| Narrative | 34,703 | 85.6 | 3.8 | 7.7 | 1.5 |
+| FirstPerson | 9,154 | 95.0 | 2.0 | 1.2 | 1.6 |
+
+Strategic is the clearest case, with 41.8% of its tags in signatures. DocuScope tags "research" and "task force" as Strategic, and these were the two most frequent Strategic phrases in block 8 (3,341 and 2,694 tags). Both recur in signature blocks, in job titles such as "Research Assistant" and "Research Associate" and in the name COVID-19 Immunity Task Force.
+
+## Checking the zones {#sec-checking-zones}
+
+The error rules apply only to tags in the authored zone, so we validated the zones in `email_zones.parquet` against zones assigned by a human coder. The coder saw neither these zones nor Chipmunk's labels. Block 11 draws the emails and writes the labelling tool. The coder followed these rules:
+
+- A name typed as the sign-off is authored. A name followed by a title or contact details starts the signature.
+- The sender's signature placed below a quoted message is signature.
+- Standing notices, such as confidentiality disclaimers, remote-work notices and land acknowledgements, are banner wherever they appear, including inside a signature.
+- The quoted zone starts at the reply or forward header, or at the separator line that opens it.
+- A line that holds only markup is markup, including inside a signature. A line that mixes an image and text takes the zone of the text.
+- Separators that open no quoted message, attachment lists and meeting-invitation details are other.
+- A line of punctuation alone takes the zone of the lines around it.
+
+We compared the coder's zones with those in `email_zones.parquet` on a first set of 80 emails and added rules to correct the differences. We drew 20 of these emails at random and 60 from emails containing banners, quoted text or a line whose zone differs from Chipmunk's label. A random sample would contain too few of these lines to test the rules. Block 7's 30 emails, for example, hold one banner line and one quoted line between them. Accuracy on the first set would be biased upward. We therefore measured it on 40 other emails drawn at random after the rules were final. We labelled these emails in batches of 20 and stopped once the lower end of the 95% interval for precision reached 95%. We set this threshold before labelling so that the results could not influence when we stopped. On these 40 emails the authored zone has a precision of 98.7% (236 of 239 lines; 95% interval 96.4% to 99.7%) and a recall of 97.1% (236 of 243 lines; 95% interval 94.2% to 98.8%).
+
+## Error rules {#sec-error-rules}
+
+Each rule targets specific categories, so that it flags the mistag and leaves correct tags in the same phrase alone ("Please let" is correctly Interactive; only "know" in "let me know" is flagged, and only as ConfidenceHigh). The rules fall into two kinds.
+
+**Fixed rules** match patterns whose tags we treat as inaccurate without coding. Block 13 applies them directly, and they stay out of the coding sample.
+
+| Rule | What it flags | Authored tags |
+|---|---|---:|
+| `french_line` | Tags on lines of French text, tagged by an English-only model | 871 |
+| `name` | Words inside multiword names such as COVID-19 Immunity Task Force | 167 |
+| `date_month` | "May" in a date, read as the modal verb | 177 |
+| `time_am_pm` | "am" after a clock time, tagged FirstPerson | 150 |
+| `terms_cond` | "conditions" in "terms and conditions", tagged Contingent | 23 |
+
+**Checked rules** depend on context, so a human sample tests each one before block 13 applies it.
+
+| Rule | What it flags | Authored tags |
+|---|---|---:|
+| `domain_noun` | Data sharing nouns (agreement, consent, cohort, research, results and others) | 4,040 |
+| `polite_would` | "would" or "you would" tagged Narrative | 1,198 |
+| `let_know` | "know" in "let me/us know" tagged ConfidenceHigh | 515 |
+| `dont_hesitate` | Words in "don't hesitate to" tagged Uncertainty, Negative or ForceStressed | 507 |
+| `negated_modal` | "do", "does", "did" or "can" before a negation, tagged ForceStressed or ConfidenceHedged | 316 |
+| `have_a_day` | Words in "have a great day/weekend" tagged Strategic or Narrative | 162 |
+| `on_my_end` | "end" in "on my/our/your end" tagged Narrative | 102 |
+| `best_of` | "the best of" in "to the best of your knowledge" tagged Positive | 65 |
+
+The `domain_noun` rule needs particular care. Domain nouns are nouns with a specific meaning in data sharing, and DocuScope gives many of them a rhetorical category. For example, DocuScope tags "agreement" as Positive, but in these emails the word often refers to a data sharing agreement.
+
+## Issues that span more than one tag {#sec-multi-tag}
+
+Some inaccuracies occur when DocuScope splits a single name or phrase into several tags, each with its own category. For example, "COVID-19 Immunity Task Force" names an organization, but DocuScope tags "Immunity" as Positive and "Task Force" as Strategic. The inaccuracy belongs to the name as a whole, so a rule that judges each tag in isolation cannot catch it.
+
+We handle these split names and phrases in two ways. For known cases, the `name` rule searches each email for a short list of organization names and flags every tag that falls within or across one of these names. To find split names and phrases outside that list, we list runs of adjacent capitalized tags as candidate names and the 30 most frequent pairs of adjacent tags in different categories as candidate phrases.

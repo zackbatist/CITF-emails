@@ -1,0 +1,7 @@
+# Block 8: distribution of HOW tags {#sec-distribution}
+
+Block 8 parses all 6,086 emails in the pool and keeps only HOW tags, counting tag spans (`doc.ents`), the same unit block 7 uses.
+
+Block 8 produced 374,940 tags, of which 176,836 (47.2%) were HOW tags. Narrative (35,341), Positive (30,102) and Interactive (28,226) together carried more than half of them. The median email held 25 HOW tags, and HOW tags made up a median 48% of each email's tags.
+
+The 15 most frequent phrases in each category, which cover 53.5% of HOW tags, showed that the raw counts mix rhetoric with text no sender composed and with words DocuScope reads in a sense other than the one their sentence gives them. Within those phrases, at least 9,979 tags (5.6% of HOW tags) came from the CITF name, external-sender banners, confidentiality footers, French text and image markup, and 5,929 (3.4%) were domain nouns such as agreement, consent, health, assay and research. These figures cover only the visible half of the tags, so they motivated a systematic check and are not themselves results.

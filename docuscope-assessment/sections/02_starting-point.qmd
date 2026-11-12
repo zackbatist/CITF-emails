@@ -1,0 +1,9 @@
+# Starting point {#sec-starting-point}
+
+Melissa's notebook (blocks 1 to 7) sets up everything this session relies on. It loads `msgs10` and `recip4`, flattens and deduplicates the emails, keeps the 10,397 emails linked to a CITF study ID, tags email bodies with the `en_docusco_spacy` model (version 1.5), and exports 30 tagged emails to `docuscope_sample_30.html`.
+
+Block 7 defines the pool that this session works from: study emails of 300 to 2,000 characters, with emails that look like they contain credentials removed. The pool holds 6,086 emails.
+
+Block 7 also sorts the 19 HOW categories into six working groups (`how_groups`), which made the 30-email sample easier to read. This session works with the categories directly, since the memo plans to derive groups from the data through a factor analysis once the tags are cleaned.
+
+The notebook runs on the CITF analysis server (`citf-analysis`), reached from VSCodium through the Open Remote SSH extension, with a dedicated environment at `~/docuscope-env`. @sec-reproducibility lists the software versions.

@@ -57,3 +57,5 @@ notes/*_files/
 _extensions/
 _freeze/
 private/
+# DocuScope assessment: email data stays off GitHub
+docuscope-assessment/data/

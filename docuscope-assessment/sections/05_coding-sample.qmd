@@ -1,0 +1,26 @@
+# The coding sample and coding tool {#sec-coding-sample}
+
+## Rationale {#sec-rationale}
+
+We code a sample of tags by hand to check that the rules themselves are accurate. The coding also measures how often DocuScope is inaccurate where no rule applies. That measure decides whether a supervised model is worth building, and the coded tags would become its first training data.
+
+Each coder reads the tagged phrase in its context and decides whether it performs the function that its category describes. The coder marks the tag `correct`, `incorrect` or `unsure`, and can add a note. The two coders work independently so that we can measure inter-coder agreement.
+
+## Stratification {#sec-stratification}
+
+We stratify the sample so that each rule, domain noun and HOW category has enough tags to assess on its own. Within each stratum, we draw tags at random.
+
+| Stratum | Size per stratum | Strata | Tags |
+|---|---:|---:|---:|
+| Each checked rule except `domain_noun` | up to 30 | 7 | 210 |
+| Each noun of `domain_noun` | up to 10 | 19 | 184 |
+| Each HOW category among tags that match no rule | up to 20 | 19 | 380 |
+| Total | | | 774 |
+
+Each domain noun has its own stratum because nouns such as "agreement", "access" and "results" may behave differently, and a single stratum of 30 tags across 19 nouns says almost nothing about any one of them. Each coded tag records the size of its stratum, so that block 13 can weight the results to the whole corpus. A tag that two rules match appears in the sample only once.
+
+The sample holds 774 tags, with 30 per rule, 20 per category and 10 per domain noun. These sizes are provisional, because we chose them before setting the thresholds for applying rules and rating categories. Thirty tags give each rule a confidence interval narrow enough to separate rules whose matches are nearly always inaccurate from rules whose matches are often accurate. Twenty tags give each category a coarse estimate of its inaccuracy, enough to show which categories need closer attention. Ten tags give a first indication of how each domain noun behaves. A stratum has enough tags when its 95% confidence interval falls clearly on one side of its threshold. Once the thresholds are set, we will check each stratum against this standard and draw more tags for any stratum whose interval still spans its threshold.
+
+## The coding tool {#sec-coding-tool}
+
+The coding tool lets two coders judge the sample quickly and independently. It is a single offline web page with the sample built in. Each card shows one tag. The card gives the category, with a short description and examples paraphrased from the DocuScope Full Dictionary documentation [@docuscopefd]. It shows the tagged phrase with about 60 characters of context on each side, and highlights the phrase. If a rule put the tag in the sample, the card names the rule and states what the rule claims. Coders work from the keyboard. The page saves each coder's codes in the browser, and the Export CSV button writes them to a separate file for each coder. An About panel explains the purpose of the coding, how the sample is drawn, the fixed rules and how to handle the data. The page contains email excerpts, so it must stay on storage approved for the study data.

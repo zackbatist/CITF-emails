@@ -1,0 +1,13 @@
+# Block 13: validating rules and correcting tags (planned) {#sec-block-13}
+
+Block 13 is not yet written. Its planned steps:
+
+1. **Agreement.** Merge the two coders' files, report percent agreement and Cohen's kappa overall and by sample type, and export disagreements for the two coders to settle in a consensus column. Later steps use the consensus codes.
+2. **Rule validation.** For each checked rule and each domain noun, compute the share coded incorrect with a 95% confidence interval, and classify the rule as apply, drop or refine against thresholds fixed before the results are seen.
+3. **Residual accuracy.** For each HOW category, estimate the error rate among tags no rule matched, weighted by stratum size.
+4. **Correction.** Keep authored text only, relabel tags matched by fixed rules and by confirmed checked rules, and log every change against its `msgid2`.
+5. **Category reliability.** Estimate each category's accuracy after cleaning and classify categories as use, use with caution or drop, against thresholds fixed in advance.
+6. **Cleaned distribution.** Rerun block 8's category tables on the cleaned tags and show raw and cleaned results side by side.
+7. **Model gate.** Report which kept categories still carry substantial inaccuracy after cleaning. For those categories, a supervised model could judge each tag in its context from its category, phrase, surrounding words, matched rules and zone. Such a model can flag an inaccurate tag for removal but cannot supply the right category. It would also need far more coded tags than this sample holds, weighted by stratum, so building it means a further round of coding.
+
+The thresholds in steps 2, 5 and 7 remain to be set, and they must be set before the coded results are examined.
