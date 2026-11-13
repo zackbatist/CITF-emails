@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-11-12">
+<meta name="dcterms.date" content="2026-11-13">
 <meta name="keywords" content="DocuScope, email zoning, rhetorical tagging, validation">
 
 <title>DocuScope Assessment – CITF Emails Analysis</title>
@@ -237,18 +237,24 @@ p {
   <li><a href="#sec-stratification" id="toc-sec-stratification" class="nav-link" data-scroll-target="#sec-stratification"><span class="header-section-number">5.2</span> Stratification</a></li>
   <li><a href="#sec-coding-tool" id="toc-sec-coding-tool" class="nav-link" data-scroll-target="#sec-coding-tool"><span class="header-section-number">5.3</span> The coding tool</a></li>
   </ul></li>
-  <li><a href="#sec-block-13" id="toc-sec-block-13" class="nav-link" data-scroll-target="#sec-block-13"><span class="header-section-number">6</span> Block 13: validating rules and correcting tags (planned)</a></li>
-  <li><a href="#sec-planned-analysis" id="toc-sec-planned-analysis" class="nav-link" data-scroll-target="#sec-planned-analysis"><span class="header-section-number">7</span> Planned analysis</a></li>
-  <li><a href="#sec-reproducibility" id="toc-sec-reproducibility" class="nav-link" data-scroll-target="#sec-reproducibility"><span class="header-section-number">8</span> Reproducibility</a></li>
-  <li><a href="#sec-next-steps" id="toc-sec-next-steps" class="nav-link" data-scroll-target="#sec-next-steps"><span class="header-section-number">9</span> Next steps</a></li>
-  <li><a href="#sec-zoning-tests" id="toc-sec-zoning-tests" class="nav-link" data-scroll-target="#sec-zoning-tests"><span class="header-section-number">10</span> Appendix: reproducing the zoning tests</a>
+  <li><a href="#sec-block-13" id="toc-sec-block-13" class="nav-link" data-scroll-target="#sec-block-13"><span class="header-section-number">6</span> Block 13: preliminary comparison across tag versions</a>
   <ul class="collapse">
-  <li><a href="#provenance" id="toc-provenance" class="nav-link" data-scroll-target="#provenance"><span class="header-section-number">10.1</span> Provenance</a></li>
-  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup"><span class="header-section-number">10.2</span> Setup</a></li>
-  <li><a href="#chipmunk-benchmarks" id="toc-chipmunk-benchmarks" class="nav-link" data-scroll-target="#chipmunk-benchmarks"><span class="header-section-number">10.3</span> Chipmunk benchmarks</a></li>
-  <li><a href="#okapi-rebuild" id="toc-okapi-rebuild" class="nav-link" data-scroll-target="#okapi-rebuild"><span class="header-section-number">10.4</span> Okapi rebuild</a></li>
-  <li><a href="#recall-by-zone-on-enron" id="toc-recall-by-zone-on-enron" class="nav-link" data-scroll-target="#recall-by-zone-on-enron"><span class="header-section-number">10.5</span> Recall by zone on Enron</a></li>
-  <li><a href="#five-emails" id="toc-five-emails" class="nav-link" data-scroll-target="#five-emails"><span class="header-section-number">10.6</span> Five emails</a></li>
+  <li><a href="#sec-block-13-shares" id="toc-sec-block-13-shares" class="nav-link" data-scroll-target="#sec-block-13-shares"><span class="header-section-number">6.1</span> Category shares</a></li>
+  <li><a href="#sec-block-13-phrases" id="toc-sec-block-13-phrases" class="nav-link" data-scroll-target="#sec-block-13-phrases"><span class="header-section-number">6.2</span> Phrases</a></li>
+  <li><a href="#sec-block-13-groups" id="toc-sec-block-13-groups" class="nav-link" data-scroll-target="#sec-block-13-groups"><span class="header-section-number">6.3</span> Sender groups</a></li>
+  </ul></li>
+  <li><a href="#sec-block-14" id="toc-sec-block-14" class="nav-link" data-scroll-target="#sec-block-14"><span class="header-section-number">7</span> Block 14: validating rules and correcting tags (planned)</a></li>
+  <li><a href="#sec-planned-analysis" id="toc-sec-planned-analysis" class="nav-link" data-scroll-target="#sec-planned-analysis"><span class="header-section-number">8</span> Planned analysis</a></li>
+  <li><a href="#sec-reproducibility" id="toc-sec-reproducibility" class="nav-link" data-scroll-target="#sec-reproducibility"><span class="header-section-number">9</span> Reproducibility</a></li>
+  <li><a href="#sec-next-steps" id="toc-sec-next-steps" class="nav-link" data-scroll-target="#sec-next-steps"><span class="header-section-number">10</span> Next steps</a></li>
+  <li><a href="#sec-zoning-tests" id="toc-sec-zoning-tests" class="nav-link" data-scroll-target="#sec-zoning-tests"><span class="header-section-number">11</span> Appendix: reproducing the zoning tests</a>
+  <ul class="collapse">
+  <li><a href="#provenance" id="toc-provenance" class="nav-link" data-scroll-target="#provenance"><span class="header-section-number">11.1</span> Provenance</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup"><span class="header-section-number">11.2</span> Setup</a></li>
+  <li><a href="#chipmunk-benchmarks" id="toc-chipmunk-benchmarks" class="nav-link" data-scroll-target="#chipmunk-benchmarks"><span class="header-section-number">11.3</span> Chipmunk benchmarks</a></li>
+  <li><a href="#okapi-rebuild" id="toc-okapi-rebuild" class="nav-link" data-scroll-target="#okapi-rebuild"><span class="header-section-number">11.4</span> Okapi rebuild</a></li>
+  <li><a href="#recall-by-zone-on-enron" id="toc-recall-by-zone-on-enron" class="nav-link" data-scroll-target="#recall-by-zone-on-enron"><span class="header-section-number">11.5</span> Recall by zone on Enron</a></li>
+  <li><a href="#five-emails" id="toc-five-emails" class="nav-link" data-scroll-target="#five-emails"><span class="header-section-number">11.6</span> Five emails</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -292,7 +298,7 @@ p {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 12, 2026</p>
+      <p class="date">November 13, 2026</p>
     </div>
   </div>
   
@@ -325,8 +331,8 @@ p {
 <h1 data-number="2"><span class="header-section-number">2</span> Starting point</h1>
 <p><span id="3" class="paragraph-number">[3]</span> Melissa’s notebook (blocks 1 to 7) sets up everything this session relies on. It loads <code>msgs10</code> and <code>recip4</code>, flattens and deduplicates the emails, keeps the 10,397 emails linked to a CITF study ID, tags email bodies with the <code>en_docusco_spacy</code> model (version 1.5), and exports 30 tagged emails to <code>docuscope_sample_30.html</code>.</p>
 <p><span id="4" class="paragraph-number">[4]</span> Block 7 defines the pool that this session works from: study emails of 300 to 2,000 characters, with emails that look like they contain credentials removed. The pool holds 6,086 emails.</p>
-<p><span id="5" class="paragraph-number">[5]</span> Block 7 also sorts the 19 HOW categories into six working groups (<code>how_groups</code>), which made the 30-email sample easier to read. This session works with the categories directly, since we plan to derive groups from the data through a factor analysis once the tags are cleaned (<a href="#sec-planned-analysis" class="quarto-xref">Section&nbsp;7</a>).</p>
-<p><span id="6" class="paragraph-number">[6]</span> The notebook runs on the CITF analysis server (<code>citf-analysis</code>), reached from VSCodium through the Open Remote SSH extension, with a dedicated environment at <code>~/docuscope-env</code>. <a href="#sec-reproducibility" class="quarto-xref">Section&nbsp;8</a> lists the software versions.</p>
+<p><span id="5" class="paragraph-number">[5]</span> Block 7 also sorts the 19 HOW categories into six working groups (<code>how_groups</code>), which made the 30-email sample easier to read. This session works with the categories directly, since we plan to derive groups from the data through a factor analysis once the tags are cleaned (<a href="#sec-planned-analysis" class="quarto-xref">Section&nbsp;8</a>).</p>
+<p><span id="6" class="paragraph-number">[6]</span> The notebook runs on the CITF analysis server (<code>citf-analysis</code>), reached from VSCodium through the Open Remote SSH extension, with a dedicated environment at <code>~/docuscope-env</code>. <a href="#sec-reproducibility" class="quarto-xref">Section&nbsp;9</a> lists the software versions.</p>
 </section>
 <section id="sec-distribution" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Block 8: distribution of HOW tags</h1>
@@ -336,8 +342,8 @@ p {
 </section>
 <section id="sec-detecting-errors" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Blocks 9 to 12: detecting likely tagging errors</h1>
-<p><span id="10" class="paragraph-number">[10]</span> Our strategy is to clean the tags with error rules. Each DocuScope category stands for a rhetorical function, such as hedging a claim or addressing the reader. A tag is inaccurate when the word or phrase it marks does not perform that function in its sentence, as when “May” in “May 8th” carries a ConfidenceHedged tag although it names a month and qualifies no claim. An error rule describes, in code, one recurring form of inaccurate tag. The inaccuracies in <a href="#sec-distribution" class="quarto-xref">Section&nbsp;3</a> recur in recognizable forms across thousands of emails, so a rule can find every instance of its form, the same way on every run, in terms anyone can read and question. Human judgement then goes into testing the rules and estimating the inaccuracies that no rule catches. If those remaining inaccuracies prove substantial, a supervised model trained on human judgements becomes the next step. In the human review, described in <a href="#sec-coding-sample" class="quarto-xref">Section&nbsp;5</a>, two coders independently judge a sample of tags. Block 13 then measures agreement between the coders, estimates each rule’s hit rate and each category’s remaining inaccuracy with confidence intervals and stratum weights, keeps the rules that meet thresholds set in advance, and relabels their matches with a log of every change.</p>
-<p><span id="11" class="paragraph-number">[11]</span> The work spans four blocks. Blocks 10 and 12 leave out automated notifications (<a href="#sec-automated" class="quarto-xref">Section&nbsp;4.1</a>), blocks 9 and 10 divide every email into zones (<a href="#sec-zones" class="quarto-xref">Section&nbsp;4.2</a>), and block 11 draws the emails for checking the zones by hand (<a href="#sec-checking-zones" class="quarto-xref">Section&nbsp;4.3</a>). Block 12 gives each tag the zone of the line it falls on, flags HOW tags in authored text that match an error rule (<a href="#sec-error-rules" class="quarto-xref">Section&nbsp;4.4</a>), and lists inaccuracies that span more than one tag (<a href="#sec-multi-tag" class="quarto-xref">Section&nbsp;4.5</a>). It then draws the coding sample for the human review (<a href="#sec-coding-sample" class="quarto-xref">Section&nbsp;5</a>). All patterns, meaning the regular expressions and word lists that define reply headers, banners, closing lines, names, domain nouns and each error rule, sit at the top of the cell that uses them, so that each can be inspected and changed.</p>
+<p><span id="10" class="paragraph-number">[10]</span> Our strategy is to clean the tags with error rules. Each DocuScope category stands for a rhetorical function, such as hedging a claim or addressing the reader. A tag is inaccurate when the word or phrase it marks does not perform that function in its sentence, as when “May” in “May 8th” carries a ConfidenceHedged tag although it names a month and qualifies no claim. An error rule describes, in code, one recurring form of inaccurate tag. The inaccuracies in <a href="#sec-distribution" class="quarto-xref">Section&nbsp;3</a> recur in recognizable forms across thousands of emails, so a rule can find every instance of its form, the same way on every run, in terms anyone can read and question. Human judgement then goes into testing the rules and estimating the inaccuracies that no rule catches. If those remaining inaccuracies prove substantial, a supervised model trained on human judgements becomes the next step. In the human review, described in <a href="#sec-coding-sample" class="quarto-xref">Section&nbsp;5</a>, two coders independently judge a sample of tags. Block 14 then measures agreement between the coders, estimates each rule’s hit rate and each category’s remaining inaccuracy with confidence intervals and stratum weights, keeps the rules that meet thresholds set in advance, and relabels their matches with a log of every change.</p>
+<p><span id="11" class="paragraph-number">[11]</span> The work spans four blocks. Blocks 10 and 12 leave out automated notifications (<a href="#sec-automated" class="quarto-xref">Section&nbsp;4.1</a>), blocks 9 and 10 divide every email into zones (<a href="#sec-zones" class="quarto-xref">Section&nbsp;4.2</a>), and block 11 draws the emails for checking the zones by hand (<a href="#sec-checking-zones" class="quarto-xref">Section&nbsp;4.3</a>). Block 12 gives each tag the zone of the line it falls on, flags HOW tags in authored text that match an error rule (<a href="#sec-error-rules" class="quarto-xref">Section&nbsp;4.4</a>), and lists inaccuracies that span more than one tag (<a href="#sec-multi-tag" class="quarto-xref">Section&nbsp;4.5</a>). It saves every HOW tag with its zone and rule matches to <code>how_tags.parquet</code>, and then draws the coding sample for the human review (<a href="#sec-coding-sample" class="quarto-xref">Section&nbsp;5</a>). All patterns, meaning the regular expressions and word lists that define reply headers, banners, closing lines, names, domain nouns and each error rule, sit at the top of the cell that uses them, so that each can be inspected and changed.</p>
 <section id="sec-automated" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="sec-automated"><span class="header-section-number">4.1</span> Excluding automated notifications</h2>
 <p><span id="12" class="paragraph-number">[12]</span> Automated notifications have no author, so blocks 10 and 12 leave them out by sender. The run excluded 30 notifications from DocuSign, SharePoint and WeTransfer, leaving 6,056 emails and 174,765 HOW tags. The count is small because block 7’s filters already remove most notifications, and because the rule identifies automated emails by sender address alone. Automated messages sent from a person’s address therefore remain in the pool, including ticket confirmations (“Reference#: REF00000 Please use this number when inquiring”) and out-of-office replies. Catching them requires patterns on email content, such as “out of the office”, “absent du bureau” or “Reference#”, which no block includes yet.</p>
@@ -347,7 +353,7 @@ p {
 <p><span id="13" class="paragraph-number">[13]</span> An email body holds more than what its sender wrote for that message. It also carries earlier messages quoted below a reply, notices that mail systems insert, markup, signature blocks and boilerplate lines that recur across many emails. DocuScope tags all of this text alike, but tags in it describe other writers, mail software or standing institutional text, not the sender’s rhetoric. Because the same signatures and notices repeat word for word across hundreds of emails, their tags also make senders look more alike than their writing is. Blocks 9 and 10 therefore divide each email into zones and keep only the authored zone for analysis.</p>
 <p><span id="14" class="paragraph-number">[14]</span> Block 9 labels the email bodies with Chipmunk <span class="citation" data-cites="bevendorff2020">(<a href="#ref-bevendorff2020" role="doc-biblioref">Bevendorff et al. 2020</a>)</span>, a neural model trained to segment emails. Chipmunk gives each line of an email body one of 15 labels, such as paragraph, closing, personal signature, quotation and mail client signature. The model runs on the CITF analysis server, so no email text leaves it.</p>
 <p><span id="15" class="paragraph-number">[15]</span> We chose Chipmunk after comparing the published tools for email zoning, the task of dividing an email into parts such as greeting, body, signature and quoted text <span class="citation" data-cites="lampert2009">(<a href="#ref-lampert2009" role="doc-biblioref">Lampert et al. 2009</a>)</span>. Rule-based libraries such as talon, email_reply_parser and mail-parser-reply detect only quotations and signatures, and their authors report no evaluation. Zebra <span class="citation" data-cites="lampert2009">(<a href="#ref-lampert2009" role="doc-biblioref">Lampert et al. 2009</a>)</span> exists only in third-party reimplementations, and Chipmunk outperformed Quagga <span class="citation" data-cites="repke2018">(<a href="#ref-repke2018" role="doc-biblioref">Repke and Krestel 2018</a>)</span> in its authors’ tests. Chipmunk is peer-reviewed, its authors released its code, training data and trained model, and it labels greetings and closings and separates personal signatures from notices that mail programs add.</p>
-<p><span id="16" class="paragraph-number">[16]</span> We tested Chipmunk extensively before using it. Its authors trained it on Gmane, an archive of public mailing lists. They tested it on Gmane and on Enron, a corpus of corporate email. We reran both tests and reproduced their results (<a href="#sec-zoning-tests" class="quarto-xref">Section&nbsp;10</a>). We also ran Chipmunk on five CITF emails and compared its zones with a provisional labelling made during testing, which has not been reviewed.</p>
+<p><span id="16" class="paragraph-number">[16]</span> We tested Chipmunk extensively before using it. Its authors trained it on Gmane, an archive of public mailing lists. They tested it on Gmane and on Enron, a corpus of corporate email. We reran both tests and reproduced their results (<a href="#sec-zoning-tests" class="quarto-xref">Section&nbsp;11</a>). We also ran Chipmunk on five CITF emails and compared its zones with a provisional labelling made during testing, which has not been reviewed.</p>
 <p><span id="17" class="paragraph-number">[17]</span> We compared Chipmunk with Okapi <span class="citation" data-cites="jardim2021">(<a href="#ref-jardim2021" role="doc-biblioref">Jardim et al. 2021</a>)</span>. Okapi is a multilingual extension of Chipmunk that keeps its 15 zones and Gmane training emails. Chipmunk reads the layout of each line and the lines around it. Okapi reads the wording of each line through a multilingual language model. Okapi’s authors published its design but no trained model. We therefore built Okapi from their paper and trained it ourselves, and the Okapi results in the table come from our rebuild. The two models score alike on Gmane and Enron. On the five CITF emails Okapi labelled whole signature blocks as authored text in three of them and Chipmunk did not. The table gives the share of lines each model labels correctly. It also gives the results that Chipmunk’s authors report for Quagga and an SVM baseline on the same benchmarks.</p>
 <table class="caption-top table">
 <colgroup>
@@ -552,7 +558,7 @@ p {
 <section id="sec-error-rules" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="sec-error-rules"><span class="header-section-number">4.4</span> Error rules</h2>
 <p><span id="28" class="paragraph-number">[28]</span> Each rule targets specific categories, so that it flags the mistag and leaves correct tags in the same phrase alone (“Please let” is correctly Interactive; only “know” in “let me know” is flagged, and only as ConfidenceHigh). The rules fall into two kinds.</p>
-<p><span id="29" class="paragraph-number">[29]</span> <strong>Fixed rules</strong> match patterns whose tags we treat as inaccurate without coding. Block 13 applies them directly, and they stay out of the coding sample.</p>
+<p><span id="29" class="paragraph-number">[29]</span> <strong>Fixed rules</strong> match patterns whose tags we treat as inaccurate without coding. Block 14 applies them directly, and they stay out of the coding sample.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
@@ -594,7 +600,7 @@ p {
 </tr>
 </tbody>
 </table>
-<p><span id="30" class="paragraph-number">[30]</span> <strong>Checked rules</strong> depend on context, so a human sample tests each one before block 13 applies it.</p>
+<p><span id="30" class="paragraph-number">[30]</span> <strong>Checked rules</strong> depend on context, so a human sample tests each one before block 14 applies it.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
@@ -711,7 +717,7 @@ p {
 </tr>
 </tbody>
 </table>
-<p><span id="37" class="paragraph-number">[37]</span> Each domain noun has its own stratum because nouns such as “agreement”, “access” and “results” may behave differently, and a single stratum of 30 tags across 19 nouns says almost nothing about any one of them. Each coded tag records the size of its stratum, so that block 13 can weight the results to the whole corpus. A tag that two rules match appears in the sample only once.</p>
+<p><span id="37" class="paragraph-number">[37]</span> Each domain noun has its own stratum because nouns such as “agreement”, “access” and “results” may behave differently, and a single stratum of 30 tags across 19 nouns says almost nothing about any one of them. Each coded tag records the size of its stratum, so that block 14 can weight the results to the whole corpus. A tag that two rules match appears in the sample only once.</p>
 <p><span id="38" class="paragraph-number">[38]</span> The sample holds 774 tags, with 30 per rule, 20 per category and 10 per domain noun. These sizes are provisional, because we chose them before setting the thresholds for applying rules and rating categories. Thirty tags give each rule a confidence interval narrow enough to separate rules whose matches are nearly always inaccurate from rules whose matches are often accurate. Twenty tags give each category a coarse estimate of its inaccuracy, enough to show which categories need closer attention. Ten tags give a first indication of how each domain noun behaves. A stratum has enough tags when its 95% confidence interval falls clearly on one side of its threshold. Once the thresholds are set, we will check each stratum against this standard and draw more tags for any stratum whose interval still spans its threshold.</p>
 </section>
 <section id="sec-coding-tool" class="level2" data-number="5.3">
@@ -720,8 +726,63 @@ p {
 </section>
 </section>
 <section id="sec-block-13" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Block 13: validating rules and correcting tags (planned)</h1>
-<p><span id="40" class="paragraph-number">[40]</span> Block 13 is not yet written. Its planned steps:</p>
+<h1 data-number="6"><span class="header-section-number">6</span> Block 13: preliminary comparison across tag versions</h1>
+<p><span id="40" class="paragraph-number">[40]</span> Block 13 compares DocuScope tags across four versions, to see how far zoning and the error rules change the picture. It reads <code>how_tags.parquet</code>, which block 12 saves with each tag’s zone and rule matches. The results are preliminary. The checked rules remain untested, and the sender groups use a provisional rule.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Version</th>
+<th style="text-align: right;">Tags</th>
+<th style="text-align: right;">Emails</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Raw</td>
+<td style="text-align: right;">174,765</td>
+<td style="text-align: right;">6,055</td>
+</tr>
+<tr class="even">
+<td>Authored zone</td>
+<td style="text-align: right;">142,695</td>
+<td style="text-align: right;">5,976</td>
+</tr>
+<tr class="odd">
+<td>Cleaned (authored zone, fixed-rule matches removed)</td>
+<td style="text-align: right;">141,311</td>
+<td style="text-align: right;">5,923</td>
+</tr>
+<tr class="even">
+<td>Upper bound (authored zone, all rule matches removed)</td>
+<td style="text-align: right;">134,529</td>
+<td style="text-align: right;">5,923</td>
+</tr>
+</tbody>
+</table>
+<section id="sec-block-13-shares" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="sec-block-13-shares"><span class="header-section-number">6.1</span> Category shares</h2>
+<p><span id="41" class="paragraph-number">[41]</span> The overall profile holds. Narrative, Positive and Interactive remain the three largest categories, and most shares move by less than one percentage point between the raw and cleaned versions. Two categories shrink sharply. Strategic falls by 37% relative to its raw share, as “task force” (2,694 tags) leaves with signatures and “research” drops from 3,334 tags to 512. Negative falls by 22%, as disclaimer wording leaves the authored zone. FirstPerson, Future and MetadiscourseInteractive rise by 15 to 19%, since boilerplate no longer dilutes them.</p>
+</section>
+<section id="sec-block-13-phrases" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="sec-block-13-phrases"><span class="header-section-number">6.2</span> Phrases</h2>
+<p><span id="42" class="paragraph-number">[42]</span> Most categories rest on a few formulas. The ten most frequent phrases cover 82% of MetadiscourseCohesive tags, and “hesitate to” accounts for about half of Uncertainty. Strategic changes most, from 60% coverage by its ten most frequent phrases in the raw version to 31% after cleaning.</p>
+<p><span id="43" class="paragraph-number">[43]</span> Misreadings survive cleaning. Positive counts “agreement” (959 tags), Interactive counts “email” (1,160), Inquiry counts “review” (473) and “assay” (280), and the most frequent ConfidenceHedged phrases, “we can” and “i can”, state capability. These need rules before any further analysis.</p>
+</section>
+<section id="sec-block-13-groups" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="sec-block-13-groups"><span class="header-section-number">6.3</span> Sender groups</h2>
+<p><span id="44" class="paragraph-number">[44]</span> Block 13 assigns each email to CITF when the sender’s domain matches <code>covid19immunitytaskforce.ca</code> or the sender’s emails span five or more study IDs, and to study teams otherwise. CITF holds 3,477 emails from 30 senders and study teams hold 2,579 emails from 438 senders.</p>
+<p><span id="45" class="paragraph-number">[45]</span> Cleaning changes the comparison between the groups. The raw gaps in Negative, Strategic and Positive come from disclaimers, signatures and the CITF name, and they shrink or reverse once those leave. After cleaning, CITF writes more Interactive and Contingent text, and study teams write more Narrative and FirstPerson text.</p>
+<p><span id="46" class="paragraph-number">[46]</span> The grouping needs three corrections. echosign.com is an automated e-signature service and belongs in <code>automated_senders</code>. Maelstrom (349 emails) sits with CITF, and Statistics Canada (180 emails) sits with study teams, and both placements need a decision. Pooled shares can also reflect a few prolific senders, so each sender’s shares need checking before the gaps are read as differences between groups.</p>
+</section>
+</section>
+<section id="sec-block-14" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Block 14: validating rules and correcting tags (planned)</h1>
+<p><span id="47" class="paragraph-number">[47]</span> Block 14 is not yet written. Its planned steps:</p>
 <ol type="1">
 <li><strong>Agreement.</strong> Merge the two coders’ files, report percent agreement and Cohen’s kappa overall and by sample type, and export disagreements for the two coders to settle in a consensus column. Later steps use the consensus codes.</li>
 <li><strong>Rule validation.</strong> For each checked rule and each domain noun, compute the share coded incorrect with a 95% confidence interval, and classify the rule as apply, drop or refine against thresholds fixed before the results are seen.</li>
@@ -731,36 +792,36 @@ p {
 <li><strong>Cleaned distribution.</strong> Rerun block 8’s category tables on the cleaned tags and show raw and cleaned results side by side.</li>
 <li><strong>Model gate.</strong> Report which kept categories still carry substantial inaccuracy after cleaning. For those categories, a supervised model could judge each tag in its context from its category, phrase, surrounding words, matched rules and zone. Such a model can flag an inaccurate tag for removal but cannot supply the right category. It would also need far more coded tags than this sample holds, weighted by stratum, so building it means a further round of coding.</li>
 </ol>
-<p><span id="41" class="paragraph-number">[41]</span> The thresholds in steps 2, 5 and 7 remain to be set, and they must be set before the coded results are examined.</p>
+<p><span id="48" class="paragraph-number">[48]</span> The thresholds in steps 2, 5 and 7 remain to be set, and they must be set before the coded results are examined.</p>
 </section>
-<section id="sec-planned-analysis" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Planned analysis</h1>
-<p><span id="42" class="paragraph-number">[42]</span> Brown and Laudenbach <span class="citation" data-cites="brown2022">(<a href="#ref-brown2022" role="doc-biblioref">2022</a>)</span> group the DocuScope categories into four rhetorical functions (their Table 3):</p>
+<section id="sec-planned-analysis" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Planned analysis</h1>
+<p><span id="49" class="paragraph-number">[49]</span> Brown and Laudenbach <span class="citation" data-cites="brown2022">(<a href="#ref-brown2022" role="doc-biblioref">2022</a>)</span> group the DocuScope categories into four rhetorical functions (their Table 3):</p>
 <ul>
 <li><strong>Negotiated Information</strong>: CitationAuthority, PublicTerms, AcademicTerms, SyntacticComplexity, InformationReportVerbs, MetadiscourseInteractive, Citation, Contingent, InformationStates, InformationTopics, Uncertainty</li>
 <li><strong>Narrative Forecasting</strong>: Narrative, Description, Future, Updates</li>
 <li><strong>Supportive Interaction</strong>: Facilitate, PublicTerms, CitationHedged, Citation, Responsibility, Interactive</li>
 <li><strong>Modulated Reporting</strong>: ConfidenceHedged, InformationChangeNegative, Uncertainty, ConfidenceHigh, FirstPerson, InformationChangePositive, Strategic, Description, InformationExposition, Negative</li>
 </ul>
-<p><span id="43" class="paragraph-number">[43]</span> We derive our own groups from the cleaned tags. We aggregate the HOW tag counts in authored text by sender and run a factor analysis, which groups the categories that the same senders use often. Each group becomes a rhetorical category for research data sharing emails. We name each group after its highest-scoring DocuScope categories and test the name in a manual review.</p>
-<p><span id="44" class="paragraph-number">[44]</span> The manual review covers all DocuScope tags in a sample of 200 emails. For each email, we write a topic label that names what the email is about, drawing on its InformationTopics spans, which mark the nominal subjects and objects that signal what a text concerns. We also assign each email the rhetorical categories that fit it, and we keep a category’s name only if the senders of the emails we assign it to score highest on its group.</p>
-<p><span id="45" class="paragraph-number">[45]</span> We then give part of this annotated sample to an LLM and ask it to label the remaining emails in the corpus, adding new labels where the sample has none. We check the LLM’s labels against our own on the held-out part of the sample.</p>
-<p><span id="46" class="paragraph-number">[46]</span> DocuScope reads English only, so we translate the French emails and flag them. Translation changes style, so we check whether the flagged emails behave differently.</p>
+<p><span id="50" class="paragraph-number">[50]</span> We derive our own groups from the cleaned tags. We aggregate the HOW tag counts in authored text by sender and run a factor analysis, which groups the categories that the same senders use often. Each group becomes a rhetorical category for research data sharing emails. We name each group after its highest-scoring DocuScope categories and test the name in a manual review.</p>
+<p><span id="51" class="paragraph-number">[51]</span> The manual review covers all DocuScope tags in a sample of 200 emails. For each email, we write a topic label that names what the email is about, drawing on its InformationTopics spans, which mark the nominal subjects and objects that signal what a text concerns. We also assign each email the rhetorical categories that fit it, and we keep a category’s name only if the senders of the emails we assign it to score highest on its group.</p>
+<p><span id="52" class="paragraph-number">[52]</span> We then give part of this annotated sample to an LLM and ask it to label the remaining emails in the corpus, adding new labels where the sample has none. We check the LLM’s labels against our own on the held-out part of the sample.</p>
+<p><span id="53" class="paragraph-number">[53]</span> DocuScope reads English only, so we translate the French emails and flag them. Translation changes style, so we check whether the flagged emails behave differently.</p>
 </section>
-<section id="sec-reproducibility" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Reproducibility</h1>
+<section id="sec-reproducibility" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Reproducibility</h1>
 <ul>
 <li><strong>Server and environment.</strong> <code>citf-analysis</code>, Python 3.12 in <code>~/docuscope-env</code>, with docuscospacy 0.3.7, en_docusco_spacy 1.5, spaCy 3.8.18, pandas 3.1.1, polars 2.1.0 and pyarrow 26.0.1.</li>
 <li><strong>Inputs.</strong> <code>msgs10.csv</code> and <code>recip4.csv</code> in <code>/citfdata_share/email/processed data/melissa</code>.</li>
 <li><strong>Email zoning.</strong> Chipmunk from <code>webis-de/acl20-crawling-mailing-lists</code> at commit <code>ecc2c70</code>, with its published weights (<code>fasttext-model.bin</code> and <code>segmenter_hinge.epoch-11.val_loss-0.093.h5</code>), runs on CPU with TensorFlow 2.2 in its own environment at <code>/home/zack/models/email-zoning/chipmunk-env</code>.</li>
 <li><strong>Notebook.</strong> <code>docuscope-assessment/docuscope_assessment.ipynb</code>, committed without its outputs.</li>
-<li><strong>Outputs</strong> in <code>docuscope-assessment/data</code>, which git does not track because the files contain email text: <code>docuscope_sample_30.html</code> (block 7), <code>email_zones.parquet</code> (blocks 9 and 10), the zone check files (block 11; <code>zone_check_</code> for the first set and <code>heldout_check_</code> for the second, each with <code>_emails.csv</code>, <code>_sample.csv</code>, <code>_tool.html</code> and the coder’s <code>_coder1.csv</code>), <code>docuscope_coding_sample.csv</code> and <code>docuscope_coding_tool.html</code> (block 12), and, once coded, <code>docuscope_coding_coder1.csv</code> and <code>docuscope_coding_coder2.csv</code>.</li>
+<li><strong>Outputs</strong> in <code>docuscope-assessment/data</code>, which git does not track because the files contain email text: <code>docuscope_sample_30.html</code> (block 7), <code>email_zones.parquet</code> (blocks 9 and 10), the zone check files (block 11; <code>zone_check_</code> for the first set and <code>heldout_check_</code> for the second, each with <code>_emails.csv</code>, <code>_sample.csv</code>, <code>_tool.html</code> and the coder’s <code>_coder1.csv</code>), <code>how_tags.parquet</code>, <code>docuscope_coding_sample.csv</code> and <code>docuscope_coding_tool.html</code> (block 12), and, once coded, <code>docuscope_coding_coder1.csv</code> and <code>docuscope_coding_coder2.csv</code>.</li>
 <li><strong>Randomness.</strong> Every sample uses <code>random_state=42</code>, except the second batch of 20 emails in the second set of the zone check, which uses <code>random_state=62</code>.</li>
 <li><strong>Parameters.</strong> Patterns, thresholds, rule lists and sample sizes sit at the top of blocks 9 to 12.</li>
 </ul>
 </section>
-<section id="sec-next-steps" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Next steps</h1>
+<section id="sec-next-steps" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Next steps</h1>
 <ul>
 <li>Decide which groups the analysis will compare, such as senders, studies or periods. Measure from block 8’s output how much category shares differ between them.</li>
 <li>Set the thresholds for applying rules, rating categories and building a model from those differences, before examining any coded results.</li>
@@ -770,14 +831,15 @@ p {
 <li>Test the <code>name</code> rule in the coding sample. The rule currently counts as accurate without testing, flags tags that only partly overlap a name, ignores case and covers only seven names.</li>
 <li>Write content patterns that exclude automated messages sent from personal addresses, such as out-of-office replies and ticket confirmations.</li>
 <li>Have two coders code the sample in <code>docuscope_coding_tool.html</code>.</li>
-<li>Write and run block 13 (<a href="#sec-block-13" class="quarto-xref">Section&nbsp;6</a>).</li>
+<li>Add echosign.com to <code>automated_senders</code>, write rules for the misreadings block 13 found, and check each sender’s shares (<a href="#sec-block-13" class="quarto-xref">Section&nbsp;6</a>).</li>
+<li>Write and run block 14 (<a href="#sec-block-14" class="quarto-xref">Section&nbsp;7</a>).</li>
 </ul>
 </section>
-<section id="sec-zoning-tests" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Appendix: reproducing the zoning tests</h1>
-<p><span id="47" class="paragraph-number">[47]</span> The zoning tests ran on the lab’s GPU machine (<code>buckeridge-rtx6000</code>) in <code>~/models/email-zoning</code>. The folder lives on <code>citf-analysis</code>, and the GPU machine mounts it over SSHFS. Chipmunk runs on the CPU. Okapi runs on one GPU.</p>
-<section id="provenance" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="provenance"><span class="header-section-number">10.1</span> Provenance</h2>
+<section id="sec-zoning-tests" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Appendix: reproducing the zoning tests</h1>
+<p><span id="54" class="paragraph-number">[54]</span> The zoning tests ran on the lab’s GPU machine (<code>buckeridge-rtx6000</code>) in <code>~/models/email-zoning</code>. The folder lives on <code>citf-analysis</code>, and the GPU machine mounts it over SSHFS. Chipmunk runs on the CPU. Okapi runs on one GPU.</p>
+<section id="provenance" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="provenance"><span class="header-section-number">11.1</span> Provenance</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -814,11 +876,11 @@ p {
 </tr>
 </tbody>
 </table>
-<p><span id="48" class="paragraph-number">[48]</span> <code>chipmunk-packages.txt</code> and <code>okapi-packages.txt</code> in the same folder record every installed package version.</p>
+<p><span id="55" class="paragraph-number">[55]</span> <code>chipmunk-packages.txt</code> and <code>okapi-packages.txt</code> in the same folder record every installed package version.</p>
 </section>
-<section id="setup" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="setup"><span class="header-section-number">10.2</span> Setup</h2>
-<p><span id="49" class="paragraph-number">[49]</span> The setup installs uv in the home directory and keeps its Python builds and both download caches on the mount.</p>
+<section id="setup" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="setup"><span class="header-section-number">11.2</span> Setup</h2>
+<p><span id="56" class="paragraph-number">[56]</span> The setup installs uv in the home directory and keeps its Python builds and both download caches on the mount.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-LsSf</span> https://astral.sh/uv/install.sh <span class="kw">|</span> <span class="fu">sh</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/models/email-zoning <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> ~/models/email-zoning</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">UV_CACHE_DIR</span><span class="op">=</span>~/models/email-zoning/.cache/uv</span>
@@ -831,7 +893,7 @@ p {
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fSLO</span> https://files.webis.de/webis-gmane19-model/segmenter_hinge.epoch-11.val_loss-0.093.h5</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">sha256sum</span> <span class="pp">*</span> <span class="op">&gt;</span> SHA256SUMS</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><span id="50" class="paragraph-number">[50]</span> The Chipmunk environment needs four adjustments to the repository’s <code>requirements.txt</code>. It installs only the packages the segmenter imports. <code>fasttextmirror</code> needs <code>pybind11</code> to compile without declaring it, so it builds without isolation. TensorFlow 2.2 declares no upper bound on <code>protobuf</code> or <code>numpy</code> but fails with current releases of both, so the last line pins their 2020 releases.</p>
+<p><span id="57" class="paragraph-number">[57]</span> The Chipmunk environment needs four adjustments to the repository’s <code>requirements.txt</code>. It installs only the packages the segmenter imports. <code>fasttextmirror</code> needs <code>pybind11</code> to compile without declaring it, so it builds without isolation. TensorFlow 2.2 declares no upper bound on <code>protobuf</code> or <code>numpy</code> but fails with current releases of both, so the last line pins their 2020 releases.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> venv <span class="at">--python</span> 3.8 chipmunk-env</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> chipmunk-env/bin/activate</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip install pybind11 setuptools wheel</span>
@@ -840,7 +902,7 @@ p {
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip install <span class="st">"protobuf==3.20.3"</span> <span class="st">"numpy==1.18.5"</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip freeze <span class="op">&gt;</span> chipmunk-packages.txt</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><span id="51" class="paragraph-number">[51]</span> The Okapi environment uses PyTorch’s CUDA 12.6 build, since the server’s driver (565.57) supports CUDA up to 12.7.</p>
+<p><span id="58" class="paragraph-number">[58]</span> The Okapi environment uses PyTorch’s CUDA 12.6 build, since the server’s driver (565.57) supports CUDA up to 12.7.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> venv <span class="at">--python</span> 3.11 okapi-env</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> okapi-env/bin/activate</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip install <span class="at">--torch-backend</span> cu126 <span class="st">"torch==2.14.1"</span> <span class="st">"transformers==5.22.2"</span> <span class="st">"pytorch-crf==0.7.2"</span> <span class="st">"huggingface_hub==2.4.0"</span> <span class="st">"numpy==2.4.6"</span></span>
@@ -853,9 +915,9 @@ p {
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="chipmunk-benchmarks" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="chipmunk-benchmarks"><span class="header-section-number">10.3</span> Chipmunk benchmarks</h2>
-<p><span id="52" class="paragraph-number">[52]</span> The repository’s own <code>evaluate</code> command scores the trained segmenter on the 300 Gmane validation emails and the 296 Enron emails. The paper reports its 96% on the same 300 emails.</p>
+<section id="chipmunk-benchmarks" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="chipmunk-benchmarks"><span class="header-section-number">11.3</span> Chipmunk benchmarks</h2>
+<p><span id="59" class="paragraph-number">[59]</span> The repository’s own <code>evaluate</code> command scores the trained segmenter on the 300 Gmane validation emails and the 296 Enron emails. The paper reports its 96% on the same 300 emails.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/models/email-zoning</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> chipmunk-env/bin/activate</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> acl20-crawling-mailing-lists</span>
@@ -866,9 +928,9 @@ p {
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  ../weights/segmenter_hinge.epoch-11.val_loss-0.093.h5 ../weights/fasttext-model.bin <span class="dt">\</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  annotations/enron-annotated.jsonl <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span> <span class="kw">|</span> <span class="fu">tee</span> ../eval-enron.log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="okapi-rebuild" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="okapi-rebuild"><span class="header-section-number">10.4</span> Okapi rebuild</h2>
-<p><span id="53" class="paragraph-number">[53]</span> The Okapi paper specifies the encoder and the sequence model. We chose the remaining settings.</p>
+<section id="okapi-rebuild" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="okapi-rebuild"><span class="header-section-number">11.4</span> Okapi rebuild</h2>
+<p><span id="60" class="paragraph-number">[60]</span> The Okapi paper specifies the encoder and the sequence model. We chose the remaining settings.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -915,7 +977,7 @@ p {
 </tr>
 </tbody>
 </table>
-<p><span id="54" class="paragraph-number">[54]</span> <code>okapi.py</code> embeds every line, trains the model, saves it as <code>okapi-model.pt</code>, and writes <code>okapi-eval-gmane-validation.txt</code> and <code>okapi-eval-enron.txt</code>.</p>
+<p><span id="61" class="paragraph-number">[61]</span> <code>okapi.py</code> embeds every line, trains the model, saves it as <code>okapi-model.pt</code>, and writes <code>okapi-eval-gmane-validation.txt</code> and <code>okapi-eval-enron.txt</code>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/models/email-zoning</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HF_HOME</span><span class="op">=</span>~/models/email-zoning/.cache/huggingface</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> okapi-env/bin/activate</span>
@@ -1112,9 +1174,9 @@ p {
 </div>
 </div>
 </section>
-<section id="recall-by-zone-on-enron" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="recall-by-zone-on-enron"><span class="header-section-number">10.5</span> Recall by zone on Enron</h2>
-<p><span id="55" class="paragraph-number">[55]</span> On Enron, the two models recall the zones that matter for us at similar rates. Both read about a quarter of mua_signature lines as paragraph, which would send banners and disclaimers into the text DocuScope tags.</p>
+<section id="recall-by-zone-on-enron" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="recall-by-zone-on-enron"><span class="header-section-number">11.5</span> Recall by zone on Enron</h2>
+<p><span id="62" class="paragraph-number">[62]</span> On Enron, the two models recall the zones that matter for us at similar rates. Both read about a quarter of mua_signature lines as paragraph, which would send banners and disclaimers into the text DocuScope tags.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1157,9 +1219,9 @@ p {
 </tbody>
 </table>
 </section>
-<section id="five-emails" class="level2" data-number="10.6">
-<h2 data-number="10.6" class="anchored" data-anchor-id="five-emails"><span class="header-section-number">10.6</span> Five emails</h2>
-<p><span id="56" class="paragraph-number">[56]</span> <code>five-emails.txt</code> holds the first five emails of the 30-email sample. This block splits it into one body per email in <code>emails/</code>, named by msgid2, and saves the header fields to <code>emails/headers.json</code>. Each body is everything below the <code>───</code> line, unchanged.</p>
+<section id="five-emails" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="five-emails"><span class="header-section-number">11.6</span> Five emails</h2>
+<p><span id="63" class="paragraph-number">[63]</span> <code>five-emails.txt</code> holds the first five emails of the 30-email sample. This block splits it into one body per email in <code>emails/</code>, named by msgid2, and saves the header fields to <code>emails/headers.json</code>. Each body is everything below the <code>───</code> line, unchanged.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/models/email-zoning</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> okapi-env/bin/activate</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">timeout</span> 60 python3 <span class="at">-</span> <span class="op">&lt;&lt;'EOF'</span></span>
@@ -1180,7 +1242,7 @@ p {
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="st">(out / "headers.json").write_text(json.dumps(headers, indent=2, ensure_ascii=False))</span></span>
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span>
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><span id="57" class="paragraph-number">[57]</span> Chipmunk labels each line with the repository’s own functions and writes <code>zones-chipmunk.jsonl</code>. <code>chipmunk_raw</code> holds the model’s top zone for each line; <code>chipmunk</code> holds the same after the repository’s <code>_post_process_labels</code> corrections.</p>
+<p><span id="64" class="paragraph-number">[64]</span> Chipmunk labels each line with the repository’s own functions and writes <code>zones-chipmunk.jsonl</code>. <code>chipmunk_raw</code> holds the model’s top zone for each line; <code>chipmunk</code> holds the same after the repository’s <code>_post_process_labels</code> corrections.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/models/email-zoning</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> chipmunk-env/bin/activate</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="va">CUDA_VISIBLE_DEVICES</span><span class="op">=</span><span class="st">""</span> <span class="va">TF_CPP_MIN_LOG_LEVEL</span><span class="op">=</span>3 <span class="va">PYTHONPATH</span><span class="op">=</span>acl20-crawling-mailing-lists/src <span class="va">PYTHONWARNINGS</span><span class="op">=</span>ignore <span class="fu">timeout</span> 1800 python3 <span class="at">-</span> <span class="op">&lt;&lt;'EOF'</span></span>
@@ -1208,7 +1270,7 @@ p {
 <span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="st">Path("zones-chipmunk.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows))</span></span>
 <span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span>
 <span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><span id="58" class="paragraph-number">[58]</span> Okapi loads <code>okapi-model.pt</code>, labels each line, and merges its labels with Chipmunk’s into <code>zones.jsonl</code>. Each embedding passes through half precision before the BiLSTM, as in training.</p>
+<p><span id="65" class="paragraph-number">[65]</span> Okapi loads <code>okapi-model.pt</code>, labels each line, and merges its labels with Chipmunk’s into <code>zones.jsonl</code>. Each embedding passes through half precision before the BiLSTM, as in training.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/models/email-zoning</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> okapi-env/bin/activate</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HF_HOME</span><span class="op">=</span>~/models/email-zoning/.cache/huggingface</span>
