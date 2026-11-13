@@ -8,4 +8,5 @@
 - Test the `name` rule in the coding sample. The rule currently counts as accurate without testing, flags tags that only partly overlap a name, ignores case and covers only seven names.
 - Write content patterns that exclude automated messages sent from personal addresses, such as out-of-office replies and ticket confirmations.
 - Have two coders code the sample in `docuscope_coding_tool.html`.
-- Write and run block 13 (@sec-block-13).
+- Add echosign.com to `automated_senders`, write rules for the misreadings block 13 found, and check each sender's shares (@sec-block-13).
+- Write and run block 14 (@sec-block-14).

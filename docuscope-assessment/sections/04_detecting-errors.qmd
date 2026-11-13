@@ -1,8 +1,8 @@
 # Blocks 9 to 12: detecting likely tagging errors {#sec-detecting-errors}
 
-Our strategy is to clean the tags with error rules. Each DocuScope category stands for a rhetorical function, such as hedging a claim or addressing the reader. A tag is inaccurate when the word or phrase it marks does not perform that function in its sentence, as when "May" in "May 8th" carries a ConfidenceHedged tag although it names a month and qualifies no claim. An error rule describes, in code, one recurring form of inaccurate tag. The inaccuracies in @sec-distribution recur in recognizable forms across thousands of emails, so a rule can find every instance of its form, the same way on every run, in terms anyone can read and question. Human judgement then goes into testing the rules and estimating the inaccuracies that no rule catches. If those remaining inaccuracies prove substantial, a supervised model trained on human judgements becomes the next step. In the human review, described in @sec-coding-sample, two coders independently judge a sample of tags. Block 13 then measures agreement between the coders, estimates each rule's hit rate and each category's remaining inaccuracy with confidence intervals and stratum weights, keeps the rules that meet thresholds set in advance, and relabels their matches with a log of every change.
+Our strategy is to clean the tags with error rules. Each DocuScope category stands for a rhetorical function, such as hedging a claim or addressing the reader. A tag is inaccurate when the word or phrase it marks does not perform that function in its sentence, as when "May" in "May 8th" carries a ConfidenceHedged tag although it names a month and qualifies no claim. An error rule describes, in code, one recurring form of inaccurate tag. The inaccuracies in @sec-distribution recur in recognizable forms across thousands of emails, so a rule can find every instance of its form, the same way on every run, in terms anyone can read and question. Human judgement then goes into testing the rules and estimating the inaccuracies that no rule catches. If those remaining inaccuracies prove substantial, a supervised model trained on human judgements becomes the next step. In the human review, described in @sec-coding-sample, two coders independently judge a sample of tags. Block 14 then measures agreement between the coders, estimates each rule's hit rate and each category's remaining inaccuracy with confidence intervals and stratum weights, keeps the rules that meet thresholds set in advance, and relabels their matches with a log of every change.
 
-The work spans four blocks. Blocks 10 and 12 leave out automated notifications (@sec-automated), blocks 9 and 10 divide every email into zones (@sec-zones), and block 11 draws the emails for checking the zones by hand (@sec-checking-zones). Block 12 gives each tag the zone of the line it falls on, flags HOW tags in authored text that match an error rule (@sec-error-rules), and lists inaccuracies that span more than one tag (@sec-multi-tag). It then draws the coding sample for the human review (@sec-coding-sample). All patterns, meaning the regular expressions and word lists that define reply headers, banners, closing lines, names, domain nouns and each error rule, sit at the top of the cell that uses them, so that each can be inspected and changed.
+The work spans four blocks. Blocks 10 and 12 leave out automated notifications (@sec-automated), blocks 9 and 10 divide every email into zones (@sec-zones), and block 11 draws the emails for checking the zones by hand (@sec-checking-zones). Block 12 gives each tag the zone of the line it falls on, flags HOW tags in authored text that match an error rule (@sec-error-rules), and lists inaccuracies that span more than one tag (@sec-multi-tag). It saves every HOW tag with its zone and rule matches to `how_tags.parquet`, and then draws the coding sample for the human review (@sec-coding-sample). All patterns, meaning the regular expressions and word lists that define reply headers, banners, closing lines, names, domain nouns and each error rule, sit at the top of the cell that uses them, so that each can be inspected and changed.
 
 ## Excluding automated notifications {#sec-automated}
 
@@ -85,7 +85,7 @@ We compared the coder's zones with those in `email_zones.parquet` on a first set
 
 Each rule targets specific categories, so that it flags the mistag and leaves correct tags in the same phrase alone ("Please let" is correctly Interactive; only "know" in "let me know" is flagged, and only as ConfidenceHigh). The rules fall into two kinds.
 
-**Fixed rules** match patterns whose tags we treat as inaccurate without coding. Block 13 applies them directly, and they stay out of the coding sample.
+**Fixed rules** match patterns whose tags we treat as inaccurate without coding. Block 14 applies them directly, and they stay out of the coding sample.
 
 | Rule | What it flags | Authored tags |
 |---|---|---:|
@@ -95,7 +95,7 @@ Each rule targets specific categories, so that it flags the mistag and leaves co
 | `time_am_pm` | "am" after a clock time, tagged FirstPerson | 150 |
 | `terms_cond` | "conditions" in "terms and conditions", tagged Contingent | 23 |
 
-**Checked rules** depend on context, so a human sample tests each one before block 13 applies it.
+**Checked rules** depend on context, so a human sample tests each one before block 14 applies it.
 
 | Rule | What it flags | Authored tags |
 |---|---|---:|

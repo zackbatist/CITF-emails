@@ -1,13 +1,28 @@
-# Block 13: validating rules and correcting tags (planned) {#sec-block-13}
+# Block 13: preliminary comparison across tag versions {#sec-block-13}
 
-Block 13 is not yet written. Its planned steps:
+Block 13 compares DocuScope tags across four versions, to see how far zoning and the error rules change the picture. It reads `how_tags.parquet`, which block 12 saves with each tag's zone and rule matches. The results are preliminary. The checked rules remain untested, and the sender groups use a provisional rule.
 
-1. **Agreement.** Merge the two coders' files, report percent agreement and Cohen's kappa overall and by sample type, and export disagreements for the two coders to settle in a consensus column. Later steps use the consensus codes.
-2. **Rule validation.** For each checked rule and each domain noun, compute the share coded incorrect with a 95% confidence interval, and classify the rule as apply, drop or refine against thresholds fixed before the results are seen.
-3. **Residual accuracy.** For each HOW category, estimate the error rate among tags no rule matched, weighted by stratum size.
-4. **Correction.** Keep authored text only, relabel tags matched by fixed rules and by confirmed checked rules, and log every change against its `msgid2`.
-5. **Category reliability.** Estimate each category's accuracy after cleaning and classify categories as use, use with caution or drop, against thresholds fixed in advance.
-6. **Cleaned distribution.** Rerun block 8's category tables on the cleaned tags and show raw and cleaned results side by side.
-7. **Model gate.** Report which kept categories still carry substantial inaccuracy after cleaning. For those categories, a supervised model could judge each tag in its context from its category, phrase, surrounding words, matched rules and zone. Such a model can flag an inaccurate tag for removal but cannot supply the right category. It would also need far more coded tags than this sample holds, weighted by stratum, so building it means a further round of coding.
+| Version | Tags | Emails |
+|---|---:|---:|
+| Raw | 174,765 | 6,055 |
+| Authored zone | 142,695 | 5,976 |
+| Cleaned (authored zone, fixed-rule matches removed) | 141,311 | 5,923 |
+| Upper bound (authored zone, all rule matches removed) | 134,529 | 5,923 |
 
-The thresholds in steps 2, 5 and 7 remain to be set, and they must be set before the coded results are examined.
+## Category shares {#sec-block-13-shares}
+
+The overall profile holds. Narrative, Positive and Interactive remain the three largest categories, and most shares move by less than one percentage point between the raw and cleaned versions. Two categories shrink sharply. Strategic falls by 37% relative to its raw share, as "task force" (2,694 tags) leaves with signatures and "research" drops from 3,334 tags to 512. Negative falls by 22%, as disclaimer wording leaves the authored zone. FirstPerson, Future and MetadiscourseInteractive rise by 15 to 19%, since boilerplate no longer dilutes them.
+
+## Phrases {#sec-block-13-phrases}
+
+Most categories rest on a few formulas. The ten most frequent phrases cover 82% of MetadiscourseCohesive tags, and "hesitate to" accounts for about half of Uncertainty. Strategic changes most, from 60% coverage by its ten most frequent phrases in the raw version to 31% after cleaning.
+
+Misreadings survive cleaning. Positive counts "agreement" (959 tags), Interactive counts "email" (1,160), Inquiry counts "review" (473) and "assay" (280), and the most frequent ConfidenceHedged phrases, "we can" and "i can", state capability. These need rules before any further analysis.
+
+## Sender groups {#sec-block-13-groups}
+
+Block 13 assigns each email to CITF when the sender's domain matches `covid19immunitytaskforce.ca` or the sender's emails span five or more study IDs, and to study teams otherwise. CITF holds 3,477 emails from 30 senders and study teams hold 2,579 emails from 438 senders.
+
+Cleaning changes the comparison between the groups. The raw gaps in Negative, Strategic and Positive come from disclaimers, signatures and the CITF name, and they shrink or reverse once those leave. After cleaning, CITF writes more Interactive and Contingent text, and study teams write more Narrative and FirstPerson text.
+
+The grouping needs three corrections. echosign.com is an automated e-signature service and belongs in `automated_senders`. Maelstrom (349 emails) sits with CITF, and Statistics Canada (180 emails) sits with study teams, and both placements need a decision. Pooled shares can also reflect a few prolific senders, so each sender's shares need checking before the gaps are read as differences between groups.
