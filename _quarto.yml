@@ -49,6 +49,8 @@ website:
         contents:
           - href: notes/restructuring/index.qmd
             text: Restructuring Plan
+          - href: notes/relating-rhetoric-to-functions/index.qmd
+            text: Relating Rhetoric to Functions
 toc: true
 toc-depth: 3
 toc-expand: 2
