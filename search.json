@@ -304,73 +304,93 @@
     ]
   },
   {
-    "objectID": "network-analysis/index.html#acknowledgments",
-    "href": "network-analysis/index.html#acknowledgments",
-    "title": "Network Analysis",
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Notes",
+    "section": "",
+    "text": "Modified\n\n\n\nTitle\n\n\n\n\n\n\n\n\nNov 14, 2026\n\n\nRelating rhetoric to functions\n\n\n\n\n\n\nNov 14, 2026\n\n\nRestructuring the CITF email analysis\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CITF Emails",
+    "section": "",
+    "text": "This research project addresses a critical evidence gap in the Canadian health system: the organizational and collaborative labor required to share health research data at scale. While technical informatics barriers are often the focus of development, the administrative and governance processes – such as negotiating data sharing agreements and aligning institutional frameworks – remain poorly understood and under-resourced. The study aims to move beyond theoretical models by empirically investigating the actual operations of the COVID-19 Immunity Task Force (CITF) Databank. By examining these coordination efforts, the project seeks to provide actionable recommendations for health system leaders and policymakers responsible for building and sustaining national data sharing capacity.\nResearch Objectives and Methodology\nThe project utilizes an explanatory sequential mixed-methods design to investigate the human and organizational determinants of data sharing behaviors. The first phase focuses on characterizing coordination processes through a quantitative analysis of approximately 50,000 emails exchanged between Databank personnel and contributing partners. Using natural language processing and network analysis, the research team will map communication patterns and identify how governance and technical work are distributed across different roles. This is followed by a second phase consisting of semi-structured interviews with principal investigators and data managers to elicit situated perspectives on the specific organizational factors that either facilitated or hindered their participation.\nSignificance and Knowledge Translation\nThe significance of this work lies in its potential to improve pandemic preparedness and the overall efficiency of the Canadian health research ecosystem. By documenting how governance processes actually unfolded during a public health emergency, the project provides a grounded perspective on the material needs of stakeholders. Knowledge translation efforts are directed toward health system leaders, research administrators, and international organizations like GA4GH to ensure that the findings inform future management strategies and policy frameworks. Ultimately, the project emphasizes that the primary obstacles to timely health data sharing are not technical, but rather reside in the “invisible labor” of coordination and the complexity of inter-institutional governance.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "data-complexity/index.html#acknowledgments",
+    "href": "data-complexity/index.html#acknowledgments",
+    "title": "Data Complexity",
     "section": "8.1 Acknowledgments",
     "text": "8.1 Acknowledgments",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
     ]
   },
   {
-    "objectID": "network-analysis/index.html#funding",
-    "href": "network-analysis/index.html#funding",
-    "title": "Network Analysis",
+    "objectID": "data-complexity/index.html#funding",
+    "href": "data-complexity/index.html#funding",
+    "title": "Data Complexity",
     "section": "8.2 Funding",
     "text": "8.2 Funding",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
     ]
   },
   {
-    "objectID": "network-analysis/index.html#competing-interests",
-    "href": "network-analysis/index.html#competing-interests",
-    "title": "Network Analysis",
+    "objectID": "data-complexity/index.html#competing-interests",
+    "href": "data-complexity/index.html#competing-interests",
+    "title": "Data Complexity",
     "section": "8.3 Competing Interests",
     "text": "8.3 Competing Interests",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
     ]
   },
   {
-    "objectID": "network-analysis/index.html#author-contributions",
-    "href": "network-analysis/index.html#author-contributions",
-    "title": "Network Analysis",
+    "objectID": "data-complexity/index.html#author-contributions",
+    "href": "data-complexity/index.html#author-contributions",
+    "title": "Data Complexity",
     "section": "8.4 Author Contributions",
     "text": "8.4 Author Contributions",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
     ]
   },
   {
-    "objectID": "network-analysis/index.html#informed-consent",
-    "href": "network-analysis/index.html#informed-consent",
-    "title": "Network Analysis",
+    "objectID": "data-complexity/index.html#informed-consent",
+    "href": "data-complexity/index.html#informed-consent",
+    "title": "Data Complexity",
     "section": "8.5 Informed Consent",
     "text": "8.5 Informed Consent",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
     ]
   },
   {
-    "objectID": "network-analysis/index.html#data-availability-statement",
-    "href": "network-analysis/index.html#data-availability-statement",
-    "title": "Network Analysis",
+    "objectID": "data-complexity/index.html#data-availability-statement",
+    "href": "data-complexity/index.html#data-availability-statement",
+    "title": "Data Complexity",
     "section": "8.6 Data Availability Statement",
     "text": "8.6 Data Availability Statement",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
     ]
   },
   {
-    "objectID": "network-analysis/index.html#author-bios",
-    "href": "network-analysis/index.html#author-bios",
-    "title": "Network Analysis",
+    "objectID": "data-complexity/index.html#author-bios",
+    "href": "data-complexity/index.html#author-bios",
+    "title": "Data Complexity",
     "section": "8.7 Author Bios",
     "text": "8.7 Author Bios",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
     ]
   },
   {
@@ -524,93 +544,117 @@
     ]
   },
   {
-    "objectID": "data-complexity/index.html#acknowledgments",
-    "href": "data-complexity/index.html#acknowledgments",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#acknowledgments",
+    "href": "network-analysis/index.html#acknowledgments",
+    "title": "Network Analysis",
     "section": "8.1 Acknowledgments",
     "text": "8.1 Acknowledgments",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
-    "objectID": "data-complexity/index.html#funding",
-    "href": "data-complexity/index.html#funding",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#funding",
+    "href": "network-analysis/index.html#funding",
+    "title": "Network Analysis",
     "section": "8.2 Funding",
     "text": "8.2 Funding",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
-    "objectID": "data-complexity/index.html#competing-interests",
-    "href": "data-complexity/index.html#competing-interests",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#competing-interests",
+    "href": "network-analysis/index.html#competing-interests",
+    "title": "Network Analysis",
     "section": "8.3 Competing Interests",
     "text": "8.3 Competing Interests",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
-    "objectID": "data-complexity/index.html#author-contributions",
-    "href": "data-complexity/index.html#author-contributions",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#author-contributions",
+    "href": "network-analysis/index.html#author-contributions",
+    "title": "Network Analysis",
     "section": "8.4 Author Contributions",
     "text": "8.4 Author Contributions",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
-    "objectID": "data-complexity/index.html#informed-consent",
-    "href": "data-complexity/index.html#informed-consent",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#informed-consent",
+    "href": "network-analysis/index.html#informed-consent",
+    "title": "Network Analysis",
     "section": "8.5 Informed Consent",
     "text": "8.5 Informed Consent",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
-    "objectID": "data-complexity/index.html#data-availability-statement",
-    "href": "data-complexity/index.html#data-availability-statement",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#data-availability-statement",
+    "href": "network-analysis/index.html#data-availability-statement",
+    "title": "Network Analysis",
     "section": "8.6 Data Availability Statement",
     "text": "8.6 Data Availability Statement",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
-    "objectID": "data-complexity/index.html#author-bios",
-    "href": "data-complexity/index.html#author-bios",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#author-bios",
+    "href": "network-analysis/index.html#author-bios",
+    "title": "Network Analysis",
     "section": "8.7 Author Bios",
     "text": "8.7 Author Bios",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "CITF Emails",
+    "objectID": "notes/relating-rhetoric-to-functions/index.html",
+    "href": "notes/relating-rhetoric-to-functions/index.html",
+    "title": "Relating rhetoric to functions",
     "section": "",
-    "text": "This research project addresses a critical evidence gap in the Canadian health system: the organizational and collaborative labor required to share health research data at scale. While technical informatics barriers are often the focus of development, the administrative and governance processes – such as negotiating data sharing agreements and aligning institutional frameworks – remain poorly understood and under-resourced. The study aims to move beyond theoretical models by empirically investigating the actual operations of the COVID-19 Immunity Task Force (CITF) Databank. By examining these coordination efforts, the project seeks to provide actionable recommendations for health system leaders and policymakers responsible for building and sustaining national data sharing capacity.\nResearch Objectives and Methodology\nThe project utilizes an explanatory sequential mixed-methods design to investigate the human and organizational determinants of data sharing behaviors. The first phase focuses on characterizing coordination processes through a quantitative analysis of approximately 50,000 emails exchanged between Databank personnel and contributing partners. Using natural language processing and network analysis, the research team will map communication patterns and identify how governance and technical work are distributed across different roles. This is followed by a second phase consisting of semi-structured interviews with principal investigators and data managers to elicit situated perspectives on the specific organizational factors that either facilitated or hindered their participation.\nSignificance and Knowledge Translation\nThe significance of this work lies in its potential to improve pandemic preparedness and the overall efficiency of the Canadian health research ecosystem. By documenting how governance processes actually unfolded during a public health emergency, the project provides a grounded perspective on the material needs of stakeholders. Knowledge translation efforts are directed toward health system leaders, research administrators, and international organizations like GA4GH to ensure that the findings inform future management strategies and policy frameworks. Ultimately, the project emphasizes that the primary obstacles to timely health data sharing are not technical, but rather reside in the “invisible labor” of coordination and the complexity of inter-institutional governance.",
+    "text": "Note\n\n\n\nI wrote this document on November 13, 2026, following a comprehensive assessment of DocuScope for tagging the rhetoric of the CITF emails. The restructuring plan has since superseded this document, but its concerns about relating DocuScope tags to functional categories still stand. The plan’s section on relating rhetoric, functions and actions builds on them.\nThe project relates how people wrote (the how) to what their emails did (the what), with sender role and workflow phase as context. DocuScope supplies the how and nothing else. Functional coding supplies the what, through codes derived from the emails without an initial codebook and grouped into functional categories. The two streams stay separate until integration, so any association between them reflects the emails themselves.\nRelating the two streams needs a method that first identifies the functional units of a text and then describes their language. Corpus-based move analysis does this. It fits the project for two reasons. It defines function before it examines language, as the functional coding does. It compares functional and linguistic analyses derived independently, which matches keeping the two streams separate. The project takes the sentence as its unit, since sentences need no hand segmentation. A sentence can carry several functional categories, and it counts in each.\nThe central analysis is the variation within each functional category, explained by role, phase and the relationship between sender and recipient, and read closely at prototypical and peripheral cases.",
     "crumbs": [
-      "Home"
+      "Notes",
+      "Relating Rhetoric to Functions"
     ]
   },
   {
-    "objectID": "notes/index.html",
-    "href": "notes/index.html",
-    "title": "Notes",
-    "section": "",
-    "text": "Modified\n\n\n\nTitle\n\n\n\n\n\n\n\n\nNov 14, 2026\n\n\nRestructuring the CITF email analysis\n\n\n\n\n\n\nNo matching items",
+    "objectID": "notes/relating-rhetoric-to-functions/index.html#detecting-rhetoric-in-fragments",
+    "href": "notes/relating-rhetoric-to-functions/index.html#detecting-rhetoric-in-fragments",
+    "title": "Relating rhetoric to functions",
+    "section": "2.1 Detecting rhetoric in fragments",
+    "text": "2.1 Detecting rhetoric in fragments\nA DocuScope tag in a sentence with a functional category shows only that the two co-occur. Take the follow-up “Sorry to bother you again, could you send a copy of the agreement we signed last week?” “Could you send” is the request itself. “Sorry” is an apology that softens the request. “The agreement we signed last week” recounts an earlier event. DocuScope may tag all three, but only the first two tags describe how the writer made the request.\nWe considered three ways of linking a tag to the act it describes, and set each aside. Linking each DocuScope tag to the verb that performs the request, through dependency parses, would rest on single tags, such as “sorry” in the follow-up above, and DocuScope is not designed for single-tag readings. Counting the tags in the sentences before and after each sentence would catch framing such as “I know you’re busy, but”, yet those sentences carry their own functional categories, so counting their tags twice would blur the comparison between categories. Linking a tag to a request when its clause stands in a marked relation to it, such as a condition (“if you have time”) or a concession, works only where connectives mark the relation, and again rests on single tags.\nWe therefore accept co-occurrence as the measure. Some tags in a sentence describe something other than its function, as “the agreement we signed last week” does in a request, and the comparison with the corpus absorbs them where they occur evenly across functional categories. Tags that cluster in one category, as accounts of earlier events may in follow-ups, need checking in the close reading before they count as its rhetoric.",
     "crumbs": [
-      "Notes"
+      "Notes",
+      "Relating Rhetoric to Functions"
+    ]
+  },
+  {
+    "objectID": "notes/relating-rhetoric-to-functions/index.html#defining-and-varying-rhetoric",
+    "href": "notes/relating-rhetoric-to-functions/index.html#defining-and-varying-rhetoric",
+    "title": "Relating rhetoric to functions",
+    "section": "2.2 Defining and varying rhetoric",
+    "text": "2.2 Defining and varying rhetoric\nSome rhetoric defines a functional category, and some reflects how writers chose to frame the work. For example, nearly every request addresses the reader and asks for something, as in “could you send”, so that rhetoric belongs to the request itself. Whether the writer apologises, sets a deadline or explains the need varies from request to request, and that variation is the kind of choice worth tracking. DocuScope tags words independently of their functional context, and it is necessary to differentiate these two kinds of rhetoric.\nWithin each functional category, we separate rhetoric present in nearly every sentence from rhetoric that varies across sentences. For example, nearly every request addresses the reader, while only some apologise, set a deadline or explain the need. The varying part shows how writers chose to frame the work.",
+    "crumbs": [
+      "Notes",
+      "Relating Rhetoric to Functions"
+    ]
+  },
+  {
+    "objectID": "notes/relating-rhetoric-to-functions/index.html#disentangling-rhetorics-relationship-with-role-and-function",
+    "href": "notes/relating-rhetoric-to-functions/index.html#disentangling-rhetorics-relationship-with-role-and-function",
+    "title": "Relating rhetoric to functions",
+    "section": "2.3 Disentangling rhetoric’s relationship with role and function",
+    "text": "2.3 Disentangling rhetoric’s relationship with role and function\nThe rhetoric of a functional category may reflect who writes it. If CITF coordinators write most requests and study teams write most reports, a difference in rhetoric between requests and reports may come from the writers, from the work, or from the way a writer’s role shapes how they do the work. Distinguishing these depends on people who write in several functional categories, and such writers may be few.\nWe compare the same senders across functional categories, and model sender and study as random effects. For example, a coordinator who writes both requests and reports shows whether requests read differently from reports when the writer stays the same. If too few senders write in several functional categories, the random effects carry the comparison alone, and the analysis reports the confound as a limit.",
+    "crumbs": [
+      "Notes",
+      "Relating Rhetoric to Functions"
     ]
   },
   {
