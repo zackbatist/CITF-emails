@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-09-24">
+<meta name="description" content="The case for replacing unsupervised multi-topic assignment (NMF, 15% threshold) with hand coding of passages in a 100 to 200 email sample, one topic per passage, the objections to it, the design of the coding interface and codebook, and a recommended path.">
+
+<title>Shifting to supervised topic assignment – CITF Emails Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-0b10f4a090abded817b2fe5f069b6edb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style type="text/css">
+p {
+  text-align: justify !important;
+}
+</style>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/shift-to-supervised/index.html">Shifting to Supervised Topic Assignment</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topic-modelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Topic Modelling</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../network-analysis/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Network Analysis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../data-complexity/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Complexity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docuscope-assessment/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DocuScope Assessment</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../research-protocol/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Research Protocol</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../notes/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/restructuring/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Restructuring Plan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/relating-rhetoric-to-functions/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Relating Rhetoric to Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/shift-to-supervised/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Shifting to Supervised Topic Assignment</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#arguments-for-the-shift" id="toc-arguments-for-the-shift" class="nav-link active" data-scroll-target="#arguments-for-the-shift">Arguments for the shift</a></li>
+  <li><a href="#objections-and-responses" id="toc-objections-and-responses" class="nav-link" data-scroll-target="#objections-and-responses">Objections and responses</a></li>
+  <li><a href="#coding-design" id="toc-coding-design" class="nav-link" data-scroll-target="#coding-design">Coding design</a></li>
+  <li><a href="#framing-in-the-paper" id="toc-framing-in-the-paper" class="nav-link" data-scroll-target="#framing-in-the-paper">Framing in the paper</a></li>
+  <li><a href="#recommendation" id="toc-recommendation" class="nav-link" data-scroll-target="#recommendation">Recommendation</a></li>
+  <li><a href="#appendix-initial-codebook" id="toc-appendix-initial-codebook" class="nav-link" data-scroll-target="#appendix-initial-codebook">Appendix: Initial codebook</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/shift-to-supervised/index.html">Shifting to Supervised Topic Assignment</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Shifting to supervised topic assignment</h1>
+<p class="subtitle lead">Following informal consultation (September 18, 2026)</p>
+</div>
+
+<div>
+  <div class="description">
+    The case for replacing unsupervised multi-topic assignment (NMF, 15% threshold) with hand coding of passages in a 100 to 200 email sample, one topic per passage, the objections to it, the design of the coding interface and codebook, and a recommended path.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Created</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 24, 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Updated</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">November 15, 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I wrote this document in September 2026, after an informal consultation on how to code the emails, and revised it on October 2. The <a href="../../notes/restructuring/index.html#sec-coding">restructuring plan</a> has since superseded it. The plan codes rhetoric, functions and actions as three kinds of codes, and starts coding without a codebook.</p>
+</div>
+</div>
+<p>The shift replaces NMF topic assignment at a 15% threshold with human-coded primary and secondary codes, with no limit on the number of either an email receives. Coders apply the codes on the fly by selecting text in a purpose-built page. A sample of 100 to 200 emails from the pilot corpus is coded this way, and those codes guide and validate a local model that applies them to the full corpus. The pilot’s four themes carry over as the top-level categories of the codebook.</p>
+<section id="arguments-for-the-shift" class="level2">
+<h2 class="anchored" data-anchor-id="arguments-for-the-shift">Arguments for the shift</h2>
+<section id="fixed-categories-let-the-expanded-corpus-test-the-pilot" class="level3">
+<h3 class="anchored" data-anchor-id="fixed-categories-let-the-expanded-corpus-test-the-pilot">1. Fixed categories let the expanded corpus test the pilot</h3>
+<p>The protocol describes the pilot as a pipeline test that produced preliminary observations, and the expansion to the Scientific Director’s and data managers’ mailboxes exists to find out whether those observations hold at scale. Refitting NMF on a corpus with different senders and a different vocabulary yields a new solution with its own k and its own topic labels, so a pilot topic such as Serology and Data Harmonization has no guarantee of reappearing. A comparison across the two corpora would then compare two different sets of categories. Supervised codes hold the categories constant, so the finding that agreements work and data operations work ran as parallel workstreams can be retested on the same constructs in the expanded corpus.</p>
+<p>NMF stays in the methods as the exploratory stage that generated the category scheme, and the codes do not guide its fitting. Its dominant-topic assignments stratify the annotation sample so that rare categories are represented, and agreement between NMF topics and human primary codes reports how much of the pilot’s structure the coded labels reproduce. Because the codes did not shape the topics, that agreement is evidence.</p>
+</section>
+<section id="human-labels-supply-validity-evidence-that-coherence-scores-cannot" class="level3">
+<h3 class="anchored" data-anchor-id="human-labels-supply-validity-evidence-that-coherence-scores-cannot">2. Human labels supply validity evidence that coherence scores cannot</h3>
+<p>The c_v score measures whether a topic’s top words co-occur. It says nothing about whether a topic corresponds to a type of administrative work. The two least coherent topics, Meeting Scheduling and Invitations (0.473) and Executive Correspondence (0.497), make up the entire Coordination theme, whose generic language the codebook has to define most carefully. The LLM-generated labels also needed correction by hand. The application and the protocol label one topic Catalogue Completion Reminders; the preprint relabels it Catalogue Onboarding and Collaboration after manual inspection showed it captures early introductions to the Maelstrom catalogue. Five of the 14 labels differ between the protocol’s Table 1 and the preprint. A label attached after the fact is a hypothesis about what a word cluster means, and every downstream analysis treats it as a measurement.</p>
+<p>A supervised design reports validity as coder agreement on the double-coded sample and as precision and recall for each theme against the human codes.</p>
+</section>
+<section id="the-15-threshold-measures-vocabulary-mix" class="level3">
+<h3 class="anchored" data-anchor-id="the-15-threshold-measures-vocabulary-mix">3. The 15% threshold measures vocabulary mix</h3>
+<p>A weight threshold on a normalized NMF matrix records how an email’s vocabulary divides across topics. In the pilot, 72.7% of emails cleared 15% on two or more topics (mean 2.01 per email). Four of the Agreements topics (T0, T5, T7, T8) share near-identical subject lines and separate on body vocabulary. The preprint reads them as stages of the agreement lifecycle, and that reading carries weight because four of the cluster’s five most strongly coupled pairs (25 to 33%) are among them. The model cannot tell a change in activity from a change in wording, so the reading remains an interpretation. Coding tests it. Annotators either distinguish the stages reliably or they do not, and reliability is reportable.</p>
+<p>The threshold is also a free parameter. The protocol weighed 10%, 15%, and 20%, and every phase, role, gender, and co-occurrence result inherits the choice. A coder deciding which codes an email carries replaces the threshold with a judgment that can be documented and checked for reliability.</p>
+</section>
+<section id="primary-and-secondary-codes-restore-single-count-analyses-and-add-direction" class="level3">
+<h3 class="anchored" data-anchor-id="primary-and-secondary-codes-restore-single-count-analyses-and-add-direction">4. Primary and secondary codes restore single-count analyses and add direction</h3>
+<p>Under the threshold scheme an email appears in every topic cell it clears, so the cells in the phase, role, and gender figures overlap. The application specified a simpler design in which, for the workflow phase and sender analyses, “emails will be assigned to their dominant topic”, with the multi-topic threshold reserved for co-occurrence. The preprint applied the 15% threshold to every analysis. Primary codes restore the application’s single count. Because a coder assigns them for what the email mainly does, they carry more meaning than the highest weight in a factor matrix. An email that does several things at equal weight takes several primary codes, and its one count splits across their distinct themes. Each email then counts once in the phase, role, gender, and network analyses, and the secondary codes feed the co-occurrence analysis.</p>
+<p>Secondary codes also make co-occurrence directional. An email with a primary Agreements code and a secondary Data Operations code differs from the reverse, so the analysis can ask which workstream leads when the two meet, a question the symmetric co-occurrence score cannot express.</p>
+<p>Neither the number of primary codes nor the number of secondary codes needs a cap. The 25.1% of pilot emails that carried three or more topics keep every assignment, and the split of one count across primary themes holds the single-count analyses fixed. The coder’s judgment that a code applies replaces the weight threshold, and it needs a written applicability rule in the codebook, since an uncapped scheme allows over-application.</p>
+</section>
+<section id="one-coded-construct-serves-the-topic-network-and-questionnaire-analyses" class="level3">
+<h3 class="anchored" data-anchor-id="one-coded-construct-serves-the-topic-network-and-questionnaire-analyses">5. One coded construct serves the topic, network, and questionnaire analyses</h3>
+<p>A single paper needs one unit of analysis across its topic and network sections, and the coded email is that unit. With network analysis folded in, topic labels become attributes of edges. In the person projection each edge inherits the topics of the emails exchanged, and at 2.01 topics per email those inherited labels are overlapping sets, which complicates claims about which topics carry bridging ties, such as data managers linking study teams to the Harmonization Group on Data Operations. Primary codes give each email a weight of one split across its primary themes, so an edge’s topic profile is a distribution over themes that sums to one.</p>
+<p>In the email co-participation projection, nodes that carry several topics tie topics together through the labels themselves as well as through shared people, which blurs the line between that projection and the co-occurrence analysis. Primary-only node labels restore the line, with co-occurrence describing content through primary and secondary pairs and the projection describing people.</p>
+<p>The codebook’s role categories supply node attributes with definitions fixed in advance. Coding Automated services as a role gives the protocol’s exclusion of systemic notification traffic a coded basis that can be reported and audited.</p>
+<p>The questionnaire’s second and third domains correspond to the email analysis’s topic and phase categories, and its thematic coding starts from the email analysis framework. Defined codes with inclusion rules move into that coding intact. An NMF topic moves as a list of keywords.</p>
+</section>
+<section id="a-local-model-already-in-the-pipeline-scales-the-codes" class="level3">
+<h3 class="anchored" data-anchor-id="a-local-model-already-in-the-pipeline-scales-the-codes">6. A local model already in the pipeline scales the codes</h3>
+<p>Manual annotation covers a sample of 100 to 200 emails from the pilot corpus, and a local model applies the codes to the remaining emails and to the expanded corpus, which grows well beyond the pilot’s 6,833 emails. The pipeline already runs Meta-Llama-3.1-8B-Instruct on secure servers to label topics, so few-shot prompting with annotated examples extends existing infrastructure and keeps email content on McGill servers. A sample of this size supports prompting and validation, and the codebook’s anchor examples serve as the few-shot examples, so annotators and model work from one artefact. Passage-level codes also give the model the exact text behind each code. The annotation itself is qualitative coding, the competence the questionnaire analysis also requires, and it follows the process used for the BibVik codebook.</p>
+</section>
+</section>
+<section id="objections-and-responses" class="level2">
+<h2 class="anchored" data-anchor-id="objections-and-responses">Objections and responses</h2>
+<p>The first three objections carry real weight. The rest can be handled in the design.</p>
+<section id="the-codebook-inherits-the-pilots-structure-so-confirmation-is-partly-circular" class="level3">
+<h3 class="anchored" data-anchor-id="the-codebook-inherits-the-pilots-structure-so-confirmation-is-partly-circular">1. The codebook inherits the pilot’s structure, so confirmation is partly circular</h3>
+<p>The top-level categories are the pilot’s four themes and the example codes come from its topics. Coders applying those definitions will tend to sort emails as the topic model did, so agreement with the pilot’s findings is partly built in. A fixed codebook also cannot show what the pilot missed. The annotated sample comes from the operations manager’s mailbox, so the codes are validated on that mailbox only, and the Scientific Director’s mailbox will carry governance and leadership correspondence the sample never covered.</p>
+<p><strong>Response.</strong> Add an Other code with a required free-text note, review it after annotation, and version the codebook with dated changes. Annotate a further small sample from each added mailbox before applying the codes to it. Fit NMF to the expanded corpus as well and report any topic that no code accounts for. Discovery stays in the design, and the confirmatory claims rest on categories that were allowed to change.</p>
+</section>
+<section id="the-threshold-and-single-count-arguments-support-ranking-without-requiring-supervision" class="level3">
+<h3 class="anchored" data-anchor-id="the-threshold-and-single-count-arguments-support-ranking-without-requiring-supervision">2. The threshold and single-count arguments support ranking without requiring supervision</h3>
+<p>An unsupervised design can fix the overlap problem. The application already specifies dominant-topic assignment for phase and sender analyses, and a threshold sensitivity analysis, a lower k, or merging the four Agreements topics would address the rest. A reviewer can accept everything said about the 15% threshold and about single counting and still ask why humans need to label anything. Fixed categories, validity evidence, defined codes shared with the questionnaire and the network roles, and local classification are the arguments that justify supervision itself.</p>
+<p><strong>Response.</strong> Lead the justification with fixed categories and validity evidence, and present ranking as an additional benefit of coding.</p>
+</section>
+<section id="a-sample-of-100-to-200-emails-cannot-support-fine-grained-claims" class="level3">
+<h3 class="anchored" data-anchor-id="a-sample-of-100-to-200-emails-cannot-support-fine-grained-claims">3. A sample of 100 to 200 emails cannot support fine-grained claims</h3>
+<p>The codebook lists example codes under four themes, and the full set will be larger. Spread across 100 to 200 emails, rare codes receive a handful of examples or none, so per-code precision and recall are unstable. A proportion estimated on 100 to 200 emails carries a 95% interval of about 7 to 10 percentage points at its widest. Fine-tuning a classifier on this few labels is out of reach, and few-shot prompting is the workable route. The main analyses also report per-study medians and drop cells with fewer than five emails, so misclassification in rare codes moves results more than it would in pooled counts. LLM output varies with temperature and seed, and the pilot already ran its LLM tasks across five temperature settings to check stability.</p>
+<p><strong>Response.</strong> Make the four themes the validated classification targets for primary and secondary codes, and keep the finer codes as descriptive annotation. Report agreement and per-theme precision and recall with bootstrap confidence intervals. Run the model at temperature 0 with fixed seeds and limit claims to themes that meet a stated performance floor. Propagate the confusion matrix into the main results by resampling assigned labels, and report how far the headline findings move.</p>
+</section>
+<section id="ranked-uncapped-passage-level-codes-have-no-reliability-record" class="level3">
+<h3 class="anchored" data-anchor-id="ranked-uncapped-passage-level-codes-have-no-reliability-record">4. Ranked, uncapped, passage-level codes have no reliability record</h3>
+<p>Agreement is harder to reach on a primary and secondary scheme than on a single label, since coders must agree on which codes apply and on which of them are primary. With no limit on the number of codes, coders can also over-apply them, which inflates co-occurrence. Coding from selected passages adds a second source of disagreement, because two coders can choose the same code for slightly different stretches of text. The pilot’s human review rested mostly on one research assistant. A sample of 100 to 200 makes double-coding feasible, which removes most of the capacity problem.</p>
+<p><strong>Response.</strong> Double-code the whole sample and adjudicate disagreements. Write a rule for when a secondary code applies into the codebook. Measure agreement first at the email level, as Krippendorff’s alpha on the presence of each theme among the primary codes and, separately, among the secondary codes, with 0.67 as the floor for tentative conclusions and 0.80 for firm ones. Then measure passage agreement as overlap, counting two coders’ passages as the same when they share more than half their words. Selections snap to whole words, which removes the commonest boundary disagreement. If agreement on primary themes fails, use unranked labels.</p>
+</section>
+<section id="a-primary-code-imposes-a-hierarchy" class="level3">
+<h3 class="anchored" data-anchor-id="a-primary-code-imposes-a-hierarchy">5. A primary code imposes a hierarchy</h3>
+<p>Emails often do several things at comparable weight, such as returning a signed agreement and proposing a call. Naming one purpose primary would impose a hierarchy the email may lack, so the design allows several primary codes. That leaves the question of what separates primary from secondary, since a scheme in which every code is primary asserts no rank at all.</p>
+<p><strong>Response.</strong> Write a decision rule for the primary capacity into the codebook. A code is primary when it determines what the recipient must do next, or carries the main information conveyed when nothing is requested, and secondary when it adds context. An email whose codes are all primary carries no ranking, which its split count shows. Report the share of emails with more than one primary code, and run the main results with all codes counted as a check.</p>
+</section>
+<section id="creating-codes-while-coding-erodes-the-codebook" class="level3">
+<h3 class="anchored" data-anchor-id="creating-codes-while-coding-erodes-the-codebook">6. Creating codes while coding erodes the codebook</h3>
+<p>Coders can create a code from the selection when no existing code fits. Each new code changes the codebook mid-round, so emails coded earlier never had the chance to receive it, and two coders can create overlapping codes for the same thing. Free creation is also the quickest route to a codebook that drifts from its definitions.</p>
+<p><strong>Response.</strong> Allow creation only during calibration. A code created on the fly is provisional, records the email it came from, and stays undefined until a coder writes a definition in the codebook drawer. The team reviews provisional codes after each calibration round, merges duplicates, and recodes affected emails before the codebook freezes. Once it freezes, the create option turns off, and a coder who finds a gap uses Other with a note.</p>
+</section>
+<section id="the-codes-could-guide-the-topic-model-directly" class="level3">
+<h3 class="anchored" data-anchor-id="the-codes-could-guide-the-topic-model-directly">7. The codes could guide the topic model directly</h3>
+<p>Seeding or regularizing NMF with the codebook, or fitting a guided model to the annotated emails, would put the codes to work on the topics themselves. A sample of 100 to 200 emails is too small to supervise a factorization across 14 or more topics. Guidance also makes the topics reflect the codebook. Agreement between NMF and the human codes then becomes partly built in, a fresh NMF on the expanded corpus loses its value as a check on what the codebook misses, and the pilot’s unsupervised results are replaced by something the codebook produced.</p>
+<p><strong>Response.</strong> Keep NMF unguided and use the codes to evaluate it. Report agreement between NMF dominant topics and human primary codes, weigh it alongside c_v when comparing k and stopword choices, choose those on one split of the sample, and report final agreement on the held-out split. Fit a fresh NMF to the emails coded Other, and treat topics that surface there as candidates for new codes.</p>
+</section>
+<section id="the-change-departs-from-the-application-and-the-preprint" class="level3">
+<h3 class="anchored" data-anchor-id="the-change-departs-from-the-application-and-the-preprint">8. The change departs from the application and the preprint</h3>
+<p>The application names NMF, its evaluation against three alternatives, and LLM-generated labels as the method, and the preprint reports NMF results. Dropping NMF as the primary method can read as abandoning the validated pipeline. The preprint also presents NMF with LLM annotation as a replicable approach other groups can adapt, whereas supervised coding asks each group to build a codebook for its own corpus.</p>
+<p><strong>Response.</strong> Keep NMF as the exploratory stage, record the change in the protocol with its rationale and date, and leave the preprint unchanged as the pilot record. Publish the codebook and annotation guidelines so the codebook becomes the transferable output.</p>
+</section>
+<section id="annotation-widens-human-exposure-to-email-content" class="level3">
+<h3 class="anchored" data-anchor-id="annotation-widens-human-exposure-to-email-content">9. Annotation widens human exposure to email content</h3>
+<p>Presidio as configured replaces names, email addresses, and URLs, so institutional and study details remain in the text. Annotators read each sampled email in full. The sample size of 100 to 200 keeps that exposure small.</p>
+<p><strong>Response.</strong> Confirm that the ethics file (REB #26-08-029) covers annotation by the research team. Annotate only cleaned, de-identified text on the secure servers, under the confidentiality terms that apply to the pipeline research assistant.</p>
+</section>
+</section>
+<section id="coding-design" class="level2">
+<h2 class="anchored" data-anchor-id="coding-design">Coding design</h2>
+<p>We developed a mock-up for an interface to assist with manual annotation: <a href="citf-coding-interface-mockup.html">citf-coding-interface-mockup.html</a>. This section describes its basic functionality and the rationale that informs the interface’s design.</p>
+<section id="code-from-a-selection" class="level3">
+<h3 class="anchored" data-anchor-id="code-from-a-selection">Code from a selection</h3>
+<p>Coding happens on the fly. A coder selects a passage in the newly written content, and a popover opens beside it with everything needed to code it. The coder chooses the type of code, topic or action, whether it applies to the passage or the whole email, and its capacity, primary or secondary. For a topic the coder then picks a category, which is one of the four themes, and a search box lists that category’s existing codes and offers to create a new one when none matches. Actions have no categories and go straight to the search box. Each application carries its own unsure flag. The mouse stays in the text, and the number keys pick a category.</p>
+<p>The interface keeps three levels apart. Passage codes attach to selected text and show as highlights, with a bold bar for primary topics, a lighter bar for secondary topics, and a dotted underline for actions. Whole-email codes, the residual marks, and the note sit in a strip under the header. Roles belong to people and are set in the review pane. A side panel on the popover lists the codings on the selected passage, where a coder switches capacity, marks a coding unsure, or removes it, and the review pane offers the same controls.</p>
+<p>Selections snap outward to whole words, and arrow buttons move either edge of a passage by one word, so a loose selection does not become a boundary disagreement.</p>
+</section>
+<section id="separate-topic-actor-and-action" class="level3">
+<h3 class="anchored" data-anchor-id="separate-topic-actor-and-action">Separate topic, actor, and action</h3>
+<p>The example codes mix subjects (Informed consent), activities (Cleaning, Uploading), and actors (Contracts officers, Research ethics boards). Contracts officer also appears as an Institutional role, so the same information would be coded twice. Topic codes cover activity and subject matter, and actors go to the role coding. Actions are coded like topics, from a short list such as request, provide, chase, confirm, and decide, at the level of a passage or the whole email and with the same choice of capacity. Topic alone cannot separate an email that sends a draft agreement from one that chases its signature, and chasing is the clearest trace of friction in the data. The pilot showed the risk when a topic labelled Catalogue Completion Reminders turned out to capture early introductions.</p>
+</section>
+<section id="define-codes-and-fix-the-unit-of-coding" class="level3">
+<h3 class="anchored" data-anchor-id="define-codes-and-fix-the-unit-of-coding">Define codes and fix the unit of coding</h3>
+<p>Each code gets a definition, inclusion and exclusion criteria, and two or three anchor examples, including a boundary case. Written rules cover the adjacent codes that will be confused, such as Schema / map / spreadsheet / variables against Data dictionary / metadata, Harmonization against Core data elements, and Data governance against Data sharing agreements. The pilot’s strongest cross-theme coupling was between variable mapping and the data dictionary, so that boundary gets its rule first. Coders code what the sender does in the newly written content of the email. They may see the prior message for context and ignore quoted history, so a reply that quotes a long agreement thread is coded for its own content.</p>
+<p>Every passage code is anchored to the text that justifies it, and a coder applies a secondary code only when a distinct passage carries out that activity, so a passing mention does not qualify. The passages limit over-application, speed adjudication, and allow a check on whether the model cites the same passages. A code is primary when it determines what the recipient must do next, or carries the main information conveyed when nothing is requested. An email can have several primary codes, which records equal weight without a separate flag.</p>
+</section>
+<section id="add-residual-values-and-an-unsure-flag" class="level3">
+<h3 class="anchored" data-anchor-id="add-residual-values-and-an-unsure-flag">Add residual values and an unsure flag</h3>
+<p>Separate values cover Other (a substantive email no code fits), Uncodable (translation or de-identification artefacts, empty content), and Automated notification. Each is marked on the email beside a note field, which is required for Other. Each code application carries its own unsure flag, since doubt attaches to a coding decision and an email can hold a confident primary code beside an uncertain secondary one. The flags feed codebook revision, and the reliability analysis reports agreement with and without the unsure applications.</p>
+</section>
+<section id="code-roles-on-the-person-kept-simple-for-round-1" class="level3">
+<h3 class="anchored" data-anchor-id="code-roles-on-the-person-kept-simple-for-round-1">Code roles on the person, kept simple for round 1</h3>
+<p>Round 1 codes each person once per study from a single list of roles grouped by domain, chosen from a select box in the review pane, with the date the role applies from. A crosswalk from the pilot’s five sender roles to the codebook roles keeps pilot findings comparable. Point man is renamed Point person, since gender is an analytic variable in this study. Automated services remains a role, and emails from it take the Automated notification value.</p>
+<p>Roles are the least settled part of the codebook. A role depends on the circumstances of an action and an interaction, and a title conflates it with position. A list of positions does not capture what a person did in a given exchange. Round 1 does not settle this. The disagreements coders show on roles decide afterward whether roles stay positional, become situated in the email or the interaction, or split into both. Coding people and institutions mentioned in the text waits on that decision.</p>
+</section>
+<section id="stage-the-process-and-keep-the-codebook-as-data" class="level3">
+<h3 class="anchored" data-anchor-id="stage-the-process-and-keep-the-codebook-as-data">Stage the process and keep the codebook as data</h3>
+<p>Two calibration rounds of about 20 to 30 emails are coded independently and discussed, and those emails stay outside the sample. The codebook version is frozen before the double-coded sample begins, and a dated changelog records later changes. Codes created on the fly during calibration stay provisional until reviewed, and creation turns off at the freeze. Annotators do not see NMF topics or model predictions, since those anchor judgments and undermine the independence of the NMF comparison. The sample uses a floor of about 25 emails per theme, with the theme taken from the NMF dominant topic, and a cap on emails per study so high-volume studies do not dominate. Coordination needs deliberate oversampling to reach that floor, since it is the smallest theme in the pilot, with about 1,600 topic assignments against about 3,800 for Agreements.</p>
+<p>Codes, definitions, and examples live in a YAML file that renders into the qmd and feeds the coding page and the model prompt, so the three cannot drift apart. This matches the literate programming commitment in the protocol.</p>
+</section>
+</section>
+<section id="framing-in-the-paper" class="level2">
+<h2 class="anchored" data-anchor-id="framing-in-the-paper">Framing in the paper</h2>
+<p>Present the design as two stages within the email work package. NMF with LLM labelling is the exploratory stage that produced the category scheme from the pilot corpus. Hand coding of a 100 to 200 email sample is the confirmatory stage that fixes those categories, and agreement between the local model and the human codes validates the model’s labels at scale. NMF stays unguided by the codes, so the two stages remain independent checks on each other. The same codes then carry into the network and questionnaire analyses. The application names NMF as the method, so the change goes into the protocol as a documented refinement, with the pilot’s topic model retained as the comparison showing how much of its structure the coded labels reproduce.</p>
+</section>
+<section id="recommendation" class="level2">
+<h2 class="anchored" data-anchor-id="recommendation">Recommendation</h2>
+<p>Run two calibration rounds on emails outside the sample, review the codes created on the fly, and freeze the codebook version. Then double-code the 100 to 200 email sample and treat its agreement thresholds as the go/no-go decision. If they are met, apply the codes at the theme level with a few-shot local model that uses the codebook’s anchor examples and is validated against the sample, keep the Other code, and refit NMF on the expanded corpus without guidance from the codes. If they are not met, keep NMF with dominant-topic assignment, which is the design the application already describes.</p>
+</section>
+<section id="appendix-initial-codebook" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-initial-codebook">Appendix: Initial codebook</h2>
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<p>This is a list of potential codes and code categories developed as part of a plan to shift toward a supervised method. I draw from the preliminary findings of the pilot stage.</p>
+<p>The initial set of primary code categories are the same as the themes identified in the pilot study, and are subject to further modification or expansion. I include a few exemplary codes for each code category, which were inspired by the topics and subtopics from each theme. I will also include a brief description of each category.</p>
+<p>This is similar to the process for developing the codebook for the BibVik project: <a href="https://zackbatist.info/BibVik/codebook" class="uri">https://zackbatist.info/BibVik/codebook</a></p>
+<p>I also document some early thinking on role definitions below.</p>
+</section>
+<section id="codebook" class="level3">
+<h3 class="anchored" data-anchor-id="codebook">Codebook</h3>
+<section id="topics" class="level4">
+<h4 class="anchored" data-anchor-id="topics">Topics</h4>
+<section id="agreement-and-contracts" class="level5">
+<h5 class="anchored" data-anchor-id="agreement-and-contracts">Agreement and contracts</h5>
+<ul>
+<li>Data governance</li>
+<li>Research ethics boards</li>
+<li>Data sharing agreements</li>
+<li>Contracts officers</li>
+<li>Informed consent</li>
+<li>Amendments / extensions / waivers</li>
+</ul>
+</section>
+<section id="data-operations" class="level5">
+<h5 class="anchored" data-anchor-id="data-operations">Data operations</h5>
+<ul>
+<li>Transfer</li>
+<li>Cleaning</li>
+<li>Preparation</li>
+<li>Uploading</li>
+<li>Schema / map / spreadsheet / variables</li>
+<li>Core data elements</li>
+<li>Harmonization</li>
+</ul>
+</section>
+<section id="study-documentation" class="level5">
+<h5 class="anchored" data-anchor-id="study-documentation">Study documentation</h5>
+<ul>
+<li>Data dictionary / metadata</li>
+<li>Cohort description</li>
+<li>Publications</li>
+<li>References / citations</li>
+<li>Authorship / credit</li>
+<li>Open data</li>
+<li>Institutional repository</li>
+</ul>
+</section>
+<section id="coordination" class="level5">
+<h5 class="anchored" data-anchor-id="coordination">Coordination</h5>
+<ul>
+<li>Meetings</li>
+<li>Introductions</li>
+<li>Contact info</li>
+<li>Calls for participation</li>
+</ul>
+</section>
+</section>
+<section id="roles" class="level4">
+<h4 class="anchored" data-anchor-id="roles">Roles</h4>
+<p>Roles are situated within three domains: CITF Core, Data Contributors, Institutional. These domains align with the project’s general goal, which assumes a distinction between the CITF Databank and its data contributors that is bridged through operational processes.</p>
+<p>As of right now (September 22, 2026), the institutional domain is still tentative. The other two domains comprise communities of practice with assumed knowledge and ways of working, which are attempting to align themselves. The institutional domain may be oriented by a set of priorities that may be generalized across institutions, but the roles within the domain do not necessarily comprise a cohesive unit. If the CITF core and each data contributor team are bounded collectives, then the institutional domain comprises relatively loosely-associated individual actors who interject with their distinct yet generalizable perspectives.</p>
+<section id="citf-core" class="level5">
+<h5 class="anchored" data-anchor-id="citf-core">CITF core</h5>
+<ul>
+<li>Leadership</li>
+<li>Data managers</li>
+<li>Operations manager</li>
+<li>Project liaison</li>
+</ul>
+</section>
+<section id="data-contributors" class="level5">
+<h5 class="anchored" data-anchor-id="data-contributors">Data contributors</h5>
+<ul>
+<li>Project lead</li>
+<li>Point person</li>
+<li>Data manager</li>
+</ul>
+</section>
+<section id="institutional" class="level5">
+<h5 class="anchored" data-anchor-id="institutional">Institutional</h5>
+<ul>
+<li>Contracts officer</li>
+<li>Information technology support</li>
+<li>Administrative contact</li>
+<li>Automated services</li>
+</ul>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/zackbatist\.info\/CITF-emails\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
