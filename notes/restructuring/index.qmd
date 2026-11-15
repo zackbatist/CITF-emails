@@ -1,15 +1,13 @@
 ---
 title: "Restructuring the CITF email analysis"
 date: 2026-11-13
-date-modified: 2026-11-14
+date-modified: 2026-11-15
 language:
   title-block-published: "Created"
   title-block-modified: "Updated"
 call-appendices: false
 tbl-cap-location: bottom
 link-citations: true
-nocite: |
-  @batist2026, @tunstall2022, @jardim2021
 format:
   html:
     toc: true
@@ -32,146 +30,8 @@ format:
         \captionsetup{font=small,labelfont=bf,justification=raggedright,singlelinecheck=false}
         \AtBeginEnvironment{longtable}{\setlength{\LTcapwidth}{\linewidth}}
         \setlength{\emergencystretch}{3em}
-        \publishers{Updated November 14, 2026}
-references:
-- author:
-  - family: Bevendorff
-    given: Janek
-  - family: Al Khatib
-    given: Khalid
-  - family: Potthast
-    given: Martin
-  - family: Stein
-    given: Benno
-  container-title: Proceedings of the 58th annual meeting of the
-    association for computational linguistics
-  doi: 10.18653/v1/2020.acl-main.108
-  id: bevendorff2020
-  issued: 2020
-  page: 1151-1158
-  publisher: Association for Computational Linguistics
-  title: Crawling and preprocessing mailing lists at scale for dialog
-    analysis
-  type: paper-conference
-- author:
-  - family: Jardim
-    given: Bruno
-  - family: Rei
-    given: Ricardo
-  - family: Almeida
-    given: Mariana S. C.
-  container-title: "Proceedings of the 16th conference of the european
-    chapter of the association for computational linguistics: Student
-    research workshop"
-  doi: 10.18653/v1/2021.eacl-srw.13
-  id: jardim2021
-  issued: 2021
-  page: 88-95
-  publisher: Association for Computational Linguistics
-  title: Multilingual email zoning
-  type: paper-conference
-- author:
-  - family: Brown
-    given: David West
-  - family: Laudenbach
-    given: Michael
-  container-title: Register Studies
-  doi: 10.1075/rs.20023.bro
-  id: brown2022
-  issue: 1
-  issued: 2022
-  page: 1-29
-  title: Stylistic variation in email
-  type: article-journal
-  volume: 4
-- author:
-  - family: Srivastava
-    given: Saurabh
-  - family: Singh
-    given: Gaurav
-  - family: Matsumoto
-    given: Shou
-  - family: Raz
-    given: Ali
-  - family: Costa
-    given: Paulo
-  - family: Poore
-    given: Joshua
-  - family: Yao
-    given: Ziyu
-  container-title: Proceedings of the 2023 conference on empirical
-    methods in natural language processing
-  doi: 10.18653/v1/2023.emnlp-main.801
-  id: srivastava2023
-  issued: 2023
-  page: 12964-12987
-  publisher: Association for Computational Linguistics
-  publisher-place: Singapore
-  title: "MailEx: Email event and argument extraction"
-  title-short: MailEx
-  type: paper-conference
-- author:
-  - family: Tunstall
-    given: Lewis
-  - family: Reimers
-    given: Nils
-  - family: Jo
-    given: Unso Eun Seo
-  - family: Bates
-    given: Luke
-  - family: Korat
-    given: Daniel
-  - family: Wasserblat
-    given: Moshe
-  - family: Pereg
-    given: Oren
-  doi: 10.48550/arXiv.2209.11055
-  id: tunstall2022
-  issued: 2022
-  publisher: "arXiv:2209.11055"
-  title: Efficient few-shot learning without prompts
-- author:
-  - family: Chawinga
-    given: Winner Dominic
-  - family: Zinn
-    given: Sandy
-  container-title: Library & Information Science Research
-  doi: 10.1016/j.lisr.2019.04.004
-  id: chawinga2019
-  issue: 2
-  issued: 2019
-  page: 109-122
-  title: "Global perspectives of research data sharing: A systematic
-    literature review"
-  title-short: Global perspectives of research data sharing
-  type: article-journal
-  volume: 41
-- author:
-  - family: Batist
-    given: Zachary
-  - family: Ouellet
-    given: Melissa
-  - family: Khezri
-    given: Sadun
-  - family: Murphy
-    given: Tanya
-  - family: Noza
-    given: Aklil
-  - family: Abbasgholizadeh-Rahimi
-    given: Samira
-  - family: Bourque
-    given: Guillaume
-  - family: Buckeridge
-    given: David
-  id: batist2026
-  issued: 2026
-  note: Manuscript in preparation
-  title: "Revealing the administrative process of data sharing:
-    LLM-assisted topic modelling of COVID-19 immunity task force
-    databank operations"
-  title-short: Revealing the administrative process of data sharing
-  type: manuscript
-  url: "https://zackbatist.info/CITF-emails/topic-modelling/"
+        \publishers{Updated November 15, 2026}
+bibliography: references.bib
 ---
 
 # Summary
@@ -226,7 +86,7 @@ Thread stitching joins the linked emails into threads. A reply joins its parent 
 
 Zoning divides each email into six zones. The authored zone holds the text the sender wrote for this message, greetings and closing lines included. The signature, banner, quoted and other zones hold text the sender did not write, and the markup zone holds what regular expressions match as markup. Keeping the non-authored zones apart shows how many of each category's tags come from signatures, banners, quoted messages and other text.
 
-Chipmunk [@bevendorff2020], at commit `ecc2c70`, gives every line one of its 15 labels, and block 10 maps those labels onto the six zones. I compared Chipmunk with Okapi, which I rebuilt from its paper and trained, and kept Chipmunk, since Okapi labelled whole signature blocks as authored in three of five CITF emails. Five correction rules then fix Chipmunk's known errors, and regular expressions mark markup, attachment and meeting lines, banners and reply headers, in that order of precedence.
+Chipmunk [@bevendorff2020], at commit `ecc2c70`, gives every line one of its 15 labels, and block 10 maps those labels onto the six zones. I compared Chipmunk with Okapi [@jardim2021], which I rebuilt from its paper and trained, and kept Chipmunk, since Okapi labelled whole signature blocks as authored in three of five CITF emails. Five correction rules then fix Chipmunk's known errors, and regular expressions mark markup, attachment and meeting lines, banners and reply headers, in that order of precedence.
 
 On 40 held-out emails the authored zone reaches 98.7% precision and 97.1% recall. That figure holds only for the 6,056 emails in block 7's pool, the filter that kept the tagging checks manageable. Zoning all 10,397 study emails brings in short follow-ups and confirmations that the pool excluded, and a two-line reply gives Chipmunk little layout to read. It also brings in the longest emails, which carry the longest quoted chains and the most signatures inside quoted text. A second held-out check draws from emails under 300 characters and over 2,000, by project, and the coder follows the same rules as before. `zoning-tests/` holds the comparison of Chipmunk and Okapi, both held-out checks and their scores.
 
@@ -234,7 +94,7 @@ Sentence boundaries then divide the authored zone into the unit that function an
 
 ### De-identification
 
-Presidio replaces the personal information in the text shown on the coding page. Its recognizers find personal names, email addresses and URLs, the same kinds that the topic modelling preprint replaced with placeholders.
+Presidio replaces the personal information in the text shown on the coding page. Its recognizers find personal names, email addresses and URLs, the same kinds that the topic modelling preprint [@batist2026] replaced with placeholders.
 
 Each person needs one pseudonym across the corpus, so that a coder reading a thread can follow who writes to whom, which a placeholder such as `<PERSON>` hides. A lookup keyed on each person's email address and on the names the project information lists gives "Dr. Smith", "Jane" and her address one pseudonym. The pseudonym carries no role, since a label such as the PI of a small study identifies the person. The coding page shows the role in its own column, which gives coders the context Ian asked for.
 
@@ -297,7 +157,7 @@ Grouping the categories into rhetorical styles is the question David and Ian pre
 
 Function codes label each sentence in the authored zone with the work it serves. Functions have their own sample, coding page, codebook, agreement figures and classifier, in `coding/functions/`.
 
-The pipeline in `how-what-strategy.qmd` keeps labelling predictable and auditable. Discovery coding comes first, on a calibration set of whole threads with no codebook, so that the categories come from the emails. The coders group their codes into function categories and write a codebook with definitions, inclusion and exclusion criteria and anchor examples. Coders then label a training set against the frozen codebook, with small-text choosing the sentences the model is least certain about, and each change to the training set produces a new version and a retrained model. A test set of about 200 sentences, double-coded and stratified by project and milestone, never enters training and gives both human agreement and model accuracy for each category. I compare SetFit with logistic regression on frozen sentence embeddings and with a fine-tuned small encoder, and the simplest model that reaches the floor wins. A category enters the analysis only if the model's F1 on the test set reaches the agreement the coders achieved on it. No DocuScope feature ever enters the classifiers.
+The pipeline in `how-what-strategy.qmd` keeps labelling predictable and auditable. Discovery coding comes first, on a calibration set of whole threads with no codebook, so that the categories come from the emails. The coders group their codes into function categories and write a codebook with definitions, inclusion and exclusion criteria and anchor examples. Coders then label a training set against the frozen codebook, with small-text choosing the sentences the model is least certain about, and each change to the training set produces a new version and a retrained model. A test set of about 200 sentences, double-coded and stratified by project and milestone, never enters training and gives both human agreement and model accuracy for each category. I compare SetFit [@tunstall2022] with logistic regression on frozen sentence embeddings and with a fine-tuned small encoder, and the simplest model that reaches the floor wins. A category enters the analysis only if the model's F1 on the test set reaches the agreement the coders achieved on it. No DocuScope feature ever enters the classifiers.
 
 Coding whole threads answers Ian's point that coding sometimes needs the sender's role and the email's context, since a short reply makes sense only beside the message it answers. Drawing threads by project and milestone ties the coding to the timeline. The coding page exports labels by sentence identifier with character offsets on the raw body, so that codes, tags and zones line up.
 
