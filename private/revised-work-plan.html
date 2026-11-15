@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-10-13">
+
+<title>Revised Work Plan – CITF Emails Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0b10f4a090abded817b2fe5f069b6edb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style type="text/css">
+p {
+  text-align: justify !important;
+}
+</style>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Revised Work Plan</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../topic-modelling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Topic Modelling</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../network-analysis/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Network Analysis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../data-complexity/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Complexity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../codebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Codebook</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../research-protocol/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Research Protocol</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#reviewer-feedback" id="toc-reviewer-feedback" class="nav-link active" data-scroll-target="#reviewer-feedback">Reviewer feedback</a>
+  <ul class="collapse">
+  <li><a href="#strengths" id="toc-strengths" class="nav-link" data-scroll-target="#strengths">Strengths</a></li>
+  <li><a href="#weaknesses" id="toc-weaknesses" class="nav-link" data-scroll-target="#weaknesses">Weaknesses</a></li>
+  </ul></li>
+  <li><a href="#corpus-expansion" id="toc-corpus-expansion" class="nav-link" data-scroll-target="#corpus-expansion">Corpus expansion</a></li>
+  <li><a href="#questionnaire-replacing-interviews" id="toc-questionnaire-replacing-interviews" class="nav-link" data-scroll-target="#questionnaire-replacing-interviews">Questionnaire, replacing interviews</a></li>
+  <li><a href="#reb-submission" id="toc-reb-submission" class="nav-link" data-scroll-target="#reb-submission">REB submission</a>
+  <ul class="collapse">
+  <li><a href="#email-corpus-waiver-of-consent-fully-retroactive" id="toc-email-corpus-waiver-of-consent-fully-retroactive" class="nav-link" data-scroll-target="#email-corpus-waiver-of-consent-fully-retroactive">Email corpus: waiver of consent, fully retroactive</a></li>
+  <li><a href="#questionnaire-standard-informed-consent-fully-prospective" id="toc-questionnaire-standard-informed-consent-fully-prospective" class="nav-link" data-scroll-target="#questionnaire-standard-informed-consent-fully-prospective">Questionnaire: standard informed consent, fully prospective</a></li>
+  </ul></li>
+  <li><a href="#knowledge-mobilization" id="toc-knowledge-mobilization" class="nav-link" data-scroll-target="#knowledge-mobilization">Knowledge mobilization</a></li>
+  <li><a href="#fall-2026-spring-2027-resubmission" id="toc-fall-2026-spring-2027-resubmission" class="nav-link" data-scroll-target="#fall-2026-spring-2027-resubmission">Fall 2026 / Spring 2027 resubmission</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="revised-work-plan.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Revised Work Plan</h1>
+<p class="subtitle lead">After receiving funding from CIHR’s Pandemic Preparedness Priority Fund</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 13, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The project failed to obtain funding from the CIHR’s main Project Grant program, but received $100,000 from the Pandemic Preparedness priority stream. This is half the money we applied for, so we must therefore adjust our work plan to fit within this limited budget. This document outlines the reviewers’ feedback and a revised work plan that accommodates their concerns and the reduced budget.</p>
+<p>The proposal was submitted to the Health Policy and Systems Management (HPM) Research panel (582492; Spring 2026). It was a re-submission of a prior attempt (553620; Fall 2025) directed toward the Knowledge Translation (KT) Research panel.</p>
+<section id="reviewer-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="reviewer-feedback">Reviewer feedback</h2>
+<p>Our final rating is 3.95/5 (discussed), and was ranked second among the non-funded mainline Project Grant proposals.</p>
+<ul>
+<li>R1: 4.2</li>
+<li>R2: 4.3</li>
+<li>R3: 3.9</li>
+<li>Average: 4.13</li>
+<li>Adjusted: -4.36%</li>
+</ul>
+<section id="strengths" class="level3">
+<h3 class="anchored" data-anchor-id="strengths">Strengths</h3>
+<ul>
+<li>Significance and potential impact are considerable and read as globally relevant, not just Canadian.</li>
+<li>Team is experienced; budget is proportionate.</li>
+<li>Feasibility work already done meaningfully de-risks the project.</li>
+<li>Topic modelling comparison (NMF vs.&nbsp;K-Means, LDA, BERTopic, with coherence scores) is well-detailed.</li>
+<li>Six-phase workflow is clear and generalizable beyond CITF.</li>
+<li>Network analysis is a genuine strength.</li>
+<li>Interview design (recruitment strategy and the three domains) is well-detailed and appropriate.</li>
+</ul>
+</section>
+<section id="weaknesses" class="level3">
+<h3 class="anchored" data-anchor-id="weaknesses">Weaknesses</h3>
+<p><strong>Third-party consent in the email corpus.</strong> The team has consent and access to the corpus holder’s mailbox, but emails involve senders and recipients who didn’t individually consent, and it’s unclear whether or how their inclusion is covered by ethics approval.</p>
+<p><strong>SGBA+/gender treated as an add-on rather than integrated.</strong> The feminist framing needs to be operationalized as an analytic thread inside the methods, not confined to a standalone section.</p>
+<p><strong>Qualitative/quantitative integration under-specified.</strong> How the email analysis and interviews connect needs a stated mechanism, not just a named design.</p>
+<p><strong>AI/LLM use for qualitative coding lacks a validation or reflexivity step.</strong> Coding assisted by AI needs a formal validation protocol, double-coding a subsample, an inter-rater metric, a reflexivity statement, none of which are present.</p>
+<p><strong>Writing quality.</strong> Meaningless critique of specific words and phrases that apparently signal use of AI writing tools.</p>
+</section>
+</section>
+<section id="corpus-expansion" class="level2">
+<h2 class="anchored" data-anchor-id="corpus-expansion">Corpus expansion</h2>
+<p>The un-funded pilot phase developed the data processing pipeline and also established the feasibility of analysis by subjecting the initial dataset of ~35,000 emails (output: 6,833) to NMF topic modelling, applying the six-phase/five-role coding scheme, and producing the findings at <a href="https://zackbatist.info/CITF-emails/topic-modelling">zackbatist.info/CITF-emails/topic-modelling</a>.</p>
+<p>The pilot’s emails took several months to clean, translate and de-identify — work that Melissa did herself based on Tanya’s prior de-deduplication effort. The proposal committed to running the same pipeline on additional mailboxes belonging to relevant individuals (e.g.&nbsp;David, Ahmed, Sadun). Expanding the corpus means applying that same protocol to each new mailbox.</p>
+<p>Melissa has already established the technique and know-how and is best suited to continue with this work on a part-time basis throughout the Fall 2026 semester, coinciding with her PhD coursework. In accordance with McGill’s policies concerning work hours outside PhD activities, her work on the CITF-Emails data processing will occupy no more than 12 hours per week. In practical terms, Melissa’s casual RA contract will be extended beyond August 2026, using funds from the CITF-Emails grant. At 40$/hour, 12 hours per week, over 12 weeks (September, October, and November, more or less), the grant will effectively supplement her income by $5,760.00</p>
+<p>The k=14 topics reported in the <a href="../topic-modelling/index.html">preprint</a> and cited in the grant text are specific to the pilot’s smaller corpus. All results will need to be updated based on the revised corpus. Both the preprint and grant resubmissions need updated numbers once that’s done, and we should consider holding back the preprint before submitting for peer-review.</p>
+</section>
+<section id="questionnaire-replacing-interviews" class="level2">
+<h2 class="anchored" data-anchor-id="questionnaire-replacing-interviews">Questionnaire, replacing interviews</h2>
+<p>The protocol includes a qualitative component based on interviews with representatives of projects that shared data with the CITF Databank. However, the reduced budget condenses our timeline, and it may be more efficient to pursue a questionnaire-based data collection method instead of interviews. This will reduce overhead of contacting and setting up individual interviews, and provide a more streamlined dataset to work with. We may opt for a two-stage process whereby we contact specific responders to participate in a more open-ended interview. Specific selection criteria will have to be addressed.</p>
+<p>The interview guide outlined in the protocol covers three domains that may be translated to the questionnaire: (1) participants’ professional backgrounds and experiences, (2) studies’ missions, purposes, and motivations, and (3) practices, procedures, and relationships. The questionnaire should be built out of that same structure. The first section may also serve as a mechanism for branching logic, with different kinds of questions for people with different roles.</p>
+<p>The emails analysis relates a few primary variables: topics, phases, gender, affiliations, roles. The questionnaire will ask participants’ about their gender, affiliation, and role, and questions or blocks of questions will be designed to correspond with topic and phase distinctions ascertained in prior email analysis. There is no need to draw direct relationships between individual email senders and questionnaire respondents; the analysis focuses on aggregate experiences corresponding with roles, genders, and institutional hosts, and parity in our controlled vocabularies for the analysis of emails and questionnaire data allows for comparison of these distinct perspectival and documentary data sources.</p>
+<p>It may be helpful to do a brief pilot with 2–3 respondents before full distribution, as a validation and refinement stage.</p>
+</section>
+<section id="reb-submission" class="level2">
+<h2 class="anchored" data-anchor-id="reb-submission">REB submission</h2>
+<p>This submission bundles two distinct components with different consent logic. The email corpus (including both pilot and expansion) needs a waiver of consent that’s retroactive throughout. The questionnaire needs standard informed consent, since respondents will be asked directly and nothing has been fielded yet. Zack is currently drafting a REB proposal, which we intend to submit by end of August 2026.</p>
+<section id="email-corpus-waiver-of-consent-fully-retroactive" class="level3">
+<h3 class="anchored" data-anchor-id="email-corpus-waiver-of-consent-fully-retroactive">Email corpus: waiver of consent, fully retroactive</h3>
+<p>The consent gap is specific to third parties, not the mailbox owners. The Operations Manager, Scientific Director and one of two Data Managers have consented to their own mailboxes being used (we have not yet approached the other Data Manager who has left the project, but we anticipate an affirmative response). What’s missing is consent from the senders and recipients who corresponded with them. The waiver needs to be scoped and argued as covering that specific population, not framed as if consent is missing across the board.</p>
+<p>Submitting now, while the first paper is still an unpublished preprint, also means there’s still room to revise if the board asks for changes.</p>
+<p>Build the argument around minimal risk. The emails were sent in a professional, institutional capacity, not personal correspondence. De-identification is applied before any analysis or storage of results. Outputs are aggregate and topic-level rather than reproducing individual statements. State plainly that all of the corpus, not just the pilot portion, has been or will be processed under these same safeguards.</p>
+<p>One potential concern is use of identifiable information. We do intend to capture people’s institutional affiliations, roles and genders. Affiliations will be broad enough to encompass larger institutions that host projects, or kinds of institutions, rather than projects themselves (i.e., University of Montreal rather than <a href="https://www.maelstrom-research.org/study/risc">RISC</a>; “independent research centre” rather than CanPath). Roles, which characterize a person’s responsibilities in relation to a project’s collective objectives, will also have to be presented as conceptually distinct from titles, which are identifiable information.</p>
+</section>
+<section id="questionnaire-standard-informed-consent-fully-prospective" class="level3">
+<h3 class="anchored" data-anchor-id="questionnaire-standard-informed-consent-fully-prospective">Questionnaire: standard informed consent, fully prospective</h3>
+<p>Similar concerns as above. We do not collect identifying information; identity is only characterized in terms of relatively abstract categories like roles, institutional affiliations, and gender. Re-state the fact that no direct association is drawn with email records, and that these are parallel tracks.</p>
+<p>We will primarily report descriptive or associative statistical findings in aggregate categories large enough to preserve anonymity. However, we will also seek consent to publish specific de-identified passages from questionnaire or interview responses.</p>
+<p>Withdrawal needs a stated mechanism, since a respondent could ask to withdraw after their response has already been aggregated. Assign each response a respondent-controlled identifier so a withdrawal request can be matched to their specific response before aggregation, and state a cutoff date after which withdrawal is no longer possible.</p>
+</section>
+</section>
+<section id="knowledge-mobilization" class="level2">
+<h2 class="anchored" data-anchor-id="knowledge-mobilization">Knowledge mobilization</h2>
+<p>Our knowledge mobilization plan operates on three fronts: partner debrief, publication, and DRAC/GA4GH engagement. While not much needs to change, we should identify specific trigger points to initiate each KM activity.</p>
+</section>
+<section id="fall-2026-spring-2027-resubmission" class="level2">
+<h2 class="anchored" data-anchor-id="fall-2026-spring-2027-resubmission">Fall 2026 / Spring 2027 resubmission</h2>
+<p>It may be prudent to wait to re-submit for a full Project Grant. We will have greater chance of success once we obtain REB approval, finish expanding the corpus, re-analyzing and submitting the topic modelling paper, and initiating work on the network analysis paper - all of which are feasible prior to March 2027.</p>
+<p>We should also consider adding a qualitative methods collaborator.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/zackbatist\.info\/CITF-emails\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
