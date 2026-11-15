@@ -605,7 +605,7 @@ citf-emails/
 │   ├── views.ipynb                 # thread view, timelines, comparisons
 │   └── data/                       # untracked
 ├── notes/
-│   ├── notes.qmd, _metadata.yml
+│   ├── index.qmd                   # listing of the notes
 │   ├── how-what-strategy.qmd
 │   └── restructuring/              # this document, with its own .gitignore
 ├── grant-writing/                  # private repository, untracked
@@ -642,7 +642,7 @@ The coding sample keeps its seed, so block 6 regenerates the same 774 tags with 
 
 Each folder keeps its checks in a `tests/` folder of its own, with one subfolder per check and the write-up in that folder's `sections/`. `corpus/tests/` holds the checks on the automated-message patterns, the zones, the sentences, the de-identification, the detection and the links. The zoning checks cover the Chipmunk and Okapi tests on Gmane and Enron, the five CITF emails, the zone check of 80 emails and the held-out checks, and the link checks include the timelines of two real projects drawn without codes. `coding/rhetoric/tests/` holds the tag coding sample and the planned validation, and the `tests/` folders of `coding/functions/` and `coding/actions/` hold each test set and the comparison of SetFit with its baselines, with the MAILEX test under actions. The test subfolder names are proposed labels.
 
-`notes/` holds working notes, following `notes/` in `CITF-Postdoc`, with a `_metadata.yml` and a `notes.qmd` listing page. `how-what-strategy.qmd` moves there, along with the notes not yet seen here. This document is the first note in `notes/`, at `notes/restructuring/index.qmd`. The summary of the call and the transcript sit beside it as `_call-summary.qmd` and `_transcript.qmd`, which the site skips because of the leading underscore. A `.gitignore` of the folder's own lists both files, so the protection moves with the folder, and the root `.gitignore` stays as it is. The published page leaves out the summary of the call and the transcript, since both are personal records of the call, and a local render with `-M call-appendices:true` includes them.
+`notes/` holds working notes, following `notes/` in `CITF-Postdoc`, with `notes/index.qmd` as the page that lists them. `how-what-strategy.qmd` moves there, along with the notes not yet seen here. This document is the first note in `notes/`, at `notes/restructuring/index.qmd`. The summary of the call and the transcript sit beside it as `_call-summary.qmd` and `_transcript.qmd`, which the site skips because of the leading underscore. A `.gitignore` of the folder's own lists both files, so the protection moves with the folder, and the root `.gitignore` stays as it is. The published page leaves out the summary of the call and the transcript, since both are personal records of the call, and a local render with `-M call-appendices:true` includes them.
 
 `grant-writing/` is its own private repository on `git.mchi.mcgill.ca`, cloned into `citf-emails/grant-writing/` and listed in `.gitignore`. `citf-emails` is public on GitHub, so GitHub publishes every tracked file and every past version of it, and grant drafts, budgets and reviews cannot sit there. Listed in `.gitignore`, the grant repository leaves no trace in `citf-emails`, and I work in it as an ordinary repository. [Appendix A](#sec-grant-move) gives the steps to carry the grant work and its history over from `CITF-Postdoc`.
 

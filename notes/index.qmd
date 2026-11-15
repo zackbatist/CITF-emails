@@ -1,0 +1,14 @@
+---
+title: Notes
+listing:
+  contents:
+    - "*.qmd"
+    - "*/index.qmd"
+  type: table
+  sort: "date-modified desc"
+  categories: false
+  feed: false
+  fields: [date-modified, title]
+  filter-ui: false
+  sort-ui: false
+---
