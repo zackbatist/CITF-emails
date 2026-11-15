@@ -11,6 +11,7 @@ project:
     - "!**/sections/" # Section files are included in each index.qmd, not pages of their own
     - "!**/*.ipynb" # Notebooks hold email text in their outputs
     - "!docuscope-assessment/data/" # Email data
+    - "!**/_*.qmd" # Personal records and fragments, included by their index.qmd
 website: 
   site-url: https://zackbatist.info/CITF-emails/
   repo-url: https://github.com/zackbatist/CITF-emails
@@ -43,6 +44,10 @@ website:
         text: DocuScope Assessment
       - href: research-protocol/index.qmd
         text: Research Protocol
+      - section: Notes
+        contents:
+          - href: notes/restructuring/index.qmd
+            text: Restructuring Plan
 toc: true
 toc-depth: 3
 toc-expand: 2

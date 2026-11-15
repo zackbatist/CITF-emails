@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 48 1470 1059" font-family="Helvetica, Arial, sans-serif" font-size="12">
+<rect width="1470" height="1107" fill="#ffffff"/>
+<text x="20" y="84" font-weight="bold" font-size="13" fill="#222">Events</text>
+<line x1="384.5217391304536" y1="88" x2="384.5217391304536" y2="1022" stroke="#c9ced6" stroke-width="1" stroke-dasharray="2,4"/>
+<polygon points="384.5217391304536,72 392.5217391304536,80 384.5217391304536,88 376.5217391304536,80" fill="#6c3483"/>
+<text x="384.5217391304536" y="66" text-anchor="middle" fill="#6c3483" font-size="11">Webinar</text>
+<line x1="550.0869565217486" y1="88" x2="550.0869565217486" y2="1022" stroke="#c9ced6" stroke-width="1" stroke-dasharray="2,4"/>
+<polygon points="550.0869565217486,72 558.0869565217486,80 550.0869565217486,88 542.0869565217486,80" fill="#6c3483"/>
+<text x="550.0869565217486" y="66" text-anchor="middle" fill="#6c3483" font-size="11">Webinar</text>
+<line x1="757.043478260879" y1="88" x2="757.043478260879" y2="1022" stroke="#c9ced6" stroke-width="1" stroke-dasharray="2,4"/>
+<polygon points="757.043478260879,72 765.043478260879,80 757.043478260879,88 749.043478260879,80" fill="#6c3483"/>
+<text x="757.043478260879" y="66" text-anchor="middle" fill="#6c3483" font-size="11">CITF conference</text>
+<line x1="953.6521739130623" y1="88" x2="953.6521739130623" y2="1022" stroke="#c9ced6" stroke-width="1" stroke-dasharray="2,4"/>
+<polygon points="953.6521739130623,72 961.6521739130623,80 953.6521739130623,88 945.6521739130623,80" fill="#6c3483"/>
+<text x="953.6521739130623" y="66" text-anchor="middle" fill="#6c3483" font-size="11">CITF report</text>
+<line x1="20" y1="120" x2="1440" y2="120" stroke="#bbb"/>
+<text x="20" y="140" font-weight="bold" font-size="13" fill="#222">Project A</text>
+<text x="20" y="188" fill="#222" font-size="11" font-weight="bold">People</text>
+<line x1="250" y1="184" x2="1440" y2="184" stroke="#eef0f3"/>
+<text x="240" y="188" text-anchor="end" fill="#444" font-size="11">Task force director</text>
+<line x1="250" y1="206" x2="1440" y2="206" stroke="#eef0f3"/>
+<text x="240" y="210" text-anchor="end" fill="#444" font-size="11">Scientific Director</text>
+<line x1="250" y1="228" x2="1440" y2="228" stroke="#eef0f3"/>
+<text x="240" y="232" text-anchor="end" fill="#444" font-size="11">Operations Manager</text>
+<line x1="250" y1="250" x2="1440" y2="250" stroke="#eef0f3"/>
+<text x="240" y="254" text-anchor="end" fill="#444" font-size="11">Data manager</text>
+<line x1="250" y1="272" x2="1440" y2="272" stroke="#eef0f3"/>
+<text x="240" y="276" text-anchor="end" fill="#444" font-size="11">Principal investigator</text>
+<line x1="250" y1="294" x2="1440" y2="294" stroke="#eef0f3"/>
+<text x="240" y="298" text-anchor="end" fill="#444" font-size="11">Study coordinator</text>
+<line x1="250" y1="316" x2="1440" y2="316" stroke="#eef0f3"/>
+<text x="240" y="320" text-anchor="end" fill="#444" font-size="11">Contracts officer</text>
+<text x="20" y="354" fill="#222" font-size="11" font-weight="bold">Focal objects</text>
+<line x1="250" y1="350" x2="1440" y2="350" stroke="#eef0f3"/>
+<text x="240" y="354" text-anchor="end" fill="#444" font-size="11">Data sharing agreement</text>
+<line x1="250" y1="372" x2="1440" y2="372" stroke="#eef0f3"/>
+<text x="240" y="376" text-anchor="end" fill="#444" font-size="11">Core data elements</text>
+<text x="20" y="410" fill="#222" font-size="11" font-weight="bold">Attachments</text>
+<line x1="250" y1="406" x2="1440" y2="406" stroke="#eef0f3"/>
+<text x="240" y="410" text-anchor="end" fill="#444" font-size="11">Spreadsheets</text>
+<line x1="250" y1="428" x2="1440" y2="428" stroke="#eef0f3"/>
+<text x="240" y="432" text-anchor="end" fill="#444" font-size="11">PDFs</text>
+<line x1="250" y1="450" x2="1440" y2="450" stroke="#eef0f3"/>
+<text x="240" y="454" text-anchor="end" fill="#444" font-size="11">Text documents</text>
+<text x="20" y="488" fill="#222" font-size="11" font-weight="bold">Publications</text>
+<line x1="250" y1="484" x2="1440" y2="484" stroke="#eef0f3"/>
+<text x="240" y="488" text-anchor="end" fill="#444" font-size="11">Preprints</text>
+<line x1="250" y1="506" x2="1440" y2="506" stroke="#eef0f3"/>
+<text x="240" y="510" text-anchor="end" fill="#444" font-size="11">Papers</text>
+<line x1="250" y1="528" x2="1440" y2="528" stroke="#eef0f3"/>
+<text x="240" y="532" text-anchor="end" fill="#444" font-size="11">Datasets</text>
+<line x1="20" y1="332" x2="1440" y2="332" stroke="#d5d8dc" stroke-dasharray="1,3"/>
+<line x1="20" y1="388" x2="1440" y2="388" stroke="#d5d8dc" stroke-dasharray="1,3"/>
+<line x1="20" y1="466" x2="1440" y2="466" stroke="#d5d8dc" stroke-dasharray="1,3"/>
+<line x1="343.1304347826181" y1="172" x2="343.1304347826181" y2="546" stroke="#b03a2e" stroke-width="2" stroke-dasharray="7,4"/>
+<text x="347.1304347826181" y="168" text-anchor="start" fill="#b03a2e" font-size="11">Funding start</text>
+<line x1="436.26086956523625" y1="172" x2="436.26086956523625" y2="546" stroke="#b03a2e" stroke-width="2" stroke-dasharray="7,4"/>
+<text x="440.26086956523625" y="168" text-anchor="start" fill="#b03a2e" font-size="11">First data request</text>
+<line x1="659.773913043482" y1="172" x2="659.773913043482" y2="546" stroke="#b03a2e" stroke-width="2" stroke-dasharray="7,4"/>
+<text x="663.773913043482" y="168" text-anchor="start" fill="#b03a2e" font-size="11">DSA signed</text>
+<line x1="870.8695652173913" y1="172" x2="870.8695652173913" y2="546" stroke="#b03a2e" stroke-width="2" stroke-dasharray="7,4"/>
+<text x="866.8695652173913" y="168" text-anchor="end" fill="#b03a2e" font-size="11">Data upload</text>
+<line x1="943.3043478260681" y1="172" x2="943.3043478260681" y2="546" stroke="#b03a2e" stroke-width="2" stroke-dasharray="7,4"/>
+<text x="947.3043478260681" y="168" text-anchor="start" fill="#b03a2e" font-size="11">Data cataloguing</text>
+<line x1="446.6086956521833" y1="228" x2="477.6521739130246" y2="272" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="477.6521739130246" y1="272" x2="514.9043478260813" y2="228" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="556.2956521739168" y1="228" x2="585.2695652173687" y2="316" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="585.2695652173687" y1="316" x2="612.1739130434783" y2="228" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="612.1739130434783" y1="228" x2="643.2173913043666" y2="184" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="643.2173913043666" y1="184" x2="674.2608695652079" y2="272" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="725.9999999999906" y1="294" x2="757.043478260879" y2="250" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="757.043478260879" y1="250" x2="788.0869565217203" y2="294" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="788.0869565217203" y1="294" x2="819.1304347826087" y2="250" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="819.1304347826087" y1="250" x2="850.1739130434971" y2="294" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="850.1739130434971" y1="294" x2="881.2173913043384" y2="250" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="881.2173913043384" y1="250" x2="901.9130434782797" y2="206" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="514.9043478260813" y1="228" x2="556.2956521739168" y2="228" stroke="#2e5e8c" stroke-width="2" stroke-dasharray="6,4"/>
+<circle cx="446.6086956521833" cy="228" r="5.5" fill="#2e5e8c"/>
+<circle cx="477.6521739130246" cy="272" r="5.5" fill="#2e5e8c"/>
+<circle cx="514.9043478260813" cy="228" r="5.5" fill="#2e5e8c"/>
+<circle cx="556.2956521739168" cy="228" r="5.5" fill="#2e5e8c"/>
+<circle cx="585.2695652173687" cy="316" r="5.5" fill="#2e5e8c"/>
+<circle cx="612.1739130434783" cy="228" r="5.5" fill="#2e5e8c"/>
+<circle cx="643.2173913043666" cy="184" r="5.5" fill="#2e5e8c"/>
+<circle cx="674.2608695652079" cy="272" r="5.5" fill="#2e5e8c"/>
+<circle cx="725.9999999999906" cy="294" r="5.5" fill="#2e5e8c"/>
+<circle cx="757.043478260879" cy="250" r="5.5" fill="#2e5e8c"/>
+<circle cx="788.0869565217203" cy="294" r="5.5" fill="#2e5e8c"/>
+<circle cx="819.1304347826087" cy="250" r="5.5" fill="#2e5e8c"/>
+<circle cx="850.1739130434971" cy="294" r="5.5" fill="#2e5e8c"/>
+<circle cx="881.2173913043384" cy="250" r="5.5" fill="#2e5e8c"/>
+<circle cx="901.9130434782797" cy="206" r="5.5" fill="#2e5e8c"/>
+<circle cx="353.47826086956525" cy="228" r="5.5" fill="#2e5e8c"/>
+<circle cx="995.0434782608507" cy="272" r="5.5" fill="#2e5e8c"/>
+<circle cx="1119.2173913043573" cy="228" r="5.5" fill="#2e5e8c"/>
+<polygon points="612.1739130434783,421.5 618.6739130434783,433.5 605.6739130434783,433.5" fill="#117a65"/>
+<rect x="813.6304347826087" y="400.5" width="11.0" height="11.0" fill="#117a65"/>
+<rect x="875.7173913043384" y="400.5" width="11.0" height="11.0" fill="#117a65"/>
+<polygon points="794.1,450.0 791.1,455.2 785.1,455.2 782.1,450.0 785.1,444.8 791.1,444.8" fill="#117a65"/>
+<line x1="446.6086956521833" y1="343" x2="446.6086956521833" y2="357" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="519.0434782608602" y1="343" x2="519.0434782608602" y2="357" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="581.1304347825899" y1="343" x2="581.1304347825899" y2="357" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="643.2173913043666" y1="343" x2="643.2173913043666" y2="357" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="674.2608695652079" y1="343" x2="674.2608695652079" y2="357" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="725.9999999999906" y1="343" x2="725.9999999999906" y2="357" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="757.043478260879" y1="365" x2="757.043478260879" y2="379" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="819.1304347826087" y1="365" x2="819.1304347826087" y2="379" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="901.9130434782797" y1="365" x2="901.9130434782797" y2="379" stroke="#5d6d7e" stroke-width="2.5"/>
+<rect x="787.2260869564991" y="477" width="10" height="14" rx="1" fill="#fff" stroke="#7f8c8d" stroke-width="1.6"/>
+<rect x="979.6956521739036" y="499" width="10" height="14" rx="1" fill="#fff" stroke="#7f8c8d" stroke-width="1.6"/>
+<rect x="1186.652173913034" y="521" width="10" height="14" rx="1" fill="#fff" stroke="#7f8c8d" stroke-width="1.6"/>
+<line x1="20" y1="576" x2="1440" y2="576" stroke="#bbb"/>
+<text x="20" y="596" font-weight="bold" font-size="13" fill="#222">Project B</text>
+<text x="20" y="644" fill="#222" font-size="11" font-weight="bold">People</text>
+<line x1="250" y1="640" x2="1440" y2="640" stroke="#eef0f3"/>
+<text x="240" y="644" text-anchor="end" fill="#444" font-size="11">Task force director</text>
+<line x1="250" y1="662" x2="1440" y2="662" stroke="#eef0f3"/>
+<text x="240" y="666" text-anchor="end" fill="#444" font-size="11">Scientific Director</text>
+<line x1="250" y1="684" x2="1440" y2="684" stroke="#eef0f3"/>
+<text x="240" y="688" text-anchor="end" fill="#444" font-size="11">Operations Manager</text>
+<line x1="250" y1="706" x2="1440" y2="706" stroke="#eef0f3"/>
+<text x="240" y="710" text-anchor="end" fill="#444" font-size="11">Data manager</text>
+<line x1="250" y1="728" x2="1440" y2="728" stroke="#eef0f3"/>
+<text x="240" y="732" text-anchor="end" fill="#444" font-size="11">Principal investigator</text>
+<line x1="250" y1="750" x2="1440" y2="750" stroke="#eef0f3"/>
+<text x="240" y="754" text-anchor="end" fill="#444" font-size="11">Study coordinator</text>
+<line x1="250" y1="772" x2="1440" y2="772" stroke="#eef0f3"/>
+<text x="240" y="776" text-anchor="end" fill="#444" font-size="11">Contracts officer</text>
+<text x="20" y="810" fill="#222" font-size="11" font-weight="bold">Focal objects</text>
+<line x1="250" y1="806" x2="1440" y2="806" stroke="#eef0f3"/>
+<text x="240" y="810" text-anchor="end" fill="#444" font-size="11">Data sharing agreement</text>
+<line x1="250" y1="828" x2="1440" y2="828" stroke="#eef0f3"/>
+<text x="240" y="832" text-anchor="end" fill="#444" font-size="11">Core data elements</text>
+<text x="20" y="866" fill="#222" font-size="11" font-weight="bold">Attachments</text>
+<line x1="250" y1="862" x2="1440" y2="862" stroke="#eef0f3"/>
+<text x="240" y="866" text-anchor="end" fill="#444" font-size="11">Spreadsheets</text>
+<line x1="250" y1="884" x2="1440" y2="884" stroke="#eef0f3"/>
+<text x="240" y="888" text-anchor="end" fill="#444" font-size="11">PDFs</text>
+<line x1="250" y1="906" x2="1440" y2="906" stroke="#eef0f3"/>
+<text x="240" y="910" text-anchor="end" fill="#444" font-size="11">Text documents</text>
+<text x="20" y="944" fill="#222" font-size="11" font-weight="bold">Publications</text>
+<line x1="250" y1="940" x2="1440" y2="940" stroke="#eef0f3"/>
+<text x="240" y="944" text-anchor="end" fill="#444" font-size="11">Preprints</text>
+<line x1="250" y1="962" x2="1440" y2="962" stroke="#eef0f3"/>
+<text x="240" y="966" text-anchor="end" fill="#444" font-size="11">Papers</text>
+<line x1="250" y1="984" x2="1440" y2="984" stroke="#eef0f3"/>
+<text x="240" y="988" text-anchor="end" fill="#444" font-size="11">Datasets</text>
+<line x1="20" y1="788" x2="1440" y2="788" stroke="#d5d8dc" stroke-dasharray="1,3"/>
+<line x1="20" y1="844" x2="1440" y2="844" stroke="#d5d8dc" stroke-dasharray="1,3"/>
+<line x1="20" y1="922" x2="1440" y2="922" stroke="#d5d8dc" stroke-dasharray="1,3"/>
+<line x1="374.17391304345944" y1="628" x2="374.17391304345944" y2="1002" stroke="#b03a2e" stroke-width="2" stroke-dasharray="7,4"/>
+<text x="370.17391304345944" y="624" text-anchor="end" fill="#b03a2e" font-size="11">Funding start</text>
+<line x1="425.91304347824206" y1="628" x2="425.91304347824206" y2="1002" stroke="#b03a2e" stroke-width="2" stroke-dasharray="7,4"/>
+<text x="429.91304347824206" y="624" text-anchor="start" fill="#b03a2e" font-size="11">First data request</text>
+<line x1="788.0869565217203" y1="628" x2="788.0869565217203" y2="1002" stroke="#b03a2e" stroke-width="2" stroke-dasharray="7,4"/>
+<text x="792.0869565217203" y="624" text-anchor="start" fill="#b03a2e" font-size="11">DSA signed</text>
+<line x1="999.1826086956296" y1="628" x2="999.1826086956296" y2="1002" stroke="#b03a2e" stroke-width="2" stroke-dasharray="7,4"/>
+<text x="995.1826086956296" y="624" text-anchor="end" fill="#b03a2e" font-size="11">Data upload</text>
+<line x1="1067.4782608695746" y1="628" x2="1067.4782608695746" y2="1002" stroke="#b03a2e" stroke-width="2" stroke-dasharray="7,4"/>
+<text x="1071.4782608695746" y="624" text-anchor="start" fill="#b03a2e" font-size="11">Data cataloguing</text>
+<line x1="436.26086956523625" y1="684" x2="467.30434782607756" y2="728" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="467.30434782607756" y1="728" x2="519.0434782608602" y2="684" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="519.0434782608602" y1="684" x2="560.4347826086956" y2="750" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="560.4347826086956" y1="750" x2="612.1739130434783" y2="684" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="612.1739130434783" y1="684" x2="663.9130434782609" y2="772" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="663.9130434782609" y1="772" x2="705.3043478260963" y2="684" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="705.3043478260963" y1="684" x2="757.043478260879" y2="772" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="757.043478260879" y1="772" x2="808.7826086956616" y2="662" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="850.1739130434971" y1="750" x2="860.5217391304442" y2="706" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="897.7739130435009" y1="706" x2="920.5391304347845" y2="750" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="920.5391304347845" y1="750" x2="964.0000000000094" y2="706" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="860.5217391304442" y1="706" x2="897.7739130435009" y2="706" stroke="#2e5e8c" stroke-width="2" stroke-dasharray="6,4"/>
+<circle cx="436.26086956523625" cy="684" r="5.5" fill="#2e5e8c"/>
+<circle cx="467.30434782607756" cy="728" r="5.5" fill="#2e5e8c"/>
+<circle cx="519.0434782608602" cy="684" r="5.5" fill="#2e5e8c"/>
+<circle cx="560.4347826086956" cy="750" r="5.5" fill="#2e5e8c"/>
+<circle cx="612.1739130434783" cy="684" r="5.5" fill="#2e5e8c"/>
+<circle cx="663.9130434782609" cy="772" r="5.5" fill="#2e5e8c"/>
+<circle cx="705.3043478260963" cy="684" r="5.5" fill="#2e5e8c"/>
+<circle cx="757.043478260879" cy="772" r="5.5" fill="#2e5e8c"/>
+<circle cx="808.7826086956616" cy="662" r="5.5" fill="#2e5e8c"/>
+<circle cx="850.1739130434971" cy="750" r="5.5" fill="#2e5e8c"/>
+<circle cx="860.5217391304442" cy="706" r="5.5" fill="#2e5e8c"/>
+<circle cx="897.7739130435009" cy="706" r="5.5" fill="#2e5e8c"/>
+<circle cx="920.5391304347845" cy="750" r="5.5" fill="#2e5e8c"/>
+<circle cx="964.0000000000094" cy="706" r="5.5" fill="#2e5e8c"/>
+<circle cx="394.8695652174007" cy="684" r="5.5" fill="#2e5e8c"/>
+<circle cx="1129.5652173913045" cy="728" r="5.5" fill="#2e5e8c"/>
+<polygon points="705.3043478260963,877.5 711.8043478260963,889.5 698.8043478260963,889.5" fill="#117a65"/>
+<rect x="855.0217391304442" y="856.5" width="11.0" height="11.0" fill="#117a65"/>
+<rect x="958.5000000000094" y="856.5" width="11.0" height="11.0" fill="#117a65"/>
+<polygon points="566.4,906.0 563.4,911.2 557.4,911.2 554.4,906.0 557.4,900.8 563.4,900.8" fill="#117a65"/>
+<line x1="436.26086956523625" y1="799" x2="436.26086956523625" y2="813" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="519.0434782608602" y1="799" x2="519.0434782608602" y2="813" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="663.9130434782609" y1="799" x2="663.9130434782609" y2="813" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="757.043478260879" y1="799" x2="757.043478260879" y2="813" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="808.7826086956616" y1="799" x2="808.7826086956616" y2="813" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="850.1739130434971" y1="821" x2="850.1739130434971" y2="835" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="906.0521739130585" y1="821" x2="906.0521739130585" y2="835" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="964.0000000000094" y1="821" x2="964.0000000000094" y2="835" stroke="#5d6d7e" stroke-width="2.5"/>
+<rect x="1083.173913043469" y="955" width="10" height="14" rx="1" fill="#fff" stroke="#7f8c8d" stroke-width="1.6"/>
+<rect x="1248.7391304347639" y="977" width="10" height="14" rx="1" fill="#fff" stroke="#7f8c8d" stroke-width="1.6"/>
+<line x1="250" y1="1022" x2="1440" y2="1022" stroke="#555" stroke-width="1.5"/>
+<line x1="250.0" y1="1022" x2="250.0" y2="1028" stroke="#555"/>
+<text x="250.0" y="1042" text-anchor="middle" fill="#555">2020</text>
+<line x1="456.95652173913044" y1="1022" x2="456.95652173913044" y2="1028" stroke="#555"/>
+<text x="456.95652173913044" y="1042" text-anchor="middle" fill="#555">2021</text>
+<line x1="663.9130434782609" y1="1022" x2="663.9130434782609" y2="1028" stroke="#555"/>
+<text x="663.9130434782609" y="1042" text-anchor="middle" fill="#555">2022</text>
+<line x1="870.8695652173913" y1="1022" x2="870.8695652173913" y2="1028" stroke="#555"/>
+<text x="870.8695652173913" y="1042" text-anchor="middle" fill="#555">2023</text>
+<line x1="1077.8260869565217" y1="1022" x2="1077.8260869565217" y2="1028" stroke="#555"/>
+<text x="1077.8260869565217" y="1042" text-anchor="middle" fill="#555">2024</text>
+<line x1="1284.7826086956522" y1="1022" x2="1284.7826086956522" y2="1028" stroke="#555"/>
+<text x="1284.7826086956522" y="1042" text-anchor="middle" fill="#555">2025</text>
+<circle cx="30" cy="1072" r="5.5" fill="#2e5e8c"/>
+<text x="46" y="1076" fill="#333" font-size="11">email</text>
+<line x1="97" y1="1072" x2="113" y2="1072" stroke="#2e5e8c" stroke-width="2"/>
+<text x="121" y="1076" fill="#333" font-size="11">reply</text>
+<line x1="162" y1="1072" x2="178" y2="1072" stroke="#2e5e8c" stroke-width="2" stroke-dasharray="5,3"/>
+<text x="186" y="1076" fill="#333" font-size="11">forward</text>
+<rect x="245" y="1067" width="10" height="10" fill="#117a65"/>
+<text x="266" y="1076" fill="#333" font-size="11">spreadsheet</text>
+<polygon points="350,1066 356,1077 344,1077" fill="#117a65"/>
+<text x="366" y="1076" fill="#333" font-size="11">PDF</text>
+<polygon points="415.5,1072.0 412.8,1076.8 407.2,1076.8 404.5,1072.0 407.2,1067.2 412.8,1067.2" fill="#117a65"/>
+<text x="426" y="1076" fill="#333" font-size="11">text document</text>
+<line x1="525" y1="1065" x2="525" y2="1079" stroke="#5d6d7e" stroke-width="2.5"/>
+<text x="541" y="1076" fill="#333" font-size="11">mention</text>
+<line x1="610" y1="1063" x2="610" y2="1081" stroke="#b03a2e" stroke-width="2" stroke-dasharray="5,3"/>
+<text x="626" y="1076" fill="#333" font-size="11">milestone</text>
+<polygon points="710,1064 718,1072 710,1080 702,1072" fill="#6c3483"/>
+<text x="726" y="1076" fill="#333" font-size="11">event</text>
+</svg>
