@@ -106,7 +106,7 @@ p {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/restructuring/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/restructuring/index.html">Restructuring Plan</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/restructuring/index.html">Restructuring Plan</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -160,7 +160,7 @@ p {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a href="../../notes/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Notes</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -252,7 +252,7 @@ p {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/restructuring/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/restructuring/index.html">Restructuring Plan</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/restructuring/index.html">Restructuring Plan</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Restructuring the CITF email analysis</h1>
 </div>
@@ -816,7 +816,7 @@ Figure&nbsp;4: Views for comparison across projects, with illustrative data.
 │   ├── views.ipynb                 # thread view, timelines, comparisons
 │   └── data/                       # untracked
 ├── notes/
-│   ├── notes.qmd, _metadata.yml
+│   ├── index.qmd                   # listing of the notes
 │   ├── how-what-strategy.qmd
 │   └── restructuring/              # this document, with its own .gitignore
 ├── grant-writing/                  # private repository, untracked
@@ -909,7 +909,7 @@ Table&nbsp;3: Current notebook blocks and where each one moves.
 </div>
 <p>The coding sample keeps its seed, so block 6 regenerates the same 774 tags with new block numbers in the coding tool.</p>
 <p>Each folder keeps its checks in a <code>tests/</code> folder of its own, with one subfolder per check and the write-up in that folder’s <code>sections/</code>. <code>corpus/tests/</code> holds the checks on the automated-message patterns, the zones, the sentences, the de-identification, the detection and the links. The zoning checks cover the Chipmunk and Okapi tests on Gmane and Enron, the five CITF emails, the zone check of 80 emails and the held-out checks, and the link checks include the timelines of two real projects drawn without codes. <code>coding/rhetoric/tests/</code> holds the tag coding sample and the planned validation, and the <code>tests/</code> folders of <code>coding/functions/</code> and <code>coding/actions/</code> hold each test set and the comparison of SetFit with its baselines, with the MAILEX test under actions. The test subfolder names are proposed labels.</p>
-<p><code>notes/</code> holds working notes, following <code>notes/</code> in <code>CITF-Postdoc</code>, with a <code>_metadata.yml</code> and a <code>notes.qmd</code> listing page. <code>how-what-strategy.qmd</code> moves there, along with the notes not yet seen here. This document is the first note in <code>notes/</code>, at <code>notes/restructuring/index.qmd</code>. The summary of the call and the transcript sit beside it as <code>_call-summary.qmd</code> and <code>_transcript.qmd</code>, which the site skips because of the leading underscore. A <code>.gitignore</code> of the folder’s own lists both files, so the protection moves with the folder, and the root <code>.gitignore</code> stays as it is. The published page leaves out the summary of the call and the transcript, since both are personal records of the call, and a local render with <code>-M call-appendices:true</code> includes them.</p>
+<p><code>notes/</code> holds working notes, following <code>notes/</code> in <code>CITF-Postdoc</code>, with <code>notes/index.qmd</code> as the page that lists them. <code>how-what-strategy.qmd</code> moves there, along with the notes not yet seen here. This document is the first note in <code>notes/</code>, at <code>notes/restructuring/index.qmd</code>. The summary of the call and the transcript sit beside it as <code>_call-summary.qmd</code> and <code>_transcript.qmd</code>, which the site skips because of the leading underscore. A <code>.gitignore</code> of the folder’s own lists both files, so the protection moves with the folder, and the root <code>.gitignore</code> stays as it is. The published page leaves out the summary of the call and the transcript, since both are personal records of the call, and a local render with <code>-M call-appendices:true</code> includes them.</p>
 <p><code>grant-writing/</code> is its own private repository on <code>git.mchi.mcgill.ca</code>, cloned into <code>citf-emails/grant-writing/</code> and listed in <code>.gitignore</code>. <code>citf-emails</code> is public on GitHub, so GitHub publishes every tracked file and every past version of it, and grant drafts, budgets and reviews cannot sit there. Listed in <code>.gitignore</code>, the grant repository leaves no trace in <code>citf-emails</code>, and I work in it as an ordinary repository. <a href="#sec-grant-move">Appendix A</a> gives the steps to carry the grant work and its history over from <code>CITF-Postdoc</code>.</p>
 </section>
 <section id="sec-next" class="level1" data-number="6">

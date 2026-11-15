@@ -304,83 +304,73 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "CITF Emails",
-    "section": "",
-    "text": "This research project addresses a critical evidence gap in the Canadian health system: the organizational and collaborative labor required to share health research data at scale. While technical informatics barriers are often the focus of development, the administrative and governance processes – such as negotiating data sharing agreements and aligning institutional frameworks – remain poorly understood and under-resourced. The study aims to move beyond theoretical models by empirically investigating the actual operations of the COVID-19 Immunity Task Force (CITF) Databank. By examining these coordination efforts, the project seeks to provide actionable recommendations for health system leaders and policymakers responsible for building and sustaining national data sharing capacity.\nResearch Objectives and Methodology\nThe project utilizes an explanatory sequential mixed-methods design to investigate the human and organizational determinants of data sharing behaviors. The first phase focuses on characterizing coordination processes through a quantitative analysis of approximately 50,000 emails exchanged between Databank personnel and contributing partners. Using natural language processing and network analysis, the research team will map communication patterns and identify how governance and technical work are distributed across different roles. This is followed by a second phase consisting of semi-structured interviews with principal investigators and data managers to elicit situated perspectives on the specific organizational factors that either facilitated or hindered their participation.\nSignificance and Knowledge Translation\nThe significance of this work lies in its potential to improve pandemic preparedness and the overall efficiency of the Canadian health research ecosystem. By documenting how governance processes actually unfolded during a public health emergency, the project provides a grounded perspective on the material needs of stakeholders. Knowledge translation efforts are directed toward health system leaders, research administrators, and international organizations like GA4GH to ensure that the findings inform future management strategies and policy frameworks. Ultimately, the project emphasizes that the primary obstacles to timely health data sharing are not technical, but rather reside in the “invisible labor” of coordination and the complexity of inter-institutional governance.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "data-complexity/index.html#acknowledgments",
-    "href": "data-complexity/index.html#acknowledgments",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#acknowledgments",
+    "href": "network-analysis/index.html#acknowledgments",
+    "title": "Network Analysis",
     "section": "8.1 Acknowledgments",
     "text": "8.1 Acknowledgments",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
-    "objectID": "data-complexity/index.html#funding",
-    "href": "data-complexity/index.html#funding",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#funding",
+    "href": "network-analysis/index.html#funding",
+    "title": "Network Analysis",
     "section": "8.2 Funding",
     "text": "8.2 Funding",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
-    "objectID": "data-complexity/index.html#competing-interests",
-    "href": "data-complexity/index.html#competing-interests",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#competing-interests",
+    "href": "network-analysis/index.html#competing-interests",
+    "title": "Network Analysis",
     "section": "8.3 Competing Interests",
     "text": "8.3 Competing Interests",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
-    "objectID": "data-complexity/index.html#author-contributions",
-    "href": "data-complexity/index.html#author-contributions",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#author-contributions",
+    "href": "network-analysis/index.html#author-contributions",
+    "title": "Network Analysis",
     "section": "8.4 Author Contributions",
     "text": "8.4 Author Contributions",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
-    "objectID": "data-complexity/index.html#informed-consent",
-    "href": "data-complexity/index.html#informed-consent",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#informed-consent",
+    "href": "network-analysis/index.html#informed-consent",
+    "title": "Network Analysis",
     "section": "8.5 Informed Consent",
     "text": "8.5 Informed Consent",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
-    "objectID": "data-complexity/index.html#data-availability-statement",
-    "href": "data-complexity/index.html#data-availability-statement",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#data-availability-statement",
+    "href": "network-analysis/index.html#data-availability-statement",
+    "title": "Network Analysis",
     "section": "8.6 Data Availability Statement",
     "text": "8.6 Data Availability Statement",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
-    "objectID": "data-complexity/index.html#author-bios",
-    "href": "data-complexity/index.html#author-bios",
-    "title": "Data Complexity",
+    "objectID": "network-analysis/index.html#author-bios",
+    "href": "network-analysis/index.html#author-bios",
+    "title": "Network Analysis",
     "section": "8.7 Author Bios",
     "text": "8.7 Author Bios",
     "crumbs": [
-      "Data Complexity"
+      "Network Analysis"
     ]
   },
   {
@@ -534,73 +524,93 @@
     ]
   },
   {
-    "objectID": "network-analysis/index.html#acknowledgments",
-    "href": "network-analysis/index.html#acknowledgments",
-    "title": "Network Analysis",
+    "objectID": "data-complexity/index.html#acknowledgments",
+    "href": "data-complexity/index.html#acknowledgments",
+    "title": "Data Complexity",
     "section": "8.1 Acknowledgments",
     "text": "8.1 Acknowledgments",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
     ]
   },
   {
-    "objectID": "network-analysis/index.html#funding",
-    "href": "network-analysis/index.html#funding",
-    "title": "Network Analysis",
+    "objectID": "data-complexity/index.html#funding",
+    "href": "data-complexity/index.html#funding",
+    "title": "Data Complexity",
     "section": "8.2 Funding",
     "text": "8.2 Funding",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
     ]
   },
   {
-    "objectID": "network-analysis/index.html#competing-interests",
-    "href": "network-analysis/index.html#competing-interests",
-    "title": "Network Analysis",
+    "objectID": "data-complexity/index.html#competing-interests",
+    "href": "data-complexity/index.html#competing-interests",
+    "title": "Data Complexity",
     "section": "8.3 Competing Interests",
     "text": "8.3 Competing Interests",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
     ]
   },
   {
-    "objectID": "network-analysis/index.html#author-contributions",
-    "href": "network-analysis/index.html#author-contributions",
-    "title": "Network Analysis",
+    "objectID": "data-complexity/index.html#author-contributions",
+    "href": "data-complexity/index.html#author-contributions",
+    "title": "Data Complexity",
     "section": "8.4 Author Contributions",
     "text": "8.4 Author Contributions",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
     ]
   },
   {
-    "objectID": "network-analysis/index.html#informed-consent",
-    "href": "network-analysis/index.html#informed-consent",
-    "title": "Network Analysis",
+    "objectID": "data-complexity/index.html#informed-consent",
+    "href": "data-complexity/index.html#informed-consent",
+    "title": "Data Complexity",
     "section": "8.5 Informed Consent",
     "text": "8.5 Informed Consent",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
     ]
   },
   {
-    "objectID": "network-analysis/index.html#data-availability-statement",
-    "href": "network-analysis/index.html#data-availability-statement",
-    "title": "Network Analysis",
+    "objectID": "data-complexity/index.html#data-availability-statement",
+    "href": "data-complexity/index.html#data-availability-statement",
+    "title": "Data Complexity",
     "section": "8.6 Data Availability Statement",
     "text": "8.6 Data Availability Statement",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
     ]
   },
   {
-    "objectID": "network-analysis/index.html#author-bios",
-    "href": "network-analysis/index.html#author-bios",
-    "title": "Network Analysis",
+    "objectID": "data-complexity/index.html#author-bios",
+    "href": "data-complexity/index.html#author-bios",
+    "title": "Data Complexity",
     "section": "8.7 Author Bios",
     "text": "8.7 Author Bios",
     "crumbs": [
-      "Network Analysis"
+      "Data Complexity"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CITF Emails",
+    "section": "",
+    "text": "This research project addresses a critical evidence gap in the Canadian health system: the organizational and collaborative labor required to share health research data at scale. While technical informatics barriers are often the focus of development, the administrative and governance processes – such as negotiating data sharing agreements and aligning institutional frameworks – remain poorly understood and under-resourced. The study aims to move beyond theoretical models by empirically investigating the actual operations of the COVID-19 Immunity Task Force (CITF) Databank. By examining these coordination efforts, the project seeks to provide actionable recommendations for health system leaders and policymakers responsible for building and sustaining national data sharing capacity.\nResearch Objectives and Methodology\nThe project utilizes an explanatory sequential mixed-methods design to investigate the human and organizational determinants of data sharing behaviors. The first phase focuses on characterizing coordination processes through a quantitative analysis of approximately 50,000 emails exchanged between Databank personnel and contributing partners. Using natural language processing and network analysis, the research team will map communication patterns and identify how governance and technical work are distributed across different roles. This is followed by a second phase consisting of semi-structured interviews with principal investigators and data managers to elicit situated perspectives on the specific organizational factors that either facilitated or hindered their participation.\nSignificance and Knowledge Translation\nThe significance of this work lies in its potential to improve pandemic preparedness and the overall efficiency of the Canadian health research ecosystem. By documenting how governance processes actually unfolded during a public health emergency, the project provides a grounded perspective on the material needs of stakeholders. Knowledge translation efforts are directed toward health system leaders, research administrators, and international organizations like GA4GH to ensure that the findings inform future management strategies and policy frameworks. Ultimately, the project emphasizes that the primary obstacles to timely health data sharing are not technical, but rather reside in the “invisible labor” of coordination and the complexity of inter-institutional governance.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Notes",
+    "section": "",
+    "text": "Modified\n\n\n\nTitle\n\n\n\n\n\n\n\n\nNov 14, 2026\n\n\nRestructuring the CITF email analysis\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes"
     ]
   },
   {
