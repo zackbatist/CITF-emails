@@ -14,4 +14,4 @@ format:
     urlcolor: NavyBlue
     citecolor: NavyBlue
     template-partials:
-      - ../assets/working/title.tex
+      - ../../assets/working/title.tex

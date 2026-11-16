@@ -1,0 +1,17 @@
+language:
+  title-block-published: "Created"
+  title-block-modified: "Updated"
+date-format: "MMMM D, YYYY"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+  pdf:
+    toc: true
+    toc-depth: 2
+    colorlinks: true
+    linkcolor: NavyBlue
+    urlcolor: NavyBlue
+    citecolor: NavyBlue
+    template-partials:
+      - ../../assets/working/title.tex
