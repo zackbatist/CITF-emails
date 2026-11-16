@@ -5,10 +5,12 @@ listing:
     - "*.qmd"
     - "*/index.qmd"
   type: table
-  sort: "date-modified desc"
+  sort: "date desc"
   categories: false
   feed: false
-  fields: [date-modified, title]
+  fields: [date, title]
+  field-display-names:
+    date: Created
   filter-ui: false
   sort-ui: false
 ---
