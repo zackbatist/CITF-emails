@@ -417,6 +417,7 @@ Links and values carry their method and confidence from the data model (@sec-mod
 
 ```
 citf-emails/
+├── requirements.txt                # the environment for every notebook
 ├── data/                           # untracked: msgs10.csv, recip4.csv
 ├── corpus/
 │   ├── index.qmd, sections/
@@ -433,7 +434,7 @@ citf-emails/
 ├── coding/
 │   ├── rhetoric/
 │   │   ├── index.qmd, sections/
-│   │   ├── rhetoric.ipynb          # install, tag, distribution, confirmed rules
+│   │   ├── rhetoric.ipynb          # tag, distribution, confirmed rules
 │   │   └── tests/
 │   │       └── docuscope/          # the DocuScope assessment
 │   ├── functions/
@@ -462,7 +463,7 @@ The folders follow the actions. `data/` holds only the raw data, `msgs10.csv` an
 
 Every output sits beside the notebook that writes it, and each notebook saves what later notebooks read. `corpus.ipynb` saves the study emails and `email_zones.parquet`, and `rhetoric.ipynb` saves the tags. The root `.gitignore` lists `/data/`, `*.csv` and `*.parquet` and already lists `*.html`, so no email text and no output enters the repository. The coding pages embed their samples, so they stay untracked until they load samples through Import.
 
-`coding/` holds one folder for each kind of code. `coding/rhetoric/` holds `rhetoric.ipynb`, which installs DocuScope, tags the email bodies, counts the tags and applies the error rules that coding confirms. The DocuScope assessment moves from `docuscope-assessment/` to `coding/rhetoric/tests/docuscope/`, with its write-up and `docuscope.ipynb`. `coding/functions/` and `coding/actions/` each hold their own notebook, coding page, codebook and classifier. `relating/` holds one notebook for relating codes to each other, one for relating codes to context, which also builds the activity log, and one for the views.
+`coding/` holds one folder for each kind of code. `coding/rhetoric/` holds `rhetoric.ipynb`, which tags the email bodies, counts the tags and applies the error rules that coding confirms. The DocuScope assessment moves from `docuscope-assessment/` to `coding/rhetoric/tests/docuscope/`, with its write-up and `docuscope.ipynb`. `coding/functions/` and `coding/actions/` each hold their own notebook, coding page, codebook and classifier. `relating/` holds one notebook for relating codes to each other, one for relating codes to context, which also builds the activity log, and one for the views.
 
 Each notebook numbers its blocks from 1, and @tbl-blocks shows where each current block moves. Block numbers appear in notebook headings, in the About text of `docuscope_coding_tool.html` and in the assessment's sections, and all of them change in one pass.
 
@@ -475,9 +476,9 @@ Each notebook numbers its blocks from 1, and @tbl-blocks shows where each curren
 | 10 Refine zones | `corpus.ipynb` block 5 |
 | 11 Zone check sample | `corpus/tests/zoning/` |
 | new | `corpus.ipynb` blocks 6 to 8: sentences, de-identification, detection |
-| 4 Install DocuScope | `rhetoric.ipynb` block 1 |
-| 5 Tag email bodies | `rhetoric.ipynb` block 2 |
-| 8 Distribution of tags | `rhetoric.ipynb` block 3 |
+| 4 Install DocuScope | `requirements.txt` |
+| 5 Tag email bodies | `rhetoric.ipynb` block 1 |
+| 8 Distribution of tags | `rhetoric.ipynb` block 2 |
 | 6 View tags in an email | `docuscope.ipynb` block 1 |
 | 7 Export 30 tagged emails | `docuscope.ipynb` block 2 |
 | 12 Detect likely tagging errors | `docuscope.ipynb` block 3, reading tags from `rhetoric.ipynb` and zones from `corpus.ipynb` |
@@ -552,7 +553,7 @@ Steps 1 and 2 unblock everything else. Steps 11 and 12 run alongside steps 4 to 
 
    The output identifies the grant folder. Every past version of every file in the grant folder will move with the folder, so the list also shows whether anything should be left behind.
 
-2. **Install git-filter-repo** into `~/docuscope-env`.
+2. **Install git-filter-repo** into `~/citf-emails-env`.
 3. **Extract the folder.** In a fresh clone of `private`, `git filter-repo` keeps only the grant folder, moves its contents to the root, and keeps every commit that touched it with its original date and message.
 4. **Create the private repository** on the lab's git server and push the extracted history to it. The name `citf-emails-grant` is my label.
 5. **Clone the new repository into `citf-emails`** at `grant-writing/`, and add `grant-writing/` to `.gitignore` and `"!grant-writing/"` to the render list in `_quarto.yml`.

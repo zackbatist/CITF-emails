@@ -62,4 +62,3 @@ private/
 *.csv
 *.parquet
 *.spacy
-docuscope-assessment/data/

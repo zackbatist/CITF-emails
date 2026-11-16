@@ -1,6 +1,6 @@
-# Block 13: preliminary comparison across tag versions {#sec-block-13}
+# Preliminary comparison across tag versions {#sec-block-13}
 
-Block 13 compares DocuScope tags across four versions, to see how far zoning and the error rules change the picture. It reads `how_tags.parquet`, which block 12 saves with each tag's zone and rule matches. The results are preliminary. The checked rules remain untested, and the sender groups use a provisional rule.
+Block 4 compares DocuScope tags across four versions, to see how far zoning and the error rules change the picture. It reads `rhetoric_tags.parquet`, which block 3 saves with each tag's zone and rule matches. The results are preliminary. The checked rules remain untested, and the sender groups use a provisional rule.
 
 | Version | Tags | Emails |
 |---|---:|---:|
@@ -21,7 +21,7 @@ Misreadings survive cleaning. Positive counts "agreement" (959 tags), Interactiv
 
 ## Sender groups {#sec-block-13-groups}
 
-Block 13 assigns each email to CITF when the sender's domain matches `covid19immunitytaskforce.ca` or the sender's emails span five or more study IDs, and to study teams otherwise. CITF holds 3,477 emails from 30 senders and study teams hold 2,579 emails from 438 senders.
+Block 4 assigns each email to CITF when the sender's domain matches `covid19immunitytaskforce.ca` or the sender's emails span five or more study IDs, and to study teams otherwise. CITF holds 3,477 emails from 30 senders and study teams hold 2,579 emails from 438 senders.
 
 Cleaning changes the comparison between the groups. The raw gaps in Negative, Strategic and Positive come from disclaimers, signatures and the CITF name, and they shrink or reverse once those leave. After cleaning, CITF writes more Interactive and Contingent text, and study teams write more Narrative and FirstPerson text.
 

@@ -10,7 +10,6 @@ project:
     - "!private/" # Internal docs
     - "!**/sections/" # Section files are included in each index.qmd, not pages of their own
     - "!**/*.ipynb" # Notebooks hold email text in their outputs
-    - "!docuscope-assessment/data/" # Email data
     - "!**/_*.qmd" # Personal records and fragments, included by their index.qmd
 website: 
   site-url: https://zackbatist.info/CITF-emails/

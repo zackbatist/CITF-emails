@@ -8,16 +8,16 @@ Each coder reads the tagged phrase in its context and decides whether it perform
 
 ## Stratification {#sec-stratification}
 
-We stratify the sample so that each rule, domain noun and HOW category has enough tags to assess on its own. Within each stratum, we draw tags at random.
+We stratify the sample so that each rule, domain noun and rhetorical category has enough tags to assess on its own. Within each stratum, we draw tags at random.
 
 | Stratum | Size per stratum | Strata | Tags |
 |---|---:|---:|---:|
 | Each checked rule except `domain_noun` | up to 30 | 7 | 210 |
 | Each noun of `domain_noun` | up to 10 | 19 | 184 |
-| Each HOW category among tags that match no rule | up to 20 | 19 | 380 |
+| Each rhetorical category among tags that match no rule | up to 20 | 19 | 380 |
 | Total | | | 774 |
 
-Each domain noun has its own stratum because nouns such as "agreement", "access" and "results" may behave differently, and a single stratum of 30 tags across 19 nouns says almost nothing about any one of them. Each coded tag records the size of its stratum, so that block 14 can weight the results to the whole corpus. A tag that two rules match appears in the sample only once.
+Each domain noun has its own stratum because nouns such as "agreement", "access" and "results" may behave differently, and a single stratum of 30 tags across 19 nouns says almost nothing about any one of them. Each coded tag records the size of its stratum, so that block 5 can weight the results to the whole corpus. A tag that two rules match appears in the sample only once.
 
 The sample holds 774 tags, with 30 per rule, 20 per category and 10 per domain noun. These sizes are provisional, because we chose them before setting the thresholds for applying rules and rating categories. Thirty tags give each rule a confidence interval narrow enough to separate rules whose matches are nearly always inaccurate from rules whose matches are often accurate. Twenty tags give each category a coarse estimate of its inaccuracy, enough to show which categories need closer attention. Ten tags give a first indication of how each domain noun behaves. A stratum has enough tags when its 95% confidence interval falls clearly on one side of its threshold. Once the thresholds are set, we will check each stratum against this standard and draw more tags for any stratum whose interval still spans its threshold.
 

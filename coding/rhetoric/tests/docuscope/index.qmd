@@ -1,6 +1,6 @@
 ---
 title: "DocuScope Assessment"
-subtitle: "Validating DocuScope HOW tags in the CITF email corpus"
+subtitle: "Validating DocuScope rhetorical tags in the CITF email corpus"
 date: 2026-11-12
 date-modified: 2026-11-16
 bibliography: references.bib

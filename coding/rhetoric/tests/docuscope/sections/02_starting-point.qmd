@@ -1,9 +1,9 @@
 # Starting point {#sec-starting-point}
 
-Melissa's notebook (blocks 1 to 7) sets up everything this session relies on. It loads `msgs10` and `recip4`, flattens and deduplicates the emails, keeps the 10,397 emails linked to a CITF study ID, tags email bodies with the `en_docusco_spacy` model (version 1.5), and exports 30 tagged emails to `docuscope_sample_30.html`.
+Melissa's notebook, since split into `corpus.ipynb`, `rhetoric.ipynb` and `docuscope.ipynb`, sets up everything this session relies on. It loads `msgs10` and `recip4`, flattens and deduplicates the emails, keeps the 10,397 emails linked to a CITF study ID, tags email bodies with the `en_docusco_spacy` model (version 1.5), and exports 30 tagged emails to `docuscope_sample_30.html`. Block numbers without a notebook name refer to `docuscope.ipynb`.
 
-Block 7 defines the pool that this session works from: study emails of 300 to 2,000 characters, with emails that look like they contain credentials removed. The pool holds 6,086 emails.
+`corpus.ipynb` block 3 defines the pool that this session works from: study emails of 300 to 2,000 characters, with emails that look like they contain credentials removed. The pool holds 6,086 emails.
 
-Block 7 also sorts the 19 HOW categories into six working groups (`how_groups`), which made the 30-email sample easier to read. This session works with the categories directly, since we plan to derive groups from the data through a factor analysis once the tags are cleaned (@sec-planned-analysis).
+Block 2 sorts the 19 rhetorical categories into six working groups (`rhetoric_groups`), which made the 30-email sample easier to read. This session works with the categories directly, since we plan to derive groups from the data through a factor analysis once the tags are cleaned (@sec-planned-analysis).
 
-The notebook runs on the CITF analysis server, reached from VSCodium through the Open Remote SSH extension, with a dedicated environment at `~/docuscope-env`. @sec-reproducibility lists the software versions.
+The notebooks run on the CITF analysis server, reached from VSCodium through the Open Remote SSH extension, in the environment `~/citf-emails-env`, built from the repository's `requirements.txt`. @sec-reproducibility lists the software versions.

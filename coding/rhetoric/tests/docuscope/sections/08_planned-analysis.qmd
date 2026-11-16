@@ -7,7 +7,7 @@ Brown and Laudenbach [-@brown2022] group the DocuScope categories into four rhet
 - **Supportive Interaction**: Facilitate, PublicTerms, CitationHedged, Citation, Responsibility, Interactive
 - **Modulated Reporting**: ConfidenceHedged, InformationChangeNegative, Uncertainty, ConfidenceHigh, FirstPerson, InformationChangePositive, Strategic, Description, InformationExposition, Negative
 
-We derive our own groups from the cleaned tags. We aggregate the HOW tag counts in authored text by sender and run a factor analysis, which groups the categories that the same senders use often. Each group becomes a rhetorical category for research data sharing emails. We name each group after its highest-scoring DocuScope categories and test the name in a manual review.
+We derive our own groups from the cleaned tags. We aggregate the rhetorical tag counts in authored text by sender and run a factor analysis, which groups the categories that the same senders use often. Each group becomes a rhetorical category for research data sharing emails. We name each group after its highest-scoring DocuScope categories and test the name in a manual review.
 
 The manual review covers all DocuScope tags in a sample of 200 emails. For each email, we write a topic label that names what the email is about, drawing on its InformationTopics spans, which mark the nominal subjects and objects that signal what a text concerns. We also assign each email the rhetorical categories that fit it, and we keep a category's name only if the senders of the emails we assign it to score highest on its group.
 
