@@ -148,25 +148,64 @@ p {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docuscope-assessment/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">DocuScope Assessment</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../research-protocol/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research Protocol</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../notes/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Notes</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Corpus</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../corpus/tests/zoning/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zoning</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Coding</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Rhetoric</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../coding/rhetoric/tests/docuscope/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DocuScope Assessment</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../notes/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/restructuring/index.html" class="sidebar-item-text sidebar-link active">
@@ -335,14 +374,14 @@ p {
 <h3 data-number="2.1.3" class="anchored" data-anchor-id="segmentation"><span class="header-section-number">2.1.3</span> Segmentation</h3>
 <p>Zoning divides each email into six zones. The authored zone holds the text the sender wrote for this message, greetings and closing lines included. The signature, banner, quoted and other zones hold text the sender did not write, and the markup zone holds what regular expressions match as markup. Keeping the non-authored zones apart shows how many of each category’s tags come from signatures, banners, quoted messages and other text.</p>
 <p>Chipmunk <span class="citation" data-cites="bevendorff2020">(<a href="#ref-bevendorff2020" role="doc-biblioref">Bevendorff et al. 2020</a>)</span>, at commit <code>ecc2c70</code>, gives every line one of its 15 labels, and block 10 maps those labels onto the six zones. I compared Chipmunk with Okapi <span class="citation" data-cites="jardim2021">(<a href="#ref-jardim2021" role="doc-biblioref">Jardim, Rei, and Almeida 2021</a>)</span>, which I rebuilt from its paper and trained, and kept Chipmunk, since Okapi labelled whole signature blocks as authored in three of five CITF emails. Five correction rules then fix Chipmunk’s known errors, and regular expressions mark markup, attachment and meeting lines, banners and reply headers, in that order of precedence.</p>
-<p>On 40 held-out emails the authored zone reaches 98.7% precision and 97.1% recall. That figure holds only for the 6,056 emails in block 7’s pool, the filter that kept the tagging checks manageable. Zoning all 10,397 study emails brings in short follow-ups and confirmations that the pool excluded, and a two-line reply gives Chipmunk little layout to read. It also brings in the longest emails, which carry the longest quoted chains and the most signatures inside quoted text. A second held-out check draws from emails under 300 characters and over 2,000, by project, and the coder follows the same rules as before. <code>zoning-tests/</code> holds the comparison of Chipmunk and Okapi, both held-out checks and their scores.</p>
+<p>On 40 held-out emails the authored zone reaches 98.7% precision and 97.1% recall. That figure holds only for the 6,056 emails in block 7’s pool, the filter that kept the tagging checks manageable. Zoning all 10,397 study emails brings in short follow-ups and confirmations that the pool excluded, and a two-line reply gives Chipmunk little layout to read. It also brings in the longest emails, which carry the longest quoted chains and the most signatures inside quoted text. A second held-out check draws from emails under 300 characters and over 2,000, by project, and the coder follows the same rules as before. <code>corpus/tests/zoning/</code> holds the comparison of Chipmunk and Okapi, both held-out checks and their scores.</p>
 <p>Sentence boundaries then divide the authored zone into the unit that function and action codes label and the unit in which DocuScope records presence. The splitter has to handle text that ends without sentence punctuation, such as lists of variables, bulleted requests and a sign-off name. A hand check on the 30 sample emails, the same emails as the feasibility test, shows where the splitter breaks, and <code>corpus/tests/segmentation/</code> keeps that check. Each sentence keeps its character offsets into the raw body.</p>
 </section>
 <section id="de-identification" class="level3" data-number="2.1.4">
 <h3 data-number="2.1.4" class="anchored" data-anchor-id="de-identification"><span class="header-section-number">2.1.4</span> De-identification</h3>
 <p>Presidio replaces the personal information in the text shown on the coding page. Its recognizers find personal names, email addresses and URLs, the same kinds that the topic modelling preprint <span class="citation" data-cites="batist2026">(<a href="#ref-batist2026" role="doc-biblioref">Batist et al. 2026</a>)</span> replaced with placeholders.</p>
 <p>Each person needs one pseudonym across the corpus, so that a coder reading a thread can follow who writes to whom, which a placeholder such as <code>&lt;PERSON&gt;</code> hides. A lookup keyed on each person’s email address and on the names the project information lists gives “Dr.&nbsp;Smith”, “Jane” and her address one pseudonym. The pseudonym carries no role, since a label such as the PI of a small study identifies the person. The coding page shows the role in its own column, which gives coders the context Ian asked for.</p>
-<p>The offset map links every position in the de-identified text back to the raw body, so that every tag, code and zone points into one canonical text. Because <code>citf-emails</code> is public, no email text enters the repository, de-identified or not, and the spans and the offset map stay in the untracked <code>data/</code>.</p>
+<p>The offset map links every position in the de-identified text back to the raw body, so that every tag, code and zone points into one canonical text. Because <code>citf-emails</code> is public, no email text enters the repository, de-identified or not, and the spans and the offset map stay untracked beside the notebook that writes them.</p>
 <p>A hand check on a sample, kept in <code>corpus/tests/de-identification/</code>, counts the names Presidio misses, since a missed name in a greeting or a signature exposes a person on the coding page. The sample draws extra short emails and French emails, where general recognizers do worst. The de-identification has to meet what REB 26-08-029 promises for the email corpus.</p>
 </section>
 <section id="detecting-actors-objects-and-events" class="level3" data-number="2.1.5">
@@ -453,7 +492,7 @@ p {
 </section>
 <section id="sec-model" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Data model</h1>
-<p>The data form a graph of nodes and edges in four groups. Correspondence holds the emails and their parts, people and organizations hold who wrote and on whose behalf, analysis holds what coding and detection add, and context holds what comes from outside the emails. Each part of the work writes the tables it produces, keyed by identifiers that every notebook shares. <code>corpus/</code> writes the correspondence, people and organizations, and context tables, with mentions and focal objects, each coding folder writes its Code nodes and Coding edges, <code>coding/actions/</code> writes the follow-ups, and <code>relating/</code> builds the activity log. People nodes carry names, email addresses and gender, so all of these tables stay in untracked <code>data/</code> folders, as the email text does. <a href="#fig-data-model" class="quarto-xref">Figure&nbsp;1</a> shows the node and edge types, and <a href="#tbl-nodes" class="quarto-xref">Table&nbsp;1</a> and <a href="#tbl-edges" class="quarto-xref">Table&nbsp;2</a> list them.</p>
+<p>The data form a graph of nodes and edges in four groups. Correspondence holds the emails and their parts, people and organizations hold who wrote and on whose behalf, analysis holds what coding and detection add, and context holds what comes from outside the emails. Each part of the work writes the tables it produces, keyed by identifiers that every notebook shares. <code>corpus/</code> writes the correspondence, people and organizations, and context tables, with mentions and focal objects, each coding folder writes its Code nodes and Coding edges, <code>coding/actions/</code> writes the follow-ups, and <code>relating/</code> builds the activity log. People nodes carry names, email addresses and gender, so all of these tables stay untracked beside the notebooks that write them, as the email text does. <a href="#fig-data-model" class="quarto-xref">Figure&nbsp;1</a> shows the node and edge types, and <a href="#tbl-nodes" class="quarto-xref">Table&nbsp;1</a> and <a href="#tbl-edges" class="quarto-xref">Table&nbsp;2</a> list them.</p>
 <div id="fig-data-model" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-data-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -792,41 +831,38 @@ Figure&nbsp;4: Views for comparison across projects, with illustrative data.
 <section id="sec-repo" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Repository</h1>
 <pre><code>citf-emails/
+├── data/                           # untracked: msgs10.csv, recip4.csv
 ├── corpus/
 │   ├── index.qmd, sections/
-│   ├── corpus.ipynb                # zones, sentences, de-identification, detection
+│   ├── corpus.ipynb                # load, flatten, study emails, zones, sentences, de-identification, detection
 │   ├── links.ipynb                 # threads, reply and forward links
 │   ├── project-information.ipynb   # projects, people, publications, events
-│   ├── tests/
-│   │   ├── filters/
-│   │   ├── zoning/
-│   │   ├── segmentation/
-│   │   ├── de-identification/
-│   │   ├── detection/
-│   │   └── links/
-│   └── data/                       # untracked
+│   └── tests/
+│       ├── filters/
+│       ├── zoning/
+│       ├── segmentation/
+│       ├── de-identification/
+│       ├── detection/
+│       └── links/
 ├── coding/
-│   ├── rhetoric/                   # the DocuScope assessment
+│   ├── rhetoric/
 │   │   ├── index.qmd, sections/
-│   │   ├── docuscope_assessment.ipynb
-│   │   ├── tests/
-│   │   └── data/                   # untracked
+│   │   ├── rhetoric.ipynb          # install, tag, distribution, confirmed rules
+│   │   └── tests/
+│   │       └── docuscope/          # the DocuScope assessment
 │   ├── functions/
 │   │   ├── index.qmd, sections/
 │   │   ├── functions.ipynb
-│   │   ├── tests/
-│   │   └── data/                   # untracked
+│   │   └── tests/
 │   └── actions/
 │       ├── index.qmd, sections/
 │       ├── actions.ipynb
-│       ├── tests/
-│       └── data/                   # untracked
+│       └── tests/
 ├── relating/
 │   ├── index.qmd, sections/
 │   ├── codes.ipynb                 # codes with each other
 │   ├── context.ipynb               # context, activity log, counts
-│   ├── views.ipynb                 # thread view, timelines, comparisons
-│   └── data/                       # untracked
+│   └── views.ipynb                 # thread view, timelines, comparisons
 ├── notes/
 │   ├── index.qmd                   # listing of the notes
 │   ├── relating-rhetoric-to-functions/
@@ -834,8 +870,9 @@ Figure&nbsp;4: Views for comparison across projects, with illustrative data.
 │   └── restructuring/              # this document, with its own .gitignore
 ├── grant-writing/                  # private repository, untracked
 └── private/                        # untracked</code></pre>
-<p>The folders follow the actions. <code>corpus/</code> builds the corpus that every action reads, since project information, threads, attachments and links to focal objects are data that several analyses read directly. <code>corpus.ipynb</code> loads, flattens and links emails to studies, then adds zones, sentences, de-identification and detection. <code>links.ipynb</code> stitches threads and records reply and forward links, and <code>project-information.ipynb</code> compiles projects, people, institutions, publications and events. Block 7’s length filter stays in the DocuScope assessment, where it keeps the tagging checks manageable, and stops defining the corpus. Zoning extends to all 10,397 study emails.</p>
-<p><code>coding/</code> holds one folder for each kind of code. <code>coding/rhetoric/</code> takes the DocuScope assessment, which moves there from <code>docuscope-assessment/</code>, and <code>coding/functions/</code> and <code>coding/actions/</code> each hold their own notebook, coding page, codebook and classifier. <code>relating/</code> holds one notebook for relating codes to each other, one for relating codes to context, which also builds the activity log, and one for the views. Moving the DocuScope assessment changes its address on the site, so the move waits until the assessment is finished.</p>
+<p>The folders follow the actions. <code>data/</code> holds only the raw data, <code>msgs10.csv</code> and <code>recip4.csv</code>. <code>corpus/</code> builds the corpus that every action reads, since project information, threads, attachments and links to focal objects are data that several analyses read directly. <code>corpus.ipynb</code> loads <code>msgs10.csv</code> and <code>recip4.csv</code> from <code>data/</code>, flattens the emails and links them to studies, then adds zones, sentences, de-identification and detection. <code>links.ipynb</code> stitches threads and records reply and forward links, and <code>project-information.ipynb</code> compiles projects, people, institutions, publications and events. Block 7’s length filter stays in the DocuScope assessment, where it keeps the tagging checks manageable, and stops defining the corpus. Zoning extends to all 10,397 study emails.</p>
+<p>Every output sits beside the notebook that writes it, and each notebook saves what later notebooks read. <code>corpus.ipynb</code> saves the study emails and <code>email_zones.parquet</code>, and <code>rhetoric.ipynb</code> saves the tags. The root <code>.gitignore</code> lists <code>/data/</code>, <code>*.csv</code> and <code>*.parquet</code> and already lists <code>*.html</code>, so no email text and no output enters the repository. The coding pages embed their samples, so they stay untracked until they load samples through Import.</p>
+<p><code>coding/</code> holds one folder for each kind of code. <code>coding/rhetoric/</code> holds <code>rhetoric.ipynb</code>, which installs DocuScope, tags the email bodies, counts the tags and applies the error rules that coding confirms. The DocuScope assessment moves from <code>docuscope-assessment/</code> to <code>coding/rhetoric/tests/docuscope/</code>, with its write-up and <code>docuscope.ipynb</code>. <code>coding/functions/</code> and <code>coding/actions/</code> each hold their own notebook, coding page, codebook and classifier. <code>relating/</code> holds one notebook for relating codes to each other, one for relating codes to context, which also builds the activity log, and one for the views.</p>
 <p>Each notebook numbers its blocks from 1, and <a href="#tbl-blocks" class="quarto-xref">Table&nbsp;3</a> shows where each current block moves. Block numbers appear in notebook headings, in the About text of <code>docuscope_coding_tool.html</code> and in the assessment’s sections, and all of them change in one pass.</p>
 <div id="tbl-blocks" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -854,7 +891,7 @@ Figure&nbsp;4: Views for comparison across projects, with illustrative data.
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">1 Load email data</td>
-<td style="text-align: left;"><code>corpus.ipynb</code> block 1</td>
+<td style="text-align: left;"><code>corpus.ipynb</code> block 1, reading <code>data/</code></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2 Flatten emails</td>
@@ -882,35 +919,35 @@ Figure&nbsp;4: Views for comparison across projects, with illustrative data.
 </tr>
 <tr class="even">
 <td style="text-align: left;">4 Install DocuScope</td>
-<td style="text-align: left;"><code>coding/rhetoric/docuscope_assessment.ipynb</code> block 1</td>
+<td style="text-align: left;"><code>rhetoric.ipynb</code> block 1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">5 Tag email bodies</td>
-<td style="text-align: left;">block 2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">6 View tags in an email</td>
-<td style="text-align: left;">block 3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">7 Export 30 tagged emails</td>
-<td style="text-align: left;">block 4</td>
+<td style="text-align: left;"><code>rhetoric.ipynb</code> block 2</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">8 Distribution of tags</td>
-<td style="text-align: left;">block 5</td>
+<td style="text-align: left;"><code>rhetoric.ipynb</code> block 3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6 View tags in an email</td>
+<td style="text-align: left;"><code>docuscope.ipynb</code> block 1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7 Export 30 tagged emails</td>
+<td style="text-align: left;"><code>docuscope.ipynb</code> block 2</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">12 Detect likely tagging errors</td>
-<td style="text-align: left;">block 6, reading zones from <code>corpus/</code></td>
+<td style="text-align: left;"><code>docuscope.ipynb</code> block 3, reading tags from <code>rhetoric.ipynb</code> and zones from <code>corpus.ipynb</code></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">13 Comparison across tag versions</td>
-<td style="text-align: left;">block 7, once restored</td>
+<td style="text-align: left;"><code>docuscope.ipynb</code> block 4</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">14 Validation (planned)</td>
-<td style="text-align: left;">block 8</td>
+<td style="text-align: left;"><code>docuscope.ipynb</code> block 5</td>
 </tr>
 </tbody>
 </table>
@@ -920,8 +957,8 @@ Table&nbsp;3: Current notebook blocks and where each one moves.
 </figcaption>
 </figure>
 </div>
-<p>The coding sample keeps its seed, so block 6 regenerates the same 774 tags with new block numbers in the coding tool.</p>
-<p>Each folder keeps its checks in a <code>tests/</code> folder of its own, with one subfolder per check and the write-up in that folder’s <code>sections/</code>. <code>corpus/tests/</code> holds the checks on the automated-message patterns, the zones, the sentences, the de-identification, the detection and the links. The zoning checks cover the Chipmunk and Okapi tests on Gmane and Enron, the five CITF emails, the zone check of 80 emails and the held-out checks, and the link checks include the timelines of two real projects drawn without codes. <code>coding/rhetoric/tests/</code> holds the tag coding sample and the planned validation, and the <code>tests/</code> folders of <code>coding/functions/</code> and <code>coding/actions/</code> hold each test set and the comparison of SetFit with its baselines, with the MAILEX test under actions. The test subfolder names are proposed labels.</p>
+<p>The coding sample keeps its seed, so block 3 of <code>docuscope.ipynb</code> regenerates the same 774 tags with new block numbers in the coding tool.</p>
+<p>Workstream notebooks hold the final methods, and each <code>tests/</code> folder holds the trials and checks on them, with one subfolder per check and the write-up in that subfolder’s <code>sections/</code>. A test reads the workstream’s outputs without copying its methods, and a rule that a test confirms moves into the workstream notebook. <code>corpus/tests/</code> holds the checks on the automated-message patterns, the zones, the sentences, the de-identification, the detection and the links. The zoning checks cover the Chipmunk and Okapi tests on Gmane and Enron, the five CITF emails, the zone check of 80 emails and the held-out checks, and the zoning appendix moves there from the DocuScope assessment. The link checks include the timelines of two real projects drawn without codes. <code>coding/rhetoric/tests/docuscope/</code> holds the DocuScope assessment, with the tag coding sample and the planned validation, and the <code>tests/</code> folders of <code>coding/functions/</code> and <code>coding/actions/</code> hold each test set and the comparison of SetFit with its baselines, with the MAILEX test under actions. The test subfolder names are proposed labels.</p>
 <p><code>notes/</code> holds working notes, following <code>notes/</code> in <code>CITF-Postdoc</code>, with <code>notes/index.qmd</code> as the page that lists them. It also holds <code>relating-rhetoric-to-functions/</code> and <code>shift-to-supervised/</code>, which moved there from <code>private/</code>. This document is the first note in <code>notes/</code>, at <code>notes/restructuring/index.qmd</code>. The summary of the call and the transcript sit beside it as <code>_call-summary.qmd</code> and <code>_transcript.qmd</code>, which the site skips because of the leading underscore. A <code>.gitignore</code> of the folder’s own lists both files, so the protection moves with the folder, and the root <code>.gitignore</code> stays as it is. The published page leaves out the summary of the call and the transcript, since both are personal records of the call, and a local render with <code>-M call-appendices:true</code> includes them.</p>
 <p><code>grant-writing/</code> is its own private repository on <code>git.mchi.mcgill.ca</code>, cloned into <code>citf-emails/grant-writing/</code> and listed in <code>.gitignore</code>. <code>citf-emails</code> is public on GitHub, so GitHub publishes every tracked file and every past version of it, and grant drafts, budgets and reviews cannot sit there. Listed in <code>.gitignore</code>, the grant repository leaves no trace in <code>citf-emails</code>, and I work in it as an ordinary repository. <a href="#sec-grant-move">Appendix A</a> gives the steps to carry the grant work and its history over from <code>CITF-Postdoc</code>.</p>
 </section>
@@ -934,7 +971,7 @@ Table&nbsp;3: Current notebook blocks and where each one moves.
 <li><strong>Restore block 13.</strong> Find its code on the server, commit it to <code>docuscope_assessment.ipynb</code>, and confirm whether <code>start</code> and <code>end</code> in <code>how_tags.parquet</code> are character or token offsets.</li>
 <li><strong>Move the grant work</strong> into <code>grant-writing/</code> (<a href="#sec-grant-move">Appendix A</a>).</li>
 <li><strong>Create <code>notes/</code></strong> with this document in <code>notes/restructuring/</code>, and move the notes from <code>private/</code> into it.</li>
-<li><strong>Create <code>corpus/</code>.</strong> Move blocks 1 to 3 and 9 to 11 with the restored fields, reproduce <code>email_zones.parquet</code> by hash, renumber both notebooks and regenerate the coding tool.</li>
+<li><strong>Create <code>corpus/</code> and move the DocuScope assessment.</strong> Copy <code>msgs10.csv</code> and <code>recip4.csv</code> into <code>data/</code>, split the notebook as <a href="#tbl-blocks" class="quarto-xref">Table&nbsp;3</a> shows with the restored fields, reproduce <code>email_zones.parquet</code> by hash and regenerate the coding tool.</li>
 <li><strong>Extend zoning</strong> to all study emails and run the second held-out check.</li>
 <li><strong>Split sentences and de-identify</strong> the authored text, checked in <code>corpus/tests/segmentation/</code> and <code>corpus/tests/de-identification/</code>.</li>
 <li><strong>Compile project information and events</strong> in <code>project-information.ipynb</code>, from the <code>crs</code> table, signatures, ORCID, OpenAlex, DataCite and CITF records.</li>
