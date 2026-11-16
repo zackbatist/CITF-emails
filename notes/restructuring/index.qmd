@@ -98,7 +98,7 @@ Presidio replaces the personal information in the text shown on the coding page.
 
 Each person needs one pseudonym across the corpus, so that a coder reading a thread can follow who writes to whom, which a placeholder such as `<PERSON>` hides. A lookup keyed on each person's email address and on the names the project information lists gives "Dr. Smith", "Jane" and her address one pseudonym. The pseudonym carries no role, since a label such as the PI of a small study identifies the person. The coding page shows the role in its own column, which gives coders the context Ian asked for.
 
-The offset map links every position in the de-identified text back to the raw body, so that every tag, code and zone points into one canonical text. Because `citf-emails` is public, no email text enters the repository, de-identified or not, and the spans and the offset map stay in the untracked `data/`.
+The offset map links every position in the de-identified text back to the raw body, so that every tag, code and zone points into one canonical text. Because `citf-emails` is public, no email text enters the repository, de-identified or not, and the spans and the offset map stay untracked beside the notebook that writes them.
 
 A hand check on a sample, kept in `corpus/tests/de-identification/`, counts the names Presidio misses, since a missed name in a greeting or a signature exposes a person on the coding page. The sample draws extra short emails and French emails, where general recognizers do worst. The de-identification has to meet what REB 26-08-029 promises for the email corpus.
 
@@ -240,7 +240,7 @@ The draft currently leans toward questions 1 and 5. The first comes from David's
 
 # Data model {#sec-model}
 
-The data form a graph of nodes and edges in four groups. Correspondence holds the emails and their parts, people and organizations hold who wrote and on whose behalf, analysis holds what coding and detection add, and context holds what comes from outside the emails. Each part of the work writes the tables it produces, keyed by identifiers that every notebook shares. `corpus/` writes the correspondence, people and organizations, and context tables, with mentions and focal objects, each coding folder writes its Code nodes and Coding edges, `coding/actions/` writes the follow-ups, and `relating/` builds the activity log. People nodes carry names, email addresses and gender, so all of these tables stay in untracked `data/` folders, as the email text does. @fig-data-model shows the node and edge types, and @tbl-nodes and @tbl-edges list them.
+The data form a graph of nodes and edges in four groups. Correspondence holds the emails and their parts, people and organizations hold who wrote and on whose behalf, analysis holds what coding and detection add, and context holds what comes from outside the emails. Each part of the work writes the tables it produces, keyed by identifiers that every notebook shares. `corpus/` writes the correspondence, people and organizations, and context tables, with mentions and focal objects, each coding folder writes its Code nodes and Coding edges, `coding/actions/` writes the follow-ups, and `relating/` builds the activity log. People nodes carry names, email addresses and gender, so all of these tables stay untracked beside the notebooks that write them, as the email text does. @fig-data-model shows the node and edge types, and @tbl-nodes and @tbl-edges list them.
 
 ![The data model, with node types grouped by kind and the edge types between them.](figures/data-model.svg){#fig-data-model}
 
@@ -429,41 +429,38 @@ Links and values carry their method and confidence from the data model (@sec-mod
 
 ```
 citf-emails/
+├── data/                           # untracked: msgs10.csv, recip4.csv
 ├── corpus/
 │   ├── index.qmd, sections/
-│   ├── corpus.ipynb                # zones, sentences, de-identification, detection
+│   ├── corpus.ipynb                # load, flatten, study emails, zones, sentences, de-identification, detection
 │   ├── links.ipynb                 # threads, reply and forward links
 │   ├── project-information.ipynb   # projects, people, publications, events
-│   ├── tests/
-│   │   ├── filters/
-│   │   ├── zoning/
-│   │   ├── segmentation/
-│   │   ├── de-identification/
-│   │   ├── detection/
-│   │   └── links/
-│   └── data/                       # untracked
+│   └── tests/
+│       ├── filters/
+│       ├── zoning/
+│       ├── segmentation/
+│       ├── de-identification/
+│       ├── detection/
+│       └── links/
 ├── coding/
-│   ├── rhetoric/                   # the DocuScope assessment
+│   ├── rhetoric/
 │   │   ├── index.qmd, sections/
-│   │   ├── docuscope_assessment.ipynb
-│   │   ├── tests/
-│   │   └── data/                   # untracked
+│   │   ├── rhetoric.ipynb          # install, tag, distribution, confirmed rules
+│   │   └── tests/
+│   │       └── docuscope/          # the DocuScope assessment
 │   ├── functions/
 │   │   ├── index.qmd, sections/
 │   │   ├── functions.ipynb
-│   │   ├── tests/
-│   │   └── data/                   # untracked
+│   │   └── tests/
 │   └── actions/
 │       ├── index.qmd, sections/
 │       ├── actions.ipynb
-│       ├── tests/
-│       └── data/                   # untracked
+│       └── tests/
 ├── relating/
 │   ├── index.qmd, sections/
 │   ├── codes.ipynb                 # codes with each other
 │   ├── context.ipynb               # context, activity log, counts
-│   ├── views.ipynb                 # thread view, timelines, comparisons
-│   └── data/                       # untracked
+│   └── views.ipynb                 # thread view, timelines, comparisons
 ├── notes/
 │   ├── index.qmd                   # listing of the notes
 │   ├── relating-rhetoric-to-functions/
@@ -473,35 +470,37 @@ citf-emails/
 └── private/                        # untracked
 ```
 
-The folders follow the actions. `corpus/` builds the corpus that every action reads, since project information, threads, attachments and links to focal objects are data that several analyses read directly. `corpus.ipynb` loads, flattens and links emails to studies, then adds zones, sentences, de-identification and detection. `links.ipynb` stitches threads and records reply and forward links, and `project-information.ipynb` compiles projects, people, institutions, publications and events. Block 7's length filter stays in the DocuScope assessment, where it keeps the tagging checks manageable, and stops defining the corpus. Zoning extends to all 10,397 study emails.
+The folders follow the actions. `data/` holds only the raw data, `msgs10.csv` and `recip4.csv`. `corpus/` builds the corpus that every action reads, since project information, threads, attachments and links to focal objects are data that several analyses read directly. `corpus.ipynb` loads `msgs10.csv` and `recip4.csv` from `data/`, flattens the emails and links them to studies, then adds zones, sentences, de-identification and detection. `links.ipynb` stitches threads and records reply and forward links, and `project-information.ipynb` compiles projects, people, institutions, publications and events. Block 7's length filter stays in the DocuScope assessment, where it keeps the tagging checks manageable, and stops defining the corpus. Zoning extends to all 10,397 study emails.
 
-`coding/` holds one folder for each kind of code. `coding/rhetoric/` takes the DocuScope assessment, which moves there from `docuscope-assessment/`, and `coding/functions/` and `coding/actions/` each hold their own notebook, coding page, codebook and classifier. `relating/` holds one notebook for relating codes to each other, one for relating codes to context, which also builds the activity log, and one for the views. Moving the DocuScope assessment changes its address on the site, so the move waits until the assessment is finished.
+Every output sits beside the notebook that writes it, and each notebook saves what later notebooks read. `corpus.ipynb` saves the study emails and `email_zones.parquet`, and `rhetoric.ipynb` saves the tags. The root `.gitignore` lists `/data/`, `*.csv` and `*.parquet` and already lists `*.html`, so no email text and no output enters the repository. The coding pages embed their samples, so they stay untracked until they load samples through Import.
+
+`coding/` holds one folder for each kind of code. `coding/rhetoric/` holds `rhetoric.ipynb`, which installs DocuScope, tags the email bodies, counts the tags and applies the error rules that coding confirms. The DocuScope assessment moves from `docuscope-assessment/` to `coding/rhetoric/tests/docuscope/`, with its write-up and `docuscope.ipynb`. `coding/functions/` and `coding/actions/` each hold their own notebook, coding page, codebook and classifier. `relating/` holds one notebook for relating codes to each other, one for relating codes to context, which also builds the activity log, and one for the views.
 
 Each notebook numbers its blocks from 1, and @tbl-blocks shows where each current block moves. Block numbers appear in notebook headings, in the About text of `docuscope_coding_tool.html` and in the assessment's sections, and all of them change in one pass.
 
 | Current block | Moves to |
 |:--------------------------|:----------------------------------------------|
-| 1 Load email data | `corpus.ipynb` block 1 |
+| 1 Load email data | `corpus.ipynb` block 1, reading `data/` |
 | 2 Flatten emails | `corpus.ipynb` block 2, keeping dates and any reply and identifier fields |
 | 3 Restrict to study emails | `corpus.ipynb` block 3 |
 | 9 Label lines with Chipmunk | `corpus.ipynb` block 4, over all study emails |
 | 10 Refine zones | `corpus.ipynb` block 5 |
 | 11 Zone check sample | `corpus/tests/zoning/` |
 | new | `corpus.ipynb` blocks 6 to 8: sentences, de-identification, detection |
-| 4 Install DocuScope | `coding/rhetoric/docuscope_assessment.ipynb` block 1 |
-| 5 Tag email bodies | block 2 |
-| 6 View tags in an email | block 3 |
-| 7 Export 30 tagged emails | block 4 |
-| 8 Distribution of tags | block 5 |
-| 12 Detect likely tagging errors | block 6, reading zones from `corpus/` |
-| 13 Comparison across tag versions | block 7, once restored |
-| 14 Validation (planned) | block 8 |
+| 4 Install DocuScope | `rhetoric.ipynb` block 1 |
+| 5 Tag email bodies | `rhetoric.ipynb` block 2 |
+| 8 Distribution of tags | `rhetoric.ipynb` block 3 |
+| 6 View tags in an email | `docuscope.ipynb` block 1 |
+| 7 Export 30 tagged emails | `docuscope.ipynb` block 2 |
+| 12 Detect likely tagging errors | `docuscope.ipynb` block 3, reading tags from `rhetoric.ipynb` and zones from `corpus.ipynb` |
+| 13 Comparison across tag versions | `docuscope.ipynb` block 4 |
+| 14 Validation (planned) | `docuscope.ipynb` block 5 |
 
 : Current notebook blocks and where each one moves. {#tbl-blocks}
 
-The coding sample keeps its seed, so block 6 regenerates the same 774 tags with new block numbers in the coding tool.
+The coding sample keeps its seed, so block 3 of `docuscope.ipynb` regenerates the same 774 tags with new block numbers in the coding tool.
 
-Each folder keeps its checks in a `tests/` folder of its own, with one subfolder per check and the write-up in that folder's `sections/`. `corpus/tests/` holds the checks on the automated-message patterns, the zones, the sentences, the de-identification, the detection and the links. The zoning checks cover the Chipmunk and Okapi tests on Gmane and Enron, the five CITF emails, the zone check of 80 emails and the held-out checks, and the link checks include the timelines of two real projects drawn without codes. `coding/rhetoric/tests/` holds the tag coding sample and the planned validation, and the `tests/` folders of `coding/functions/` and `coding/actions/` hold each test set and the comparison of SetFit with its baselines, with the MAILEX test under actions. The test subfolder names are proposed labels.
+Workstream notebooks hold the final methods, and each `tests/` folder holds the trials and checks on them, with one subfolder per check and the write-up in that subfolder's `sections/`. A test reads the workstream's outputs without copying its methods, and a rule that a test confirms moves into the workstream notebook. `corpus/tests/` holds the checks on the automated-message patterns, the zones, the sentences, the de-identification, the detection and the links. The zoning checks cover the Chipmunk and Okapi tests on Gmane and Enron, the five CITF emails, the zone check of 80 emails and the held-out checks, and the zoning appendix moves there from the DocuScope assessment. The link checks include the timelines of two real projects drawn without codes. `coding/rhetoric/tests/docuscope/` holds the DocuScope assessment, with the tag coding sample and the planned validation, and the `tests/` folders of `coding/functions/` and `coding/actions/` hold each test set and the comparison of SetFit with its baselines, with the MAILEX test under actions. The test subfolder names are proposed labels.
 
 `notes/` holds working notes, following `notes/` in `CITF-Postdoc`, with `notes/index.qmd` as the page that lists them. It also holds `relating-rhetoric-to-functions/` and `shift-to-supervised/`, which moved there from `private/`. This document is the first note in `notes/`, at `notes/restructuring/index.qmd`. The summary of the call and the transcript sit beside it as `_call-summary.qmd` and `_transcript.qmd`, which the site skips because of the leading underscore. A `.gitignore` of the folder's own lists both files, so the protection moves with the folder, and the root `.gitignore` stays as it is. The published page leaves out the summary of the call and the transcript, since both are personal records of the call, and a local render with `-M call-appendices:true` includes them.
 
@@ -517,7 +516,7 @@ The email analysis began in summer 2025 with the cleaning of the email data, don
 2. **Restore block 13.** Find its code on the server, commit it to `docuscope_assessment.ipynb`, and confirm whether `start` and `end` in `how_tags.parquet` are character or token offsets.
 3. **Move the grant work** into `grant-writing/` ([Appendix A](#sec-grant-move)).
 4. **Create `notes/`** with this document in `notes/restructuring/`, and move the notes from `private/` into it.
-5. **Create `corpus/`.** Move blocks 1 to 3 and 9 to 11 with the restored fields, reproduce `email_zones.parquet` by hash, renumber both notebooks and regenerate the coding tool.
+5. **Create `corpus/` and move the DocuScope assessment.** Copy `msgs10.csv` and `recip4.csv` into `data/`, split the notebook as @tbl-blocks shows with the restored fields, reproduce `email_zones.parquet` by hash and regenerate the coding tool.
 6. **Extend zoning** to all study emails and run the second held-out check.
 7. **Split sentences and de-identify** the authored text, checked in `corpus/tests/segmentation/` and `corpus/tests/de-identification/`.
 8. **Compile project information and events** in `project-information.ipynb`, from the `crs` table, signatures, ORCID, OpenAlex, DataCite and CITF records.
