@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zackbatist.info/CITF-emails/topic-modelling/index.html</loc>
-    <lastmod>2026-06-15T19:04:35.245Z</lastmod>
+    <lastmod>2026-11-16T17:55:05.954Z</lastmod>
   </url>
   <url>
     <loc>https://zackbatist.info/CITF-emails/notes/shift-to-supervised/index.html</loc>
@@ -13,12 +13,8 @@
     <lastmod>2026-11-16T16:23:11.000Z</lastmod>
   </url>
   <url>
-    <loc>https://zackbatist.info/CITF-emails/network-analysis/index.html</loc>
-    <lastmod>2026-04-23T17:11:44.165Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zackbatist.info/CITF-emails/data-complexity/index.html</loc>
-    <lastmod>2026-04-27T13:24:14.797Z</lastmod>
+    <loc>https://zackbatist.info/CITF-emails/index.html</loc>
+    <lastmod>2026-05-04T13:23:40.546Z</lastmod>
   </url>
   <url>
     <loc>https://zackbatist.info/CITF-emails/coding/rhetoric/tests/docuscope/index.html</loc>
@@ -27,10 +23,6 @@
   <url>
     <loc>https://zackbatist.info/CITF-emails/corpus/tests/zoning/index.html</loc>
     <lastmod>2026-11-16T16:23:11.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zackbatist.info/CITF-emails/index.html</loc>
-    <lastmod>2026-05-04T13:23:40.546Z</lastmod>
   </url>
   <url>
     <loc>https://zackbatist.info/CITF-emails/notes/index.html</loc>
