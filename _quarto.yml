@@ -35,10 +35,6 @@ website:
         text: Home
       - href: topic-modelling/index.qmd
         text: Topic Modelling
-      - href: network-analysis/index.qmd
-        text: Network Analysis
-      - href: data-complexity/index.qmd
-        text: Data Complexity
       - href: research-protocol/index.qmd
         text: Research Protocol
       - section: Corpus
