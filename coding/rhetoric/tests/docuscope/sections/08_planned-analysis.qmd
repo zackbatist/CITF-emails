@@ -7,9 +7,9 @@ Brown and Laudenbach [-@brown2022] group the DocuScope categories into four rhet
 - **Supportive Interaction**: Facilitate, PublicTerms, CitationHedged, Citation, Responsibility, Interactive
 - **Modulated Reporting**: ConfidenceHedged, InformationChangeNegative, Uncertainty, ConfidenceHigh, FirstPerson, InformationChangePositive, Strategic, Description, InformationExposition, Negative
 
-We derive our own groups from the cleaned tags. We aggregate the rhetorical tag counts in authored text by sender and run a factor analysis, which groups the categories that the same senders use often. Each group becomes a rhetorical category for research data sharing emails. We name each group after its highest-scoring DocuScope categories and test the name in a manual review.
+We derive our own groups from the cleaned tags. We aggregate the rhetorical tag counts in authored text by sender and run a factor analysis, which groups the categories that the same senders use often. We call these the rhetorical groups of research data sharing emails. We name each group after its highest-scoring DocuScope categories and test the name in a manual review.
 
-The manual review covers all DocuScope tags in a sample of 200 emails. For each email, we write a topic label that names what the email is about, drawing on its InformationTopics spans, which mark the nominal subjects and objects that signal what a text concerns. We also assign each email the rhetorical categories that fit it, and we keep a category's name only if the senders of the emails we assign it to score highest on its group.
+The manual review covers all DocuScope tags in a sample of 200 emails. For each email, we write a topic label that names what the email is about, drawing on its InformationTopics spans, which mark the nominal subjects and objects that signal what a text concerns. We also assign each email the rhetorical groups that fit it, and we keep a group's name only if the senders of the emails we assign it to score highest on that group.
 
 We then give part of this annotated sample to an LLM and ask it to label the remaining emails in the corpus, adding new labels where the sample has none. We check the LLM's labels against our own on the held-out part of the sample.
 
