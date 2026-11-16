@@ -6,8 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-11-16">
-<meta name="keywords" content="DocuScope, email zoning, rhetorical tagging, validation">
+<meta name="dcterms.date" content="2026-11-12">
 
 <title>DocuScope Assessment – CITF Emails Analysis</title>
 <style>
@@ -250,7 +249,7 @@ p {
         <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
+  <ul class="collapse">
   <li><a href="#sec-purpose" id="toc-sec-purpose" class="nav-link active" data-scroll-target="#sec-purpose"><span class="header-section-number">1</span> Purpose</a></li>
   <li><a href="#sec-starting-point" id="toc-sec-starting-point" class="nav-link" data-scroll-target="#sec-starting-point"><span class="header-section-number">2</span> Starting point</a></li>
   <li><a href="#sec-distribution" id="toc-sec-distribution" class="nav-link" data-scroll-target="#sec-distribution"><span class="header-section-number">3</span> Block 8: distribution of HOW tags</a></li>
@@ -292,54 +291,27 @@ p {
 </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Authors</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author"><a href="https://zackbatist.info">Zachary Batist</a> <a href="mailto:zachary.batist@mcgill.ca" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0003-0435-508X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            McGill University
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Melissa Ouellet <a href="mailto:melissa.ouellet@mcgill.ca" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            McGill University
-          </p>
-      </div>
-  </div>
 
 <div class="quarto-title-meta">
 
-      
+    
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Created</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 16, 2026</p>
+      <p class="date">November 12, 2026</p>
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Updated</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">November 16, 2026</p>
+    </div>
+  </div>
     
   </div>
   
-<div>
-  <div class="abstract">
-    <div class="block-title">Abstract</div>
-    <p>DocuScope’s HOW tags mix the senders’ rhetoric with text they did not write and with words read in the wrong sense. We divided every email into zones with Chipmunk, a neural model for segmenting emails, and wrote rules to correct its errors. We kept only the authored zone, the text the sender wrote for that message, and set aside signatures, banners, quoted messages and markup. A human coder checked this authored zone on 40 random emails. The coder confirmed 98.7% of its lines as authored, with a 95% confidence interval of 96.4% to 99.7%. Thirteen error rules flag likely inaccurate DocuScope tags in authored text. Five apply without coding, and eight await testing. We built an offline coding tool and drew a provisional sample of DocuScope tags for manual coding, stratified by rule, domain noun and category.</p>
-  </div>
-</div>
 
-<div>
-  <div class="keywords">
-    <div class="block-title">Keywords</div>
-    <p>DocuScope, email zoning, rhetorical tagging, validation</p>
-  </div>
-</div>
 
 </header>
 
@@ -354,7 +326,7 @@ p {
 <p><span id="3" class="paragraph-number">[3]</span> Melissa’s notebook (blocks 1 to 7) sets up everything this session relies on. It loads <code>msgs10</code> and <code>recip4</code>, flattens and deduplicates the emails, keeps the 10,397 emails linked to a CITF study ID, tags email bodies with the <code>en_docusco_spacy</code> model (version 1.5), and exports 30 tagged emails to <code>docuscope_sample_30.html</code>.</p>
 <p><span id="4" class="paragraph-number">[4]</span> Block 7 defines the pool that this session works from: study emails of 300 to 2,000 characters, with emails that look like they contain credentials removed. The pool holds 6,086 emails.</p>
 <p><span id="5" class="paragraph-number">[5]</span> Block 7 also sorts the 19 HOW categories into six working groups (<code>how_groups</code>), which made the 30-email sample easier to read. This session works with the categories directly, since we plan to derive groups from the data through a factor analysis once the tags are cleaned (<a href="#sec-planned-analysis" class="quarto-xref">Section&nbsp;8</a>).</p>
-<p><span id="6" class="paragraph-number">[6]</span> The notebook runs on the CITF analysis server (<code>citf-analysis</code>), reached from VSCodium through the Open Remote SSH extension, with a dedicated environment at <code>~/docuscope-env</code>. <a href="#sec-reproducibility" class="quarto-xref">Section&nbsp;9</a> lists the software versions.</p>
+<p><span id="6" class="paragraph-number">[6]</span> The notebook runs on the CITF analysis server, reached from VSCodium through the Open Remote SSH extension, with a dedicated environment at <code>~/docuscope-env</code>. <a href="#sec-reproducibility" class="quarto-xref">Section&nbsp;9</a> lists the software versions.</p>
 </section>
 <section id="sec-distribution" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Block 8: distribution of HOW tags</h1>
@@ -833,9 +805,9 @@ p {
 <section id="sec-reproducibility" class="level1" data-number="9">
 <h1 data-number="9"><span class="header-section-number">9</span> Reproducibility</h1>
 <ul>
-<li><strong>Server and environment.</strong> <code>citf-analysis</code>, Python 3.12 in <code>~/docuscope-env</code>, with docuscospacy 0.3.7, en_docusco_spacy 1.5, spaCy 3.8.18, pandas 3.1.1, polars 2.1.0 and pyarrow 26.0.1.</li>
+<li><strong>Server and environment.</strong> The CITF analysis server, Python 3.12 in <code>~/docuscope-env</code>, with docuscospacy 0.3.7, en_docusco_spacy 1.5, spaCy 3.8.18, pandas 3.1.1, polars 2.1.0 and pyarrow 26.0.1.</li>
 <li><strong>Inputs.</strong> <code>msgs10.csv</code> and <code>recip4.csv</code> in <code>/citfdata_share/email/processed data/melissa</code>.</li>
-<li><strong>Email zoning.</strong> Chipmunk from <code>webis-de/acl20-crawling-mailing-lists</code> at commit <code>ecc2c70</code>, with its published weights (<code>fasttext-model.bin</code> and <code>segmenter_hinge.epoch-11.val_loss-0.093.h5</code>), runs on CPU with TensorFlow 2.2 in its own environment at <code>/home/zack/models/email-zoning/chipmunk-env</code>.</li>
+<li><strong>Email zoning.</strong> Chipmunk from <code>webis-de/acl20-crawling-mailing-lists</code> at commit <code>ecc2c70</code>, with its published weights (<code>fasttext-model.bin</code> and <code>segmenter_hinge.epoch-11.val_loss-0.093.h5</code>), runs on CPU with TensorFlow 2.2 in its own environment at <code>~/models/email-zoning/chipmunk-env</code>.</li>
 <li><strong>Notebook.</strong> <code>coding/rhetoric/tests/docuscope/docuscope.ipynb</code>, committed without its outputs.</li>
 <li><strong>Outputs</strong> in <code>docuscope-assessment/data</code>, which git does not track because the files contain email text: <code>docuscope_sample_30.html</code> (block 7), <code>email_zones.parquet</code> (blocks 9 and 10), the zone check files (block 11; <code>zone_check_</code> for the first set and <code>heldout_check_</code> for the second, each with <code>_emails.csv</code>, <code>_sample.csv</code>, <code>_tool.html</code> and the coder’s <code>_coder1.csv</code>), <code>how_tags.parquet</code>, <code>docuscope_coding_sample.csv</code> and <code>docuscope_coding_tool.html</code> (block 12), and, once coded, <code>docuscope_coding_coder1.csv</code> and <code>docuscope_coding_coder2.csv</code>.</li>
 <li><strong>Randomness.</strong> Every sample uses <code>random_state=42</code>, except the second batch of 20 emails in the second set of the zone check, which uses <code>random_state=62</code>.</li>
