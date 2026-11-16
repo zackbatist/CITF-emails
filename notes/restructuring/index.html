@@ -831,6 +831,7 @@ Figure&nbsp;4: Views for comparison across projects, with illustrative data.
 <section id="sec-repo" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Repository</h1>
 <pre><code>citf-emails/
+├── requirements.txt                # the environment for every notebook
 ├── data/                           # untracked: msgs10.csv, recip4.csv
 ├── corpus/
 │   ├── index.qmd, sections/
@@ -847,7 +848,7 @@ Figure&nbsp;4: Views for comparison across projects, with illustrative data.
 ├── coding/
 │   ├── rhetoric/
 │   │   ├── index.qmd, sections/
-│   │   ├── rhetoric.ipynb          # install, tag, distribution, confirmed rules
+│   │   ├── rhetoric.ipynb          # tag, distribution, confirmed rules
 │   │   └── tests/
 │   │       └── docuscope/          # the DocuScope assessment
 │   ├── functions/
@@ -872,7 +873,7 @@ Figure&nbsp;4: Views for comparison across projects, with illustrative data.
 └── private/                        # untracked</code></pre>
 <p>The folders follow the actions. <code>data/</code> holds only the raw data, <code>msgs10.csv</code> and <code>recip4.csv</code>. <code>corpus/</code> builds the corpus that every action reads, since project information, threads, attachments and links to focal objects are data that several analyses read directly. <code>corpus.ipynb</code> loads <code>msgs10.csv</code> and <code>recip4.csv</code> from <code>data/</code>, flattens the emails and links them to studies, then adds zones, sentences, de-identification and detection. <code>links.ipynb</code> stitches threads and records reply and forward links, and <code>project-information.ipynb</code> compiles projects, people, institutions, publications and events. Block 7’s length filter stays in the DocuScope assessment, where it keeps the tagging checks manageable, and stops defining the corpus. Zoning extends to all 10,397 study emails.</p>
 <p>Every output sits beside the notebook that writes it, and each notebook saves what later notebooks read. <code>corpus.ipynb</code> saves the study emails and <code>email_zones.parquet</code>, and <code>rhetoric.ipynb</code> saves the tags. The root <code>.gitignore</code> lists <code>/data/</code>, <code>*.csv</code> and <code>*.parquet</code> and already lists <code>*.html</code>, so no email text and no output enters the repository. The coding pages embed their samples, so they stay untracked until they load samples through Import.</p>
-<p><code>coding/</code> holds one folder for each kind of code. <code>coding/rhetoric/</code> holds <code>rhetoric.ipynb</code>, which installs DocuScope, tags the email bodies, counts the tags and applies the error rules that coding confirms. The DocuScope assessment moves from <code>docuscope-assessment/</code> to <code>coding/rhetoric/tests/docuscope/</code>, with its write-up and <code>docuscope.ipynb</code>. <code>coding/functions/</code> and <code>coding/actions/</code> each hold their own notebook, coding page, codebook and classifier. <code>relating/</code> holds one notebook for relating codes to each other, one for relating codes to context, which also builds the activity log, and one for the views.</p>
+<p><code>coding/</code> holds one folder for each kind of code. <code>coding/rhetoric/</code> holds <code>rhetoric.ipynb</code>, which tags the email bodies, counts the tags and applies the error rules that coding confirms. The DocuScope assessment moves from <code>docuscope-assessment/</code> to <code>coding/rhetoric/tests/docuscope/</code>, with its write-up and <code>docuscope.ipynb</code>. <code>coding/functions/</code> and <code>coding/actions/</code> each hold their own notebook, coding page, codebook and classifier. <code>relating/</code> holds one notebook for relating codes to each other, one for relating codes to context, which also builds the activity log, and one for the views.</p>
 <p>Each notebook numbers its blocks from 1, and <a href="#tbl-blocks" class="quarto-xref">Table&nbsp;3</a> shows where each current block moves. Block numbers appear in notebook headings, in the About text of <code>docuscope_coding_tool.html</code> and in the assessment’s sections, and all of them change in one pass.</p>
 <div id="tbl-blocks" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -919,15 +920,15 @@ Figure&nbsp;4: Views for comparison across projects, with illustrative data.
 </tr>
 <tr class="even">
 <td style="text-align: left;">4 Install DocuScope</td>
-<td style="text-align: left;"><code>rhetoric.ipynb</code> block 1</td>
+<td style="text-align: left;"><code>requirements.txt</code></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">5 Tag email bodies</td>
-<td style="text-align: left;"><code>rhetoric.ipynb</code> block 2</td>
+<td style="text-align: left;"><code>rhetoric.ipynb</code> block 1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">8 Distribution of tags</td>
-<td style="text-align: left;"><code>rhetoric.ipynb</code> block 3</td>
+<td style="text-align: left;"><code>rhetoric.ipynb</code> block 2</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">6 View tags in an email</td>
@@ -1038,7 +1039,7 @@ Tunstall, Lewis, Nils Reimers, Unso Eun Seo Jo, Luke Bates, Daniel Korat, Moshe 
 <li><p><strong>Find the folder.</strong> List every path the <code>private</code> repository has ever held, to identify the grant folder and to check what its history contains. Run this on the server:</p>
 <pre><code>cd ~ &amp;&amp; git clone &lt;address of the private repository&gt; private-scan &amp;&amp; cd private-scan &amp;&amp; git log --all --name-only --format= | sort -u | cat</code></pre>
 <p>The output identifies the grant folder. Every past version of every file in the grant folder will move with the folder, so the list also shows whether anything should be left behind.</p></li>
-<li><p><strong>Install git-filter-repo</strong> into <code>~/docuscope-env</code>.</p></li>
+<li><p><strong>Install git-filter-repo</strong> into <code>~/citf-emails-env</code>.</p></li>
 <li><p><strong>Extract the folder.</strong> In a fresh clone of <code>private</code>, <code>git filter-repo</code> keeps only the grant folder, moves its contents to the root, and keeps every commit that touched it with its original date and message.</p></li>
 <li><p><strong>Create the private repository</strong> on the lab’s git server and push the extracted history to it. The name <code>citf-emails-grant</code> is my label.</p></li>
 <li><p><strong>Clone the new repository into <code>citf-emails</code></strong> at <code>grant-writing/</code>, and add <code>grant-writing/</code> to <code>.gitignore</code> and <code>"!grant-writing/"</code> to the render list in <code>_quarto.yml</code>.</p></li>
