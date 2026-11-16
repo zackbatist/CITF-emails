@@ -1,8 +1,31 @@
-# Appendix: reproducing the zoning tests {#sec-zoning-tests}
-
+---
+title: "Zoning Tests"
+date: today
+authors:
+  - name: Zachary Batist
+    id: zb
+    email: zachary.batist@mcgill.ca
+    url: https://zackbatist.info
+    orcid: 0000-0003-0435-508X
+    affiliations:
+      - name: McGill University
+        department: Epidemiology, Biostatistics and Occupational Health
+        city: Montreal
+        region: Québec
+        country: Canada
+  - name: Melissa Ouellet
+    id: mo
+    email: melissa.ouellet@mcgill.ca
+    affiliations:
+      - name: McGill University
+        department: Epidemiology, Biostatistics and Occupational Health
+        city: Montreal
+        region: Québec
+        country: Canada
+---
 The zoning tests ran on the lab's GPU machine (`buckeridge-rtx6000`) in `~/models/email-zoning`. The folder lives on `citf-analysis`, and the GPU machine mounts it over SSHFS. Chipmunk runs on the CPU. Okapi runs on one GPU.
 
-## Provenance
+# Provenance
 
 | Item | Source | Identifier |
 |---|---|---|
@@ -13,7 +36,7 @@ The zoning tests ran on the lab's GPU machine (`buckeridge-rtx6000`) in `~/model
 
 `chipmunk-packages.txt` and `okapi-packages.txt` in the same folder record every installed package version.
 
-## Setup
+# Setup
 
 The setup installs uv in the home directory and keeps its Python builds and both download caches on the mount.
 
@@ -61,7 +84,7 @@ EOF
 deactivate
 ```
 
-## Chipmunk benchmarks
+# Chipmunk benchmarks
 
 The repository's own `evaluate` command scores the trained segmenter on the 300 Gmane validation emails and the 296 Enron emails. The paper reports its 96% on the same 300 emails.
 
@@ -77,7 +100,7 @@ CUDA_VISIBLE_DEVICES="" timeout 3600 ./run.sh src/parsing/message_segmenter.py e
   annotations/enron-annotated.jsonl 2>&1 | tee ../eval-enron.log
 ```
 
-## Okapi rebuild
+# Okapi rebuild
 
 The Okapi paper specifies the encoder and the sequence model. We chose the remaining settings.
 
@@ -282,7 +305,7 @@ report("enron", *predict(model, embed_set("enron-annotated.jsonl")))
 ```
 :::
 
-## Recall by zone on Enron
+# Recall by zone on Enron
 
 On Enron, the two models recall the zones that matter for us at similar rates. Both read about a quarter of mua_signature lines as paragraph, which would send banners and disclaimers into the text DocuScope tags.
 
@@ -295,7 +318,7 @@ On Enron, the two models recall the zones that matter for us at similar rates. B
 | mua_signature | 0.71 | 0.72 |
 | quotation | 0.97 | 0.94 |
 
-## Five emails
+# Five emails
 
 `five-emails.txt` holds the first five emails of the 30-email sample. This block splits it into one body per email in `emails/`, named by msgid2, and saves the header fields to `emails/headers.json`. Each body is everything below the `───` line, unchanged.
 

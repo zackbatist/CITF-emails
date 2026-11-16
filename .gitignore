@@ -57,5 +57,8 @@ notes/*_files/
 _extensions/
 _freeze/
 private/
-# DocuScope assessment: email data stays off GitHub
+# Email data and outputs stay off GitHub
+/data/
+*.csv
+*.parquet
 docuscope-assessment/data/

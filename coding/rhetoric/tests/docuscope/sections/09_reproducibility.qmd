@@ -3,7 +3,7 @@
 - **Server and environment.** `citf-analysis`, Python 3.12 in `~/docuscope-env`, with docuscospacy 0.3.7, en_docusco_spacy 1.5, spaCy 3.8.18, pandas 3.1.1, polars 2.1.0 and pyarrow 26.0.1.
 - **Inputs.** `msgs10.csv` and `recip4.csv` in `/citfdata_share/email/processed data/melissa`.
 - **Email zoning.** Chipmunk from `webis-de/acl20-crawling-mailing-lists` at commit `ecc2c70`, with its published weights (`fasttext-model.bin` and `segmenter_hinge.epoch-11.val_loss-0.093.h5`), runs on CPU with TensorFlow 2.2 in its own environment at `/home/zack/models/email-zoning/chipmunk-env`.
-- **Notebook.** `docuscope-assessment/docuscope_assessment.ipynb`, committed without its outputs.
+- **Notebook.** `coding/rhetoric/tests/docuscope/docuscope.ipynb`, committed without its outputs.
 - **Outputs** in `docuscope-assessment/data`, which git does not track because the files contain email text: `docuscope_sample_30.html` (block 7), `email_zones.parquet` (blocks 9 and 10), the zone check files (block 11; `zone_check_` for the first set and `heldout_check_` for the second, each with `_emails.csv`, `_sample.csv`, `_tool.html` and the coder's `_coder1.csv`), `how_tags.parquet`, `docuscope_coding_sample.csv` and `docuscope_coding_tool.html` (block 12), and, once coded, `docuscope_coding_coder1.csv` and `docuscope_coding_coder2.csv`.
 - **Randomness.** Every sample uses `random_state=42`, except the second batch of 20 emails in the second set of the zone check, which uses `random_state=62`.
 - **Parameters.** Patterns, thresholds, rule lists and sample sizes sit at the top of blocks 9 to 12.

@@ -40,10 +40,18 @@ website:
         text: Network Analysis
       - href: data-complexity/index.qmd
         text: Data Complexity
-      - href: docuscope-assessment/index.qmd
-        text: DocuScope Assessment
       - href: research-protocol/index.qmd
         text: Research Protocol
+      - section: Corpus
+        contents:
+          - href: corpus/tests/zoning/index.qmd
+            text: Zoning
+      - section: Coding
+        contents:
+          - section: Rhetoric
+            contents:
+              - href: coding/rhetoric/tests/docuscope/index.qmd
+                text: DocuScope Assessment
       - section: Notes
         href: notes/index.qmd
         contents:

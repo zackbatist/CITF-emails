@@ -32,7 +32,7 @@ keywords:
   - rhetorical tagging
   - validation
 filters: 
-  - ../assets/count-para.lua
+  - ../../../../assets/count-para.lua
 format:
   html: default
   pdf:
@@ -49,7 +49,7 @@ format:
         \usepackage{orcidlink}
         \usepackage{marvosym}
     template-partials:
-      - ../assets/title.tex
+      - ../../../../assets/title.tex
 ---
 
 {{< include sections/01_purpose.qmd >}}
@@ -62,5 +62,4 @@ format:
 {{< include sections/08_planned-analysis.qmd >}}
 {{< include sections/09_reproducibility.qmd >}}
 {{< include sections/10_next-steps.qmd >}}
-{{< include sections/11_appendix-zoning-tests.qmd >}}
 {{< include sections/12_references.qmd >}}
