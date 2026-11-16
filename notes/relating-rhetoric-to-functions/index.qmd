@@ -3,25 +3,7 @@ title: Relating rhetoric to functions
 subtitle: Strategy for integrating DocuScope and functional coding in the CITF email analysis
 date: 2026-11-13
 date-modified: 2026-11-14
-language:
-  title-block-published: "Created"
-  title-block-modified: "Updated"
 number-sections: true
-format:
-  html:
-    toc: true
-    toc-depth: 2
-  pdf:
-    date-format: "[Created] MMMM D, YYYY"
-    toc: true
-    toc-depth: 2
-    colorlinks: true
-    linkcolor: NavyBlue
-    urlcolor: NavyBlue
-    include-in-header:
-      text: |
-        \setlength{\emergencystretch}{3em}
-        \publishers{Updated November 14, 2026}
 ---
 
 ::: {.callout-note}

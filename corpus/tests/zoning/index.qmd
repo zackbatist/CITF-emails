@@ -1,29 +1,9 @@
 ---
 title: "Zoning Tests"
-date: today
-authors:
-  - name: Zachary Batist
-    id: zb
-    email: zachary.batist@mcgill.ca
-    url: https://zackbatist.info
-    orcid: 0000-0003-0435-508X
-    affiliations:
-      - name: McGill University
-        department: Epidemiology, Biostatistics and Occupational Health
-        city: Montreal
-        region: Québec
-        country: Canada
-  - name: Melissa Ouellet
-    id: mo
-    email: melissa.ouellet@mcgill.ca
-    affiliations:
-      - name: McGill University
-        department: Epidemiology, Biostatistics and Occupational Health
-        city: Montreal
-        region: Québec
-        country: Canada
+date: 2026-11-12
+date-modified: 2026-11-16
 ---
-The zoning tests ran on the lab's GPU machine (`buckeridge-rtx6000`) in `~/models/email-zoning`. The folder lives on `citf-analysis`, and the GPU machine mounts it over SSHFS. Chipmunk runs on the CPU. Okapi runs on one GPU.
+The zoning tests ran on the lab's GPU machine in `~/models/email-zoning`. The folder lives on the CITF analysis server, and the GPU machine mounts it over SSHFS. Chipmunk runs on the CPU. Okapi runs on one GPU.
 
 # Provenance
 

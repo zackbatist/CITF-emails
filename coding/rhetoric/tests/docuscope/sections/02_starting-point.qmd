@@ -6,4 +6,4 @@ Block 7 defines the pool that this session works from: study emails of 300 to 2,
 
 Block 7 also sorts the 19 HOW categories into six working groups (`how_groups`), which made the 30-email sample easier to read. This session works with the categories directly, since we plan to derive groups from the data through a factor analysis once the tags are cleaned (@sec-planned-analysis).
 
-The notebook runs on the CITF analysis server (`citf-analysis`), reached from VSCodium through the Open Remote SSH extension, with a dedicated environment at `~/docuscope-env`. @sec-reproducibility lists the software versions.
+The notebook runs on the CITF analysis server, reached from VSCodium through the Open Remote SSH extension, with a dedicated environment at `~/docuscope-env`. @sec-reproducibility lists the software versions.

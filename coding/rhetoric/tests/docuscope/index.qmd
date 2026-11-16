@@ -1,55 +1,11 @@
 ---
 title: "DocuScope Assessment"
 subtitle: "Validating DocuScope HOW tags in the CITF email corpus"
-date: today
+date: 2026-11-12
+date-modified: 2026-11-16
 bibliography: references.bib
-authors:
-  - name: Zachary Batist
-    id: zb
-    email: zachary.batist@mcgill.ca
-    url: https://zackbatist.info
-    orcid: 0000-0003-0435-508X
-    affiliations:
-      - name: McGill University
-        department: Epidemiology, Biostatistics and Occupational Health
-        city: Montreal
-        region: Québec
-        country: Canada
-  - name: Melissa Ouellet
-    id: mo
-    email: melissa.ouellet@mcgill.ca
-    affiliations:
-      - name: McGill University
-        department: Epidemiology, Biostatistics and Occupational Health
-        city: Montreal
-        region: Québec
-        country: Canada
-abstract: |
-  DocuScope's HOW tags mix the senders' rhetoric with text they did not write and with words read in the wrong sense. We divided every email into zones with Chipmunk, a neural model for segmenting emails, and wrote rules to correct its errors. We kept only the authored zone, the text the sender wrote for that message, and set aside signatures, banners, quoted messages and markup. A human coder checked this authored zone on 40 random emails. The coder confirmed 98.7% of its lines as authored, with a 95% confidence interval of 96.4% to 99.7%. Thirteen error rules flag likely inaccurate DocuScope tags in authored text. Five apply without coding, and eight await testing. We built an offline coding tool and drew a provisional sample of DocuScope tags for manual coding, stratified by rule, domain noun and category.
-keywords:
-  - DocuScope
-  - email zoning
-  - rhetorical tagging
-  - validation
-filters: 
+filters:
   - ../../../../assets/count-para.lua
-format:
-  html: default
-  pdf:
-    documentclass: article
-    geometry:
-      - top = 1in
-      - bottom = 1in
-      - left = 1in
-      - right = 1in
-    colorlinks: true
-    toc: false
-    include-in-header:
-      text: |
-        \usepackage{orcidlink}
-        \usepackage{marvosym}
-    template-partials:
-      - ../../../../assets/title.tex
 ---
 
 {{< include sections/01_purpose.qmd >}}

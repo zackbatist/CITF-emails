@@ -4,27 +4,9 @@ subtitle: Following informal consultation (September 18, 2026)
 description: The case for replacing unsupervised multi-topic assignment (NMF, 15% threshold) with hand coding of passages in a 100 to 200 email sample, one topic per passage, the objections to it, the design of the coding interface and codebook, and a recommended path.
 date: 2026-09-24
 date-modified: 2026-11-15
-language:
-  title-block-published: "Created"
-  title-block-modified: "Updated"
 number-sections: false
 resources:
   - mockup.html
-format:
-  html:
-    toc: true
-    toc-depth: 2
-  pdf:
-    date-format: "[Created] MMMM D, YYYY"
-    toc: true
-    toc-depth: 2
-    colorlinks: true
-    linkcolor: NavyBlue
-    urlcolor: NavyBlue
-    include-in-header:
-      text: |
-        \setlength{\emergencystretch}{3em}
-        \publishers{Updated November 15, 2026}
 ---
 
 ::: {.callout-note}

@@ -1,26 +1,16 @@
 ---
 title: "Restructuring the CITF email analysis"
 date: 2026-11-13
-date-modified: 2026-11-15
-language:
-  title-block-published: "Created"
-  title-block-modified: "Updated"
+date-modified: 2026-11-16
 call-appendices: false
 tbl-cap-location: bottom
 link-citations: true
 format:
   html:
-    toc: true
     toc-depth: 3
   pdf:
-    date-format: "[Created] MMMM D, YYYY"
-    monofont: Menlo
-    toc: true
     toc-depth: 3
-    colorlinks: true
-    linkcolor: NavyBlue
-    urlcolor: NavyBlue
-    citecolor: NavyBlue
+    monofont: Menlo
     include-in-header:
       text: |
         \usepackage{etoolbox}
@@ -29,8 +19,6 @@ format:
         \usepackage{caption}
         \captionsetup{font=small,labelfont=bf,justification=raggedright,singlelinecheck=false}
         \AtBeginEnvironment{longtable}{\setlength{\LTcapwidth}{\linewidth}}
-        \setlength{\emergencystretch}{3em}
-        \publishers{Updated November 15, 2026}
 bibliography: references.bib
 ---
 
@@ -504,7 +492,7 @@ Workstream notebooks hold the final methods, and each `tests/` folder holds the 
 
 `notes/` holds working notes, following `notes/` in `CITF-Postdoc`, with `notes/index.qmd` as the page that lists them. It also holds `relating-rhetoric-to-functions/` and `shift-to-supervised/`, which moved there from `private/`. This document is the first note in `notes/`, at `notes/restructuring/index.qmd`. The summary of the call and the transcript sit beside it as `_call-summary.qmd` and `_transcript.qmd`, which the site skips because of the leading underscore. A `.gitignore` of the folder's own lists both files, so the protection moves with the folder, and the root `.gitignore` stays as it is. The published page leaves out the summary of the call and the transcript, since both are personal records of the call, and a local render with `-M call-appendices:true` includes them.
 
-`grant-writing/` is its own private repository on `git.mchi.mcgill.ca`, cloned into `citf-emails/grant-writing/` and listed in `.gitignore`. `citf-emails` is public on GitHub, so GitHub publishes every tracked file and every past version of it, and grant drafts, budgets and reviews cannot sit there. Listed in `.gitignore`, the grant repository leaves no trace in `citf-emails`, and I work in it as an ordinary repository. [Appendix A](#sec-grant-move) gives the steps to carry the grant work and its history over from `CITF-Postdoc`.
+`grant-writing/` is its own private repository on the lab's git server, cloned into `citf-emails/grant-writing/` and listed in `.gitignore`. `citf-emails` is public on GitHub, so GitHub publishes every tracked file and every past version of it, and grant drafts, budgets and reviews cannot sit there. Listed in `.gitignore`, the grant repository leaves no trace in `citf-emails`, and I work in it as an ordinary repository. [Appendix A](#sec-grant-move) gives the steps to carry the grant work and its history over from `CITF-Postdoc`.
 
 # Next steps {#sec-next}
 
@@ -554,19 +542,19 @@ Steps 1 and 2 unblock everything else. Steps 11 and 12 run alongside steps 4 to 
 
 # Appendix A: Migrating prior grant-writing activity {#sec-grant-move .unnumbered}
 
-`CITF-Postdoc` tracks three submodules on `git.mchi.mcgill.ca`, namely `data`, `private` and `qc`. The public repository's history holds no grant drafts, so the grant work most likely sits in the `private` submodule (`http://git.mchi.mcgill.ca/zack/private`), which I update every few days. The public `gh-pages` history does hold `notes/private/CITF-Databank_Proposal_final_core.pdf`, from "Built site for gh-pages" on 13 January and 1 March 2025, which anyone can still retrieve from GitHub. The procedure extracts the grant folder with its full history into a new private repository and clones that repository into `citf-emails` as `grant-writing/`. Step 1 finds the path of the grant folder, and steps 2 to 6 use that path.
+`CITF-Postdoc` tracks three submodules on the lab's git server, namely `data`, `private` and `qc`. The public repository's history holds no grant drafts, so the grant work most likely sits in the `private` submodule, which I update every few days. The procedure extracts the grant folder with its full history into a new private repository and clones that repository into `citf-emails` as `grant-writing/`. Step 1 finds the path of the grant folder, and steps 2 to 6 use that path.
 
 1. **Find the folder.** List every path the `private` repository has ever held, to identify the grant folder and to check what its history contains. Run this on the server:
 
    ```
-   cd ~ && git clone http://git.mchi.mcgill.ca/zack/private private-scan && cd private-scan && git log --all --name-only --format= | sort -u | cat
+   cd ~ && git clone <address of the private repository> private-scan && cd private-scan && git log --all --name-only --format= | sort -u | cat
    ```
 
    The output identifies the grant folder. Every past version of every file in the grant folder will move with the folder, so the list also shows whether anything should be left behind.
 
 2. **Install git-filter-repo** into `~/docuscope-env`.
 3. **Extract the folder.** In a fresh clone of `private`, `git filter-repo` keeps only the grant folder, moves its contents to the root, and keeps every commit that touched it with its original date and message.
-4. **Create the private repository** on `git.mchi.mcgill.ca` and push the extracted history to it. The name `citf-emails-grant` is my label.
+4. **Create the private repository** on the lab's git server and push the extracted history to it. The name `citf-emails-grant` is my label.
 5. **Clone the new repository into `citf-emails`** at `grant-writing/`, and add `grant-writing/` to `.gitignore` and `"!grant-writing/"` to the render list in `_quarto.yml`.
 6. **Remove the folder from `private`** once `grant-writing/` checks out with its full history, with a commit naming its new location.
 
