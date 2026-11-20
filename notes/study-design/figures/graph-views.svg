@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 45 1180 815" font-family="Helvetica, Arial, sans-serif" font-size="12">
+<rect width="1180" height="860" fill="#fff"/>
+<rect x="20" y="60" width="370" height="380" rx="6" fill="#fcfcfc" stroke="#ccc"/>
+<text x="34" y="84" font-weight="bold" fill="#222" font-size="13">A. Projects aligned on a milestone</text>
+<text x="34" y="102" fill="#666" font-size="11">Emails by time before and after each DSA signing</text>
+<line x1="245" y1="122" x2="245" y2="405" stroke="#b03a2e" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="250" y="132" fill="#b03a2e" font-size="11">DSA signed</text>
+<text x="34" y="156" fill="#555" font-size="11">Project A</text>
+<line x1="100" y1="152" x2="375" y2="152" stroke="#eee"/>
+<circle cx="214.1" cy="152" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="224.7" cy="152" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="313.5" cy="152" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="205.0" cy="152" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="161.6" cy="152" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="198.6" cy="152" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="311.2" cy="152" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<text x="34" y="184" fill="#555" font-size="11">Project B</text>
+<line x1="100" y1="180" x2="375" y2="180" stroke="#eee"/>
+<circle cx="202.3" cy="180" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="267.7" cy="180" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="370.0" cy="180" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="114.1" cy="180" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="269.7" cy="180" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="146.2" cy="180" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="259.8" cy="180" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="303.1" cy="180" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="325.6" cy="180" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="302.6" cy="180" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<text x="34" y="212" fill="#555" font-size="11">Project C</text>
+<line x1="100" y1="208" x2="375" y2="208" stroke="#eee"/>
+<circle cx="182.2" cy="208" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="365.8" cy="208" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="256.5" cy="208" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="339.8" cy="208" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="370.0" cy="208" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="362.5" cy="208" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="277.4" cy="208" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="269.7" cy="208" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="195.4" cy="208" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="114.7" cy="208" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="156.7" cy="208" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<text x="34" y="240" fill="#555" font-size="11">Project D</text>
+<line x1="100" y1="236" x2="375" y2="236" stroke="#eee"/>
+<circle cx="209.7" cy="236" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="105.0" cy="236" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="145.6" cy="236" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="322.1" cy="236" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="105.0" cy="236" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="300.9" cy="236" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="268.0" cy="236" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="223.1" cy="236" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="277.2" cy="236" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<text x="34" y="268" fill="#555" font-size="11">Project E</text>
+<line x1="100" y1="264" x2="375" y2="264" stroke="#eee"/>
+<circle cx="281.9" cy="264" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="154.5" cy="264" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="283.4" cy="264" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="218.8" cy="264" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="324.0" cy="264" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="195.9" cy="264" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="287.8" cy="264" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="165.2" cy="264" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="197.8" cy="264" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="332.3" cy="264" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="185.0" cy="264" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<text x="34" y="296" fill="#555" font-size="11">Project F</text>
+<line x1="100" y1="292" x2="375" y2="292" stroke="#eee"/>
+<circle cx="370.0" cy="292" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="105.0" cy="292" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="225.2" cy="292" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="208.2" cy="292" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="360.9" cy="292" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="106.0" cy="292" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<text x="34" y="324" fill="#555" font-size="11">Project G</text>
+<line x1="100" y1="320" x2="375" y2="320" stroke="#eee"/>
+<circle cx="144.5" cy="320" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="198.4" cy="320" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="277.0" cy="320" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="370.0" cy="320" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="193.7" cy="320" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="219.4" cy="320" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="370.0" cy="320" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="298.3" cy="320" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="275.1" cy="320" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="243.1" cy="320" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<text x="34" y="352" fill="#555" font-size="11">Project H</text>
+<line x1="100" y1="348" x2="375" y2="348" stroke="#eee"/>
+<circle cx="211.1" cy="348" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="266.3" cy="348" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="212.4" cy="348" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="360.3" cy="348" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="259.7" cy="348" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="229.9" cy="348" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<text x="34" y="380" fill="#555" font-size="11">Project I</text>
+<line x1="100" y1="376" x2="375" y2="376" stroke="#eee"/>
+<circle cx="250.0" cy="376" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="177.0" cy="376" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="169.2" cy="376" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="199.3" cy="376" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="294.9" cy="376" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="218.3" cy="376" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="246.7" cy="376" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="263.9" cy="376" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="278.5" cy="376" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<circle cx="246.5" cy="376" r="4" fill="#2e5e8c" fill-opacity="0.8"/>
+<text x="105" y="425" fill="#555" font-size="11">before</text><text x="370" y="425" fill="#555" font-size="11" text-anchor="end">after</text>
+<rect x="405" y="60" width="370" height="380" rx="6" fill="#fcfcfc" stroke="#ccc"/>
+<text x="419" y="84" font-weight="bold" fill="#222" font-size="13">B. Phases over time</text>
+<text x="419" y="102" fill="#666" font-size="11">Projects in each phase by year; bar height is the number of projects</text>
+<text x="460" y="322" text-anchor="middle" fill="#555" font-size="11">2020</text>
+<rect x="440" y="120" width="40" height="72.0" fill="#d6eaf8"/>
+<rect x="440" y="195.0" width="40" height="36.0" fill="#aed6f1"/>
+<rect x="440" y="234.0" width="40" height="6.0" fill="#5dade2"/>
+<text x="525" y="322" text-anchor="middle" fill="#555" font-size="11">2021</text>
+<rect x="505" y="120" width="40" height="30.0" fill="#d6eaf8"/>
+<rect x="505" y="153.0" width="40" height="66.0" fill="#aed6f1"/>
+<rect x="505" y="222.0" width="40" height="30.0" fill="#5dade2"/>
+<rect x="505" y="255.0" width="40" height="6.0" fill="#2e86c1"/>
+<text x="590" y="322" text-anchor="middle" fill="#555" font-size="11">2022</text>
+<rect x="570" y="120" width="40" height="12.0" fill="#d6eaf8"/>
+<rect x="570" y="135.0" width="40" height="36.0" fill="#aed6f1"/>
+<rect x="570" y="174.0" width="40" height="48.0" fill="#5dade2"/>
+<rect x="570" y="225.0" width="40" height="12.0" fill="#2e86c1"/>
+<rect x="570" y="240.0" width="40" height="6.0" fill="#1b4f72"/>
+<text x="655" y="322" text-anchor="middle" fill="#555" font-size="11">2023</text>
+<rect x="635" y="120" width="40" height="6.0" fill="#d6eaf8"/>
+<rect x="635" y="129.0" width="40" height="18.0" fill="#aed6f1"/>
+<rect x="635" y="150.0" width="40" height="30.0" fill="#5dade2"/>
+<rect x="635" y="183.0" width="40" height="9.6" fill="#2e86c1"/>
+<rect x="635" y="195.6" width="40" height="24.0" fill="#1b4f72"/>
+<text x="720" y="322" text-anchor="middle" fill="#555" font-size="11">2024</text>
+<rect x="700" y="120" width="40" height="6.0" fill="#aed6f1"/>
+<rect x="700" y="129.0" width="40" height="18.0" fill="#5dade2"/>
+<rect x="700" y="150.0" width="40" height="6.0" fill="#2e86c1"/>
+<rect x="700" y="159.0" width="40" height="48.0" fill="#1b4f72"/>
+<rect x="425" y="341" width="10" height="10" fill="#d6eaf8"/><text x="440" y="350" font-size="11" fill="#333">Funding to first request</text>
+<rect x="425" y="358" width="10" height="10" fill="#aed6f1"/><text x="440" y="367" font-size="11" fill="#333">First request to DSA</text>
+<rect x="425" y="375" width="10" height="10" fill="#5dade2"/><text x="440" y="384" font-size="11" fill="#333">DSA to upload</text>
+<rect x="425" y="392" width="10" height="10" fill="#2e86c1"/><text x="440" y="401" font-size="11" fill="#333">Upload to cataloguing</text>
+<rect x="425" y="409" width="10" height="10" fill="#1b4f72"/><text x="440" y="418" font-size="11" fill="#333">Cataloguing to publication</text>
+<rect x="790" y="60" width="370" height="380" rx="6" fill="#fcfcfc" stroke="#ccc"/>
+<text x="804" y="84" font-weight="bold" fill="#222" font-size="13">C. Roles against phases</text>
+<text x="804" y="102" fill="#666" font-size="11">Share of each role's sentences coded as a request</text>
+<text x="960.0" y="132" text-anchor="middle" font-size="10" fill="#555">Fund.</text>
+<text x="1000.0" y="132" text-anchor="middle" font-size="10" fill="#555">Req.</text>
+<text x="1040.0" y="132" text-anchor="middle" font-size="10" fill="#555">DSA</text>
+<text x="1080.0" y="132" text-anchor="middle" font-size="10" fill="#555">Upload</text>
+<text x="1120.0" y="132" text-anchor="middle" font-size="10" fill="#555">Catal.</text>
+<text x="932" y="161.0" text-anchor="end" font-size="11" fill="#555">Task force director</text>
+<rect x="940" y="140" width="38" height="32" fill="rgb(178,183,203)"/>
+<rect x="980" y="140" width="38" height="32" fill="rgb(87,92,112)"/>
+<rect x="1020" y="140" width="38" height="32" fill="rgb(82,87,107)"/>
+<rect x="1060" y="140" width="38" height="32" fill="rgb(218,223,243)"/>
+<rect x="1100" y="140" width="38" height="32" fill="rgb(222,227,247)"/>
+<text x="932" y="195.0" text-anchor="end" font-size="11" fill="#555">Scientific Director</text>
+<rect x="940" y="174" width="38" height="32" fill="rgb(147,152,172)"/>
+<rect x="980" y="174" width="38" height="32" fill="rgb(80,85,105)"/>
+<rect x="1020" y="174" width="38" height="32" fill="rgb(211,216,236)"/>
+<rect x="1060" y="174" width="38" height="32" fill="rgb(208,213,233)"/>
+<rect x="1100" y="174" width="38" height="32" fill="rgb(236,241,255)"/>
+<text x="932" y="229.0" text-anchor="end" font-size="11" fill="#555">Operations Manager</text>
+<rect x="940" y="208" width="38" height="32" fill="rgb(109,114,134)"/>
+<rect x="980" y="208" width="38" height="32" fill="rgb(137,142,162)"/>
+<rect x="1020" y="208" width="38" height="32" fill="rgb(75,80,100)"/>
+<rect x="1060" y="208" width="38" height="32" fill="rgb(204,209,229)"/>
+<rect x="1100" y="208" width="38" height="32" fill="rgb(107,112,132)"/>
+<text x="932" y="263.0" text-anchor="end" font-size="11" fill="#555">Data manager</text>
+<rect x="940" y="242" width="38" height="32" fill="rgb(149,154,174)"/>
+<rect x="980" y="242" width="38" height="32" fill="rgb(171,176,196)"/>
+<rect x="1020" y="242" width="38" height="32" fill="rgb(75,80,100)"/>
+<rect x="1060" y="242" width="38" height="32" fill="rgb(120,125,145)"/>
+<rect x="1100" y="242" width="38" height="32" fill="rgb(220,225,245)"/>
+<text x="932" y="297.0" text-anchor="end" font-size="11" fill="#555">Principal investigator</text>
+<rect x="940" y="276" width="38" height="32" fill="rgb(159,164,184)"/>
+<rect x="980" y="276" width="38" height="32" fill="rgb(142,147,167)"/>
+<rect x="1020" y="276" width="38" height="32" fill="rgb(90,95,115)"/>
+<rect x="1060" y="276" width="38" height="32" fill="rgb(195,200,220)"/>
+<rect x="1100" y="276" width="38" height="32" fill="rgb(222,227,247)"/>
+<text x="932" y="331.0" text-anchor="end" font-size="11" fill="#555">Study coordinator</text>
+<rect x="940" y="310" width="38" height="32" fill="rgb(216,221,241)"/>
+<rect x="980" y="310" width="38" height="32" fill="rgb(211,216,236)"/>
+<rect x="1020" y="310" width="38" height="32" fill="rgb(125,130,150)"/>
+<rect x="1060" y="310" width="38" height="32" fill="rgb(78,83,103)"/>
+<rect x="1100" y="310" width="38" height="32" fill="rgb(214,219,239)"/>
+<text x="932" y="365.0" text-anchor="end" font-size="11" fill="#555">Contracts officer</text>
+<rect x="940" y="344" width="38" height="32" fill="rgb(205,210,230)"/>
+<rect x="980" y="344" width="38" height="32" fill="rgb(100,105,125)"/>
+<rect x="1020" y="344" width="38" height="32" fill="rgb(236,241,255)"/>
+<rect x="1060" y="344" width="38" height="32" fill="rgb(159,164,184)"/>
+<rect x="1100" y="344" width="38" height="32" fill="rgb(212,217,237)"/>
+<text x="804" y="422" font-size="11" fill="#666">Darker cells: a larger share of requests</text>
+<rect x="20" y="455" width="565" height="385" rx="6" fill="#fcfcfc" stroke="#ccc"/>
+<text x="34" y="479" font-weight="bold" fill="#222" font-size="13">D. Process map</text>
+<text x="34" y="497" fill="#666" font-size="11">Drawn from the activity log, one row for each action in an email</text>
+<text x="40" y="525" font-size="11" fill="#222" font-weight="bold">project</text>
+<text x="95" y="525" font-size="11" fill="#222" font-weight="bold">date</text>
+<text x="180" y="525" font-size="11" fill="#222" font-weight="bold">role</text>
+<text x="330" y="525" font-size="11" fill="#222" font-weight="bold">action</text>
+<text x="400" y="525" font-size="11" fill="#222" font-weight="bold">phase</text>
+<text x="40" y="542" font-size="11" fill="#555" font-weight="normal">A</text>
+<text x="95" y="542" font-size="11" fill="#555" font-weight="normal">2020-08-14</text>
+<text x="180" y="542" font-size="11" fill="#555" font-weight="normal">Operations Manager</text>
+<text x="330" y="542" font-size="11" fill="#555" font-weight="normal">request</text>
+<text x="400" y="542" font-size="11" fill="#555" font-weight="normal">1</text>
+<text x="40" y="559" font-size="11" fill="#555" font-weight="normal">A</text>
+<text x="95" y="559" font-size="11" fill="#555" font-weight="normal">2020-09-02</text>
+<text x="180" y="559" font-size="11" fill="#555" font-weight="normal">Principal investigator</text>
+<text x="330" y="559" font-size="11" fill="#555" font-weight="normal">provide</text>
+<text x="400" y="559" font-size="11" fill="#555" font-weight="normal">1</text>
+<text x="40" y="576" font-size="11" fill="#555" font-weight="normal">A</text>
+<text x="95" y="576" font-size="11" fill="#555" font-weight="normal">2020-10-20</text>
+<text x="180" y="576" font-size="11" fill="#555" font-weight="normal">Operations Manager</text>
+<text x="330" y="576" font-size="11" fill="#555" font-weight="normal">chase</text>
+<text x="400" y="576" font-size="11" fill="#555" font-weight="normal">1</text>
+<text x="40" y="593" font-size="11" fill="#555" font-weight="normal">B</text>
+<text x="95" y="593" font-size="11" fill="#555" font-weight="normal">2021-01-11</text>
+<text x="180" y="593" font-size="11" fill="#555" font-weight="normal">Operations Manager</text>
+<text x="330" y="593" font-size="11" fill="#555" font-weight="normal">request</text>
+<text x="400" y="593" font-size="11" fill="#555" font-weight="normal">2</text>
+<line x1="138" y1="680" x2="232" y2="640" stroke="#7f8c8d" stroke-width="6" opacity="0.6"/>
+<line x1="138" y1="680" x2="232" y2="740" stroke="#7f8c8d" stroke-width="3" opacity="0.6"/>
+<line x1="308" y1="740" x2="232" y2="640" stroke="#7f8c8d" stroke-width="2" opacity="0.6"/>
+<line x1="308" y1="640" x2="412" y2="680" stroke="#7f8c8d" stroke-width="5" opacity="0.6"/>
+<line x1="308" y1="740" x2="412" y2="770" stroke="#7f8c8d" stroke-width="2" opacity="0.6"/>
+<line x1="488" y1="770" x2="232" y2="640" stroke="#7f8c8d" stroke-width="1" opacity="0.6"/>
+<rect x="62" y="666" width="76" height="28" rx="14" fill="#eaf2f8" stroke="#2e5e8c"/>
+<text x="100" y="684" text-anchor="middle" font-size="11" fill="#1b4f72">request</text>
+<rect x="232" y="626" width="76" height="28" rx="14" fill="#eaf2f8" stroke="#2e5e8c"/>
+<text x="270" y="644" text-anchor="middle" font-size="11" fill="#1b4f72">provide</text>
+<rect x="232" y="726" width="76" height="28" rx="14" fill="#eaf2f8" stroke="#2e5e8c"/>
+<text x="270" y="744" text-anchor="middle" font-size="11" fill="#1b4f72">chase</text>
+<rect x="412" y="666" width="76" height="28" rx="14" fill="#eaf2f8" stroke="#2e5e8c"/>
+<text x="450" y="684" text-anchor="middle" font-size="11" fill="#1b4f72">confirm</text>
+<rect x="412" y="756" width="76" height="28" rx="14" fill="#eaf2f8" stroke="#2e5e8c"/>
+<text x="450" y="774" text-anchor="middle" font-size="11" fill="#1b4f72">escalate</text>
+<text x="40" y="825" font-size="11" fill="#666">Line width: how often one action follows another within a project</text>
+<rect x="600" y="455" width="560" height="385" rx="6" fill="#fcfcfc" stroke="#ccc"/>
+<text x="614" y="479" font-weight="bold" fill="#222" font-size="13">E. Network</text>
+<text x="614" y="497" fill="#666" font-size="11">People, projects, institutions and focal objects, without time</text>
+<line x1="730" y1="600" x2="665" y2="700" stroke="#aab7c4"/>
+<line x1="730" y1="600" x2="770" y2="550" stroke="#aab7c4"/>
+<line x1="730" y1="600" x2="880" y2="640" stroke="#aab7c4"/>
+<line x1="840" y1="750" x2="750" y2="755" stroke="#aab7c4"/>
+<line x1="840" y1="750" x2="880" y2="640" stroke="#aab7c4"/>
+<line x1="840" y1="750" x2="900" y2="700" stroke="#aab7c4"/>
+<line x1="1000" y1="610" x2="880" y2="640" stroke="#aab7c4"/>
+<line x1="1000" y1="610" x2="940" y2="540" stroke="#aab7c4"/>
+<line x1="1000" y1="610" x2="1110" y2="650" stroke="#aab7c4"/>
+<line x1="1050" y1="740" x2="1110" y2="650" stroke="#aab7c4"/>
+<line x1="1050" y1="740" x2="960" y2="765" stroke="#aab7c4"/>
+<line x1="840" y1="750" x2="960" y2="765" stroke="#aab7c4"/>
+<line x1="670" y1="570" x2="665" y2="700" stroke="#c8a97e" stroke-dasharray="3,3"/>
+<line x1="670" y1="570" x2="770" y2="550" stroke="#c8a97e" stroke-dasharray="3,3"/>
+<line x1="1095" y1="550" x2="940" y2="540" stroke="#c8a97e" stroke-dasharray="3,3"/>
+<line x1="1095" y1="550" x2="1110" y2="650" stroke="#c8a97e" stroke-dasharray="3,3"/>
+<line x1="970" y1="680" x2="840" y2="750" stroke="#909497"/>
+<line x1="970" y1="680" x2="1000" y2="610" stroke="#909497"/>
+<line x1="970" y1="680" x2="1050" y2="740" stroke="#909497"/>
+<rect x="719" y="589" width="22" height="22" rx="4" fill="#2c3e50"/>
+<rect x="829" y="739" width="22" height="22" rx="4" fill="#2c3e50"/>
+<rect x="989" y="599" width="22" height="22" rx="4" fill="#2c3e50"/>
+<rect x="1039" y="729" width="22" height="22" rx="4" fill="#2c3e50"/>
+<circle cx="665" cy="700" r="7" fill="#2e5e8c"/>
+<circle cx="770" cy="550" r="7" fill="#2e5e8c"/>
+<circle cx="750" cy="755" r="7" fill="#2e5e8c"/>
+<circle cx="880" cy="640" r="7" fill="#2e5e8c"/>
+<circle cx="940" cy="540" r="7" fill="#2e5e8c"/>
+<circle cx="1110" cy="650" r="7" fill="#2e5e8c"/>
+<circle cx="960" cy="765" r="7" fill="#2e5e8c"/>
+<circle cx="900" cy="700" r="7" fill="#2e5e8c"/>
+<polygon points="670,561 679,577 661,577" fill="#a0522d"/>
+<polygon points="1095,541 1104,557 1086,557" fill="#a0522d"/>
+<polygon points="981,680 975.5,689.526 964.5,689.526 959,680 964.5,670.474 975.5,670.474" fill="#fff" stroke="#5d6d7e" stroke-width="2"/>
+<rect x="620" y="813" width="12" height="12" rx="2" fill="#2c3e50"/><text x="638" y="823" font-size="11" fill="#333">project</text>
+<circle cx="710" cy="819" r="6" fill="#2e5e8c"/><text x="722" y="823" font-size="11" fill="#333">person</text>
+<polygon points="790,811 797,824 783,824" fill="#a0522d"/><text x="803" y="823" font-size="11" fill="#333">institution</text>
+<polygon points="897,819 893.5,825.062 886.5,825.062 883,819 886.5,812.938 893.5,812.938" fill="#fff" stroke="#5d6d7e" stroke-width="2"/><text x="902" y="823" font-size="11" fill="#333">focal object</text>
+</svg>
