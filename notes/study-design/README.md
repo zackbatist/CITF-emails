@@ -1,6 +1,6 @@
-# Restructuring the CITF email analysis
+# Study design for the CITF email analysis
 
-Plan for restructuring the CITF email analysis, following the call with David and Ian on 13 November 2026. Sections:
+Study design for the CITF email analysis, following the call with David and Ian on 13 November 2026. Sections:
 
 - Preparing the corpus
 - Coding rhetoric, functions and actions
@@ -26,13 +26,13 @@ Run from the root of `citf-emails`. `index.qmd` includes Appendices B and C only
 Without Appendices B and C:
 
 ```
-quarto render notes/restructuring/index.qmd
+quarto render notes/study-design/index.qmd
 ```
 
 With Appendices B and C:
 
 ```
-quarto render notes/restructuring/index.qmd -M call-appendices:true
+quarto render notes/study-design/index.qmd -M call-appendices:true
 ```
 
 Both write to the site's output folder. Render without `-M call-appendices:true` before publishing.

@@ -10,7 +10,7 @@ resources:
 ---
 
 ::: {.callout-note}
-I wrote this document in September 2026, after an informal consultation on how to code the emails, and revised it alongside the mockup through October 22. The [restructuring plan](../restructuring/index.qmd#sec-coding) has since superseded it. The plan codes rhetoric, functions and actions as three kinds of codes, and starts coding without a codebook.
+I wrote this document in September 2026, after an informal consultation on how to code the emails, and revised it alongside the mockup through October 22. The [study design](../study-design/index.qmd#sec-coding) has since superseded it. The plan codes rhetoric, functions and actions as three kinds of codes, and starts coding without a codebook.
 :::
 
 The shift replaces NMF topic assignment at a 15% threshold with human coding of passages. A coder selects a passage of newly written content in a purpose-built page and gives it one topic code. An email has no topic codes of its own, and the analysis phase derives its topics from its coded passages. Coders code a sample of 100 to 200 emails from the pilot corpus this way, and those codes guide and validate a local model that applies them to the full corpus. The pilot's four themes carry over as categories of the codebook, alongside an Other category.

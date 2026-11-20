@@ -50,8 +50,8 @@ website:
       - section: Notes
         href: notes/index.qmd
         contents:
-          - href: notes/restructuring/index.qmd
-            text: Restructuring Plan
+          - href: notes/study-design/index.qmd
+            text: Study Design
           - href: notes/relating-rhetoric-to-functions/index.qmd
             text: Relating Rhetoric to Functions
           - href: notes/shift-to-supervised/index.qmd
