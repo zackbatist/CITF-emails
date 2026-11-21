@@ -26,7 +26,7 @@ This note carries out the re-read of Brown and Laudenbach [-@brown2022] that the
 
 The study design left one question open in coding rhetoric: how DocuScope tags become interpretable groupings, which the study design called rhetorical styles and the DocuScope assessment calls rhetorical groups. This note uses the DocuScope assessment's term, rhetorical groups, and @sec-terms defines it. Brown and Laudenbach [-@brown2022] answered the same question for the Enron emails with a supervised discriminant analysis. The re-read shows that their four rhetorical functions are readings of discriminants built to separate Enron's corporate roles, so the four functions describe those roles and carry no evidence that the same functions organize other email (@sec-bl, @sec-bl-validity). Multi-dimensional analysis, the tradition their method borrows from, offers a sounder route, and three decades of work on it supply the tools and the warnings that the rhetoric workflow in this note needs (@sec-mda, @sec-email-speech).
 
-The rhetoric workflow derives rhetorical groups from the 10,397 CITF study emails (@sec-workflow). The Multi-Feature Tagger of English (MFTE) [@lefoll2025] tags every authored sentence. A factor analysis of which MFTE features co-occur across emails, with email length removed from each feature, yields the CITF dimensions. Each pole of a CITF dimension yields a candidate rhetorical group, which becomes a rhetorical group once I have read the emails with the most extreme scores at that pole and a second reader's blind sorting check confirms its name. The rhetorical groups then face three tests. The first checks their stability across projects, the second compares them with Biber's 1988 dimensions [@biber1988], and the third compares them with DocuScope rhetorical groups, which the same procedure derives from DocuScope categories. ConvoKit's politeness strategies [@chang2020] enter beside the rhetorical groups as a set of strategies that politeness theory defines in advance. The presence of each rhetorical group and each politeness strategy in each sentence then passes to relating rhetoric, functions and actions, where it joins the function and action codes by sentence ID.
+The rhetoric workflow derives rhetorical groups from the 10,397 CITF study emails (@sec-workflow). The Multi-Feature Tagger of English (MFTE) [@lefoll2025] tags every authored sentence. A factor analysis of which MFTE features co-occur across emails, with email length removed from each feature, yields the CITF dimensions. A CITF dimension consists of linguistic features that MFTE tags, such as modal verbs, contractions or passive verbs, whose presence rises and falls together across emails, and each email receives a score on each CITF dimension. Each pole of a CITF dimension yields a candidate rhetorical group, which becomes a rhetorical group once I have read the emails with the most extreme scores at that pole and a second reader's blind sorting check confirms its name. The rhetorical groups then face three tests. The first checks their stability across projects, the second compares them with Biber's 1988 dimensions [@biber1988], and the third compares them with DocuScope rhetorical groups, which the same procedure derives from DocuScope categories. ConvoKit's politeness strategies [@danescu2013; @chang2020] enter beside the rhetorical groups as a set of strategies that politeness theory defines in advance. The presence of each rhetorical group and each politeness strategy in each sentence then passes to relating rhetoric, functions and actions, where it joins the function and action codes by sentence ID.
 
 Three changes follow for the study design and the DocuScope assessment. DocuScope becomes a comparison, and the DocuScope assessment continues with its coding sample and validation. The sender-level factor analysis and the LLM labelling in section 8 of the DocuScope assessment drop out (@sec-set-aside). Preparing the corpus, with its zones, sentences and de-identified text, stands as the precondition for the rhetoric workflow, so this note leaves cleaning to the study design.
 
@@ -42,11 +42,11 @@ The rhetorical functions come from the second discriminant analysis. For each of
 
 The study design asked three questions of the re-read. Brown and Laudenbach named the styles after the corporate roles in each role cluster, and named the rhetorical functions after their own reading of the categories kept at each end of a discriminant. They discarded every DocuScope category whose structure coefficient fell between the two means, and their Table 3 omits those categories. They classified single emails with discriminant functions trained on the sender sums.
 
-## How far their result holds {#sec-bl-validity}
+## Validity of Brown and Laudenbach's rhetorical functions {#sec-bl-validity}
 
 Brown and Laudenbach's result works as an exploratory description of one company. As evidence that four rhetorical functions organize email, it is weak, for reasons that bear directly on coding rhetoric in the CITF emails.
 
-The procedure is circular. A discriminant analysis finds the weightings that best separate classes fixed in advance, so the discriminants describe whatever separates Enron's corporate roles in that sample. Concluding that role shapes style from discriminants built to separate roles assumes much of the conclusion. The study design already set discriminant analysis aside for this reason, and the re-read confirms it.
+The procedure is circular. A discriminant analysis finds the weightings that best separate classes fixed in advance, so the discriminants describe whatever separates Enron's corporate roles in that sample. Concluding that role shapes style from discriminants built to separate roles assumes much of the conclusion.
 
 The four role clusters also come from the data that then test them. K-means clustered the role means inside the discriminant space of the first analysis, and the second analysis separated those same four role clusters. Separation in the second analysis was close to guaranteed, and nothing in the paper justifies four role clusters out of eleven role means.
 
@@ -56,7 +56,7 @@ The rule for keeping DocuScope categories rests on a relative cutoff. Most kept 
 
 The names of the rhetorical functions carry the rest. DocuScope categories already carry rhetorical labels from the DocuScope dictionary [@kaufer2004], so naming a rhetorical function adds a second interpretive layer to the dictionary's own, and the paper offers no check on that second layer. Egbert and Biber [-@egbertbiber2018] found that discriminants and factors aligned in one corpus, and Brown and Laudenbach cite that finding, but it does not make supervised discriminants stand in for dimensions found without supervision in another corpus.
 
-The Enron data also limit how far the result travels. Enron was one company in crisis, before smartphones, with coarse role labels, and summing each sender's emails mixes the different kinds of email a person writes. Brown and Laudenbach acknowledge the pre-smartphone period themselves and expect newer email to carry less conversational content, since texting and chat now carry it.
+The Enron data also limit how far the result travels. Enron was one company in crisis, before smartphones, with coarse role labels, and summing each sender's emails mixes the different kinds of email a person writes. Brown and Laudenbach acknowledge the pre-smartphone period themselves and expect newer email to hold less conversational content, which people now send by text message or chat.
 
 Brown and Laudenbach's four styles could have served as a starting codebook. The re-read shows that the styles lack the grounding a codebook needs. The four rhetorical functions serve the rhetoric workflow as a point of comparison when I name the CITF rhetorical groups (@sec-naming).
 
@@ -70,8 +70,6 @@ Douglas Biber's *Variation across Speech and Writing* [-@biber1988] set out mult
 4. Overt Expression of Persuasion
 5. Abstract versus Non-abstract Information
 6. On-line Informational Elaboration
-
-Dimension 1, Involved versus Informational Production, accounts for the most variation, and it carries the claim that email resembles speech (@sec-email-speech).
 
 Biber extended multi-dimensional analysis across languages [-@biber1995] and argued from those studies that two dimensions recur nearly everywhere [@biber2014]. One opposes clausal, oral discourse to phrasal, literate discourse, and the other opposes narrative to non-narrative discourse. His textbook with Susan Conrad [-@biberconrad2009] treats email as an emerging register, and his work with Jesse Egbert analyzed a representative sample of the searchable web [@biberegbert2016; @biberegbert2018]. Biber and Gray [-@bibergray2016] showed that academic prose grows complex through dense noun phrases, and Atkinson's [-@atkinson1999] analysis of the *Philosophical Transactions* traced the shift of scientific writing toward informational and less author-centred prose across three centuries.
 
@@ -87,27 +85,25 @@ Several tools now extract Biber-style features. MAT replicates Biber's tagger an
 
 Studies of email from the late 1990s described it as writing that mimics speech. Newer work keeps the oral versus literate dimension as a stable axis and places email along it by purpose. Berber Sardinha [-@berbersardinha2014] scored webpages, blogs, emails and social media posts on Biber's 1988 dimensions and found that Internet registers resemble earlier registers in many respects while differing in others. His later analysis of Internet texts [@berbersardinha2018] found that its first dimension again opposed involved, interactive discourse to an informational focus, with stance carrying its second and third dimensions. Biber and Egbert [-@biberegbert2020] test whether involved web registers share the linguistic profile of face-to-face conversation, a test that bears directly on the claim that email resembles speech.
 
-Work on workplace email splits it by purpose. AlAfnan [-@alafnan2018] analyzed more than 350 emails from one Malaysian workplace. Requests and replies to requests fell in Biber's involved production, emails that informed recipients fell in informational production and abstract style, and emails that delivered attachments fell in non-narrative discourse. AlAfnan's study appeared in a little-known journal and covers one workplace, but it comes closest to the CITF emails in setting. Demir, Bartholomew and Larsson [-@demir2024] coded the communicative functions of 329 out-of-office emails from universities without running a multi-dimensional analysis. Curry and Pérez-Paredes [-@curry2025] treat public-oriented research communication as a register. I found no multi-dimensional analysis of research consortium or data sharing email.
+Work on workplace email splits it by purpose. AlAfnan [-@alafnan2018] analyzed more than 350 emails from one Malaysian workplace. Requests and replies to requests fell in Biber's involved production, emails that informed recipients fell in informational production and abstract style, and emails that delivered attachments fell in non-narrative discourse. AlAfnan's study appeared in a little-known journal and covers one workplace, but it comes closest to the CITF emails in setting. Demir, Bartholomew and Larsson [-@demir2024] coded the communicative functions of 329 out-of-office emails from universities without running a multi-dimensional analysis. Curry and Pérez-Paredes [-@curry2025] treat public-oriented research communication as a register, which opens the way to treating data sharing correspondence as a register of research coordination. No published multi-dimensional analysis covers research consortium or data sharing email.
 
-Where the CITF emails fall on Biber's Dimension 1 is therefore an open result that the CITF email project can report. The CITF emails date from 2020 to 2025, well after the pre-smartphone period that Brown and Laudenbach expect to have shaped Enron's conversational emails. The most telling comparison sets requests against emails that inform and emails that deliver files, where AlAfnan found the split (@sec-compare).
+Earlier studies placed email near speech on Biber's Dimension 1, Involved versus Informational Production. No study has measured where research consortium email falls on this dimension. The CITF emails date from 2020 to 2025, well after the pre-smartphone period that Brown and Laudenbach expect to have shaped Enron's conversational emails. The most telling comparison sets requests against emails that inform and emails that deliver files, where AlAfnan found the split (@sec-compare).
 
 # Workflow {#sec-workflow}
+
+The rhetoric workflow characterizes the rhetoric of the CITF emails independently of their functions and actions. It derives a small set of rhetorical groups from MFTE features and names each one. Each rhetorical group consists of MFTE features that co-occur across emails. For every authored sentence, the rhetoric workflow records a score and presence for each rhetorical group, and the presence and count of each politeness strategy. Rhetoric is one of three kinds of codes in the CITF email project, alongside functions and actions, and each kind of code comes from its own workflow. Keeping the workflows separate means that any association between rhetoric and function reflects the emails themselves. The planned point of contact between the three kinds of codes is `relating/codes.ipynb` and `relating/context.ipynb`, where they would join by sentence ID.
 
 **Objective.** Derive rhetorical groups from the authored text of the 10,397 CITF study emails, test them, and pass the presence of each rhetorical group in each sentence to relating rhetoric, functions and actions.
 
 **Deliverables.**
 
-- MFTE features and politeness strategies for every authored sentence of every study email
-- A hand check of MFTE's tags on the 30 sample emails
-- CITF dimensions from a factor analysis of length-adjusted MFTE feature presence across emails, with their loadings and email scores
-- Named rhetorical groups, each confirmed by a blind sorting check
-- Congruence figures for each rhetorical group across random halves of the projects
-- Comparisons of the CITF dimensions with Biber's 1988 dimensions and with DocuScope rhetorical groups
-- The sentence score and presence of each rhetorical group, and the presence and count of each politeness strategy, in every sentence, keyed by sentence ID
+- Rhetorical groups, each with its features, name and definition
+- Politeness strategies on every authored sentence
+- The tagger check, blind sorting check and stability test behind the rhetorical groups
+- Comparisons with Biber's 1988 dimensions and with DocuScope rhetorical groups
+- The sentence score and presence of each rhetorical group, keyed by sentence ID, for relating to functions and actions
 
 ## Terms {#sec-terms}
-
-The rhetoric workflow uses the following terms in these senses only.
 
 - **Feature.** One of the linguistic features that MFTE tags, such as a modal verb, a *that*-clause or a human noun. DocuScope's units remain **categories**.
 - **CITF dimension.** One factor from the factor analysis of MFTE feature presence across the CITF emails, after rotation. **Biber's 1988 dimensions** refer only to the six dimensions of @biber1988.
@@ -122,40 +118,44 @@ The rhetoric workflow uses the following terms in these senses only.
 - **Politeness strategy.** One of the strategies that ConvoKit's politeness module marks, such as hedging or gratitude. Politeness strategies are not rhetorical groups, since no factor analysis derives them.
 - **Length dimension.** A CITF dimension whose email scores correlate with the log of the email's authored token count at 0.5 or above. The length residuals should leave no length dimension, and any that appears yields no rhetorical groups.
 
-For Brown and Laudenbach's work, this note keeps their own terms. **Role clusters** are the four clusters of corporate roles that k-means produced, **styles** are their names for those clusters, and **rhetorical functions** are the named ends of their two discriminants.
+Role clusters, styles and rhetorical functions are Brown and Laudenbach's terms and apply only to their work. **Role clusters** are the four clusters of corporate roles that k-means produced, **styles** are their names for those clusters, and **rhetorical functions** are the named ends of their two discriminants.
 
-@tbl-tools lists the tools in the rhetoric workflow. All of them run in Python, so `requirements.txt` stays the one environment for the `citf-emails` repository.
+@tbl-tools lists each tool in the rhetoric workflow, what it does and the step where it enters. MFTE and ConvoKit tag the authored sentences. statsmodels, factor_analyzer, NumPy and SciPy handle the length regressions, the factor analysis and the stability test. pybiber and en_docusco_spacy supply the two comparisons. Every tool installs from PyPI or Hugging Face, so `requirements.txt` stays the one environment for the `citf-emails` repository.
 
-| Tool | Role in the rhetoric workflow | Source |
-|:--------------------|:--------------------------------------------|:--------------------|
-| MFTE | Tags features in each authored sentence | @lefoll2025 |
-| ConvoKit politeness strategies | Marks politeness strategies in each authored sentence | @danescu2013; @chang2020 |
-| statsmodels | Fits the logistic regressions that give the length residuals | Documentation in Links |
-| factor_analyzer | Runs the factor analysis | Repository in Links |
-| pybiber | Scores emails above the length threshold on Biber's 1988 dimensions | Documentation in Links |
-| `en_docusco_spacy` | Supplies DocuScope categories for the DocuScope rhetorical groups | Model page in Links |
+| Tool | What it does in the rhetoric workflow | Source |
+|:----------------|:---------------------------------------------------|:------------------|
+| MFTE 1.6 | Tags more than 100 lexico-grammatical and semantic features in each authored sentence. Its regular expressions run on Stanza's part-of-speech tags. It writes `counts_raw.csv`, `counts_word-based_normed.csv` and `counts_mixed_normed.csv` (@sec-tagging) | @lefoll2025; [GitHub](https://github.com/mshakirDr/MFTE) |
+| Stanza | Tokenizes and tags parts of speech for MFTE, and parses constituency when MFTE's constituency tags are on | [Documentation](https://stanfordnlp.github.io/stanza/) |
+| ConvoKit PolitenessStrategies | Marks the 21 strategies of the `politeness_api` collection in each authored sentence, such as Please, Hedges, Gratitude, Apologizing and Deference, from a spaCy dependency parse | @danescu2013; @chang2020; [Documentation](https://convokit.cornell.edu/documentation/politenessStrategies.html) |
+| statsmodels | Fits a binomial GLM for each feature on a spline of log authored token count, and returns the Pearson residuals that become the length residuals (@sec-unit), and runs the canonical correlation analysis with `CanCorr` (@sec-compare) | [Documentation](https://www.statsmodels.org/stable/generated/statsmodels.genmod.generalized_linear_model.GLMResults.resid_pearson.html) |
+| factor_analyzer | Runs the Kaiser-Meyer-Olkin measure, Bartlett's test, extraction, promax rotation and the regression email scores (@sec-fa) | [GitHub](https://github.com/EducationalTestingService/factor_analyzer) |
+| NumPy | Generates the random data for parallel analysis, which factor_analyzer does not include (@sec-fa) | [Documentation](https://numpy.org/doc/stable/) |
+| SciPy | Matches each half's dimensions to the full corpus's dimensions with `linear_sum_assignment` (@sec-stability) | [Documentation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linear_sum_assignment.html) |
+| pybiber 0.3.1 | Extracts Biber's 67 features per 1,000 tokens with spaCy, and scores emails above the 100-token threshold on Biber's 1988 dimensions with `mda_biber` (@sec-compare) | [Documentation](https://browndw.github.io/pybiber) |
+| en_docusco_spacy 1.5 | Tags DocuScope categories for the DocuScope rhetorical groups (@sec-compare) | [Model page](https://huggingface.co/browndw/en_docusco_spacy) |
+| spaCy | Parses text for ConvoKit and pybiber, and runs en_docusco_spacy | [Documentation](https://spacy.io/) |
 
 : Tools in the rhetoric workflow. {#tbl-tools}
 
 ## Precondition {#sec-precondition}
 
-The rhetoric workflow reads the corpus that `corpus.ipynb` builds. Chipmunk zoning [@bevendorff2020] separates the authored zone from signatures, banners and quoted text. Zoning matters more for the rhetoric workflow than for any other part of the study design, since quoted text repeats features and inflates every count. Sentence splitting gives each authored sentence an ID and character offsets into the raw body. De-identification gives the text that I and the second reader read. The rhetoric workflow starts once the second held-out zoning check covers all 10,397 study emails.
+The rhetoric workflow reads the corpus that `corpus.ipynb` builds. Chipmunk zoning [@bevendorff2020] separates the authored zone from signatures, banners and quoted text. Sentence splitting gives each authored sentence an ID and character offsets into the raw body. De-identification gives the text that I and the second reader read.
 
-MFTE reads English only, as DocuScope does. French emails follow the decision that preparing the corpus reaches for DocuScope, and the factor analysis reports how many emails each project loses to that decision.
+MFTE's rules cover English only. The [study design](../study-design/index.qmd) leaves open whether to code French emails in the original or in translation. Until that decision is made, the factor analysis covers English emails only, and its results include the number of French emails excluded from each project.
 
 ## Unit and length {#sec-unit}
 
-The rhetoric workflow tags each sentence and derives the CITF dimensions from emails. Each authored sentence runs through MFTE as its own text file, named by its sentence ID, and an email's features are the union of its sentences' features. Tagging sentences gives relating rhetoric, functions and actions its unit directly, with no offset arithmetic. Each email's raw counts follow by summing its sentences' raw counts from `counts_raw.csv`, and its rates follow by recomputing MFTE's mixed normalization from those sums, since a rate averaged across sentences would weight a short sentence as heavily as a long one. A few MFTE features describe a whole text, such as type-token ratio and mean word length, and those features stay out of the factor analysis.
+The unit of tagging is the authored sentence, and the unit of the factor analysis that yields the CITF dimensions is the email. The input to MFTE is one plain-text file per authored sentence, named by its sentence ID. A feature is present in an email when at least one of the email's authored sentences carries an MFTE tag for it. Function and action codes attach to sentences, so sentence-level tags join them by sentence ID. Tags made on whole emails would need mapping back to sentences through character offsets. An email's raw count of each feature is the sum of that feature's raw counts across the email's sentences, from `counts_raw.csv`. An email's rate for each feature comes from applying MFTE's mixed normalization to those summed counts, since an average of sentence rates would weight a short sentence as heavily as a long one. MFTE also reports a few text-level measures, such as type-token ratio and mean word length. These describe the whole text and stay out of the factor analysis.
 
-The CITF dimensions come from emails because the email is the unit a writer composes and a recipient reads, and co-occurrence across a whole email reflects register in a way that co-occurrence within one sentence cannot. Sentences are too short to show which features travel together.
+The unit of the factor analysis is the email because a writer composes and a recipient reads a whole email, and register shows in which features co-occur across a whole email. Most authored sentences hold too few features to show which features co-occur.
 
-Short emails make rates unstable, as Brown and Laudenbach found. Their remedy, summing by sender, would mix a person's requests, reports and courtesies into one text, so the rhetoric workflow records presence, following Clarke and Grieve [-@clarkegrieve2017]. Each email gets a yes or no for each feature, which stays stable for a two-line reply, and every study email enters the factor analysis. Presence still rises with length, since longer emails have more room for every feature. Clarke and Grieve's tweets had a capped length, while CITF emails run from two-line replies to long reports, and the longest emails reach ceiling on the common features. Removing a dimension that tracks length would leave length in every other dimension, so length comes out of each feature before the factor analysis. For each feature, a logistic regression models its presence on a spline of the log of the email's authored token count, and the factor analysis reads the Pearson residuals of those regressions, the length residuals. I then correlate each CITF dimension's email scores with the log of the authored token count as a check, and any length dimension leaves the naming.
+Brown and Laudenbach found that rates are unstable in short emails, and they summed each sender's emails into one text. For the CITF emails, summing by sender would mix a person's requests, reports and courtesies into one text. The record for each email is instead the presence or absence of each feature, following Clarke and Grieve [-@clarkegrieve2017]. Presence or absence stays stable for a two-line reply, so every study email enters the factor analysis. Presence still rises with length, since longer emails have more room for every feature. Clarke and Grieve's tweets had a capped length, while CITF emails run from two-line replies to long reports, and the longest emails reach ceiling on the common features. Removing a dimension that tracks length would leave length in every other dimension, so length comes out of each feature before the factor analysis. For each feature, a logistic regression models its presence on a spline of the log of the email's authored token count, and the factor analysis reads the Pearson residuals of those regressions, the length residuals. The check for a length dimension is the correlation between each CITF dimension's email scores and the log of the authored token count. A length dimension yields no rhetorical groups (@sec-terms).
 
-A second factor analysis runs on rates for emails whose authored zone holds at least 100 tokens, with the threshold fixed before the analysis and sensitivity runs at 50 and 200 tokens. Agreement between the presence analysis and the rate analysis shows that the rhetorical groups do not depend on how the counts enter.
+A second factor analysis runs on rates for emails whose authored zone holds at least 100 tokens, with the threshold fixed before the analysis and sensitivity runs at 50 and 200 tokens. If the presence analysis and the rate analysis produce matching CITF dimensions, the rhetorical groups hold whether features enter as presence or as rates.
 
 ## Tagging {#sec-tagging}
 
-MFTE supplies the features. Its simple tagset holds lexico-grammatical features, and its extended tagset, the default in the Python version, adds semantic features such as human nouns and verbs of causation, for more than 100 features in all [@lefoll2025]. Three properties of MFTE matter for the CITF emails. MFTE reports counts against linguistically meaningful baselines, a count per finite verb or per noun where the feature calls for one, which answers the criticism of counting everything per 1,000 words. Its authors evaluated it against two human annotators across contrasting registers and built it for reproducible multivariable studies, with documented rules that a reader can audit. It runs on Stanza and regular expressions, so every tag traces to a rule, which fits the study design's preference for predictable, auditable labelling.
+MFTE supplies the features. Its simple tagset holds lexico-grammatical features, and its extended tagset, the default in the Python version, adds semantic features such as human nouns and verbs of causation, for more than 100 features in all [@lefoll2025]. Three properties of MFTE matter for the CITF emails. MFTE reports counts against linguistically meaningful baselines, a count per finite verb or per noun where the feature calls for one, which answers the criticism of counting everything per 1,000 words. Its authors evaluated it against two human annotators across contrasting registers and built it for reproducible multivariable studies, with documented rules that a reader can audit. MFTE assigns each tag by a documented rule, a regular expression applied to tokens and part-of-speech tags from Stanza, the Stanford NLP Group's Python library for tokenizing, tagging and parsing text. A reader can therefore find the rule behind any tag, which fits the study design's preference for predictable, auditable labelling.
 
 The rhetoric workflow uses MFTE's extended set. Biber's 1988 analysis drew on lexical classes as well as grammar, and the semantic features give the factor analysis a chance to find rhetorical groups that grammatical features alone would miss.
 
@@ -193,22 +193,26 @@ The first comparison sets the CITF dimensions against Biber's 1988 dimensions. p
 
 Within-corpus standardization sets the CITF mean on every dimension to zero, so placing the CITF emails among Biber's registers needs a second scoring. `rhetoric.ipynb` standardizes the same features against the means and standard deviations that Biber reports for his 1988 corpus [@biber1988] and applies pybiber's packaged loadings. pybiber reimplements Biber's tagger, so its counts differ from his, and the CITF mean on Dimension 1 against Biber's registers shows only approximately whether the CITF emails sit near conversation. This comparison lives in `coding/rhetoric/tests/biber-dimensions/`.
 
-The second comparison sets the rhetorical groups against DocuScope rhetorical groups. Once the DocuScope assessment's validation block clears DocuScope categories, the presence analysis, naming and blind sorting check run on those categories, and Tucker's congruence between the two sets of email scores shows whether the rhetorical groups depend on the tagger. A rhetorical group that both taggers produce rests on two independent descriptions of the text. This comparison replaces the sender-level factor analysis in section 8 of the DocuScope assessment and lives in `coding/rhetoric/tests/docuscope/`.
+The second comparison sets the rhetorical groups against DocuScope rhetorical groups. Once the DocuScope assessment's validation block clears DocuScope categories, the presence analysis, naming and blind sorting check run on those categories. A canonical correlation analysis then compares the CITF email scores with the DocuScope email scores. Its results give the number of dimensions the two taggers share and the strength of each one, which shows whether the rhetorical groups depend on the tagger. A permutation test with shuffled emails sets the chance level for each canonical correlation. A rhetorical group that both taggers produce rests on two independent descriptions of the text. This comparison replaces the sender-level factor analysis in section 8 of the DocuScope assessment and lives in `coding/rhetoric/tests/docuscope/`.
+
+Both comparisons have limits. MFTE and pybiber count several of the same features, such as first- and second-person pronouns, contractions and modal verbs, so part of any correlation between CITF email scores and Biber scores comes from features the two scores share. `mda_biber` sums the standardized rates of the features whose packaged loadings exceed 0.35 in absolute value, a different calculation from the regression scores that factor_analyzer gives the CITF emails, and it covers only emails above the 100-token threshold. When two taggers agree, both may still share an error, and when they disagree, the comparison does not show which one is right.
+
+Each correlation with Biber's 1988 dimensions appears twice, once with all features and once with the features that MFTE and pybiber both count left out of the CITF email scores, so the second figure rests on evidence that the two scores do not share. Tucker's congruence stays in the stability test, where both halves of the projects share the same MFTE features. The strongest test of the CITF dimensions lies outside these comparisons, in whether email scores separate emails by function code, as AlAfnan's split of requests, informing emails and emails that deliver files predicts.
 
 ## Relating rhetorical groups {#sec-relate}
 
-The sentence score and presence of each rhetorical group, and the presence and count of each politeness strategy, in each sentence pass to `relating/codes.ipynb`, keyed by sentence ID. There they join the function and action codes as the note on relating rhetoric to functions describes, with its comparison of each function category against all other sentences, its length control and its correction for multiple comparisons.
+The input to `relating/codes.ipynb` holds one row per sentence, keyed by sentence ID, with the sentence score and presence of each rhetorical group and the presence and count of each politeness strategy. In `relating/codes.ipynb`, those values join the function and action codes of the same sentence. For each function category, the comparison sets its sentences against all other sentences in the corpus, controls for sentence length, and corrects for multiple comparisons with the Benjamini-Hochberg false discovery rate.
 
-The comparison with context in `relating/context.ipynb` keeps the study design's mixed models with sender and study as random effects. Grieve's [-@grieve2023] argument gives those random effects a theoretical footing. If each person writes in a slightly different register, a sender's habits explain part of the presence of every rhetorical group, and the random effect for sender holds that part apart from what the sentence does. The corpus supplies the situational variables, which are the sender's role, whether a recipient sits in To or Cc, the number of recipients, the project's phase and the contact history between sender and recipient. Biber, Egbert and Keller [-@biber2020] treat such variables as a continuous situational space, and `relating/context.ipynb` follows that approach by entering each situational variable as its own dimension of the situation.
+Context means the situation of each email, which the situational variables below describe. In `relating/context.ipynb`, the comparison with context uses the study design's mixed models, with sender and study as random effects. Grieve's [-@grieve2023] argument gives the random effect for sender a theoretical footing. If each person writes in a slightly different register, a sender's habits explain part of the presence of every rhetorical group, and the random effect for sender holds that part apart from what the sentence does. The corpus supplies the situational variables, which are the sender's role, whether a recipient sits in To or Cc, the number of recipients, the project's phase and the contact history between sender and recipient. Biber, Egbert and Keller [-@biber2020] treat such variables as a continuous situational space, and `relating/context.ipynb` follows that approach by entering each situational variable as its own dimension of the situation.
 
 At the project level, each email's scores on the CITF dimensions enter the per-email and per-phase counts that the study design sets out for every code. Counts of rhetorical groups per email stay out, since they rise with email length and the email scores do not.
 
 ## Repository {#sec-wf-repo}
 
-@tbl-repo shows where each part of the rhetoric workflow sits in the repository layout of the study design. The test subfolder names are proposed labels.
+@tbl-repo shows where each part of the rhetoric workflow sits in the repository layout. Of the test subfolders, only `docuscope/` exists so far.
 
 | Part | Location |
-|:--------------------------|:----------------------------------------------|
+|:------------------------------------|:------------------------|
 | Tagging with MFTE and ConvoKit's politeness module | `coding/rhetoric/rhetoric.ipynb` |
 | Length regressions, factor analysis, email scores, sentence scores and sentence presence | `coding/rhetoric/rhetoric.ipynb` |
 | Hand check of MFTE's tags | `coding/rhetoric/tests/mfte/` |
@@ -221,9 +225,9 @@ At the project level, each email's scores on the CITF dimensions enter the per-e
 
 : Where each part of the rhetoric workflow sits. {#tbl-repo}
 
-`requirements.txt` gains MFTE with Stanza, ConvoKit, statsmodels, factor_analyzer and pybiber. spaCy already sits in the environment for `en_docusco_spacy`, and ConvoKit and pybiber both parse with spaCy.
+The rhetoric workflow adds MFTE with Stanza, ConvoKit, statsmodels, factor_analyzer and pybiber to `requirements.txt`. spaCy already sits in the environment for en_docusco_spacy, which requires a spaCy 3.8 release from 3.8.6 on, and ConvoKit and pybiber parse with that same spaCy.
 
-# Tools and methods set aside {#sec-set-aside}
+# Tools and methods not used {#sec-set-aside}
 
 **Discriminant analysis, and Brown and Laudenbach's styles as a codebook.** The discriminants describe the classes they separate, and the four styles describe Enron's corporate roles (@sec-bl-validity). Brown and Laudenbach's rhetorical functions remain a point of comparison during naming.
 
@@ -251,10 +255,6 @@ At the project level, each email's scores on the CITF dimensions enter the per-e
 
 **Lexical multi-dimensional analysis.** Berber Sardinha and Fitzsimmons-Doolan extend multi-dimensional analysis to co-occurring words, which yields discourses and topics. The topic modelling preprint and the function codes already cover what the CITF emails are about, so lexical analysis waits until those results show a gap.
 
-# Beyond the CITF emails {#sec-beyond}
-
-Three findings from this review reach past the CITF email project. Reinhart and colleagues [-@reinhart2025] give the work on AI in peer review a linguistically grounded way to describe text that language models write, and studies of peer review language have relied on LIWC [@buljan2020], so a multi-dimensional analysis of peer review reports would be new. Atkinson's [-@atkinson1999] study of the *Philosophical Transactions* and Biber and Gray's [-@bibergray2016] work on academic prose connect register analysis to the history of scientific communication, which bears on how knowledge infrastructures shape the writing that research produces. Curry and Pérez-Paredes [-@curry2025] show that research communication can be studied as a register, which places data sharing correspondence beside it as a register of research coordination.
-
 # Next steps {#sec-rg-next}
 
 These steps make up step 10 of the study design.
@@ -270,8 +270,6 @@ These steps make up step 10 of the study design.
 9. **Derive the DocuScope rhetorical groups** once the DocuScope assessment's validation block clears DocuScope categories.
 10. **Pass sentence scores and presence** to `relating/codes.ipynb` once function and action codes exist.
 
-Steps 1 to 3 can start now, alongside preparing the corpus. Step 4 waits for zoning and sentence splitting to cover all 10,397 study emails.
-
 # Links and references {#sec-refs .unnumbered}
 
 ## Links {.unnumbered}
@@ -279,21 +277,15 @@ Steps 1 to 3 can start now, alongside preparing the corpus. Step 4 waits for zon
 - Study design: <https://zackbatist.info/CITF-emails/notes/study-design/>
 - Relating rhetoric to functions: <https://zackbatist.info/CITF-emails/notes/relating-rhetoric-to-functions/>
 - DocuScope assessment: <https://zackbatist.info/CITF-emails/coding/rhetoric/tests/docuscope/>
-- MFTE code and documentation: <https://github.com/mshakirDr/MFTE>
 - MFTE on PyPI: <https://pypi.org/project/MFTE/>
 - Catalogue of Lexico-grammatical English Features (CLEF): <https://jtauber.github.io/clef/>
-- pybiber documentation: <https://browndw.github.io/pybiber>
 - pseudobibeR: <https://github.com/browndw/pseudobibeR>
-- ConvoKit politeness strategies: <https://convokit.cornell.edu/documentation/politenessStrategies.html>
-- statsmodels: <https://www.statsmodels.org/>
-- factor_analyzer: <https://github.com/EducationalTestingService/factor_analyzer>
 - Neurobiber model: <https://huggingface.co/Blablablab/neurobiber>
 - Multidimensional Analysis Tagger (MAT): <https://sites.google.com/site/multidimensionaltagger/>
 - Geometric Multivariate Analysis, SIGIL unit 7: <https://sigil.r-forge.r-project.org/materials/07_GMA.pdf>
 - Mantash and Evert, DGfS 2026 abstract: <https://www.uni-trier.de/fileadmin/fb2/DGF/AGs/AG09/DGfS2026_AG9_04_Mantash_Evert.pdf>
 - Roberts, replication of Biber (1988), Lancaster FACTOR talk: <https://www.lancaster.ac.uk/linguistics/events/factor-talk-roberts-jingle-jangle-fallacies-observations-and-learnings-from-a-replication-of-biber-1988/>
 - Lexical Multidimensional Analysis (Cambridge Elements): <https://www.cambridge.org/core/elements/abs/lexical-multidimensional-analysis/B2321B62435360F4F7C4AF3F1CCF4E59>
-- `en_docusco_spacy` model page: <https://huggingface.co/browndw/en_docusco_spacy>
 
 ## References {.unnumbered}
 
