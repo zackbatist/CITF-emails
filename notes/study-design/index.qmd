@@ -508,7 +508,7 @@ Workstream notebooks hold the final methods, and each `tests/` folder holds the 
 
 `notes/` holds working notes, following `notes/` in `CITF-Postdoc`, with `notes/index.qmd` as the page that lists them. It also holds `relating-rhetoric-to-functions/` and `shift-to-supervised/`, which moved there from `private/`, and `rhetorical-groups/`, the note of 18 November that sets out the rhetoric workflow. The summary of the call and the transcript sit beside this document in `notes/study-design/`, as `_call-summary.qmd` and `_transcript.qmd`, which the site skips because of the leading underscore. A `.gitignore` of the folder's own lists both files, so both remain untracked if the folder moves, and the root `.gitignore` stays as it is. We leave the summary of the call and the transcript out of the published page, since both are personal records of the call, and include them in a local render with `-M call-appendices:true`.
 
-The planned `grant-writing/` is its own private repository on the lab's git server, cloned into `citf-emails/grant-writing/` and listed in `.gitignore`. `citf-emails` is public on GitHub, so GitHub publishes every tracked file and every past version of it, and grant drafts, budgets and reviews cannot sit there. Since `.gitignore` lists it, `citf-emails` holds no trace of the grant repository, and we work in it as an ordinary repository. [Appendix A](#sec-grant-move) gives the steps to carry the grant work and its history over from `CITF-Postdoc`.
+The planned `grant-writing/` is its own private repository on the lab's git server, cloned into `citf-emails/grant-writing/` and listed in `.gitignore`. `citf-emails` is public on GitHub, so GitHub publishes every tracked file and every past version of it, and grant drafts, budgets and reviews cannot sit there. Since `.gitignore` lists it, `citf-emails` holds no trace of the grant repository, and we work in it as an ordinary repository. [Appendix A](#sec-grant-move) gives the steps to carry the grant work over from `CITF-Postdoc`.
 
 # Next steps {#sec-next}
 
@@ -527,8 +527,9 @@ Tanya and Melissa started cleaning the email data in April 2025. Melissa and I t
 9. **Continue the DocuScope assessment** with the thresholds, the coding of the tag sample and the validation block.
 10. **Run the rhetoric workflow** in `coding/rhetoric/`, following the steps in the [rhetorical groups note](../rhetorical-groups/index.qmd#sec-rg-next).
 11. **Research and test trained models for functions and actions,** each in its own folder, and link the text with each function code to its task of concern.
-12. **Build the project graphs** in `relating/context.ipynb` and draw the thread views and project timelines.
-13. **Draft the grant's methods** for Ian's review, registering by February 3 and submitting by March 3, 2027.
+12. **Record the comparisons** of rhetoric by function and action in `relating/codes.ipynb`, before the trained models label the corpus.
+13. **Build the project graphs** in `relating/context.ipynb`, and draw the thread views and project timelines in `relating/views.ipynb`.
+14. **Draft the grant's methods** for Ian's review, registering by February 3 and submitting by March 3, 2027.
 
 We take step 1 before the rest of the corpus work, and steps 8 and 9, with the first three steps of the rhetoric workflow, alongside steps 2 to 7.
 
@@ -548,8 +549,6 @@ We take step 1 before the rest of the corpus work, and steps 8 and 9, with the f
 - Chipmunk code and annotations: <https://github.com/webis-de/acl20-crawling-mailing-lists>
 - Presidio: <https://github.com/data-privacy-stack/presidio>
 - spaCy EntityRuler: <https://spacy.io/api/entityruler>
-- small-text: <https://github.com/webis-de/small-text>
-- SetFit: <https://github.com/huggingface/setfit>
 - MailEx code: <https://github.com/salokr/Email-Event-Extraction>
 - CIHR Project Grant program: <https://cihr-irsc.gc.ca/e/49051.html>
 
@@ -560,21 +559,12 @@ We take step 1 before the rest of the corpus work, and steps 8 and 9, with the f
 
 # Appendix A: Migrating prior grant-writing activity {#sec-grant-move .unnumbered}
 
-`CITF-Postdoc` tracks three submodules on the lab's git server, namely `data`, `private` and `qc`. The public repository's history holds no grant drafts, so the grant work most likely sits in the `private` submodule, which I update every few days. The procedure consists of extracting the grant folder with its full history into a new private repository and cloning that repository into `citf-emails` as `grant-writing/`. We find the path of the grant folder in step 1 and use it in steps 2 to 6.
+The grant work sits in a local folder in `CITF-Postdoc`, outside version control. Moving it into `grant-writing/` takes four steps.
 
-1. **Find the folder.** List every path the `private` repository has ever held, to identify the grant folder and to check what its history contains. Run this on the server:
-
-   ```
-   cd ~ && git clone <address of the private repository> private-scan && cd private-scan && git log --all --name-only --format= | sort -u | cat
-   ```
-
-   The output identifies the grant folder. Every past version of every file in the grant folder will move with the folder, so the list also shows whether anything should be left behind.
-
-2. **Install git-filter-repo** into `~/citf-emails-env`.
-3. **Extract the folder.** In a fresh clone of `private`, `git filter-repo` keeps only the grant folder, moves its contents to the root, and keeps every commit that touched it with its original date and message.
-4. **Create the private repository** on the lab's git server and push the extracted history to it. The name `citf-emails-grant` is my label.
-5. **Clone the new repository into `citf-emails`** at `grant-writing/`, and add `grant-writing/` to `.gitignore` and `"!grant-writing/"` to the render list in `_quarto.yml`.
-6. **Remove the folder from `private`** once `grant-writing/` checks out with its full history, with a commit naming its new location.
+1. **Create the private repository** on the lab's git server. The name `citf-emails-grant` is my label.
+2. **Move the folder** into `citf-emails/grant-writing/`, initialise it as a repository, commit its current contents, and push to the new repository.
+3. **Add `grant-writing/`** to `.gitignore`, and `"!grant-writing/"` to the render list in `_quarto.yml`.
+4. **Remove the old folder** from `CITF-Postdoc` once `grant-writing/` checks out.
 
 ::: {.content-visible when-meta="call-appendices"}
 {{< include _call-summary.qmd >}}
