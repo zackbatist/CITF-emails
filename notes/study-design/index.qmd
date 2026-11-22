@@ -150,7 +150,7 @@ The authored text of each email carries three kinds of codes. Rhetoric codes lab
 
 **Deliverables.**
 
-- Rhetorical groups and politeness strategies on the authored text, with the naming, sorting and stability checks behind them
+- Rhetorical groups and politeness strategies on the authored text
 - The DocuScope assessment's validation of each DocuScope category, for comparison
 - Definitions of the function and action codes
 - Function and action codes on the authored text from trained models, with tests of each model on the CITF emails
