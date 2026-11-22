@@ -164,7 +164,8 @@
 <line x1="560.4347826086956" y1="750" x2="612.1739130434783" y2="684" stroke="#2e5e8c" stroke-width="2"/>
 <line x1="612.1739130434783" y1="684" x2="663.9130434782609" y2="772" stroke="#2e5e8c" stroke-width="2"/>
 <line x1="663.9130434782609" y1="772" x2="705.3043478260963" y2="684" stroke="#2e5e8c" stroke-width="2"/>
-<line x1="705.3043478260963" y1="684" x2="757.043478260879" y2="772" stroke="#2e5e8c" stroke-width="2"/>
+<line x1="705.3043478260963" y1="684" x2="731.2" y2="684" stroke="#2e5e8c" stroke-width="2" stroke-dasharray="1.5,3"/>
+<line x1="731.2" y1="684" x2="757.043478260879" y2="772" stroke="#2e5e8c" stroke-width="2"/>
 <line x1="757.043478260879" y1="772" x2="808.7826086956616" y2="662" stroke="#2e5e8c" stroke-width="2"/>
 <line x1="850.1739130434971" y1="750" x2="860.5217391304442" y2="706" stroke="#2e5e8c" stroke-width="2"/>
 <line x1="897.7739130435009" y1="706" x2="920.5391304347845" y2="750" stroke="#2e5e8c" stroke-width="2"/>
@@ -177,6 +178,7 @@
 <circle cx="612.1739130434783" cy="684" r="5.5" fill="#2e5e8c"/>
 <circle cx="663.9130434782609" cy="772" r="5.5" fill="#2e5e8c"/>
 <circle cx="705.3043478260963" cy="684" r="5.5" fill="#2e5e8c"/>
+<circle cx="731.2" cy="684" r="5.5" fill="#2e5e8c"/>
 <circle cx="757.043478260879" cy="772" r="5.5" fill="#2e5e8c"/>
 <circle cx="808.7826086956616" cy="662" r="5.5" fill="#2e5e8c"/>
 <circle cx="850.1739130434971" cy="750" r="5.5" fill="#2e5e8c"/>
@@ -231,4 +233,6 @@
 <text x="626" y="1076" fill="#333" font-size="11">milestone</text>
 <polygon points="710,1064 718,1072 710,1080 702,1072" fill="#6c3483"/>
 <text x="726" y="1076" fill="#333" font-size="11">event</text>
+<line x1="782" y1="1072" x2="798" y2="1072" stroke="#2e5e8c" stroke-width="2" stroke-dasharray="1.5,3"/>
+<text x="806" y="1076" fill="#333" font-size="11">follow-up</text>
 </svg>
