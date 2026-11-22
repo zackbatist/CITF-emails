@@ -1,7 +1,7 @@
 ---
 title: "Study Design"
 date: 2026-11-13
-date-modified: 2026-11-20
+date-modified: 2026-11-21
 call-appendices: false
 tbl-cap-location: bottom
 link-citations: true
@@ -24,7 +24,7 @@ bibliography: references.bib
 
 # Summary
 
-Following the call on 13 November 2026 with David and Ian, we moved the CITF email work from tagging single emails to studying each project as a sequence of emails across its phases. We reorganize the work around that shift, toward the CIHR Project Grant application due March 3, 2027 (@sec-grant).
+Following the call on 13 November 2026 with David and Ian, we moved the CITF email work from tagging single emails to studying each project as a graph of its emails, people and focal objects across its phases. We reorganize the work around that shift, toward the CIHR Project Grant application due March 3, 2027 (@sec-grant).
 
 The work falls into four workstreams (@sec-workstreams). In preparing the corpus, we build the study emails, their metadata, authored sentences and de-identified text into one corpus, with a graph of people, projects, focal objects and events around it. In coding rhetoric, functions and actions, we label the authored text with three independent kinds of codes. Rhetoric now comes from rhetorical groups of the features that the Multi-Feature Tagger of English (MFTE) tags, with DocuScope kept as a comparison. In relating rhetoric, functions and actions, we bring the codes together, first with each other and then with the situation of each email and the course of each project. The grant application rests on the earlier applications and on this work.
 
@@ -32,7 +32,7 @@ The data sit in node and edge tables (@sec-model). We build every view from the 
 
 # Workstreams {#sec-workstreams}
 
-The work falls into four workstreams. In preparing the corpus, we produce the emails, zones, sentences, de-identified text, nodes and edges that the other workstreams use. In coding rhetoric, functions and actions, we label the authored text, and in relating rhetoric, functions and actions, we compare the three kinds of codes with each other, with the situation of each email and with the course of each project. The CIHR Project Grant application for Spring 2027 rests on the other three workstreams.
+The work falls into four workstreams. In preparing the corpus, we produce the emails, zones, sentences, de-identified text, nodes and edges that the other workstreams use. We then label the authored text with rhetoric, functions and actions, and compare the three kinds of codes with each other, with the situation of each email and with the course of each project. The CIHR Project Grant application for Spring 2027 rests on the other three workstreams.
 
 ## Preparing the corpus {#sec-corpus}
 
@@ -130,7 +130,7 @@ We check each kind of actor, object and event against a coded sample, with preci
 
 We compile project information to supply the context that each project's emails lack, and we place events on a calendar shared by all projects. The project information and the shared calendar together allow comparison of projects by field, institution, contracts officer, prior experience and later practice, as most of the integration questions require.
 
-A project's information includes its study IDs and acronyms, the names and email addresses of its principal investigators and key personnel, its institutional hosts and affiliations, the publications and datasets from its CITF participation, and the profiles and ORCID iDs of its members. The `crs` table is the starting list. We take profiles and works from ORCID where people have them, works, co-authors, affiliations and dates from OpenAlex, and dataset DOIs from DataCite. Publications and datasets dated before a project's CITF participation are evidence of its members' fields and prior experience with data sharing, and co-authorship with the CITF core team or other data contributors is evidence of prior ties. We measure publications, datasets and co-authorship again after participation to see whether CITF work changed their data sharing and their collaborative networks.
+A project's information includes its study ID and acronyms, the names and email addresses of its principal investigators and key personnel, its institutional hosts and affiliations, the publications and datasets from its CITF participation, and the profiles and ORCID iDs of its members. The `crs` table is the starting list. We take profiles and works from ORCID where people have them, works, co-authors, affiliations and dates from OpenAlex, and dataset DOIs from DataCite. Publications and datasets dated before a project's CITF participation are evidence of its members' fields and prior experience with data sharing, and co-authorship with the CITF core team or other data contributors is evidence of prior ties. We measure publications, datasets and co-authorship again after participation to see whether CITF work changed their data sharing and their collaborative networks.
 
 Each of these steps involves a judgement, and we record each judgement in the project information. We cannot confidently match common names, or people who changed institutions, to an ORCID iD or an OpenAlex author. Deciding that a paper comes from a project's CITF participation means reading the paper. Many datasets have no DOI, and contracts officers and study coordinators rarely appear in bibliographic sources at all. Coverage will therefore differ by role and by field, and we record which projects each source covers. We also have to confirm that REB application 26-08-029-01, which covers the email corpus and the questionnaire, allows linking people in the corpus to public records.
 
@@ -166,17 +166,17 @@ ConvoKit's politeness strategies [@danescu2013; @chang2020] sit beside the rheto
 
 ### Functions
 
-Function codes label the kind of task that the authored text concerns in the administrative process of data sharing, such as obtaining ethics approval or scheduling a meeting. Each kind of task recurs across projects. Trained models already exist for labelling workplace email by task or intent. For example, @sappelli2016 built classifiers for the tasks expressed in email, and @wang2019 built sentence-level intent models. We will research trained models that label email text by task and test how well they label the CITF emails before applying them in the analysis.
+Each kind of task, such as obtaining ethics approval or scheduling a meeting, recurs across projects. Trained models already exist for labelling workplace email by task or intent. For example, @sappelli2016 built classifiers for the tasks expressed in email, and @wang2019 built sentence-level intent models. We will research trained models that label email text by task and test how well they label the CITF emails before applying them in the analysis.
 
 The text with each function code also belongs to a task of concern, meaning one instance of that kind of task in one project, such as one project's ethics approval, and we link the text about each task of concern across emails and threads. To tell one task of concern from another of the same kind, we will draw on the mentions detected in the corpus work, such as study IDs, focal objects, attachments and events (@sec-corpus). @ailon2013 grouped machine-generated emails by the user action that triggered them, and so linked emails beyond their threads in a similar way. A follow-up is a later email in which the same sender returns to the same task of concern before any recipient replies.
 
 ### Actions
 
-Action codes label the act that a writer performs in the authored text, such as a request or a confirmation. Trained models already exist for labelling email by act. For example, @cohen2004 trained classifiers for email speech acts such as requests, proposals, deliveries and commitments, @mezza2018 trained dialogue act taggers on the ISO 24617-2 scheme [@iso24617-2], and @srivastava2023 trained event extractors on MailEx, a dataset of annotated email threads whose event types are forms of requesting, delivering and amending. We will research trained models that label email text by act and test how well they label the CITF emails before applying them in the analysis.
+Trained models already exist for labelling email by act. For example, @cohen2004 trained classifiers for email speech acts such as requests, proposals, deliveries and commitments, @mezza2018 trained dialogue act taggers on the ISO 24617-2 scheme [@iso24617-2], and @srivastava2023 trained event extractors on MailEx, a dataset of annotated email threads whose event types are forms of requesting, delivering and amending. We will research trained models that label email text by act and test how well they label the CITF emails before applying them in the analysis.
 
 ## Relating rhetoric, functions and actions {#sec-relating}
 
-By relating the codes, we see how people wrote about the administrative work of data sharing and where in each project that writing changed, which the grant application asks of the email analysis (@sec-grant).
+By relating the codes, we see how people wrote about the administrative work of data sharing and where in each project that writing changed, as the grant application sets out (@sec-grant).
 
 **Objective.** Relate the three kinds of codes to each other, to the situation of each email and to the course of each project.
 
@@ -188,7 +188,7 @@ By relating the codes, we see how people wrote about the administrative work of 
 
 ### Relating codes to each other
 
-We compare the three kinds of codes with one another to identify associations between rhetoric, acts and tasks in the CITF emails. The comparison follows form–function mapping, which links what a stretch of text does with how it is written [@biberconnorupton2007; @gray2020]. @gray2020 mapped dimension scores onto the parts of research articles in the same way, and @alafnan2018 found that workplace emails grouped by purpose fall in different registers.
+We compare the three kinds of codes with one another to identify associations between rhetoric, acts and tasks in the CITF emails. The comparison follows form–function mapping, in which researchers relate what a stretch of text does to how it is written [@biberconnorupton2007; @gray2020]. @gray2020 mapped dimension scores onto the parts of research articles in the same way, and @alafnan2018 found that workplace emails grouped by purpose fall in different registers.
 
 For each coded stretch of text, the function and action codes stand for what the text does. The text's scores on the CITF dimensions, and the presence of each rhetorical group and politeness strategy in it, stand for how the text is written. We compare the mean scores on each CITF dimension across function codes and across action codes, as @biber1988 compared registers, and set the presence of each rhetorical group and politeness strategy in text with each code against all other text, controlling for length, as the [rhetorical groups note](../rhetorical-groups/index.qmd#sec-relate) sets out. From these comparisons we see, for example, whether requests score differently from confirmations on a CITF dimension, or whether one task draws more on a rhetorical group than another. We also cross-tabulate action codes by function code, to see which acts each task draws on.
 
@@ -196,7 +196,7 @@ The rhetoric that every instance of a function or action code shares belongs to 
 
 ### Relating codes to context {#sec-relating-context}
 
-We relate the codes to the situation in which each email was written, first within each email and then across each project. We treat the situation of each email as a set of separate dimensions [@biber2020], namely the sender's role, the project's phase, prior contact between sender and recipient, follow-ups, whether a recipient sits in To or Cc, and the number of recipients, and relate the rhetoric that varies within a function or action code to each of them (@fig-comparison, panel E). Since each person writes in a register slightly their own [@grieve2023], and a few senders account for much of the correspondence, we fit mixed models with sender and project as random effects, which hold personal style apart from the function and action codes.
+We relate the codes to the situation in which each email was written, first within each email and then across each project. We treat the situation of each email as a set of separate dimensions [@biber2020], namely the sender's role, the project's phase, prior contact between sender and recipient, follow-ups, whether a recipient sits in To or Cc, and the number of recipients, and relate the rhetoric that varies within a function or action code to each of them (@fig-comparison, panel E). Since each person writes in a register slightly their own [@grieve2023], and a few senders account for much of the correspondence, we fit mixed models with sender and project as random effects, so that we can hold personal style apart from the function and action codes.
 
 At the project level, we treat each project as a graph of the people, institutions, focal objects, events, attachments and emails involved in it, linked by who wrote to whom, what each email mentions, and which emails reply to, forward or follow up others (@fig-data-model). We explore each project's graph through its structure, such as who sits at the centre of its exchanges and who bridges projects (@fig-comparison, panel A); its paths from one email to the next through replies, forwards and follow-ups (panel B); the timing that dates on emails and milestones give those paths (panels C and D); and the focal objects that recur across its threads. We build each project's graph from the threads, the project information and the detected actors, events and focal objects (@sec-corpus), and add the action and function codes once the trained models label the corpus (@sec-coding).
 
@@ -221,17 +221,17 @@ The application also draws on the work around the corpus. The phases, the milest
 
 ### Possible lines of inquiry
 
-The application's rationale lies in the social and informational pain points of data sharing, and the analysis could pursue seven integration questions. Each question concerns how something about a project, its people or its moment shaped its emails and how people wrote them, so for each we need data beyond the email text. The questions are still at the brainstorming stage, and the approach under each is a first thought on how we could answer it with the related codes. Before any results arrive, we settle with David which questions the application takes up, and date and keep that decision in `notes/`, so that we fix the comparisons in advance and fewer pairings can turn up by chance.
+The application's rationale lies in the social and informational pain points of data sharing, and the analysis could pursue seven integration questions. Each question concerns how something about a project, its people or its moment shaped its emails and how people wrote them, so for each we need data beyond the email text. The questions are still at the brainstorming stage, and the approach under each is a first thought on how we could answer it once we relate the codes to context. Before we have any results, we settle with David which questions the application takes up, and date and keep that decision in `notes/`, so that we fix the comparisons in advance and fewer pairings can turn up by chance.
 
-1. **Did projects in different fields respond differently to the data sharing mandate?** Group projects by field and compare how long each phase took, with survival analysis on the time to each milestone, along with the rounds and follow-ups in each phase. At the sentence level, compare the actions and rhetoric of each field with mixed models that take study as a random effect. Sources: field from the project information.
+1. **Did projects in different fields respond differently to the data sharing mandate?** Group projects by field and compare how long each phase took, with survival analysis on the time to each milestone, along with the rounds and follow-ups in each phase. In the authored text, compare the actions and rhetoric of each field with mixed models that take project as a random effect. Sources: field from the project information.
 
 2. **Did the webinars change how teams wrote, given that projects were at different phases?** Align each project's emails on each webinar date and compare a window before with a window after, separately for projects in each phase at the time. Compare the actions and rhetoric of the emails in each window and whether projects moved to the next phase sooner after a webinar. Attendance is unknown, so we can tie any difference to timing alone. Sources: webinar dates from CITF records, and phases from each project's milestones.
 
 3. **Did contracts offices and officers shape how the agreement phase went?** Group projects by institution and by contracts officer and compare the time from the first data request to the DSA signing, the rounds with the contracts officer before signing and the share of the phase spent waiting on the institution. Where a contracts officer handled several projects, compare within that one person, and read that officer's exchanges closely to see whether the same objections recur. Sources: institutions and contracts officers from detection and the project information, and roles from participation.
 
-4. **Did escalation by the task force director change what followed?** Find the emails the task force director wrote or received in Cc, and compare the time to the next milestone with projects at the same phase that had no escalation. At the sentence level, compare the actions and rhetoric of the emails just before and just after, from both the study side and the CITF side. Escalation follows trouble, so read each case closely for what prompted it. Sources: participation by role, and the threads.
+4. **Did escalation by the task force director change what followed?** Find the emails the task force director wrote or received in Cc, and compare the time to the next milestone with projects at the same phase that had no escalation. In the authored text, compare the actions and rhetoric of the emails just before and just after, from both the study side and the CITF side. Escalation follows trouble, so read each case closely for what prompted it. Sources: participation by role, and the threads.
 
-5. **Where did projects stall, and what did stalling look like in writing?** Define a stall as a gap within a phase longer than usual for that phase, or a run of follow-ups without a reply, and mark each stall on the project's timeline. Use sequence analysis of each project's graph to find which paths through the phases include stalls. At the sentence level, compare the follow-ups with the emails they follow, and the emails inside a stall with those around it. Sources: the milestones, the threads and the follow-ups.
+5. **Where did projects stall, and what did stalling look like in writing?** Define a stall as a gap within a phase longer than usual for that phase, or a run of follow-ups without a reply, and mark each stall on the project's timeline. Use sequence analysis of each project's graph to find which paths through the phases include stalls. In the authored text, compare the follow-ups with the emails they follow, and the emails inside a stall with those around it. Sources: the milestones, the threads and the follow-ups.
 
 6. **Did prior data sharing experience or prior ties to the core team ease the process?** Measure the data each team shared and its co-authorship with the CITF core team and other data contributors before CITF participation, then compare phase durations and follow-up counts across the two measures. Read projects at both ends closely to see whether experience appears in the writing, for example in fewer clarifying questions about the agreement. Sources: the publications, datasets and co-authors from before CITF participation.
 
@@ -250,7 +250,7 @@ We organize the data as a graph of nodes and edges in four groups. Correspondenc
 +:==============+:===================+:===============================+:=====================================+
 | **Correspondence**                                                                                         |
 +---------------+--------------------+--------------------------------+--------------------------------------+
-| Thread        | Thread ID          | Thread stitching               | Project, date range, email count     |
+| Thread        | Thread ID          | Threading                      | Project, date range, email count     |
 +---------------+--------------------+--------------------------------+--------------------------------------+
 | Email         | Email ID           | Study emails                   | Timestamp, project, thread, authored |
 |               |                    |                                | zone, source IDs                     |
@@ -267,14 +267,14 @@ We organize the data as a graph of nodes and edges in four groups. Correspondenc
 +---------------+--------------------+--------------------------------+--------------------------------------+
 | Institution   | Institution ID     | Detection; project information | Name, email domains                  |
 +---------------+--------------------+--------------------------------+--------------------------------------+
-| Project       | Study ID           | Emails; project information    | Study IDs, acronyms, milestone       |
-|               |                    |                                | dates, field, hosts                  |
+| Project       | Study ID           | Emails; project information    | Acronyms, milestone dates, field,    |
+|               |                    |                                | hosts                                |
 +---------------+--------------------+--------------------------------+--------------------------------------+
 | **Analysis**                                                                                               |
 +---------------+--------------------+--------------------------------+--------------------------------------+
 | Code          | Code ID            | Code definitions; factor       | Kind of code, name, version          |
 |               |                    | analysis of MFTE features;     |                                      |
-|               |                    | DocuScope                      |                                      |
+|               |                    | ConvoKit; DocuScope            |                                      |
 +---------------+--------------------+--------------------------------+--------------------------------------+
 | Focal object  | Object ID          | Detection                      | Name and alternative forms           |
 +---------------+--------------------+--------------------------------+--------------------------------------+
@@ -377,13 +377,13 @@ In the thread view (@fig-thread-view), one thread's emails appear in order, each
 
 ![Projects as sequences of emails, with events along the same dates. Dates, projects, emails and publications are placeholders.](figures/project-timeline.svg){#fig-timeline}
 
-In the project timeline (@fig-timeline), the horizontal axis is absolute date, and the vertical space shows who and what. Each project lane has one row for each person in a role. The CITF side has the task force director, Scientific Director, Operations Manager and data manager, and the study side has the principal investigator, study coordinator and contracts officer. We place each email in its sender's row, so that a thread reads as an exchange between people, with chasing as repeated returns to one row and a stalled exchange as a long gap before the reply. The rows run from the CITF side to the study side without a divider, since we treat affiliation as an attribute of each person to compare in the analysis. We may add rows for other roles once the coding settles them.
+In the project timeline (@fig-timeline), the horizontal axis is absolute date, and the vertical space shows who and what. Each project lane has one row for each person in a role. The CITF side has the task force director, Scientific Director, Operations Manager and data manager, and the study side has the principal investigator, study coordinator and contracts officer. We place each email in its sender's row, so that a thread reads as an exchange between people, with chasing as repeated returns to one row and a stalled exchange as a long gap before the reply. The rows run from the CITF side to the study side without a divider, since we treat affiliation as an attribute of each person to compare in the analysis. We may add rows for other roles once we assign roles in each email.
 
 Labels in the left margin group the rows into people, focal objects, attachments and publications. Each focal object has a row, with a tick at each email that mentions it. Attachments have one row per file type, with a mark at each email with an attachment of that type. Spreadsheets have squares, PDFs triangles and text documents hexagons. The properties table records which file is which and whether a file recurs. Publications from the project's CITF participation have one row per type, for preprints, papers and datasets, since datasets are direct evidence of data sharing.
 
 Copied recipients remain in the participation edges, and we can mark them on the timeline when a question needs them. Once coding exists, we can also colour each email's mark by its actions.
 
-Two invented projects, Project A and Project B, illustrate what the timeline makes visible. We chose an arc for each to that end.
+Two invented projects, Project A and Project B, illustrate what the timeline makes visible. We gave each a different arc.
 
 **Project A** signs quickly after escalation and then reworks its data. Funding starts in mid-2020, and the Operations Manager writes once before the Databank's first data request near the end of that year. The negotiation runs between the Operations Manager and the principal investigator, with the data sharing agreement mentioned in most exchanges. In spring 2021 the Operations Manager forwards the thread to the contracts officer, who replies that summer, and the Operations Manager answers with a PDF attached, likely a draft agreement. In late 2021 the task force director writes to the project, and the project signs the DSA within weeks. The principal investigator replies just after the signing, so the thread crosses the milestone. The data work runs between the study coordinator and the data manager through 2022, with core data elements as the focal object. The coordinator sends a text document, and the data manager sends a spreadsheet, then sends a spreadsheet again early in 2023, just after data upload. The Scientific Director writes once at the end of that exchange, and cataloguing follows in spring 2023. The project posts a preprint during the data work, a paper in 2023 and a dataset in 2024.
 
@@ -399,29 +399,29 @@ Webinars fell during both negotiations, on dates shared by all projects, so we c
 
 ### Network
 
-Without time, people, projects, institutions and focal objects form one network (@fig-comparison, panel A). The network shows who connects projects, which focal objects recur across them, which institutions share contracts officers, and which people had ties before the CITF. It draws on participation, membership, affiliation, mention and authorship edges.
+Without time, people, projects, institutions and focal objects form one network (@fig-comparison, panel A). The network shows who connects projects, which focal objects recur across them, which institutions share contracts officers, and which people had ties before the CITF. We draw it from participation, membership, affiliation, mention and authorship edges.
 
 ### Process map
 
-Process mining takes a table of events, which we draw from each project's graph. The process map (@fig-comparison, panel B) draws the paths from one action to the next within each project, with the line width showing how often each transition occurs. Sequence analysis compares the paths across projects, and with the time to each milestone we can run survival analysis by field, institution or contracts officer.
+For process mining, we draw a table of events from each project's graph. In the process map (@fig-comparison, panel B), we draw the paths from one action to the next within each project, with the line width showing how often each transition occurs. With sequence analysis we compare the paths across projects, and with the time to each milestone we can run survival analysis by field, institution or contracts officer.
 
 ### Projects aligned on a milestone
 
-Each project's emails sit on a common axis of time before and after its own DSA signing (@fig-comparison, panel C), or any other milestone, so projects at different calendar dates line up. The view shows how activity, follow-ups and escalation gather around a milestone, and whether they gather differently by field or by contracts officer. It draws on the emails, the milestone dates and participation.
+Each project's emails sit on a common axis of time before and after its own DSA signing (@fig-comparison, panel C), or any other milestone, so projects at different calendar dates line up. The view shows how activity, follow-ups and escalation gather around a milestone, and whether they gather differently by field or by contracts officer. We draw it from the emails, the milestone dates and participation.
 
 ### Phases over time
 
-The number of projects in each phase, year by year (@fig-comparison, panel D), shows where projects accumulated and when they moved on. We can place the events on the same calendar axis, though a coincidence between an event and movement shows only that they fell at the same time. The view draws on the milestone dates and the phase of each email (@sec-project-info).
+The number of projects in each phase, year by year (@fig-comparison, panel D), shows where projects accumulated and when they moved on. We can place the events on the same calendar axis, though a coincidence between an event and movement shows only that they fell at the same time. We draw it from the milestone dates and the phase of each email (@sec-project-info).
 
 ### Roles against phases
 
-A matrix of sender roles against phases (@fig-comparison, panel E) gives the share of each role's sentences that carry an action, a function or a rhetorical group, one code at a time. The matrix is the comparison view for relating codes to context, since it shows whether the codes follow the role, the phase or both. The matrix draws on the coding edges, participation with its roles and the phases.
+A matrix of sender roles against phases (@fig-comparison, panel E) gives the share of each role's sentences that carry an action, a function or a rhetorical group, one code at a time. The matrix is the comparison view for relating codes to context, since it shows whether the codes follow the role, the phase or both. We draw it from the coding edges, participation with its roles and the phases.
 
 ## Practical considerations
 
 A real project can hold hundreds of emails, with many people copied and several threads open at once, and a single timeline of it will be hard to read. Every view therefore filters, to one thread, one phase, one person or one focal object, and collapses people into their roles when individuals do not matter. The timeline leads into the thread view (@sec-thread), so that a pattern seen across a project can be read in the emails that make it.
 
-Every edge and value has its method and confidence from the data model (@sec-model), and we draw the uncertain ones differently. Edges below the threshold appear faint, and we mark estimated gender as an estimate in every view. We describe the gaps in the data behind each view in the subsections of Preparing the corpus (@sec-corpus), and the limits on what comparisons show in Relating rhetoric, functions and actions (@sec-relating).
+Every edge and value has its method and confidence from the data model (@sec-model), and we draw the uncertain ones differently. Edges below the threshold appear faint, and we mark estimated gender as an estimate in every view. We describe the gaps in the data behind each view in the subsections of Preparing the corpus (@sec-corpus), and the limits on what comparisons show in each view and in the integration questions (@sec-grant).
 
 # Repository {#sec-repo}
 
@@ -474,7 +474,7 @@ citf-emails/
 └── private/                        # untracked
 ```
 
-There is one folder per workstream. `data/` holds only the raw data, `msgs10.csv` and `recip4.csv`. `corpus/` holds the corpus for every workstream, since project information, threads, attachments and mentions of focal objects are data we use directly in several analyses. `corpus.ipynb` loads `msgs10.csv` and `recip4.csv` from `data/`, flattens the emails, restricts them to study emails and zones them, and later blocks will add sentences, de-identification and detection. The planned `threading.ipynb` stitches threads and records replies and forwards, and the planned `project-information.ipynb` compiles projects, people, institutions, publications and events. Block 3 of `corpus.ipynb` now marks the pool with the length filter, without using it to define the corpus, and we will extend zoning to all 10,397 study emails.
+There is one folder per workstream. `data/` holds only the raw data, `msgs10.csv` and `recip4.csv`. `corpus/` holds the corpus for every workstream, since project information, threads, attachments and mentions of focal objects are data we use directly in several analyses. `corpus.ipynb` loads `msgs10.csv` and `recip4.csv` from `data/`, flattens the emails, restricts them to study emails and zones them, and later blocks will add sentences, de-identification and detection. In the planned `threading.ipynb`, we join emails into threads and record replies and forwards, and the planned `project-information.ipynb` compiles projects, people, institutions, publications and events. Block 3 of `corpus.ipynb` now marks the pool with the length filter, without using it to define the corpus, and we will extend zoning to all 10,397 study emails.
 
 Every output sits beside the notebook that writes it, and each notebook saves what later notebooks read. `corpus.ipynb` saves the study emails and `email_zones.parquet`, and `rhetoric.ipynb` saves the tags. The root `.gitignore` lists `/data/`, `*.csv` and `*.parquet` and already lists `*.html`, so the repository holds no email text and no output.
 
@@ -504,11 +504,11 @@ Each notebook numbers its blocks from 1, and @tbl-blocks shows where each block 
 
 The coding sample keeps its seed, so block 3 of `docuscope.ipynb` regenerates the same 774 tags with new block numbers in the coding tool.
 
-Workstream notebooks hold the final methods, and each `tests/` folder holds the trials and checks on them, with one subfolder per check and the write-up in that subfolder's `sections/`. A test reads the workstream's outputs without copying its methods, and we move a rule that a test confirms into the workstream notebook. `corpus/tests/zoning/` holds the zoning checks, which cover the Chipmunk and Okapi tests on Gmane and Enron, the five CITF emails, the zone check of 80 emails and the held-out checks, and we moved the zoning appendix there from the DocuScope assessment. We will add to `corpus/tests/` the checks on the automated-message patterns, the sentences, the de-identification, the detection and the threading. `coding/rhetoric/tests/docuscope/` holds the DocuScope assessment, with the tag coding sample and the planned validation, and the `tests/` folders of `coding/functions/` and `coding/actions/` hold each test set and the comparison of SetFit with its baselines, with the MailEx test under actions. The test subfolder names are proposed labels.
+Workstream notebooks hold the final methods, and each `tests/` folder holds the trials and checks on them, with one subfolder per check and the write-up in that subfolder's `sections/`. A test reads the workstream's outputs without copying its methods, and we move a rule that a test confirms into the workstream notebook. `corpus/tests/zoning/` holds the zoning checks, which cover the Chipmunk and Okapi tests on Gmane and Enron, the five CITF emails, the zone check of 80 emails and the held-out checks, and we moved the zoning appendix there from the DocuScope assessment. We will add to `corpus/tests/` the checks on the automated-message patterns, the sentences, the de-identification, the detection and the threading. `coding/rhetoric/tests/docuscope/` holds the DocuScope assessment, with the tag coding sample and the planned validation, and the `tests/` folders of `coding/functions/` and `coding/actions/` hold the tests of each trained model on the CITF emails. The test subfolder names are proposed labels.
 
 `notes/` holds working notes, following `notes/` in `CITF-Postdoc`, with `notes/index.qmd` as the page that lists them. It also holds `relating-rhetoric-to-functions/` and `shift-to-supervised/`, which moved there from `private/`, and `rhetorical-groups/`, the note of 18 November that sets out the rhetoric workflow. The summary of the call and the transcript sit beside this document in `notes/study-design/`, as `_call-summary.qmd` and `_transcript.qmd`, which the site skips because of the leading underscore. A `.gitignore` of the folder's own lists both files, so both remain untracked if the folder moves, and the root `.gitignore` stays as it is. We leave the summary of the call and the transcript out of the published page, since both are personal records of the call, and include them in a local render with `-M call-appendices:true`.
 
-The planned `grant-writing/` is its own private repository on the lab's git server, cloned into `citf-emails/grant-writing/` and listed in `.gitignore`. `citf-emails` is public on GitHub, so GitHub publishes every tracked file and every past version of it, and grant drafts, budgets and reviews cannot sit there. Since `.gitignore` lists it, `citf-emails` holds no trace of the grant repository, and I work in it as an ordinary repository. [Appendix A](#sec-grant-move) gives the steps to carry the grant work and its history over from `CITF-Postdoc`.
+The planned `grant-writing/` is its own private repository on the lab's git server, cloned into `citf-emails/grant-writing/` and listed in `.gitignore`. `citf-emails` is public on GitHub, so GitHub publishes every tracked file and every past version of it, and grant drafts, budgets and reviews cannot sit there. Since `.gitignore` lists it, `citf-emails` holds no trace of the grant repository, and we work in it as an ordinary repository. [Appendix A](#sec-grant-move) gives the steps to carry the grant work and its history over from `CITF-Postdoc`.
 
 # Next steps {#sec-next}
 
@@ -522,11 +522,11 @@ Tanya and Melissa started cleaning the email data in April 2025. Melissa and I t
 4. **Split sentences and de-identify** the authored text, checked in `corpus/tests/segmentation/` and `corpus/tests/de-identification/`.
 5. **Compile project information and events** in `project-information.ipynb`, from the `crs` table, signatures, ORCID, OpenAlex, DataCite and CITF records.
 6. **Detect actors, objects and events,** with patterns from the project information, checked in `corpus/tests/detection/`.
-7. **Write `threading.ipynb`.** Stitch threads and record replies and forwards, checked in `corpus/tests/threading/`.
+7. **Write `threading.ipynb`.** Join emails into threads, record replies and forwards, and test published models for reconstructing threads, checked in `corpus/tests/threading/`.
 8. **Settle the integration questions** (@sec-grant) with David, dated, in `notes/`.
 9. **Continue the DocuScope assessment** with the thresholds, the coding of the tag sample and the validation block.
 10. **Run the rhetoric workflow** in `coding/rhetoric/`, following the steps in the [rhetorical groups note](../rhetorical-groups/index.qmd#sec-rg-next).
-11. **Start coding functions and actions,** each in its own folder, on whole threads drawn by project and phase.
+11. **Research and test trained models for functions and actions,** each in its own folder, and link the text with each function code to its task of concern.
 12. **Build the project graphs** in `relating/context.ipynb` and draw the thread views and project timelines.
 13. **Draft the grant's methods** for Ian's review, registering by February 3 and submitting by March 3, 2027.
 
