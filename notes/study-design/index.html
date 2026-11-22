@@ -142,13 +142,13 @@ p {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Corpus</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../corpus/tests/zoning/index.html" class="sidebar-item-text sidebar-link">
@@ -159,13 +159,13 @@ p {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Coding</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -196,6 +196,12 @@ p {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../notes/rhetorical-groups/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Deriving Rhetorical Groups from Linguistic Features</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../notes/study-design/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Study Design</span></a>
   </div>
@@ -210,12 +216,6 @@ p {
   <div class="sidebar-item-container"> 
   <a href="../../notes/shift-to-supervised/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Shifting to Supervised Topic Assignment</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/rhetorical-groups/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Deriving Rhetorical Groups from Linguistic Features</span></a>
   </div>
 </li>
       </ul>
@@ -875,51 +875,59 @@ Figure&nbsp;4: Views for comparison across projects, with illustrative data.
 <section id="sec-repo" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Repository</h1>
 <pre><code>citf-emails/
-├── requirements.txt                # the environment for every notebook
-├── data/                           # untracked: msgs10.csv, recip4.csv
+├── README.md
+├── _quarto.yml
+├── index.qmd
+├── requirements.txt
+├── assets/
+├── data/
+├── research-protocol/
+├── topic-modelling/
 ├── corpus/
-│   ├── index.qmd, sections/        # planned
-│   ├── corpus.ipynb                # load, flatten, study emails, zones; planned: sentences, de-identification, detection
-│   ├── threading.ipynb             # planned: threads, replies and forwards
-│   ├── project-information.ipynb   # planned: projects, people, publications, events
+│   ├── index.qmd, sections/ *
+│   ├── corpus.ipynb
+│   ├── threading.ipynb *
+│   ├── project-information.ipynb *
 │   └── tests/
 │       ├── zoning/
-│       ├── filters/                # planned
-│       ├── segmentation/           # planned
-│       ├── de-identification/      # planned
-│       ├── detection/              # planned
-│       └── threading/              # planned
+│       ├── filters/ *
+│       ├── segmentation/ *
+│       ├── de-identification/ *
+│       ├── detection/ *
+│       └── threading/ *
 ├── coding/
 │   ├── rhetoric/
-│   │   ├── index.qmd, sections/    # planned
-│   │   ├── rhetoric.ipynb          # DocuScope tags and their distribution; planned: MFTE, politeness, factor analysis
+│   │   ├── index.qmd, sections/ *
+│   │   ├── rhetoric.ipynb
 │   │   └── tests/
-│   │       ├── docuscope/          # the DocuScope assessment
-│   │       ├── mfte/               # planned
-│   │       ├── naming/             # planned
-│   │       ├── stability/          # planned
-│   │       └── biber-dimensions/   # planned
-│   ├── functions/                  # planned
+│   │       ├── docuscope/
+│   │       ├── mfte/ *
+│   │       ├── naming/ *
+│   │       ├── stability/ *
+│   │       └── biber-dimensions/ *
+│   ├── functions/ *
 │   │   ├── index.qmd, sections/
 │   │   ├── functions.ipynb
 │   │   └── tests/
-│   └── actions/                    # planned
+│   └── actions/ *
 │       ├── index.qmd, sections/
 │       ├── actions.ipynb
 │       └── tests/
-├── relating/                       # planned
+├── relating/ *
 │   ├── index.qmd, sections/
-│   ├── codes.ipynb                 # codes with each other
-│   ├── context.ipynb               # context, project graphs
-│   └── views.ipynb                 # thread view, timelines, comparisons
+│   ├── codes.ipynb
+│   ├── context.ipynb
+│   └── views.ipynb
 ├── notes/
-│   ├── index.qmd                   # listing of the notes
+│   ├── index.qmd
 │   ├── relating-rhetoric-to-functions/
+│   ├── rhetorical-groups/
 │   ├── shift-to-supervised/
-│   ├── study-design/               # this document, with its own .gitignore
-│   └── rhetorical-groups/          # the rhetoric workflow
-├── grant-writing/                  # planned: private repository, untracked
-└── private/                        # untracked</code></pre>
+│   └── study-design/
+├── grant-writing/ *
+└── private/
+
+* planned</code></pre>
 <p>There is one folder per workstream. <code>data/</code> holds only the raw data, <code>msgs10.csv</code> and <code>recip4.csv</code>. <code>corpus/</code> holds the corpus for every workstream, since project information, threads, attachments and mentions of focal objects are data we use directly in several analyses. <code>corpus.ipynb</code> loads <code>msgs10.csv</code> and <code>recip4.csv</code> from <code>data/</code>, flattens the emails, restricts them to study emails and zones them, and later blocks will add sentences, de-identification and detection. In the planned <code>threading.ipynb</code>, we join emails into threads and record replies and forwards, and the planned <code>project-information.ipynb</code> compiles projects, people, institutions, publications and events. In block 3 of <code>corpus.ipynb</code>, we mark the pool with the length filter, and we will extend zoning to all 10,397 study emails.</p>
 <p>Every output sits beside the notebook that writes it, and each notebook saves what later notebooks read. <code>corpus.ipynb</code> saves the study emails and <code>email_zones.parquet</code>, and <code>rhetoric.ipynb</code> saves the tags. The root <code>.gitignore</code> lists <code>/data/</code>, <code>*.csv</code> and <code>*.parquet</code> and already lists <code>*.html</code>, so the repository holds no email text and no output.</p>
 <p><code>coding/</code> holds one folder for each kind of code. <code>coding/rhetoric/</code> holds <code>rhetoric.ipynb</code>, which tags the pool with DocuScope and counts the tags, and will also tag every authored sentence with MFTE and ConvoKit’s politeness module and run the factor analysis. The DocuScope assessment moved from <code>docuscope-assessment/</code> to <code>coding/rhetoric/tests/docuscope/</code> on 16 November, with its write-up and <code>docuscope.ipynb</code>, and <code>coding/rhetoric/tests/</code> will add <code>mfte/</code>, <code>naming/</code>, <code>stability/</code> and <code>biber-dimensions/</code> for the checks in the rhetorical groups note. We will add MFTE, ConvoKit, factor_analyzer and pybiber to <code>requirements.txt</code>. <code>coding/functions/</code> and <code>coding/actions/</code> each hold their own notebook, code definitions and model tests. <code>relating/</code> holds one notebook for relating codes to each other, one for relating codes to context, which also builds the project graphs, and one for the views.</p>
