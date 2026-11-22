@@ -241,7 +241,7 @@ The application's rationale lies in the social and informational pain points of 
 
 We organize the data as a graph of nodes and edges in four groups. Correspondence covers the emails and their parts, people and organizations cover who wrote and on whose behalf, analysis covers what coding and detection add, and context covers what comes from outside the emails. We store the nodes and edges as tables and write each table in the folder for the work it comes from, keyed by identifiers shared across every notebook. In `corpus/` we write the correspondence, people and organizations, and context tables, with mentions and focal objects; and in each coding folder, its Code nodes and Coding edges, with the follow-up edges in `coding/functions/`. People nodes include names, email addresses and gender, so we keep all the node and edge tables untracked beside their notebooks, as with the email text. The node and edge types appear in @fig-data-model, with lists in @tbl-nodes and @tbl-edges.
 
-![The data model, with node types grouped by kind and the edge types between them.](figures/data-model.svg){#fig-data-model}
+![The data model, with node types grouped by kind and the edge types between them. Mentions also point to people, institutions, projects and events.](figures/data-model.svg){#fig-data-model}
 
 ## Nodes
 
@@ -318,6 +318,8 @@ Events range from a single day to a period of months, with start and end dates w
 +---------------+-----------+------------------------------+--------------------------------------+
 | Forward       | Email     | Email                        | None                                 |
 +---------------+-----------+------------------------------+--------------------------------------+
+| Belongs to    | Email     | Thread or project            | None                                 |
++---------------+-----------+------------------------------+--------------------------------------+
 | Containment   | Email     | Sentence                     | Position in the email                |
 +---------------+-----------+------------------------------+--------------------------------------+
 | Attachment    | Email     | Attachment                   | File name as sent                    |
@@ -369,9 +371,9 @@ A view is a figure that lays out part of the graph for reading or comparison. We
 
 ### Thread view {#sec-thread}
 
-![An illustrative thread, with the codes on each sentence. The sentences, functions and dates are invented.](figures/thread-view.svg){#fig-thread-view}
+![An illustrative thread, with the codes on each sentence. The sentences, codes and dates are invented, and the rhetorical groups are placeholders.](figures/thread-view.svg){#fig-thread-view}
 
-In the thread view (@fig-thread-view), one thread's emails appear in order, each under its sender's role and date, with every sentence of the authored zone beside its function, its action and the rhetorical groups present in it. A dashed arrow joins each follow-up to the email it follows. We use the thread view for close reading, to check whether a pattern in the counts holds up in the emails behind it. We also use the thread view as a visual check of the rhetorical groups, since each one appears beside its sentence. The text in the view is de-identified, and we keep the view untracked, as with the email text.
+In the thread view (@fig-thread-view), one thread's emails appear in order, each under its sender's role and date, with every sentence of the authored zone beside its function, task of concern, action, rhetorical groups and politeness strategies. Arrows join each reply and each follow-up to the email it answers or follows. We use the thread view for close reading, to check whether a pattern in the counts holds up in the emails behind it. We also use the thread view as a visual check of the rhetorical groups, since each one appears beside its sentence. The text in the view is de-identified, and we keep the view untracked, as with the email text.
 
 ### Project timeline {#sec-timeline}
 
