@@ -42,7 +42,7 @@ The corpus is the table of emails, and the zones, threads, names and sentences a
 
 **Deliverables.**
 
-- Every study email with its dates, recipients and thread, and the emails it replies to or forwards
+- Every study email with its dates, recipients and thread, and the emails it replies to, forwards or follows up
 - Zones and sentences for every study email
 - De-identified text with an offset map back to the raw body
 - Project information and events
@@ -62,7 +62,7 @@ The flattened table has 5 of the 32 columns in `msgs10`, namely the message ID, 
 
 On 16 November we inventoried all 32 columns and their missingness to see what is recoverable. The dates are in `sent_datetime_rounded`, rounded to the minute, with 9.3% missing and no time zone recorded. No column holds reply, forward or message identifiers, and none holds attachments, so we take attachments from the attachment lines in the other zone. Ten flags whose names begin with `mt_`, such as `mt_dsa` and `mt_data_transfer`, and several other columns have no documented meaning, and we will ask Melissa what they record.
 
-Threading joins emails into threads through their replies and forwards. Without identifiers, we join a reply to the email it answers through the normalized subject line, the quoted text and the timing. A forward starts a branch since it passes a message to someone outside the thread, and one email can reply to one message while forwarding another. Threading supplies the reply and forward edges in the data model (@sec-model) and the whole threads that we code for functions and actions.
+Threading joins emails into threads through their replies and forwards. Without identifiers, we join a reply to the email it answers through the normalized subject line, the quoted text and the timing. @yeh2006 reassembled Enron threads by matching each email's quoted text against earlier emails, and @jamison2013 and @dehghani2013 trained models to reconstruct email threads. We will research and test such models on the CITF emails. A forward starts a branch since it passes a message to someone outside the thread, and one email can reply to one message while forwarding another. Threading supplies the reply and forward edges in the data model (@sec-model) and the whole threads that we code for functions and actions.
 
 ### Zoning
 
@@ -142,7 +142,7 @@ We can compile the project information without any email text, in parallel with 
 
 ## Coding rhetoric, functions and actions {#sec-coding}
 
-We label the authored text of each email with three kinds of codes. Rhetoric codes are rhetorical groups of MFTE features, with politeness strategies beside them, and function and action codes start from human coding, which we extend to the rest of the corpus with a classifier. We keep the rhetoric codes apart from the function and action codes until we relate them (@sec-relating), so that any association between them comes from the emails themselves.
+The authored text of each email carries three kinds of codes. Rhetoric codes label how a sentence is written. They consist of rhetorical groups of MFTE features [@lefoll2025] and politeness strategies [@danescu2013]. Action codes label the act a writer performs in a sentence, such as a request or a confirmation [@cohen2004; @iso24617-2]. Function codes label the task an act concerns in the data sharing work, such as signing the data sharing agreement [@cohen2004; @iso24617-2]. Each kind of code comes from a trained model. The three kinds of codes stay independent until the relating stage (@sec-relating), where they join on the sentence ID, so any association among them comes from the emails themselves.
 
 **Objective.** Label the authored text of each email with rhetoric, functions and actions, and validate each kind of code before using it in the analysis.
 
@@ -152,39 +152,28 @@ We label the authored text of each email with three kinds of codes. Rhetoric cod
 - The DocuScope assessment's validation of each DocuScope category, for comparison
 - Codebooks for functions and actions
 - Function and action codes on every sentence, from coders and classifiers
-- Follow-ups, each tied to the request it repeats
 
 ### Rhetoric
 
-We derive rhetoric from the authored text by the workflow in [Deriving rhetorical groups from linguistic features](../rhetorical-groups/index.qmd). MFTE tags every authored sentence, and a factor analysis of which features occur together across emails, with email length removed from each feature, yields the CITF dimensions. Each pole of a CITF dimension yields a candidate rhetorical group, which becomes a rhetorical group once its name passes a blind sorting check by a second reader. We then test the rhetorical groups for stability across random halves of the projects and compare them with Biber's 1988 dimensions and with the groups that the same factor analysis yields from DocuScope categories. ConvoKit's politeness strategies sit beside the rhetorical groups, and we pass the sentence score and presence of each rhetorical group, and the presence of each politeness strategy, in each sentence on for relating to functions and actions (@sec-relating).
+Rhetoric follows the workflow in [Deriving rhetorical groups from linguistic features](../rhetorical-groups/index.qmd), which rests on the lexico-grammatical and semantic features of MFTE's extended tagset [@lefoll2025] in each authored sentence. The CITF dimensions come from a factor analysis of which MFTE features co-occur across emails, with each feature adjusted for email length. Each pole of a CITF dimension with at least three features is a candidate rhetorical group, and a candidate becomes a rhetorical group when the name drawn from its most extreme emails passes a second reader's blind sorting check.
 
-How DocuScope's categories group into interpretable rhetorical groups remained open. @brown2022 grouped DocuScope categories in the Enron emails with a discriminant analysis, and their four styles could have served as a starting codebook. On re-reading their paper on 18 November, we found that their four rhetorical functions are readings of discriminants built to separate Enron's corporate roles, so they describe Enron's roles, and we see no grounds for using them as a codebook. We keep them as a point of comparison when naming the rhetorical groups.
+The rhetorical groups then face three tests. The first is their stability across random halves of the projects. The second is a comparison with Biber's 1988 dimensions [@biber1988]. The third compares the CITF dimensions with dimensions from a factor analysis of DocuScope categories, which @brown2022 used for the Enron emails.
 
-DocuScope stays as a comparison, and we use the DocuScope assessment to judge whether DocuScope's tags are accurate enough for these emails. We tag with `en_docusco_spacy`, a trained spaCy pipeline with DocuScope categories as its entity labels, for which the [model page](https://huggingface.co/browndw/en_docusco_spacy) reports an F-score of 0.81. DocuScope is often described as dictionary lookup, but `en_docusco_spacy` tags spans the way NER does, so we can test directly whether it handles multi-token concepts. We mark known names before tagging and check whether the tags respect them.
-
-Across the pool, the tags number 374,940, and 176,836 of them fall in rhetorical categories. Alongside the senders' rhetoric, the raw counts include text that no sender wrote for the message and words read in the wrong sense.
-
-We separate the senders' rhetoric from the rest in three steps. First, zoning removes everything outside the authored zone. Second, we write error rules for recurring misreadings in the authored text. Of the 13 rules, we apply 5 without coding and test 8 on a human sample first, and we draw 774 tags for coding, stratified so that each rule, each domain noun and each category has enough tags to judge on its own. Third, we compare four versions of the tags, namely raw, authored, cleaned, and an upper bound with every rule match removed. Misreadings survive cleaning, with "agreement" still tagged Positive 959 times, and a few formulas dominate whole categories, with about half of Uncertainty tags on "hesitate to".
-
-Coding the sample comes next. We set the thresholds for applying a rule, rating a category and deciding whether a supervised model is worth building before coding any tag, so that the thresholds stay independent of the results. Two coders then judge each tag as correct, incorrect or unsure. From their judgements we measure agreement between the coders, each rule's hit rate and each category's remaining error, and relabel the tags that the confirmed rules catch. We then include each DocuScope category that passes validation in the factor analysis for the DocuScope rhetorical groups. We drop the sender-level factor analysis and the LLM labelling planned in section 8 of the assessment.
+ConvoKit's politeness strategies [@danescu2013; @chang2020] sit beside the rhetorical groups. Politeness theory defines them in advance, so no factor analysis lies behind them. The score and presence of each rhetorical group, and the presence and count of each politeness strategy, in each sentence are the input to relating rhetoric, functions and actions (@sec-relating), keyed by sentence ID.
 
 ### Functions
 
-We give each sentence in the authored zone a function code, naming the work the sentence is part of. Functions have their own sample, coding page, codebook, agreement figures and classifier, in `coding/functions/`.
+Function codes label the task that each authored sentence concerns in the administrative process of data sharing, such as obtaining ethics approval or scheduling a meeting. Trained models already exist for labelling workplace email by task or intent. For example, @sappelli2016 built classifiers for the tasks expressed in email, and @wang2019 built sentence-level intent models. We will research trained models that label email sentences by task and test how well they label the CITF emails before applying them in the analysis.
 
-The labelling follows a fixed pipeline, so that it stays predictable and auditable. Discovery coding comes first, on a calibration set of whole threads with no codebook, so that the categories come from the emails. The coders group their codes into function categories and write a codebook with definitions, inclusion and exclusion criteria and anchor examples. Coders then label a training set against the frozen codebook, and we use small-text to pick the sentences the current classifier is least certain about. Each change to the training set means a new version and a retrained model. The test set, about 200 sentences double-coded and stratified by project and milestone, is separate from training, and on it we measure both human agreement and model accuracy for each category. We use a category in the analysis only if the model's F1 on the test set reaches the agreement the coders achieved on it. We compare SetFit [@tunstall2022] with logistic regression on frozen sentence embeddings and with a fine-tuned small encoder, and choose the simplest model that meets that threshold. We keep DocuScope features out of the classifiers.
-
-We code whole threads because coders sometimes need the sender's role and the email's context, since a short reply makes sense only beside the message it answers. We draw threads by project and milestone, so that the coding follows the timeline. We export labels from the coding page by sentence identifier, with character offsets on the raw body, so that codes, tags and zones line up.
+A function code names a kind of task that recurs across projects, such as obtaining ethics approval. The text with each function code also belongs to a task of concern, meaning one instance of that task in one project, such as one project's ethics approval, and we link the text about each task of concern across emails and threads. To tell one task of concern from another of the same kind, we will draw on the mentions detected in the corpus work, such as study IDs, focal objects, attachments and events (@sec-corpus). @ailon2013 grouped machine-generated emails by the user action that triggered them, which links emails beyond their threads in a similar way. A follow-up is a later email in which the same sender returns to the same task of concern before any recipient replies.
 
 ### Actions
 
-We give each sentence in the authored zone an action code, naming what the writer does with the sentence. The actions come from discovery coding, as the functions do. Requesting, providing, chasing and confirming are examples, and the list stays open. Actions have their own sample, coding page, codebook, agreement figures and classifier, in `coding/actions/`, and the action codebook has its own definitions, criteria and anchor examples.
-
-Coders also mark follow-ups, meaning sentences that repeat an earlier request, and tie each one to the request it repeats. The earlier emails of the thread appear on the coding page, so coders can find the request. Each follow-up consists of two sentence identifiers, so at the project level we can count how often each request came back and how long each repetition took.
-
-MailEx [@srivastava2023], a public dataset of about 1,500 email threads, could add training data for actions. Its authors annotated the threads with ten types of what they call email events, all forms of requesting, delivering or amending data, actions and meetings, which sit closer to the action codes than to the events in the data model. Once the discovery codes exist, we map MailEx's event types onto the action codebook and record where the two match. We then train a model on the matching MailEx examples and test it on the action test set. If it reaches the coders' agreement on that set, we train the action classifier on MailEx, with a smaller CITF set for adaptation.
+Action codes label the act that a writer performs in each authored sentence, such as a request or a confirmation. Trained models already exist for labelling email by act. For example, @cohen2004 trained classifiers for email speech acts such as requests, proposals, deliveries and commitments, @mezza2018 trained dialogue act taggers on the ISO 24617-2 scheme [@iso24617-2], and @srivastava2023 trained event extractors on MailEx, a dataset of annotated email threads whose event types are forms of requesting, delivering and amending. We will research trained models that label email sentences by act and test how well they label the CITF emails before applying them in the analysis.
 
 ## Relating rhetoric, functions and actions {#sec-relating}
+
+We relate rhetoric, functions and actions to one another and to the circumstances of each email and project, such as the sender's role and the project's phase.
 
 **Objective.** Relate the three kinds of codes to each other and to the sender's role, the project's phase, prior contact between sender and recipient, and follow-ups.
 
@@ -194,21 +183,20 @@ MailEx [@srivastava2023], a public dataset of about 1,500 email threads, could a
 - Comparisons of rhetoric by function and action
 - The activity log
 - Counts per project, phase and role
-- Thread views and project timelines
 
 ### Relating codes to each other
 
-Function and action codes apply to whole sentences, and MFTE tags each sentence as its own text, so rhetorical groups and politeness strategies share the sentence as their unit. We give each sentence a score on each rhetorical group from the loadings of the features it contains, and record the group as present where that score passes a threshold fixed before any results. We record whether each politeness strategy appears in each sentence, and every code joins on the sentence ID. Sentence scores rise with sentence length, so the comparisons control for it.
+We compare the three kinds of codes with one another to identify associations between rhetoric, acts and tasks in the CITF emails. The comparison follows form–function mapping, which links what a stretch of text does with how it is written [@biberconnorupton2007; @gray2020]. @gray2020 mapped dimension scores onto the parts of research articles in the same way, and @alafnan2018 found that workplace emails grouped by purpose fall in different registers.
 
-With the codes on one unit, we compare the rhetoric of each function category with the corpus as a whole. We separate the rhetoric that every sentence of a category shares, which belongs to the function itself, from the rhetoric that varies, which the sender's role, the project's phase, prior contact or follow-ups may explain. We add actions to the comparison, to see whether a request and a confirmation serving the same function differ in rhetoric. A correctly tagged formula such as "hesitate to" can account for a rhetorical group's whole difference between functions, so we break each comparison down by phrase and report effects from a single formula as conventions. With every rhetorical group and politeness strategy paired with every function and action category, some differences will arise by chance, so we write down the comparisons before either kind of coding finishes and correct for multiple comparisons.
+For each coded stretch of text, the function and action codes stand for what the text does. The text's scores on the CITF dimensions, and the presence of each rhetorical group and politeness strategy in it, stand for how the text is written. We compare the mean scores on each CITF dimension across function codes and across action codes, as @biber1988 compared registers, and set the presence of each rhetorical group and politeness strategy in text with each code against all other text, controlling for length, as the [rhetorical groups note](../rhetorical-groups/index.qmd#sec-relate) sets out. From these comparisons we see, for example, whether requests score differently from confirmations on a CITF dimension, or whether one task draws more on a rhetorical group than another. We also cross-tabulate action codes by function code, to see which acts each task draws on.
 
-### Relating codes to context
+The rhetoric that every instance of a function code shares belongs to the function itself, and the rhetoric that varies is the subject of @sec-relating-context. With every rhetorical group and politeness strategy paired with every function and action code, some differences will arise by chance, so we record the comparisons before the trained models label the corpus and correct for multiple comparisons.
 
-We relate the varying part of the rhetoric to the sender's role, the project's phase, prior contact between sender and recipient, follow-ups, whether a recipient sits in To or Cc, and the number of recipients. The difficulty lies in keeping the person apart from the work. Each sender writes in a style of their own across every function, and some senders write far more than others, so we use mixed models with sender and study as random effects to separate personal style from the function and action of each sentence. We check each pattern by close reading of the emails behind it, reading each sentence beside the message it answers, since a short reply makes sense only beside that message.
+### Relating codes to context {#sec-relating-context}
 
-At the project level, each email sits in a sequence of senders, milestones, focal objects and attachments (@sec-model). In the two example projects, we can see why a phase took as long as it did from the order of senders, and only how long it took from its duration (@sec-views). We turn the sequences into counts across all projects, such as rounds with a contracts officer before signing, time from an escalation to the next milestone, time to reply by role and spreadsheets sent again after the first data request. One long email can outweigh many short ones, so we report codes per email and per phase. We also use the project-level counts to direct the sentence-level reading to particular emails, such as those just before and after an escalation or successive replies from one contracts officer.
+We relate the codes to the circumstances in which each email was written, first within each email and then across each project. We treat the situation of each email as a set of separate dimensions [@biber2020], namely the sender's role, the project's phase, prior contact between sender and recipient, follow-ups, whether a recipient sits in To or Cc, and the number of recipients, and relate the rhetoric that varies within a function or action code to each of them (@fig-comparison, panel E). Since each person writes in a register slightly their own [@grieve2023], and a few senders account for much of the correspondence, we fit mixed models with sender and study as random effects, which hold personal style apart from the function and action codes.
 
-For the project level we need the threads and the project information, which we test during the corpus work (@sec-corpus), and the activity log, which we build in `relating/context.ipynb` once the action codes exist (@sec-log).
+At the project level, we treat each project as a graph of the people, focal objects, attachments and emails involved in it, linked by who wrote to whom, what each email mentions, and which emails reply to, forward or follow up others (@fig-data-model). We explore each project's graph through its structure, such as who sits at the centre of its exchanges and who bridges projects (@fig-comparison, panel A); its paths from one email to the next through replies, forwards and follow-ups (panel B); the timing that dates on emails and milestones give those paths (panels C and D); and the focal objects that recur across its threads. We build each project's graph from the threads, the project information and the detected actors, events and focal objects (@sec-corpus), and add the action and function codes once the trained models label the corpus (@sec-coding).
 
 ## CIHR Project Grant, Spring 2027 {#sec-grant}
 
@@ -241,7 +229,7 @@ The application's rationale lies in the social and informational pain points of 
 
 4. **Did escalation by the task force director change what followed?** Find the emails the task force director wrote or received in Cc, and compare the time to the next milestone with projects at the same phase that had no escalation. At the sentence level, compare the actions and rhetoric of the emails just before and just after, from both the study side and the CITF side. Escalation follows trouble, so read each case closely for what prompted it. Sources: participation by role, and the threads.
 
-5. **Where did projects stall, and what did stalling look like in writing?** Define a stall as a gap within a phase longer than usual for that phase, or a run of follow-ups on one request, and mark each stall on the project's timeline. Use sequence analysis of the activity log to find which paths through the phases include stalls. At the sentence level, compare the follow-ups with the requests they repeat, and the emails inside a stall with those around it. Sources: the milestones, the threads and the follow-ups.
+5. **Where did projects stall, and what did stalling look like in writing?** Define a stall as a gap within a phase longer than usual for that phase, or a run of follow-ups without a reply, and mark each stall on the project's timeline. Use sequence analysis of the activity log to find which paths through the phases include stalls. At the sentence level, compare the follow-ups with the emails they follow, and the emails inside a stall with those around it. Sources: the milestones, the threads and the follow-ups.
 
 6. **Did prior data sharing experience or prior ties to the core team ease the process?** Measure the data each team shared and its co-authorship with the CITF core team and other data contributors before CITF participation, then compare phase durations and follow-up counts across the two measures. Read projects at both ends closely to see whether experience appears in the writing, for example in fewer clarifying questions about the agreement. Sources: the publications, datasets and co-authors from before CITF participation.
 
@@ -249,7 +237,7 @@ The application's rationale lies in the social and informational pain points of 
 
 # Data model {#sec-model}
 
-We organize the data as a graph of nodes and edges in four groups. Correspondence covers the emails and their parts, people and organizations cover who wrote and on whose behalf, analysis covers what coding and detection add, and context covers what comes from outside the emails. We store the nodes and edges as tables and write each table in the folder for the work it comes from, keyed by identifiers shared across every notebook. In `corpus/` we write the correspondence, people and organizations, and context tables, with mentions and focal objects; in each coding folder, its Code nodes and Coding edges; in `coding/actions/`, the follow-ups; and in `relating/`, the activity log. People nodes include names, email addresses and gender, so we keep all the node and edge tables untracked beside their notebooks, as with the email text. The node and edge types appear in @fig-data-model, with lists in @tbl-nodes and @tbl-edges.
+We organize the data as a graph of nodes and edges in four groups. Correspondence covers the emails and their parts, people and organizations cover who wrote and on whose behalf, analysis covers what coding and detection add, and context covers what comes from outside the emails. We store the nodes and edges as tables and write each table in the folder for the work it comes from, keyed by identifiers shared across every notebook. In `corpus/` we write the correspondence, people and organizations, and context tables, with mentions and focal objects; in each coding folder, its Code nodes and Coding edges, with the follow-up edges in `coding/functions/`; and in `relating/`, the activity log. People nodes include names, email addresses and gender, so we keep all the node and edge tables untracked beside their notebooks, as with the email text. The node and edge types appear in @fig-data-model, with lists in @tbl-nodes and @tbl-edges.
 
 ![The data model, with node types grouped by kind and the edge types between them.](figures/data-model.svg){#fig-data-model}
 
@@ -341,13 +329,13 @@ Events range from a single day to a period of months, with start and end dates w
 +---------------+-----------+------------------------------+--------------------------------------+
 | **Analysis**                                                                                    |
 +---------------+-----------+------------------------------+--------------------------------------+
+| Follow-up     | Email     | Email                        | None                                 |
++---------------+-----------+------------------------------+--------------------------------------+
 | Coding        | Sentence  | Code                         | Character offsets for DocuScope tags |
 +---------------+-----------+------------------------------+--------------------------------------+
 | Mention       | Sentence  | Person, institution,         | Character offsets                    |
 |               |           | project, focal object or     |                                      |
 |               |           | event                        |                                      |
-+---------------+-----------+------------------------------+--------------------------------------+
-| Follow-up     | Sentence  | Sentence                     | None                                 |
 +---------------+-----------+------------------------------+--------------------------------------+
 | **Context**                                                                                     |
 +---------------+-----------+------------------------------+--------------------------------------+
@@ -364,11 +352,11 @@ We record role on each participation, since people change roles over the course 
 
 We attach mentions to sentences, so that a sentence that mentions the data sharing agreement has its rhetoric, functions and actions beside the mention. Mentions of other projects remain mentions, since each email belongs to one project.
 
-A follow-up joins a sentence to the earlier request it repeats, which may be in another email.
+A follow-up joins an email to the earlier email from the same sender on the same task of concern, with no reply from any recipient in between.
 
 ## Provenance
 
-For every edge from matching, detection or coding, we record how it came about. For reply, forward, participation and mention edges, we record the method and a confidence, where the method is the basis for the edge, such as a message identifier, a subject line, quoted text, a pattern, the NER model or a person. For coding edges, we record the source (a coder, a classifier or the DocuScope tagger), the codebook or model version, a confidence and the date, and for follow-up edges, the coder. We can then keep only the edges above a confidence threshold and report how many fell below it. One sentence can have codes from two coders and from a classifier, and we measure agreement and model accuracy by comparing them.
+For every edge from matching, detection or coding, we record how it came about. For reply, forward, follow-up, participation and mention edges, we record the method and a confidence, where the method is the basis for the edge, such as a message identifier, a subject line, quoted text, a pattern, the NER model or a person. For coding edges, we record the source (a coder, a classifier or the DocuScope tagger), the codebook or model version, a confidence and the date. We can then keep only the edges above a confidence threshold and report how many fell below it. One sentence can have codes from two coders and from a classifier, and we measure agreement and model accuracy by comparing them.
 
 ## Activity log {#sec-log}
 
@@ -386,7 +374,7 @@ A view is a figure that lays out part of the graph for reading or comparison. We
 
 ![An illustrative thread, with the codes on each sentence. The sentences, functions and dates are invented.](figures/thread-view.svg){#fig-thread-view}
 
-In the thread view (@fig-thread-view), one thread's emails appear in order, each under its sender's role and date, with every sentence of the authored zone beside its function, its action and the rhetorical groups present in it. A dashed arrow joins each follow-up to the request it repeats. We use the thread view for close reading, to check whether a pattern in the counts holds up in the emails behind it. We also use the thread view as a visual check of the rhetorical groups, since each one appears beside its sentence. The text in the view is de-identified, and we keep the view untracked, as with the email text.
+In the thread view (@fig-thread-view), one thread's emails appear in order, each under its sender's role and date, with every sentence of the authored zone beside its function, its action and the rhetorical groups present in it. A dashed arrow joins each follow-up to the email it follows. We use the thread view for close reading, to check whether a pattern in the counts holds up in the emails behind it. We also use the thread view as a visual check of the rhetorical groups, since each one appears beside its sentence. The text in the view is de-identified, and we keep the view untracked, as with the email text.
 
 ### Project timeline {#sec-timeline}
 
@@ -412,25 +400,25 @@ Webinars fell during both negotiations, on dates shared by all projects, so we c
 
 ![Views for comparison across projects, with illustrative data.](figures/graph-views.svg){#fig-comparison}
 
-### Projects aligned on a milestone
+### Network
 
-Each project's emails sit on a common axis of time before and after its own DSA signing (@fig-comparison, panel A), or any other milestone, so projects at different calendar dates line up. The view shows how activity, follow-ups and escalation gather around a milestone, and whether they gather differently by field or by contracts officer. It draws on the emails, the milestone dates and participation.
-
-### Phases over time
-
-The number of projects in each phase, year by year (@fig-comparison, panel B), shows where projects accumulated and when they moved on. We can place the events on the same calendar axis, though a coincidence between an event and movement shows only that they fell at the same time. The view draws on the milestone dates and the phases in the activity log.
-
-### Roles against phases
-
-A matrix of sender roles against phases (@fig-comparison, panel C) gives the share of each role's sentences that carry an action, a function or a rhetorical group, one code at a time. The matrix is the comparison view for relating codes to context, since it shows whether the codes follow the role, the phase or both. The matrix draws on the coding edges, participation with its roles and the phases.
+Without time, people, projects, institutions and focal objects form one network (@fig-comparison, panel A). The network shows who connects projects, which focal objects recur across them, which institutions share contracts officers, and which people had ties before the CITF. It draws on participation, membership, affiliation, mention and authorship edges.
 
 ### Process map
 
-Process mining on the activity log (@fig-comparison, panel D) draws the paths from one action to the next within each project, with the line width showing how often each transition occurs. Sequence analysis compares the paths across projects, and with the time to each milestone we can run survival analysis by field, institution or contracts officer.
+Process mining on the activity log (@fig-comparison, panel B) draws the paths from one action to the next within each project, with the line width showing how often each transition occurs. Sequence analysis compares the paths across projects, and with the time to each milestone we can run survival analysis by field, institution or contracts officer.
 
-### Network
+### Projects aligned on a milestone
 
-Without time, people, projects, institutions and focal objects form one network (@fig-comparison, panel E). The network shows who connects projects, which focal objects recur across them, which institutions share contracts officers, and which people had ties before the CITF. It draws on participation, membership, affiliation, mention and authorship edges.
+Each project's emails sit on a common axis of time before and after its own DSA signing (@fig-comparison, panel C), or any other milestone, so projects at different calendar dates line up. The view shows how activity, follow-ups and escalation gather around a milestone, and whether they gather differently by field or by contracts officer. It draws on the emails, the milestone dates and participation.
+
+### Phases over time
+
+The number of projects in each phase, year by year (@fig-comparison, panel D), shows where projects accumulated and when they moved on. We can place the events on the same calendar axis, though a coincidence between an event and movement shows only that they fell at the same time. The view draws on the milestone dates and the phases in the activity log.
+
+### Roles against phases
+
+A matrix of sender roles against phases (@fig-comparison, panel E) gives the share of each role's sentences that carry an action, a function or a rhetorical group, one code at a time. The matrix is the comparison view for relating codes to context, since it shows whether the codes follow the role, the phase or both. The matrix draws on the coding edges, participation with its roles and the phases.
 
 ## Practical considerations
 
