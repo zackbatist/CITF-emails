@@ -237,11 +237,12 @@ p {
   <ul class="collapse">
   <li><a href="#study-emails" id="toc-study-emails" class="nav-link" data-scroll-target="#study-emails"><span class="header-section-number">2.1.1</span> Study emails</a></li>
   <li><a href="#email-metadata" id="toc-email-metadata" class="nav-link" data-scroll-target="#email-metadata"><span class="header-section-number">2.1.2</span> Email metadata</a></li>
-  <li><a href="#zoning" id="toc-zoning" class="nav-link" data-scroll-target="#zoning"><span class="header-section-number">2.1.3</span> Zoning</a></li>
-  <li><a href="#segmentation" id="toc-segmentation" class="nav-link" data-scroll-target="#segmentation"><span class="header-section-number">2.1.4</span> Segmentation</a></li>
-  <li><a href="#de-identification" id="toc-de-identification" class="nav-link" data-scroll-target="#de-identification"><span class="header-section-number">2.1.5</span> De-identification</a></li>
-  <li><a href="#detecting-actors-objects-and-events" id="toc-detecting-actors-objects-and-events" class="nav-link" data-scroll-target="#detecting-actors-objects-and-events"><span class="header-section-number">2.1.6</span> Detecting actors, objects and events</a></li>
-  <li><a href="#sec-project-info" id="toc-sec-project-info" class="nav-link" data-scroll-target="#sec-project-info"><span class="header-section-number">2.1.7</span> Project information</a></li>
+  <li><a href="#threading" id="toc-threading" class="nav-link" data-scroll-target="#threading"><span class="header-section-number">2.1.3</span> Threading</a></li>
+  <li><a href="#zoning" id="toc-zoning" class="nav-link" data-scroll-target="#zoning"><span class="header-section-number">2.1.4</span> Zoning</a></li>
+  <li><a href="#segmentation" id="toc-segmentation" class="nav-link" data-scroll-target="#segmentation"><span class="header-section-number">2.1.5</span> Segmentation</a></li>
+  <li><a href="#de-identification" id="toc-de-identification" class="nav-link" data-scroll-target="#de-identification"><span class="header-section-number">2.1.6</span> De-identification</a></li>
+  <li><a href="#detecting-actors-objects-and-events" id="toc-detecting-actors-objects-and-events" class="nav-link" data-scroll-target="#detecting-actors-objects-and-events"><span class="header-section-number">2.1.7</span> Detecting actors, objects and events</a></li>
+  <li><a href="#sec-project-info" id="toc-sec-project-info" class="nav-link" data-scroll-target="#sec-project-info"><span class="header-section-number">2.1.8</span> Project information</a></li>
   </ul></li>
   <li><a href="#sec-coding" id="toc-sec-coding" class="nav-link" data-scroll-target="#sec-coding"><span class="header-section-number">2.2</span> Coding rhetoric, functions and actions</a>
   <ul class="collapse">
@@ -284,13 +285,11 @@ p {
   <li><a href="#practical-considerations" id="toc-practical-considerations" class="nav-link" data-scroll-target="#practical-considerations"><span class="header-section-number">4.3</span> Practical considerations</a></li>
   </ul></li>
   <li><a href="#sec-repo" id="toc-sec-repo" class="nav-link" data-scroll-target="#sec-repo"><span class="header-section-number">5</span> Repository</a></li>
-  <li><a href="#sec-next" id="toc-sec-next" class="nav-link" data-scroll-target="#sec-next"><span class="header-section-number">6</span> Next steps</a></li>
   <li><a href="#sec-refs" id="toc-sec-refs" class="nav-link" data-scroll-target="#sec-refs">Links and references</a>
   <ul class="collapse">
   <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
-  <li><a href="#sec-grant-move" id="toc-sec-grant-move" class="nav-link" data-scroll-target="#sec-grant-move">Appendix A: Migrating prior grant-writing activity</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -332,14 +331,14 @@ p {
 <h1 data-number="1"><span class="header-section-number">1</span> Summary</h1>
 <p>Following the call on 13 November 2026 with David and Ian, we moved the CITF email work from tagging single emails to studying each project as a graph of its emails, people and focal objects across its phases. We reorganize the work around that shift, toward the CIHR Project Grant application due March 3, 2027 (<a href="#sec-grant" class="quarto-xref">Section&nbsp;2.4</a>).</p>
 <p>The work falls into four workstreams (<a href="#sec-workstreams" class="quarto-xref">Section&nbsp;2</a>). In preparing the corpus, we build the study emails, their metadata, authored sentences and de-identified text into one corpus, with a graph of people, projects, focal objects and events around it. In coding rhetoric, functions and actions, we label the authored text with three independent kinds of codes. Rhetoric comes from rhetorical groups of the features that the Multi-Feature Tagger of English (MFTE) tags, with DocuScope as a comparison. In relating rhetoric, functions and actions, we bring the codes together, first with each other and then with the situation of each email and the course of each project. The grant application rests on the earlier applications and on this work.</p>
-<p>The data sit in node and edge tables (<a href="#sec-model" class="quarto-xref">Section&nbsp;3</a>). We build every view from the node and edge tables, whether for close reading of one thread or for comparison across projects (<a href="#sec-views" class="quarto-xref">Section&nbsp;4</a>). The workstreams map onto folders in the <code>CITF-emails</code> repository (<a href="#sec-repo" class="quarto-xref">Section&nbsp;5</a>), and on 16 November we moved the corpus preparation out of the DocuScope assessment and into <code>corpus/</code>. The next steps are in <a href="#sec-next" class="quarto-xref">Section&nbsp;6</a>.</p>
+<p>The data sit in node and edge tables (<a href="#sec-model" class="quarto-xref">Section&nbsp;3</a>). We build every view from the node and edge tables, whether for close reading of one thread or for comparison across projects (<a href="#sec-views" class="quarto-xref">Section&nbsp;4</a>). The workstreams map onto folders in the CITF-emails repository (<a href="#sec-repo" class="quarto-xref">Section&nbsp;5</a>), and on 16 November we moved the corpus preparation out of the DocuScope assessment and into <code>corpus/</code>.</p>
 </section>
 <section id="sec-workstreams" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Workstreams</h1>
 <p>The work falls into four workstreams. In preparing the corpus, we produce the emails, zones, sentences, de-identified text, nodes and edges that the other workstreams use. We then label the authored text with rhetoric, functions and actions, and compare the three kinds of codes with each other, with the situation of each email and with the course of each project. The CIHR Project Grant application for Spring 2027 rests on the other three workstreams.</p>
 <section id="sec-corpus" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="sec-corpus"><span class="header-section-number">2.1</span> Preparing the corpus</h2>
-<p>The corpus is the table of emails, and the zones, threads, names and sentences attached to them, that we use in every other workstream. On 16 November we moved the corpus blocks of the DocuScope assessment notebook into <code>corpus/corpus.ipynb</code> and <code>corpus/tests/zoning/zoning.ipynb</code>. We still have to confirm, by hash, that a run of <code>corpus.ipynb</code> reproduces the earlier <code>email_zones.parquet</code> exactly.</p>
+<p>The corpus is the table of emails, and the zones, threads, names and sentences attached to them, that we use in every other workstream.</p>
 <p><strong>Objective.</strong> Build one corpus for every other workstream, with every study email, its metadata and authored sentences, a de-identified copy for coding, and the graph of people, projects, objects and events around it.</p>
 <p><strong>Deliverables.</strong></p>
 <ul>
@@ -351,18 +350,20 @@ p {
 </ul>
 <section id="study-emails" class="level3" data-number="2.1.1">
 <h3 data-number="2.1.1" class="anchored" data-anchor-id="study-emails"><span class="header-section-number">2.1.1</span> Study emails</h3>
-<p>The corpus begins with <code>msgs10</code> and <code>recip4</code>, the rawest form of the data available to us. Blocks that Melissa first wrote drop the duplicates flagged in <code>del_new</code>, join each message to its recipients, remove emails with identical content under different IDs, keep emails with a sender, a recipient and a body, and keep those linked to a valid study ID other than <code>200-NF</code>. That sequence takes 34,978 messages down to 10,397 study emails. Filtering out emails outside 300 to 2,000 characters and those that contain credentials leaves a pool of 6,086, and excluding automated notifications detected by sender address reduces the pool to 6,056. All 10,397 study emails stay in the corpus, each marked with the filters that remove it, so that we can state, for each analysis, which emails it uses.</p>
-<p>Content patterns catch automated messages sent from personal addresses, such as out-of-office replies and ticket confirmations. We check each pattern against a sample of the emails it removes, in <code>corpus/tests/filters/</code>, so that, for instance, a reply quoting an out-of-office notice stays in.</p>
-<p>We need to decide whether to code French emails in the original or to translate them, accepting that the tagged text then differs from what was sent. First we need to measure their share of the corpus, with a language detector run on the authored zone of each email.</p>
+<p>Study emails are the emails that belong to a CITF study, and they make up the corpus. From the message and recipient tables, we drop duplicates, join each message to its recipients, remove emails with identical content under different IDs, and keep those with a sender, a recipient, a body and a valid study ID, which leaves 10,397 study emails. For tagging, we draw a pool of 6,056 by excluding emails outside 300 to 2,000 characters, emails that contain credentials and automated notifications. All study emails stay in the corpus, each marked with the filters that remove it, so that we can state which emails each analysis uses.</p>
+<p>Content patterns catch automated messages sent from personal addresses, such as out-of-office replies and ticket confirmations. We check each pattern against a sample of the emails it removes, in <code>corpus/tests/filters/</code>, so that a reply quoting an out-of-office notice stays in.</p>
+<p>Some emails are in French. We will measure their share with a language detector run on the authored zone, then decide whether to code them in the original or in translation.</p>
 </section>
 <section id="email-metadata" class="level3" data-number="2.1.2">
 <h3 data-number="2.1.2" class="anchored" data-anchor-id="email-metadata"><span class="header-section-number">2.1.2</span> Email metadata</h3>
-<p>The flattened table has 5 of the 32 columns in <code>msgs10</code>, namely the message ID, study ID, sender address, cleaned subject and body, plus the To and Cc addresses from <code>recip4</code> as separate columns. The flatten step drops the dates, the sender’s name and the flags, and without dates no email has a place in time. Restoring the dates, the sender’s name and the flags is the first change to the corpus.</p>
-<p>On 16 November we inventoried all 32 columns and their missingness to see what is recoverable. The dates are in <code>sent_datetime_rounded</code>, rounded to the minute, with 9.3% missing and no time zone recorded. No column holds reply, forward or message identifiers, and none holds attachments, so we take attachments from the attachment lines in the other zone. Ten flags whose names begin with <code>mt_</code>, such as <code>mt_dsa</code> and <code>mt_data_transfer</code>, and several other columns have no documented meaning, and we will ask Melissa what they record.</p>
-<p>Threading joins emails into threads through their replies and forwards. Without identifiers, we join a reply to the email it answers through the normalized subject line, the quoted text and the timing. A forward starts a branch since it passes a message to someone outside the thread, and one email can reply to one message while forwarding another. Threading supplies the reply and forward edges in the data model (<a href="#sec-model" class="quarto-xref">Section&nbsp;3</a>) and the whole threads that we code for functions and actions. <span class="citation" data-cites="yeh2006">Yeh and Harnly (<a href="#ref-yeh2006" role="doc-biblioref">2006</a>)</span> reassembled Enron threads by matching each email’s quoted text against earlier emails, and <span class="citation" data-cites="jamison2013">Jamison and Gurevych (<a href="#ref-jamison2013" role="doc-biblioref">2013</a>)</span> and <span class="citation" data-cites="dehghani2013">Dehghani et al. (<a href="#ref-dehghani2013" role="doc-biblioref">2013</a>)</span> trained models to reconstruct email threads. We will research and test such models on the CITF emails.</p>
+<p>The metadata place each email in its project, its thread and its time, and say who wrote to whom. Each email carries its sender, its To and Cc recipients, its study ID, subject and body, and a sending date rounded to the minute, with some dates missing and no time zone recorded. The dates place emails between milestones and phases, the recipients give the participation edges and the To and Cc distinction, and the study ID ties each email to its project. The source data holds no reply, forward or message identifiers and no attachments, so we rebuild threads from the emails themselves and take attachments from the attachment lines in the other zone. Several flags and other columns have no documented meaning, and we leave them out until we know what they record.</p>
 </section>
-<section id="zoning" class="level3" data-number="2.1.3">
-<h3 data-number="2.1.3" class="anchored" data-anchor-id="zoning"><span class="header-section-number">2.1.3</span> Zoning</h3>
+<section id="threading" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="threading"><span class="header-section-number">2.1.3</span> Threading</h3>
+<p>We join emails into threads through their replies and forwards. Without identifiers, we join a reply to the email it answers through the normalized subject line, the quoted text and the timing. A forward starts a branch, since it passes a message to someone outside the thread, and one email can reply to one message while forwarding another. <span class="citation" data-cites="yeh2006">Yeh and Harnly (<a href="#ref-yeh2006" role="doc-biblioref">2006</a>)</span> reassembled Enron threads by matching each email’s quoted text against earlier emails, and <span class="citation" data-cites="jamison2013">Jamison and Gurevych (<a href="#ref-jamison2013" role="doc-biblioref">2013</a>)</span> and <span class="citation" data-cites="dehghani2013">Dehghani et al. (<a href="#ref-dehghani2013" role="doc-biblioref">2013</a>)</span> trained models to reconstruct email threads, and we will test such models on the CITF emails. Threading supplies the reply and forward edges in the data model (<a href="#sec-model" class="quarto-xref">Section&nbsp;3</a>) and the whole threads that we code for functions and actions.</p>
+</section>
+<section id="zoning" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="zoning"><span class="header-section-number">2.1.4</span> Zoning</h3>
 <p>Zoning divides each email into six zones. Chipmunk <span class="citation" data-cites="bevendorff2020">(<a href="#ref-bevendorff2020" role="doc-biblioref">Bevendorff et al. 2020</a>)</span> is a neural email segmenter trained on technical mailing lists. It classifies text into 15 segment classes, including code patches, log output and tables. Those 15 classes map onto five of the six zones defined for this project (<a href="#tbl-zones" class="quarto-xref">Table&nbsp;1</a>). The authored zone takes the paragraph, salutation and closing classes and holds the message the sender wrote, including greetings and closing lines. The signature zone takes the personal signature class and holds the sender’s name block and contact details. The banner zone takes the mail client signature class and holds text that an email client or institution appends to every message, such as “Sent from my iPhone” lines and confidentiality disclaimers. The quoted zone takes the quotation, quotation marker and inline header classes and holds the text of earlier emails that a reply or forward carries below the new message, along with the header lines that introduce each one. The other zone takes Chipmunk’s remaining seven classes, which cover headings, separators, tables and code, along with attachment lists and meeting invitations. The markup zone has no Chipmunk class and holds lines made up only of HTML tags, embedded image references, bare URLs and logo placeholders.</p>
 <div id="tbl-zones" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -422,30 +423,30 @@ Table&nbsp;1: Zones, what each holds, and the Chipmunk classes that map onto the
 <p>We tested Okapi <span class="citation" data-cites="jardim2021">(<a href="#ref-jardim2021" role="doc-biblioref">Jardim, Rei, and Almeida 2021</a>)</span>, a multilingual extension of Chipmunk with Chipmunk’s 15 classes, as an alternative email segmenter. Its authors released no trained model, so we rebuilt Okapi from the paper and trained it on the original training emails. On a test set of five CITF emails Okapi misclassified whole signature blocks as authored text, whereas Chipmunk did not. Chipmunk still errs on CITF emails, mostly by classing banners and disclaimers as authored text, or a whole signature as authored text when no closing precedes it. Five correction rules move those lines to the correct zone. Regular expressions then override Chipmunk’s classes for markup lines, attachment and meeting lines, and banners, and send everything from the first reply or forward header onward to the quoted zone.</p>
 <p>Zoning with Chipmunk, the correction rules and the regular expressions identifies authored lines with 98.7% precision and 97.1% recall, measured against an independent human coder working on a sample of 40 held-out emails. The 40 held-out emails all come from the pool of 6,056 emails of 300 to 2,000 characters. The full set of 10,397 study emails also includes short replies and confirmations, in which a two-line reply has few surrounding lines for Chipmunk to classify from. The full set also includes the longest emails, with long chains of earlier messages quoted below the reply. Each quoted message includes its sender’s signature, and zoning has to place those signatures in the quoted zone. A second held-out check covers emails under 300 characters and over 2,000 from every project, which the coder codes by the same rules as in the first check. The tests comparing Chipmunk with Okapi and both held-out checks, with their scores, are in <code>corpus/tests/zoning/</code>.</p>
 </section>
-<section id="segmentation" class="level3" data-number="2.1.4">
-<h3 data-number="2.1.4" class="anchored" data-anchor-id="segmentation"><span class="header-section-number">2.1.4</span> Segmentation</h3>
+<section id="segmentation" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="segmentation"><span class="header-section-number">2.1.5</span> Segmentation</h3>
 <p>We split the authored zone of each email into sentences, and every code refers to them. Lists of variables, bulleted requests and sign-off names often end without sentence punctuation, so we need rules beyond punctuation to find where their sentences end. We mark the sentence boundaries in a sample of emails and compare the split sentences with the marked boundaries. The comparison is in <code>corpus/tests/segmentation/</code>. Each sentence has character offsets into the raw body.</p>
 </section>
-<section id="de-identification" class="level3" data-number="2.1.5">
-<h3 data-number="2.1.5" class="anchored" data-anchor-id="de-identification"><span class="header-section-number">2.1.5</span> De-identification</h3>
+<section id="de-identification" class="level3" data-number="2.1.6">
+<h3 data-number="2.1.6" class="anchored" data-anchor-id="de-identification"><span class="header-section-number">2.1.6</span> De-identification</h3>
 <p>We use Presidio to replace personal information in the text that we read and label. Its recognizers cover personal names, email addresses and URLs, the same kinds of information that the topic modelling preprint <span class="citation" data-cites="batist2026">(<a href="#ref-batist2026" role="doc-biblioref">Batist et al. 2026</a>)</span> replaced with placeholders.</p>
 <p>We assign each person one pseudonym across the corpus, so that anyone reading a thread can follow who writes to whom. A lookup table lists each person’s email address and the names in the project information, and every entry for a person maps to that person’s pseudonym. “Dr.&nbsp;Smith”, “Jane” and her address therefore appear under one name. Pseudonyms contain no roles, since a role such as PI of a small study would identify the person. We keep roles in their own column beside the de-identified text.</p>
-<p>In an offset map, every position in the de-identified text has a matching position in the raw body, and every tag, code and zone refers to that one canonical text. <code>citf-emails</code> is public, and no email text goes into the repository, de-identified or not. The spans of replaced text and the offset map stay untracked beside <code>corpus.ipynb</code>.</p>
+<p>In an offset map, every position in the de-identified text has a matching position in the raw body, and every tag, code and zone refers to that one canonical text. The CITF-emails repository is public, and no email text goes into the repository, de-identified or not. The spans of replaced text and the offset map stay untracked.</p>
 <p>The de-identification must satisfy the commitments in REB application 26-08-029-01 for the email corpus, and any name remaining in a greeting or a signature would appear in the de-identified text. We count the remaining names in a sample of emails, with extra short emails and French emails, where name recognition is least reliable. The check is in <code>corpus/tests/de-identification/</code>.</p>
 </section>
-<section id="detecting-actors-objects-and-events" class="level3" data-number="2.1.6">
-<h3 data-number="2.1.6" class="anchored" data-anchor-id="detecting-actors-objects-and-events"><span class="header-section-number">2.1.6</span> Detecting actors, objects and events</h3>
+<section id="detecting-actors-objects-and-events" class="level3" data-number="2.1.7">
+<h3 data-number="2.1.7" class="anchored" data-anchor-id="detecting-actors-objects-and-events"><span class="header-section-number">2.1.7</span> Detecting actors, objects and events</h3>
 <p>We detect the actors, objects and events connected to each email beyond its sender and recipients. Actors are the people and institutions named in an email. Objects are the studies identified by ID or acronym, the focal objects referred to by name, such as the data sharing agreement and core data elements, and the files attached to the email. Events are moments and periods in a project’s history, from a single meeting to several months, as they appear in the emails or the project information. Each detected actor, object and event becomes a node, each mention becomes an edge from the sentence that holds it, and each attachment becomes an edge from its email (<a href="#sec-model" class="quarto-xref">Section&nbsp;3</a>).</p>
-<p>We find names with NER. spaCy’s general English models cover people, organizations, places and dates. With them, “McGill University” and “COVID-19 Immunity Task Force” each come out as one organization, but the data sharing agreement, core data elements and study acronyms go unrecognized. We add patterns with spaCy’s EntityRuler, which runs beside the trained model, and take the patterns for study IDs, acronyms, PI names, institutions and focal objects from the project information. The spans from NER and the patterns can replace the list of seven names in the <code>name</code> error rule of the DocuScope assessment, so that tags inside any detected name fall under that rule.</p>
-<p>We identify people in the sender and recipient fields, in the authored zone with NER, and in the <code>crs</code> table, which lists 403 investigators and staff with their study IDs but only some of the people in the corpus. We link a name or address to a person only when it matches exactly one person, and we keep names that match no one in the Person node table, marked as unmatched. We assign each person a role in each email, since a person’s role can differ from one email to the next. We identify institutions by name with NER and by email domain, and merge each domain with its institution’s name, so that <code>mcgill.ca</code> and McGill University form one node.</p>
+<p>We find names with NER. spaCy’s general English models cover people, organizations, places and dates. With them, “McGill University” and “COVID-19 Immunity Task Force” each come out as one organization, but the data sharing agreement, core data elements and study acronyms go unrecognized. We add patterns with spaCy’s EntityRuler, which runs beside the trained model, and take the patterns for study IDs, acronyms, PI names, institutions and focal objects from the project information. The spans from NER and the patterns can replace the list of seven names in the DocuScope assessment’s error rule for names, so that tags inside any detected name fall under that rule.</p>
+<p>We identify people in the sender and recipient fields, in the authored zone with NER, and in the investigator table, which lists 403 investigators and staff with their study IDs but only some of the people in the corpus. We link a name or address to a person only when it matches exactly one person, and we keep names that match no one in the Person node table, marked as unmatched. We assign each person a role in each email, since a person’s role can differ from one email to the next. We identify institutions by name with NER and by email domain, and merge each domain with its institution’s name, so that mcgill.ca and McGill University form one node.</p>
 <p>We identify studies by the study IDs and acronyms listed in the project information. We identify each focal object by a set of patterns, such as “DSA”, “data sharing agreement” and “the agreement” for the data sharing agreement. Short forms are ambiguous, since “the agreement” can refer to other agreements, and some mentions are pronouns, misspellings or French, so some mentions will go undetected and some detections will be wrong. Each attachment from the other zone appears in the timeline with a shape for its file type (<a href="#sec-timeline" class="quarto-xref">Section&nbsp;4.1.2</a>). The files themselves may be missing from the archive, and without them we cannot use a content hash to tell when a file recurs.</p>
 <p>A mass notification appears as the same message from one sender to many studies within minutes, and a webinar invitation appears in its subject line and dial-in lines. An absence appears in an out-of-office reply, with its start and end dates. Other events, such as meetings, deadlines and outages, appear in prose as a date or time expression near a word for what takes place, and we find them with NER’s date and time entities and a word list. We date each event by the date in its text, or by the email’s date when its text has none, and add events from outside records to the project information.</p>
-<p>We check each kind of actor, object and event against a coded sample, with precision and recall for each, in <code>corpus/tests/detection/</code>. The detection output is a table of spans, with the email, the offsets, the text, the kind and the matched node for each, and it stays untracked beside <code>corpus.ipynb</code>, since the spans contain email text.</p>
+<p>We check each kind of actor, object and event against a coded sample, with precision and recall for each, in <code>corpus/tests/detection/</code>. The detection output is a table of spans, with the email, the offsets, the text, the kind and the matched node for each, and it stays untracked, since the spans contain email text.</p>
 </section>
-<section id="sec-project-info" class="level3" data-number="2.1.7">
-<h3 data-number="2.1.7" class="anchored" data-anchor-id="sec-project-info"><span class="header-section-number">2.1.7</span> Project information</h3>
+<section id="sec-project-info" class="level3" data-number="2.1.8">
+<h3 data-number="2.1.8" class="anchored" data-anchor-id="sec-project-info"><span class="header-section-number">2.1.8</span> Project information</h3>
 <p>We compile project information to supply the context that each project’s emails lack, and we place events on a calendar shared by all projects. With the project information and the shared calendar, we can compare projects by field, institution, contracts officer, prior experience and later practice, as most of the integration questions require.</p>
-<p>A project’s information includes its study ID and acronyms, the names and email addresses of its principal investigators and key personnel, its institutional hosts and affiliations, the publications and datasets from its CITF participation, and the profiles and ORCID iDs of its members. The <code>crs</code> table is the starting list. We take profiles and works from ORCID where people have them, works, co-authors, affiliations and dates from OpenAlex, and dataset DOIs from DataCite. Publications and datasets dated before a project’s CITF participation are evidence of its members’ fields and prior experience with data sharing, and co-authorship with the CITF core team or other data contributors is evidence of prior ties. We measure publications, datasets and co-authorship again after participation to see whether CITF work changed their data sharing and their collaborative networks.</p>
+<p>A project’s information includes its study ID and acronyms, the names and email addresses of its principal investigators and key personnel, its institutional hosts and affiliations, the publications and datasets from its CITF participation, and the profiles and ORCID iDs of its members. The investigator table is the starting list. We take profiles and works from ORCID where people have them, works, co-authors, affiliations and dates from OpenAlex, and dataset DOIs from DataCite. Publications and datasets dated before a project’s CITF participation are evidence of its members’ fields and prior experience with data sharing, and co-authorship with the CITF core team or other data contributors is evidence of prior ties. We measure publications, datasets and co-authorship again after participation to see whether CITF work changed their data sharing and their collaborative networks.</p>
 <p>Each of these steps involves a judgement, and we record each judgement in the project information. We cannot confidently match common names, or people who changed institutions, to an ORCID iD or an OpenAlex author. Deciding that a paper comes from a project’s CITF participation means reading the paper. Many datasets have no DOI, and contracts officers and study coordinators rarely appear in bibliographic sources at all. Coverage will therefore differ by role and by field, and we record which projects each source covers. We also have to confirm that REB application 26-08-029-01, which covers the email corpus and the questionnaire, allows linking people in the corpus to public records.</p>
 <p>A project’s information also includes its milestone dates. Each marks a step in the project, such as the signing of a data sharing agreement or a data upload. A milestone occurs on a single date, but the work leading to it can span weeks or months.</p>
 <p>We assign each email the phase between the milestones on either side of its date. Where a milestone is missing or its date conflicts with the others, the emails around it have no phase, and we flag the project. In analyses by phase, we leave those emails out and report how many.</p>
@@ -505,7 +506,7 @@ Table&nbsp;1: Zones, what each holds, and the Chipmunk classes that map onto the
 </section>
 <section id="sec-grant" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="sec-grant"><span class="header-section-number">2.4</span> CIHR Project Grant, Spring 2027</h2>
-<p>We are preparing a CIHR Project Grant application for the Spring 2027 competition, with David as nominated principal applicant. CIHR lists the competition on ResearchNet as 202703PJT, with registration closing February 3, 2027 and applications closing March 3, 2027. McGill’s internal deadlines fall earlier than CIHR’s. Ian reviews the draft before submission. We move the grant files out of <a href="https://zackbatist.info/CITF-Postdoc/">CITF-Postdoc</a> into <code>grant-writing/</code> before drafting begins (<a href="#sec-grant-move">Appendix A</a>).</p>
+<p>We are preparing a CIHR Project Grant application for the Spring 2027 competition, with David as nominated principal applicant. CIHR lists the competition on ResearchNet as 202703PJT, with registration closing February 3, 2027 and applications closing March 3, 2027. McGill’s internal deadlines fall earlier than CIHR’s. Ian reviews the draft before submission.</p>
 <p><strong>Objective.</strong> Submit a CIHR Project Grant application to the Spring 2027 competition that builds on the earlier applications and the work so far.</p>
 <p><strong>Deliverables.</strong></p>
 <ul>
@@ -535,7 +536,7 @@ Table&nbsp;1: Zones, what each holds, and the Chipmunk classes that map onto the
 </section>
 <section id="sec-model" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Data model</h1>
-<p>We organize the data as a graph of nodes and edges in four groups. Correspondence covers the emails and their parts, people and organizations cover who wrote and on whose behalf, analysis covers what coding and detection add, and context covers what comes from outside the emails. We store the nodes and edges as tables and write each table in the folder for the work it comes from, keyed by identifiers shared across every notebook. In <code>corpus/</code> we write the correspondence, people and organizations, and context tables, with mentions and focal objects; and in each coding folder, its Code nodes and Coding edges, with the follow-up edges in <code>coding/functions/</code>. People nodes include names, email addresses and gender, so we keep all the node and edge tables untracked beside their notebooks, as with the email text. The node and edge types appear in <a href="#fig-data-model" class="quarto-xref">Figure&nbsp;1</a>, with lists in <a href="#tbl-nodes" class="quarto-xref">Table&nbsp;2</a> and <a href="#tbl-edges" class="quarto-xref">Table&nbsp;3</a>.</p>
+<p>We organize the data as a graph of nodes and edges in four groups. Correspondence covers the emails and their parts, people and organizations cover who wrote and on whose behalf, analysis covers what coding and detection add, and context covers what comes from outside the emails. We store the nodes and edges as tables and write each table in the folder for the work it comes from, keyed by identifiers shared across every notebook. In <code>corpus/</code> we write the correspondence, people and organizations, and context tables, with mentions and focal objects; and in each coding folder, its Code nodes and Coding edges. People nodes include names, email addresses and gender, so we keep all the node and edge tables untracked beside their notebooks, as with the email text. The node and edge types appear in <a href="#fig-data-model" class="quarto-xref">Figure&nbsp;1</a>, with lists in <a href="#tbl-nodes" class="quarto-xref">Table&nbsp;2</a> and <a href="#tbl-edges" class="quarto-xref">Table&nbsp;3</a>.</p>
 <div id="fig-data-model" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-data-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -555,8 +556,8 @@ Figure&nbsp;1: The data model, with node types grouped by kind and the edge type
 <colgroup>
 <col style="width: 14%">
 <col style="width: 18%">
-<col style="width: 29%">
-<col style="width: 35%">
+<col style="width: 26%">
+<col style="width: 38%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -600,7 +601,7 @@ Figure&nbsp;1: The data model, with node types grouped by kind and the edge type
 <tr class="odd">
 <td style="text-align: left;">Person</td>
 <td style="text-align: left;">Person ID</td>
-<td style="text-align: left;">Email metadata; detection; <code>crs</code> table</td>
+<td style="text-align: left;">Email metadata; detection; investigator table</td>
 <td style="text-align: left;">Names, email addresses, affiliation, ORCID iD, gender with its source</td>
 </tr>
 <tr class="even">
@@ -654,11 +655,11 @@ Table&nbsp;2: Node types, grouped by kind, with their identifiers, sources and m
 </figure>
 </div>
 <p>We group emails joined by replies and forwards into threads, so that we can code whole threads and count rounds within one.</p>
-<p>We give each email an email ID of our own, assigned once and never reused. The message IDs in the source data, <code>msgid2</code> among them, have a complicated history, so we keep them as properties for tracing an email back to its source and use none of them as identifiers in the model. Every email belongs to one project.</p>
+<p>We give each email an email ID of our own, assigned once and never reused. The message IDs in the source data have a complicated history, so we keep them as properties for tracing an email back to its source and use none of them as identifiers in the model. Every email belongs to one project.</p>
 <p>Sentences come from the authored zone, with their offsets into the raw body. We attach codes and mentions to sentences.</p>
 <p>We identify each attachment by a content hash, so that a file sent again, or under another name, remains one node. Where the file did not survive, we use the file name and size in place of the hash, and can detect recurrence only from those.</p>
 <p>Gender is a property of each person. We take a person’s gender from their own stated pronouns or profile where these exist, and otherwise from a probabilistic estimate by gender_guesser, keeping its probability. We record the source beside each value, so that we can break the counts down by gender and report how much of that breakdown rests on estimates.</p>
-<p>A project is a CITF study, identified by the study ID in <code>msg_citfid</code>, which comes from subject lines. Its milestone dates are properties of the project. The topic modelling preprint defines six milestones that bound five phases, here called funding start, first data request, DSA signed, data upload, data cataloguing and data publication, where the preprint has “data introduction” for the second and “DSA execution” for the third. Each project reaches the milestones on its own dates, and a thread can cross one. We take a project’s field from its publications and its hosts’ departments, coding it once for each project.</p>
+<p>A project is a CITF study, identified by the study ID taken from subject lines. Its milestone dates are properties of the project. The topic modelling preprint defines six milestones that bound five phases, here called funding start, first data request, DSA signed, data upload, data cataloguing and data publication, where the preprint has “data introduction” for the second and “DSA execution” for the third. Each project reaches the milestones on its own dates, and a thread can cross one. We take a project’s field from its publications and its hosts’ departments, coding it once for each project.</p>
 <p>We make codes nodes so that each code applied to a sentence can have its own record of where it came from.</p>
 <p>Focal objects are the things that recur across a project’s emails, such as the data sharing agreement, consent elements and core data elements, matched across threads and across projects. They have no date of their own and appear on the timeline only through the sentences that mention them.</p>
 <p>Events range from a single day to a period of months, with start and end dates where known. They include webinars, mass notifications, the CITF conference, email outages, and major reports and publications on data sharing, generally and during COVID-19, by the CITF and from outside it.</p>
@@ -670,10 +671,10 @@ Table&nbsp;2: Node types, grouped by kind, with their identifiers, sources and m
 <div aria-describedby="tbl-edges-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 12%">
-<col style="width: 31%">
-<col style="width: 39%">
+<col style="width: 14%">
+<col style="width: 11%">
+<col style="width: 36%">
+<col style="width: 36%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -859,7 +860,7 @@ Figure&nbsp;4: Views for comparison across projects, with illustrative data.
 </section>
 <section id="phases-over-time" class="level3" data-number="4.2.4">
 <h3 data-number="4.2.4" class="anchored" data-anchor-id="phases-over-time"><span class="header-section-number">4.2.4</span> Phases over time</h3>
-<p>The number of projects in each phase, year by year (<a href="#fig-comparison" class="quarto-xref">Figure&nbsp;4</a>, panel D), shows where projects accumulated and when they moved on. We can place the events on the same calendar axis, though a coincidence between an event and movement shows only that they fell at the same time. We draw it from the milestone dates and the phase of each email (<a href="#sec-project-info" class="quarto-xref">Section&nbsp;2.1.7</a>).</p>
+<p>The number of projects in each phase, year by year (<a href="#fig-comparison" class="quarto-xref">Figure&nbsp;4</a>, panel D), shows where projects accumulated and when they moved on. We can place the events on the same calendar axis, though a coincidence between an event and movement shows only that they fell at the same time. We draw it from the milestone dates and the phase of each email (<a href="#sec-project-info" class="quarto-xref">Section&nbsp;2.1.8</a>).</p>
 </section>
 <section id="roles-against-phases" class="level3" data-number="4.2.5">
 <h3 data-number="4.2.5" class="anchored" data-anchor-id="roles-against-phases"><span class="header-section-number">4.2.5</span> Roles against phases</h3>
@@ -875,201 +876,163 @@ Figure&nbsp;4: Views for comparison across projects, with illustrative data.
 <section id="sec-repo" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Repository</h1>
 <pre><code>citf-emails/
-├── README.md
-├── _quarto.yml
-├── index.qmd
-├── requirements.txt
-├── assets/
 ├── data/
-├── research-protocol/
-├── topic-modelling/
 ├── corpus/
-│   ├── index.qmd, sections/ *
 │   ├── corpus.ipynb
-│   ├── threading.ipynb *
-│   ├── project-information.ipynb *
+│   ├── threading.ipynb
+│   ├── project-information.ipynb
 │   └── tests/
+│       ├── filters/
+│       ├── threading/
 │       ├── zoning/
-│       ├── filters/ *
-│       ├── segmentation/ *
-│       ├── de-identification/ *
-│       ├── detection/ *
-│       └── threading/ *
+│       ├── segmentation/
+│       ├── de-identification/
+│       └── detection/
 ├── coding/
 │   ├── rhetoric/
-│   │   ├── index.qmd, sections/ *
 │   │   ├── rhetoric.ipynb
 │   │   └── tests/
-│   │       ├── docuscope/
-│   │       ├── mfte/ *
-│   │       ├── naming/ *
-│   │       ├── stability/ *
-│   │       └── biber-dimensions/ *
-│   ├── functions/ *
-│   │   ├── index.qmd, sections/
+│   │       ├── mfte/
+│   │       ├── naming/
+│   │       ├── stability/
+│   │       ├── biber-dimensions/
+│   │       └── docuscope/
+│   ├── functions/
 │   │   ├── functions.ipynb
 │   │   └── tests/
-│   └── actions/ *
-│       ├── index.qmd, sections/
+│   └── actions/
 │       ├── actions.ipynb
 │       └── tests/
-├── relating/ *
-│   ├── index.qmd, sections/
+├── relating/
 │   ├── codes.ipynb
 │   ├── context.ipynb
 │   └── views.ipynb
-├── notes/
-│   ├── index.qmd
-│   ├── relating-rhetoric-to-functions/
-│   ├── rhetorical-groups/
-│   ├── shift-to-supervised/
-│   └── study-design/
-├── grant-writing/ *
-└── private/
-
-* planned</code></pre>
-<p>There is one folder per workstream. <code>data/</code> holds only the raw data, <code>msgs10.csv</code> and <code>recip4.csv</code>. <code>corpus/</code> holds the corpus for every workstream, since project information, threads, attachments and mentions of focal objects are data we use directly in several analyses. <code>corpus.ipynb</code> loads <code>msgs10.csv</code> and <code>recip4.csv</code> from <code>data/</code>, flattens the emails, restricts them to study emails and zones them, and later blocks will add sentences, de-identification and detection. In the planned <code>threading.ipynb</code>, we join emails into threads and record replies and forwards, and the planned <code>project-information.ipynb</code> compiles projects, people, institutions, publications and events. In block 3 of <code>corpus.ipynb</code>, we mark the pool with the length filter, and we will extend zoning to all 10,397 study emails.</p>
-<p>Every output sits beside the notebook that writes it, and each notebook saves what later notebooks read. <code>corpus.ipynb</code> saves the study emails and <code>email_zones.parquet</code>, and <code>rhetoric.ipynb</code> saves the tags. The root <code>.gitignore</code> lists <code>/data/</code>, <code>*.csv</code> and <code>*.parquet</code> and already lists <code>*.html</code>, so the repository holds no email text and no output.</p>
-<p><code>coding/</code> holds one folder for each kind of code. <code>coding/rhetoric/</code> holds <code>rhetoric.ipynb</code>, which tags the pool with DocuScope and counts the tags, and will also tag every authored sentence with MFTE and ConvoKit’s politeness module and run the factor analysis. The DocuScope assessment moved from <code>docuscope-assessment/</code> to <code>coding/rhetoric/tests/docuscope/</code> on 16 November, with its write-up and <code>docuscope.ipynb</code>, and <code>coding/rhetoric/tests/</code> will add <code>mfte/</code>, <code>naming/</code>, <code>stability/</code> and <code>biber-dimensions/</code> for the checks in the rhetorical groups note. We will add MFTE, ConvoKit, factor_analyzer and pybiber to <code>requirements.txt</code>. <code>coding/functions/</code> and <code>coding/actions/</code> each hold their own notebook, code definitions and model tests. <code>relating/</code> holds one notebook for relating codes to each other, one for relating codes to context, which also builds the project graphs, and one for the views.</p>
-<p>Each notebook numbers its blocks from 1, and <a href="#tbl-blocks" class="quarto-xref">Table&nbsp;4</a> shows where each block of the former assessment notebook went on 16 November. The notebook headings and the assessment’s sections carry the new numbers, and the About text of <code>docuscope_coding_tool.html</code> will carry them once we regenerate the coding tool.</p>
-<div id="tbl-blocks" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<div aria-describedby="tbl-blocks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
-<colgroup>
-<col style="width: 36%">
-<col style="width: 63%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Former block</th>
-<th style="text-align: left;">Now</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1 Load email data</td>
-<td style="text-align: left;"><code>corpus.ipynb</code> block 1, reading <code>data/</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2 Flatten emails</td>
-<td style="text-align: left;"><code>corpus.ipynb</code> block 2, with the dates, the sender’s name and the flags still to restore</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">3 Restrict to study emails</td>
-<td style="text-align: left;"><code>corpus.ipynb</code> block 3</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">9 Label lines with Chipmunk</td>
-<td style="text-align: left;"><code>corpus.ipynb</code> block 4, to extend over all study emails</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">10 Refine zones</td>
-<td style="text-align: left;"><code>corpus.ipynb</code> block 5</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">11 Zone check sample</td>
-<td style="text-align: left;"><code>zoning.ipynb</code> block 1, in <code>corpus/tests/zoning/</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">new</td>
-<td style="text-align: left;">planned: <code>corpus.ipynb</code> blocks 6 to 8, for sentences, de-identification and detection</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">4 Install DocuScope</td>
-<td style="text-align: left;"><code>requirements.txt</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">5 Tag email bodies</td>
-<td style="text-align: left;"><code>rhetoric.ipynb</code> block 1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">8 Distribution of tags</td>
-<td style="text-align: left;"><code>rhetoric.ipynb</code> block 2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">6 View tags in an email</td>
-<td style="text-align: left;"><code>docuscope.ipynb</code> block 1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">7 Export 30 tagged emails</td>
-<td style="text-align: left;"><code>docuscope.ipynb</code> block 2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">12 Detect likely tagging errors</td>
-<td style="text-align: left;"><code>docuscope.ipynb</code> block 3, reading tags from <code>rhetoric.ipynb</code> and zones from <code>corpus.ipynb</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">13 Comparison across tag versions</td>
-<td style="text-align: left;"><code>docuscope.ipynb</code> block 4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">14 Validation (planned)</td>
-<td style="text-align: left;">planned: <code>docuscope.ipynb</code> block 5</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-blocks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4: Blocks of the former assessment notebook and where each one went on 16 November.
-</figcaption>
-</figure>
-</div>
-<p>The coding sample keeps its seed, so block 3 of <code>docuscope.ipynb</code> regenerates the same 774 tags with new block numbers in the coding tool.</p>
-<p>Workstream notebooks hold the final methods, and each <code>tests/</code> folder holds the trials and checks on them, with one subfolder per check and the write-up in that subfolder’s <code>sections/</code>. In each test, we read the workstream’s outputs without copying its methods, and we move each confirmed rule into the workstream notebook. <code>corpus/tests/zoning/</code> holds the zoning checks, which cover the Chipmunk and Okapi tests on Gmane and Enron, the five CITF emails, the zone check of 80 emails and the held-out checks, and we moved the zoning appendix there from the DocuScope assessment. We will add to <code>corpus/tests/</code> the checks on the automated-message patterns, the sentences, the de-identification, the detection and the threading. <code>coding/rhetoric/tests/docuscope/</code> holds the DocuScope assessment, with the tag coding sample and the planned validation, and the <code>tests/</code> folders of <code>coding/functions/</code> and <code>coding/actions/</code> hold the tests of each trained model on the CITF emails. The test subfolder names are proposed labels.</p>
-<p><code>notes/</code> holds working notes, following <code>notes/</code> in <a href="https://zackbatist.info/CITF-Postdoc/">CITF-Postdoc</a>, with <code>notes/index.qmd</code> as the page that lists them. It also holds <code>relating-rhetoric-to-functions/</code> and <code>shift-to-supervised/</code>, which moved there from <code>private/</code>, and <code>rhetorical-groups/</code>, the note of 18 November that sets out the rhetoric workflow. The summary of the call and the transcript sit beside this document in <code>notes/study-design/</code>, as <code>_call-summary.qmd</code> and <code>_transcript.qmd</code>, which the site skips because of the leading underscore. A <code>.gitignore</code> of the folder’s own lists both files, so both remain untracked if the folder moves. We leave the summary of the call and the transcript out of the published page, since both are personal records of the call, and include them in a local render with <code>-M call-appendices:true</code>.</p>
-<p>The planned <code>grant-writing/</code> is its own private repository on the lab’s git server, cloned into <code>citf-emails/grant-writing/</code> and listed in <code>.gitignore</code>. <code>citf-emails</code> is public on GitHub, so GitHub publishes every tracked file and every past version of it, and grant drafts, budgets and reviews cannot sit there. Since <code>.gitignore</code> lists it, <code>citf-emails</code> holds no trace of the grant repository, and we work in it as an ordinary repository. <a href="#sec-grant-move">Appendix A</a> gives the steps to carry the grant work over from <a href="https://zackbatist.info/CITF-Postdoc/">CITF-Postdoc</a>.</p>
-</section>
-<section id="sec-next" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Next steps</h1>
-<p>The next steps continue work that began in December 2024 with the <a href="https://zackbatist.info/CITF-Postdoc/">CITF-Postdoc</a> site and its research, case selection, interview and ethics protocols. The REB approved the interview study’s revised informed consent in March 2025, and from April 2025 to February 2026 I interviewed people involved in the CITF Databank and coded each interview, with an ethics amendment approved in June 2025 and the <code>qc</code> tools for reviewing the codes built in spring 2026. A CIHR Project Grant application drafted with David from July 2025 went in that September, alongside a fellowship application, and the Knowledge Translation Research committee did not fund it. I submitted an abstract to the CRDCN conference in February 2026. In March 2026 CIHR declined the resubmission to competition 202603PJT and funded a related Priority Announcement application to competition 202603PPE for $100,000, which now funds the study. I started the <a href="https://zackbatist.info/CITF-Postdoc/">CITF-Postdoc</a> manuscript on the interviews in June 2026.</p>
-<p>Tanya and Melissa started cleaning the email data in April 2025. Melissa and I then used NMF topic modelling with LLM-generated topic labels for an initial exploratory look at the administrative process of data sharing across each study’s lifecycle phases and sender roles. We wrote up that analysis as an <a href="../../topic-modelling/index.html">unpublished preprint</a>. In August 2026 I redrafted the research protocol for the email study around the revised work plan and submitted REB application 26-08-029-01 for the email corpus and the questionnaire, revising it after the pre-review comments in September. <a href="https://zackbatist.info/RDS-Review/">RDS-Review</a>, the scoping review that updates <span class="citation" data-cites="chawinga2019">Chawinga and Zinn (<a href="#ref-chawinga2019" role="doc-biblioref">2019</a>)</span>, began during a weekly call in early October 2026. Melissa’s notebook, blocks 1 to 7, filtered <code>msgs10</code> and <code>recip4</code> to the 10,397 study emails, tagged them with DocuScope and exported the 30-email sample from which the DocuScope memo grew. By 12 November 2026 blocks 8 to 12 had counted the tags, zoned the emails with Chipmunk after a comparison with a rebuilt Okapi, checked the zones on 40 held-out emails, defined 13 error rules and drawn the 774-tag coding sample, and the DocuScope Assessment went onto the site that day. Block 13’s findings followed on 13 November, the day of the call with David and Ian. On 16 November I split the assessment notebook into <code>corpus.ipynb</code>, <code>rhetoric.ipynb</code>, <code>docuscope.ipynb</code> and <code>zoning.ipynb</code>, with block 13 as block 4 of <code>docuscope.ipynb</code>, moved the notes, with this document, into <code>notes/</code>, set up a repository-wide environment, and inventoried the columns of <code>msgs10</code> and <code>recip4</code>. On 18 November I re-read Brown and Laudenbach and wrote the <a href="../../notes/rhetorical-groups/index.html">note on deriving rhetorical groups</a>.</p>
-<ol type="1">
-<li><strong>Finish the corpus move.</strong> Restore the dates, the sender’s name and the flags in <code>corpus.ipynb</code> block 2, ask Melissa what the unexplained columns record, reproduce <code>email_zones.parquet</code> by hash, regenerate the coding tool, and confirm whether <code>start</code> and <code>end</code> in <code>how_tags.parquet</code> are character or token offsets.</li>
-<li><strong>Move the grant work</strong> into <code>grant-writing/</code> (<a href="#sec-grant-move">Appendix A</a>).</li>
-<li><strong>Extend zoning</strong> to all study emails and run the second held-out check.</li>
-<li><strong>Split sentences and de-identify</strong> the authored text, checked in <code>corpus/tests/segmentation/</code> and <code>corpus/tests/de-identification/</code>.</li>
-<li><strong>Compile project information and events</strong> in <code>project-information.ipynb</code>, from the <code>crs</code> table, signatures, ORCID, OpenAlex, DataCite and CITF records.</li>
-<li><strong>Detect actors, objects and events,</strong> with patterns from the project information, checked in <code>corpus/tests/detection/</code>.</li>
-<li><strong>Write <code>threading.ipynb</code>.</strong> Join emails into threads, record replies and forwards, and test published models for reconstructing threads, checked in <code>corpus/tests/threading/</code>.</li>
-<li><strong>Settle the integration questions</strong> (<a href="#sec-grant" class="quarto-xref">Section&nbsp;2.4</a>) with David, dated, in <code>notes/</code>.</li>
-<li><strong>Continue the DocuScope assessment</strong> with the thresholds, the coding of the tag sample and the validation block.</li>
-<li><strong>Run the rhetoric workflow</strong> in <code>coding/rhetoric/</code>, following the steps in the <a href="../../notes/rhetorical-groups/index.html#sec-rg-next">rhetorical groups note</a>.</li>
-<li><strong>Research and test trained models for functions and actions,</strong> each in its own folder, and link the text with each function code to its task of concern.</li>
-<li><strong>Record the comparisons</strong> of rhetoric by function and action in <code>relating/codes.ipynb</code>, before the trained models label the corpus.</li>
-<li><strong>Build the project graphs</strong> in <code>relating/context.ipynb</code>, and draw the thread views and project timelines in <code>relating/views.ipynb</code>.</li>
-<li><strong>Draft the grant’s methods</strong> for Ian’s review, registering by February 3 and submitting by March 3, 2027.</li>
-</ol>
-<p>We take step 1 before the rest of the corpus work, and steps 8 and 9, with the first three steps of the rhetoric workflow, alongside steps 2 to 7.</p>
+└── notes/</code></pre>
+<p><code>corpus/</code>, <code>coding/</code> and <code>relating/</code> hold the workstreams, and <code>notes/</code> holds working notes. The notebooks hold the final methods, and each <code>tests/</code> folder holds the checks on them. We test a notebook’s outputs without copying its methods, and move each confirmed rule into the notebook. Outputs stay untracked beside the notebooks that write them, so the repository holds no email text.</p>
 </section>
 <section id="sec-refs" class="level1 unnumbered">
 <h1 class="unnumbered">Links and references</h1>
 <section id="links" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="links">Links</h2>
-<ul>
-<li><code>citf-emails</code> repository: <a href="https://github.com/zackbatist/CITF-emails" class="uri">https://github.com/zackbatist/CITF-emails</a></li>
-<li><code>citf-emails</code> site: <a href="https://zackbatist.info/CITF-emails/" class="uri">https://zackbatist.info/CITF-emails/</a></li>
-<li>CITF-Postdoc site: <a href="https://zackbatist.info/CITF-Postdoc/" class="uri">https://zackbatist.info/CITF-Postdoc/</a></li>
-<li>RDS-Review site: <a href="https://zackbatist.info/RDS-Review/" class="uri">https://zackbatist.info/RDS-Review/</a></li>
-<li>DocuScope assessment: <a href="https://zackbatist.info/CITF-emails/coding/rhetoric/tests/docuscope/" class="uri">https://zackbatist.info/CITF-emails/coding/rhetoric/tests/docuscope/</a></li>
-<li>Topic modelling preprint: <a href="https://zackbatist.info/CITF-emails/topic-modelling/" class="uri">https://zackbatist.info/CITF-emails/topic-modelling/</a></li>
-<li><code>en_docusco_spacy</code> model page: <a href="https://huggingface.co/browndw/en_docusco_spacy" class="uri">https://huggingface.co/browndw/en_docusco_spacy</a></li>
-<li>Deriving rhetorical groups from linguistic features: <a href="https://zackbatist.info/CITF-emails/notes/rhetorical-groups/" class="uri">https://zackbatist.info/CITF-emails/notes/rhetorical-groups/</a></li>
-<li>MFTE code and documentation: <a href="https://github.com/mshakirDr/MFTE" class="uri">https://github.com/mshakirDr/MFTE</a></li>
-<li>ConvoKit politeness strategies: <a href="https://convokit.cornell.edu/documentation/politenessStrategies.html" class="uri">https://convokit.cornell.edu/documentation/politenessStrategies.html</a></li>
-<li>factor_analyzer: <a href="https://github.com/EducationalTestingService/factor_analyzer" class="uri">https://github.com/EducationalTestingService/factor_analyzer</a></li>
-<li>pybiber documentation: <a href="https://browndw.github.io/pybiber" class="uri">https://browndw.github.io/pybiber</a></li>
-<li>DocuScope tags (full dictionary): <a href="https://browndw.github.io/docuscope-docs/tagsets/docuscope-fd-tags.html" class="uri">https://browndw.github.io/docuscope-docs/tagsets/docuscope-fd-tags.html</a></li>
-<li>Chipmunk code and annotations: <a href="https://github.com/webis-de/acl20-crawling-mailing-lists" class="uri">https://github.com/webis-de/acl20-crawling-mailing-lists</a></li>
-<li>Presidio: <a href="https://github.com/data-privacy-stack/presidio" class="uri">https://github.com/data-privacy-stack/presidio</a></li>
-<li>spaCy EntityRuler: <a href="https://spacy.io/api/entityruler" class="uri">https://spacy.io/api/entityruler</a></li>
-<li>ORCID: <a href="https://orcid.org/" class="uri">https://orcid.org/</a></li>
-<li>OpenAlex: <a href="https://openalex.org/" class="uri">https://openalex.org/</a></li>
-<li>DataCite: <a href="https://datacite.org/" class="uri">https://datacite.org/</a></li>
-<li>gender-guesser: <a href="https://pypi.org/project/gender-guesser/" class="uri">https://pypi.org/project/gender-guesser/</a></li>
-<li>MailEx code: <a href="https://github.com/salokr/Email-Event-Extraction" class="uri">https://github.com/salokr/Email-Event-Extraction</a></li>
-<li>CIHR Project Grant program: <a href="https://cihr-irsc.gc.ca/e/49051.html" class="uri">https://cihr-irsc.gc.ca/e/49051.html</a></li>
-</ul>
+<div id="tbl-links" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-links-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Resource</th>
+<th style="text-align: left;">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Our sites and documents</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CITF-emails repository</td>
+<td style="text-align: left;"><a href="https://github.com/zackbatist/CITF-emails" class="uri">https://github.com/zackbatist/CITF-emails</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CITF-emails site</td>
+<td style="text-align: left;"><a href="https://zackbatist.info/CITF-emails/" class="uri">https://zackbatist.info/CITF-emails/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DocuScope assessment</td>
+<td style="text-align: left;"><a href="https://zackbatist.info/CITF-emails/coding/rhetoric/tests/docuscope/" class="uri">https://zackbatist.info/CITF-emails/coding/rhetoric/tests/docuscope/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Deriving rhetorical groups from linguistic features</td>
+<td style="text-align: left;"><a href="https://zackbatist.info/CITF-emails/notes/rhetorical-groups/" class="uri">https://zackbatist.info/CITF-emails/notes/rhetorical-groups/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CITF-Postdoc</td>
+<td style="text-align: left;"><a href="https://zackbatist.info/CITF-Postdoc/" class="uri">https://zackbatist.info/CITF-Postdoc/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Topic modelling preprint</td>
+<td style="text-align: left;"><a href="https://zackbatist.info/CITF-emails/topic-modelling/" class="uri">https://zackbatist.info/CITF-emails/topic-modelling/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RDS-Review</td>
+<td style="text-align: left;"><a href="https://zackbatist.info/RDS-Review/" class="uri">https://zackbatist.info/RDS-Review/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Tools</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chipmunk code and annotations</td>
+<td style="text-align: left;"><a href="https://github.com/webis-de/acl20-crawling-mailing-lists" class="uri">https://github.com/webis-de/acl20-crawling-mailing-lists</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Presidio</td>
+<td style="text-align: left;"><a href="https://github.com/data-privacy-stack/presidio" class="uri">https://github.com/data-privacy-stack/presidio</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">spaCy EntityRuler</td>
+<td style="text-align: left;"><a href="https://spacy.io/api/entityruler" class="uri">https://spacy.io/api/entityruler</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MFTE code and documentation</td>
+<td style="text-align: left;"><a href="https://github.com/mshakirDr/MFTE" class="uri">https://github.com/mshakirDr/MFTE</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">factor_analyzer</td>
+<td style="text-align: left;"><a href="https://github.com/EducationalTestingService/factor_analyzer" class="uri">https://github.com/EducationalTestingService/factor_analyzer</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pybiber documentation</td>
+<td style="text-align: left;"><a href="https://browndw.github.io/pybiber" class="uri">https://browndw.github.io/pybiber</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">en_docusco_spacy model page</td>
+<td style="text-align: left;"><a href="https://huggingface.co/browndw/en_docusco_spacy" class="uri">https://huggingface.co/browndw/en_docusco_spacy</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DocuScope tags (full dictionary)</td>
+<td style="text-align: left;"><a href="https://browndw.github.io/docuscope-docs/tagsets/docuscope-fd-tags.html" class="uri">https://browndw.github.io/docuscope-docs/tagsets/docuscope-fd-tags.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ConvoKit politeness strategies</td>
+<td style="text-align: left;"><a href="https://convokit.cornell.edu/documentation/politenessStrategies.html" class="uri">https://convokit.cornell.edu/documentation/politenessStrategies.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MailEx code</td>
+<td style="text-align: left;"><a href="https://github.com/salokr/Email-Event-Extraction" class="uri">https://github.com/salokr/Email-Event-Extraction</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">gender-guesser</td>
+<td style="text-align: left;"><a href="https://pypi.org/project/gender-guesser/" class="uri">https://pypi.org/project/gender-guesser/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Data sources</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ORCID</td>
+<td style="text-align: left;"><a href="https://orcid.org/" class="uri">https://orcid.org/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OpenAlex</td>
+<td style="text-align: left;"><a href="https://openalex.org/" class="uri">https://openalex.org/</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DataCite</td>
+<td style="text-align: left;"><a href="https://datacite.org/" class="uri">https://datacite.org/</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CIHR Project Grant program</td>
+<td style="text-align: left;"><a href="https://cihr-irsc.gc.ca/e/49051.html" class="uri">https://cihr-irsc.gc.ca/e/49051.html</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-links-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Links to our sites, the tools and the data sources.
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
@@ -1147,19 +1110,9 @@ Wang, Wei, Saghar Hosseini, Ahmed Hassan Awadallah, Paul N. Bennett, and Chris Q
 Yeh, Jen-Yuan, and Aaron Harnly. 2006. <span>“Email Thread Reassembly Using Similarity Matching.”</span> In <em>Proceedings of the Third Conference on Email and Anti-Spam (CEAS 2006)</em>. Mountain View, CA. <a href="https://doi.org/10.7916/D8J3921Q">https://doi.org/10.7916/D8J3921Q</a>.
 </div>
 </div>
-</section>
-</section>
-<section id="sec-grant-move" class="level1 unnumbered">
-<h1 class="unnumbered">Appendix A: Migrating prior grant-writing activity</h1>
-<p>The grant work sits in a local folder in <a href="https://zackbatist.info/CITF-Postdoc/">CITF-Postdoc</a>, outside version control. Moving it into <code>grant-writing/</code> takes four steps.</p>
-<ol type="1">
-<li><strong>Create the private repository</strong> on the lab’s git server. The name <code>citf-emails-grant</code> is a placeholder.</li>
-<li><strong>Move the folder</strong> into <code>citf-emails/grant-writing/</code>, initialise it as a repository, commit its current contents, and push to the new repository.</li>
-<li><strong>Add <code>grant-writing/</code></strong> to <code>.gitignore</code>, and <code>"!grant-writing/"</code> to the render list in <code>_quarto.yml</code>.</li>
-<li><strong>Remove the old folder</strong> from <a href="https://zackbatist.info/CITF-Postdoc/">CITF-Postdoc</a> once <code>grant-writing/</code> checks out.</li>
-</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
