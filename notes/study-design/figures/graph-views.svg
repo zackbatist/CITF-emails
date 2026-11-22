@@ -191,7 +191,7 @@
 <g transform="translate(0,400)"><text x="804" y="422" font-size="11" fill="#666">Darker cells: a larger share of requests</text></g>
 <g transform="translate(575,-395)"><rect x="20" y="455" width="565" height="385" rx="6" fill="#fcfcfc" stroke="#ccc"/></g>
 <g transform="translate(575,-395)"><text x="34" y="479" font-weight="bold" fill="#222" font-size="13">B. Process map</text></g>
-<g transform="translate(575,-395)"><text x="34" y="497" fill="#666" font-size="11">Drawn from the activity log, one row for each action in an email</text></g>
+<g transform="translate(575,-395)"><text x="34" y="497" fill="#666" font-size="11">Drawn from each project's graph</text></g>
 <g transform="translate(575,-395)"><text x="40" y="525" font-size="11" fill="#222" font-weight="bold">project</text></g>
 <g transform="translate(575,-395)"><text x="95" y="525" font-size="11" fill="#222" font-weight="bold">date</text></g>
 <g transform="translate(575,-395)"><text x="180" y="525" font-size="11" fill="#222" font-weight="bold">role</text></g>
