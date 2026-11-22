@@ -2,6 +2,7 @@
 title: "Deriving rhetorical groups from linguistic features"
 subtitle: "A workflow for deriving rhetorical groups in the CITF emails and relating them to functions, actions and context"
 date: 2026-11-18
+date-modified: 2026-11-21
 tbl-cap-location: bottom
 link-citations: true
 format:
