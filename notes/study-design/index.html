@@ -459,7 +459,7 @@ Table&nbsp;1: Zones, what each holds, and the Chipmunk classes that map onto the
 <p><strong>Objective.</strong> Label the authored text of each email with rhetoric, functions and actions, and validate each kind of code before using it in the analysis.</p>
 <p><strong>Deliverables.</strong></p>
 <ul>
-<li>Rhetorical groups and politeness strategies on the authored text, with the naming, sorting and stability checks behind them</li>
+<li>Rhetorical groups and politeness strategies on the authored text</li>
 <li>The DocuScope assessment’s validation of each DocuScope category, for comparison</li>
 <li>Definitions of the function and action codes</li>
 <li>Function and action codes on the authored text from trained models, with tests of each model on the CITF emails</li>
@@ -542,7 +542,7 @@ Table&nbsp;1: Zones, what each holds, and the Chipmunk classes that map onto the
 <img src="figures/data-model.svg" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-data-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: The data model, with node types grouped by kind and the edge types between them.
+Figure&nbsp;1: The data model, with node types grouped by kind and the edge types between them. Mentions also point to people, institutions, projects and events.
 </figcaption>
 </figure>
 </div>
@@ -700,69 +700,75 @@ Table&nbsp;2: Node types, grouped by kind, with their identifiers, sources and m
 <td style="text-align: left;">None</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">Belongs to</td>
+<td style="text-align: left;">Email</td>
+<td style="text-align: left;">Thread or project</td>
+<td style="text-align: left;">None</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">Containment</td>
 <td style="text-align: left;">Email</td>
 <td style="text-align: left;">Sentence</td>
 <td style="text-align: left;">Position in the email</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Attachment</td>
 <td style="text-align: left;">Email</td>
 <td style="text-align: left;">Attachment</td>
 <td style="text-align: left;">File name as sent</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td colspan="4" style="text-align: left;"><strong>People and organizations</strong></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Participation</td>
 <td style="text-align: left;">Person</td>
 <td style="text-align: left;">Email</td>
 <td style="text-align: left;">Sender, To or Cc; role in that email</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Membership</td>
 <td style="text-align: left;">Person</td>
 <td style="text-align: left;">Project</td>
 <td style="text-align: left;">Start and end dates</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Affiliation</td>
 <td style="text-align: left;">Person</td>
 <td style="text-align: left;">Institution</td>
 <td style="text-align: left;">Start and end dates</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td colspan="4" style="text-align: left;"><strong>Analysis</strong></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Follow-up</td>
 <td style="text-align: left;">Email</td>
 <td style="text-align: left;">Email</td>
 <td style="text-align: left;">None</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Coding</td>
 <td style="text-align: left;">Sentence</td>
 <td style="text-align: left;">Code</td>
 <td style="text-align: left;">Character offsets for DocuScope tags</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Mention</td>
 <td style="text-align: left;">Sentence</td>
 <td style="text-align: left;">Person, institution, project, focal object or event</td>
 <td style="text-align: left;">Character offsets</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td colspan="4" style="text-align: left;"><strong>Context</strong></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Authorship</td>
 <td style="text-align: left;">Person</td>
 <td style="text-align: left;">Publication or dataset</td>
 <td style="text-align: left;">Author position</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Announcement</td>
 <td style="text-align: left;">Email</td>
 <td style="text-align: left;">Event</td>
@@ -799,11 +805,11 @@ Table&nbsp;3: Edge types, grouped by kind, with the node types they join and the
 <img src="figures/thread-view.svg" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-thread-view-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: An illustrative thread, with the codes on each sentence. The sentences, functions and dates are invented.
+Figure&nbsp;2: An illustrative thread, with the codes on each sentence. The sentences, codes and dates are invented, and the rhetorical groups are placeholders.
 </figcaption>
 </figure>
 </div>
-<p>In the thread view (<a href="#fig-thread-view" class="quarto-xref">Figure&nbsp;2</a>), one thread’s emails appear in order, each under its sender’s role and date, with every sentence of the authored zone beside its function, its action and the rhetorical groups present in it. A dashed arrow joins each follow-up to the email it follows. We use the thread view for close reading, to check whether a pattern in the counts holds up in the emails behind it. We also use the thread view as a visual check of the rhetorical groups, since each one appears beside its sentence. The text in the view is de-identified, and we keep the view untracked, as with the email text.</p>
+<p>In the thread view (<a href="#fig-thread-view" class="quarto-xref">Figure&nbsp;2</a>), one thread’s emails appear in order, each under its sender’s role and date, with every sentence of the authored zone beside its function, task of concern, action, rhetorical groups and politeness strategies. Arrows join each reply and each follow-up to the email it answers or follows. We use the thread view for close reading, to check whether a pattern in the counts holds up in the emails behind it. We also use the thread view as a visual check of the rhetorical groups, since each one appears beside its sentence. The text in the view is de-identified, and we keep the view untracked, as with the email text.</p>
 </section>
 <section id="sec-timeline" class="level3" data-number="4.1.2">
 <h3 data-number="4.1.2" class="anchored" data-anchor-id="sec-timeline"><span class="header-section-number">4.1.2</span> Project timeline</h3>
