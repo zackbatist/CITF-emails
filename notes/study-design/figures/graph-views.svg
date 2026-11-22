@@ -192,31 +192,32 @@
 <g transform="translate(575,-395)"><rect x="20" y="455" width="565" height="385" rx="6" fill="#fcfcfc" stroke="#ccc"/></g>
 <g transform="translate(575,-395)"><text x="34" y="479" font-weight="bold" fill="#222" font-size="13">B. Process map</text></g>
 <g transform="translate(575,-395)"><text x="34" y="497" fill="#666" font-size="11">Drawn from each project's graph</text></g>
-<g transform="translate(575,-395)"><text x="40" y="525" font-size="11" fill="#222" font-weight="bold">project</text></g>
-<g transform="translate(575,-395)"><text x="95" y="525" font-size="11" fill="#222" font-weight="bold">date</text></g>
-<g transform="translate(575,-395)"><text x="180" y="525" font-size="11" fill="#222" font-weight="bold">role</text></g>
-<g transform="translate(575,-395)"><text x="330" y="525" font-size="11" fill="#222" font-weight="bold">action</text></g>
-<g transform="translate(575,-395)"><text x="400" y="525" font-size="11" fill="#222" font-weight="bold">phase</text></g>
-<g transform="translate(575,-395)"><text x="40" y="542" font-size="11" fill="#555" font-weight="normal">A</text></g>
-<g transform="translate(575,-395)"><text x="95" y="542" font-size="11" fill="#555" font-weight="normal">2020-08-14</text></g>
-<g transform="translate(575,-395)"><text x="180" y="542" font-size="11" fill="#555" font-weight="normal">Operations Manager</text></g>
-<g transform="translate(575,-395)"><text x="330" y="542" font-size="11" fill="#555" font-weight="normal">request</text></g>
-<g transform="translate(575,-395)"><text x="400" y="542" font-size="11" fill="#555" font-weight="normal">1</text></g>
-<g transform="translate(575,-395)"><text x="40" y="559" font-size="11" fill="#555" font-weight="normal">A</text></g>
-<g transform="translate(575,-395)"><text x="95" y="559" font-size="11" fill="#555" font-weight="normal">2020-09-02</text></g>
-<g transform="translate(575,-395)"><text x="180" y="559" font-size="11" fill="#555" font-weight="normal">Principal investigator</text></g>
-<g transform="translate(575,-395)"><text x="330" y="559" font-size="11" fill="#555" font-weight="normal">provide</text></g>
-<g transform="translate(575,-395)"><text x="400" y="559" font-size="11" fill="#555" font-weight="normal">1</text></g>
-<g transform="translate(575,-395)"><text x="40" y="576" font-size="11" fill="#555" font-weight="normal">A</text></g>
-<g transform="translate(575,-395)"><text x="95" y="576" font-size="11" fill="#555" font-weight="normal">2020-10-20</text></g>
-<g transform="translate(575,-395)"><text x="180" y="576" font-size="11" fill="#555" font-weight="normal">Operations Manager</text></g>
-<g transform="translate(575,-395)"><text x="330" y="576" font-size="11" fill="#555" font-weight="normal">chase</text></g>
-<g transform="translate(575,-395)"><text x="400" y="576" font-size="11" fill="#555" font-weight="normal">1</text></g>
-<g transform="translate(575,-395)"><text x="40" y="593" font-size="11" fill="#555" font-weight="normal">B</text></g>
-<g transform="translate(575,-395)"><text x="95" y="593" font-size="11" fill="#555" font-weight="normal">2021-01-11</text></g>
-<g transform="translate(575,-395)"><text x="180" y="593" font-size="11" fill="#555" font-weight="normal">Operations Manager</text></g>
-<g transform="translate(575,-395)"><text x="330" y="593" font-size="11" fill="#555" font-weight="normal">request</text></g>
-<g transform="translate(575,-395)"><text x="400" y="593" font-size="11" fill="#555" font-weight="normal">2</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="40" y="525" font-size="10.5" fill="#222" font-weight="bold">project</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="95" y="525" font-size="10.5" fill="#222" font-weight="bold">date</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="180" y="525" font-size="10.5" fill="#222" font-weight="bold">role</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="330" y="525" font-size="10.5" fill="#222" font-weight="bold">action</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="400" y="525" font-size="10.5" fill="#222" font-weight="bold">phase</text></g>
+<g transform="translate(575,-395)"><line x1="40" y1="531" x2="430" y2="531" stroke="#ccc"/></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="40" y="542" font-size="10.5" fill="#555" font-weight="normal">A</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="95" y="542" font-size="10.5" fill="#555" font-weight="normal">2020-08-14</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="180" y="542" font-size="10.5" fill="#555" font-weight="normal">Operations Manager</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="330" y="542" font-size="10.5" fill="#555" font-weight="normal">request</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="400" y="542" font-size="10.5" fill="#555" font-weight="normal">1</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="40" y="559" font-size="10.5" fill="#555" font-weight="normal">A</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="95" y="559" font-size="10.5" fill="#555" font-weight="normal">2020-09-02</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="180" y="559" font-size="10.5" fill="#555" font-weight="normal">Principal investigator</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="330" y="559" font-size="10.5" fill="#555" font-weight="normal">deliver</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="400" y="559" font-size="10.5" fill="#555" font-weight="normal">1</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="40" y="576" font-size="10.5" fill="#555" font-weight="normal">A</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="95" y="576" font-size="10.5" fill="#555" font-weight="normal">2020-10-20</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="180" y="576" font-size="10.5" fill="#555" font-weight="normal">Operations Manager</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="330" y="576" font-size="10.5" fill="#555" font-weight="normal">propose</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="400" y="576" font-size="10.5" fill="#555" font-weight="normal">1</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="40" y="593" font-size="10.5" fill="#555" font-weight="normal">B</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="95" y="593" font-size="10.5" fill="#555" font-weight="normal">2021-01-11</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="180" y="593" font-size="10.5" fill="#555" font-weight="normal">Operations Manager</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="330" y="593" font-size="10.5" fill="#555" font-weight="normal">request</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="400" y="593" font-size="10.5" fill="#555" font-weight="normal">2</text></g>
 <g transform="translate(575,-395)"><line x1="138" y1="680" x2="232" y2="640" stroke="#7f8c8d" stroke-width="6" opacity="0.6"/></g>
 <g transform="translate(575,-395)"><line x1="138" y1="680" x2="232" y2="740" stroke="#7f8c8d" stroke-width="3" opacity="0.6"/></g>
 <g transform="translate(575,-395)"><line x1="308" y1="740" x2="232" y2="640" stroke="#7f8c8d" stroke-width="2" opacity="0.6"/></g>
@@ -224,19 +225,19 @@
 <g transform="translate(575,-395)"><line x1="308" y1="740" x2="412" y2="770" stroke="#7f8c8d" stroke-width="2" opacity="0.6"/></g>
 <g transform="translate(575,-395)"><line x1="488" y1="770" x2="232" y2="640" stroke="#7f8c8d" stroke-width="1" opacity="0.6"/></g>
 <g transform="translate(575,-395)"><rect x="62" y="666" width="76" height="28" rx="14" fill="#eaf2f8" stroke="#2e5e8c"/></g>
-<g transform="translate(575,-395)"><text x="100" y="684" text-anchor="middle" font-size="11" fill="#1b4f72">request</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="100" y="684" text-anchor="middle" font-size="10.5" fill="#1b4f72">request</text></g>
 <g transform="translate(575,-395)"><rect x="232" y="626" width="76" height="28" rx="14" fill="#eaf2f8" stroke="#2e5e8c"/></g>
-<g transform="translate(575,-395)"><text x="270" y="644" text-anchor="middle" font-size="11" fill="#1b4f72">provide</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="270" y="644" text-anchor="middle" font-size="10.5" fill="#1b4f72">deliver</text></g>
 <g transform="translate(575,-395)"><rect x="232" y="726" width="76" height="28" rx="14" fill="#eaf2f8" stroke="#2e5e8c"/></g>
-<g transform="translate(575,-395)"><text x="270" y="744" text-anchor="middle" font-size="11" fill="#1b4f72">chase</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="270" y="744" text-anchor="middle" font-size="10.5" fill="#1b4f72">propose</text></g>
 <g transform="translate(575,-395)"><rect x="412" y="666" width="76" height="28" rx="14" fill="#eaf2f8" stroke="#2e5e8c"/></g>
-<g transform="translate(575,-395)"><text x="450" y="684" text-anchor="middle" font-size="11" fill="#1b4f72">confirm</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="450" y="684" text-anchor="middle" font-size="10.5" fill="#1b4f72">commit</text></g>
 <g transform="translate(575,-395)"><rect x="412" y="756" width="76" height="28" rx="14" fill="#eaf2f8" stroke="#2e5e8c"/></g>
-<g transform="translate(575,-395)"><text x="450" y="774" text-anchor="middle" font-size="11" fill="#1b4f72">escalate</text></g>
+<g transform="translate(575,-395)"><text font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" x="450" y="774" text-anchor="middle" font-size="10.5" fill="#1b4f72">amend</text></g>
 <g transform="translate(575,-395)"><text x="40" y="825" font-size="11" fill="#666">Line width: how often one action follows another within a project</text></g>
 <g transform="translate(-580,-395)"><rect x="600" y="455" width="560" height="385" rx="6" fill="#fcfcfc" stroke="#ccc"/></g>
 <g transform="translate(-580,-395)"><text x="614" y="479" font-weight="bold" fill="#222" font-size="13">A. Network</text></g>
-<g transform="translate(-580,-395)"><text x="614" y="497" fill="#666" font-size="11">People, projects, institutions and focal objects, without time</text></g>
+<g transform="translate(-580,-395)"><text x="614" y="497" fill="#666" font-size="11">People, projects, institutions and focal objects</text></g>
 <g transform="translate(-580,-395)"><line x1="730" y1="600" x2="665" y2="700" stroke="#aab7c4"/></g>
 <g transform="translate(-580,-395)"><line x1="730" y1="600" x2="770" y2="550" stroke="#aab7c4"/></g>
 <g transform="translate(-580,-395)"><line x1="730" y1="600" x2="880" y2="640" stroke="#aab7c4"/></g>
@@ -275,4 +276,5 @@
 <g transform="translate(-580,-395)"><circle cx="710" cy="819" r="6" fill="#2e5e8c"/><text x="722" y="823" font-size="11" fill="#333">person</text></g>
 <g transform="translate(-580,-395)"><polygon points="790,811 797,824 783,824" fill="#a0522d"/><text x="803" y="823" font-size="11" fill="#333">institution</text></g>
 <g transform="translate(-580,-395)"><polygon points="897,819 893.5,825.062 886.5,825.062 883,819 886.5,812.938 893.5,812.938" fill="#fff" stroke="#5d6d7e" stroke-width="2"/><text x="902" y="823" font-size="11" fill="#333">focal object</text></g>
+<g transform="translate(-580,-395)"><line x1="990" y1="819" x2="1012" y2="819" stroke="#c8a97e" stroke-dasharray="3,3"/><text x="1018" y="823" font-size="11" fill="#333">affiliation</text></g>
 </svg>
